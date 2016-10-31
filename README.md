@@ -1,6 +1,6 @@
 ## Playground
 
-This is where I (Calvin Lee) plays with algorithms. Mostly they are basics for now, I plan to continue with writing and collect algorithms.
+This is where I play with different kind of algorithms. Mostly they are basics which I personally think is important. I plan to continue with writing and collect algorithms here.
 
 ## Contributors
 

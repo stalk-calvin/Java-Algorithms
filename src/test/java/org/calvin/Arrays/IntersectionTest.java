@@ -23,7 +23,7 @@ public class IntersectionTest {
     @Test
     public void shouldReturnCorrectIntersection() throws Exception {
         int[] input1 = {1, 2, 3, 4, 5};
-        int[] input2 = {6, 7, 8, 9, 3};
+        int[] input2 = {6, 7, 3, 3, 3};
         int[] expected = {3};
         assertTrue(Arrays.equals(expected, fixture.intersection(input1, input2)));
     }

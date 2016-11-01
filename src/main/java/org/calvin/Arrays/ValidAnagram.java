@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Arrays;
 
 import java.util.Arrays;
@@ -7,8 +12,8 @@ public class ValidAnagram {
         return sorted(s).equals(sorted(t));
     }
 
-    public String sorted(String in) {
-        char[] inChars = in.toCharArray();
+    private String sorted(String in) {
+        char[] inChars = in.toLowerCase().toCharArray();
         Arrays.sort(inChars);
         return new String(inChars);
     }

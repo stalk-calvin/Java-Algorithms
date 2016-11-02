@@ -1,3 +1,10 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
+package org.calvin.BitManipulation;
+
 public class ReverseBit {
     // you need treat n as an unsigned value
     public int reverseBits(int n) {

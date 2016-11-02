@@ -1,10 +1,26 @@
 package org.calvin.LinkedList;
 
+import lombok.Data;
+
+@Data
 public class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) {
+    private int val;
+    private ListNode next;
+    public ListNode(int x) {
       val = x;
       next = null;
+    }
+
+    public ListNode(int d, ListNode n) {
+        val = d;
+        setNext(n);
+    }
+
+    public String printForward() {
+        if (next != null) {
+            return val + "->" + next.printForward();
+        } else {
+            return ((Integer) val).toString();
+        }
     }
 }

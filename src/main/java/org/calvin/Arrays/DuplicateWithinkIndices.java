@@ -23,10 +23,4 @@ public class DuplicateWithinkIndices {
         }
         return false;
     }
-
-    public static void main(String args[]) {
-        int arr[] = {1, 2, 3, 11, 2, 5, 6};
-        DuplicateWithinkIndices dk = new DuplicateWithinkIndices();
-        System.out.println(dk.duplicate(arr, 3));
-    }
 }

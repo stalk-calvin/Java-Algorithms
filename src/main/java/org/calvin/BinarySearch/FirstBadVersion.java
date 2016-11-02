@@ -7,8 +7,8 @@ class VersionControl {
     public VersionControl(int n) {
         this.random = ThreadLocalRandom.current().nextInt(0, n + 1);
     }
-    public boolean isBadVersion(int mid) {
-        return random == mid;
+    public int isBadVersion(int mid) {
+        return Integer.compare(random, mid);
     }
 }
 
@@ -19,25 +19,21 @@ public class FirstBadVersion extends VersionControl {
         this.n = n;
     }
 
-    public int firstBadVersion() {
-        if (n < 2) return n;
+    public boolean findBadVersion() {
         int first = 1;
         int last = n;
-        while (first < last) {
-            int mid = first + (last - first) / 2;
-            boolean bad = isBadVersion(mid);
-            if (bad) {
-                last = mid;
+        int mid = first + (last - first) / 2;
+        while (first <= last) {
+            int i = isBadVersion(mid);
+            if (i == 0) return true;
+
+            if (i < 0){
+                last = mid -1;
             } else {
                 first = mid + 1;
             }
-
+            mid = first + (last - first) / 2;
         }
-        return first;
-    }
-
-    public static void main(String[] args) {
-        FirstBadVersion firstBadVersion = new FirstBadVersion(10);
-        System.out.println(firstBadVersion.firstBadVersion());
+        return false;
     }
 }

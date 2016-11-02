@@ -14,15 +14,22 @@ public class RemoveDuplicateSortedArrayTest {
     RemoveDuplicateSortedArray fixture;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fixture = new RemoveDuplicateSortedArray();
     }
 
     @Test
-    public void removeDuplicates() throws Exception {
+    public void shouldRemoveDuplicates() {
         int[] input = {1,1,2,2,2,3,4,5};
         int actual = fixture.removeDuplicates(input);
         assertEquals(5,actual);
+    }
+
+    @Test
+    public void shouldNotRemoveDuplicates() {
+        int[] input = new int[0];
+        int actual = fixture.removeDuplicates(input);
+        assertEquals(0,actual);
     }
 
 }

@@ -13,19 +13,16 @@ import java.util.Arrays;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-/**
- * Created by calvinlee on 2016-10-30.
- */
 public class RemoveElementTest {
     RemoveElement fixture;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fixture = new RemoveElement();
     }
 
     @Test
-    public void testRemoveOneElement() throws Exception {
+    public void shouldRemoveOneElement() {
         int[] input = {1,2,3,4,5};
         int length = fixture.removeElement(input, 3);
         assertEquals(4, length);
@@ -35,7 +32,7 @@ public class RemoveElementTest {
     }
 
     @Test
-    public void testRemoveFourElement() throws Exception {
+    public void shouldRemoveFourElement() {
         int[] input = {3,1,3,2,3,4,5,3};
         int length = fixture.removeElement(input, 3);
         assertEquals(4, length);

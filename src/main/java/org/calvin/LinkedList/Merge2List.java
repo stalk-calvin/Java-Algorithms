@@ -12,36 +12,36 @@ public class Merge2List {
             return l1;
         }
         // find out who has minimum head
-        ListNode newHead = new ListNode(Math.min(l1.val, l2.val));
-        if (l1.val > l2.val) {
-            l2 = l2.next;
+        ListNode newHead = new ListNode(Math.min(l1.getVal(), l2.getVal()));
+        if (l1.getVal() > l2.getVal()) {
+            l2 = l2.getNext();
         } else {
-            l1 = l1.next;
+            l1 = l1.getNext();
         }
         ListNode returnHead = newHead;
         while (l1 != null && l2 != null) {
-            ListNode n = new ListNode(Math.min(l1.val, l2.val));
-            newHead.next = n;
-            newHead = newHead.next;
-            if (l1.val > l2.val) {
-                l2 = l2.next;
+            ListNode n = new ListNode(Math.min(l1.getVal(), l2.getVal()));
+            newHead.setNext(n);
+            newHead = newHead.getNext();
+            if (l1.getVal() > l2.getVal()) {
+                l2 = l2.getNext();
             } else {
-                l1 = l1.next;
+                l1 = l1.getNext();
             }
         }
 
         while (l1 != null) {
-            ListNode n = new ListNode(l1.val);
-            newHead.next = n;
-            newHead = newHead.next;
-            l1 = l1.next;
+            ListNode n = new ListNode(l1.getVal());
+            newHead.setNext(n);
+            newHead = newHead.getNext();
+            l1 = l1.getNext();
         }
 
         while (l2 != null) {
-            ListNode n = new ListNode(l2.val);
-            newHead.next = n;
-            newHead = newHead.next;
-            l2 = l2.next;
+            ListNode n = new ListNode(l2.getVal());
+            newHead.setNext(n);
+            newHead = newHead.getNext();
+            l2 = l2.getNext();
         }
 
         return returnHead;

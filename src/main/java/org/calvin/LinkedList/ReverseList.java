@@ -2,16 +2,16 @@ package org.calvin.LinkedList;
 
 public class ReverseList {
     public ListNode reverseList(ListNode n) {
-        if (n == null || n.next == null) {
+        if (n == null || n.getNext() == null) {
             return n;
         }
-        ListNode newHead = new ListNode(n.val);
-        n = n.next;
+        ListNode newHead = new ListNode(n.getVal());
+        n = n.getNext();
         while (n != null) {
-            ListNode newN = new ListNode(n.val);
-            newN.next = newHead;
+            ListNode newN = new ListNode(n.getVal());
+            newN.setNext(newHead);
             newHead = newN;
-            n = n.next;
+            n = n.getNext();
         }
         return newHead;
     }

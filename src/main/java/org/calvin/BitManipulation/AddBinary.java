@@ -1,23 +1,24 @@
 package org.calvin.BitManipulation;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Arrays;
 
+@Slf4j
 public class AddBinary {
     public String addBinary(String a, String b) {
         long aToDigit = toDigit(a);
-        System.out.println(aToDigit);
         long bToDigit = toDigit(b);
-        System.out.println(bToDigit);
         return Long.toBinaryString(aToDigit + bToDigit);
     }
 
-    public long toDigit(String binary) {
-        char[] binaryInChar = binary.toCharArray();
+    private long toDigit(String binary) {
         if (binary.length() < 1) {
             return 0;
         }
+        char[] binaryInChar = binary.toCharArray();
         long binaryDigit = 0;
-        System.out.println(Arrays.toString(binaryInChar));
+        log.info(Arrays.toString(binaryInChar));
         for (int i = binaryInChar.length - 1; i >= 0; i--) {
             if (binaryInChar[i] == '1') {
                 if (i == binaryInChar.length - 1) {

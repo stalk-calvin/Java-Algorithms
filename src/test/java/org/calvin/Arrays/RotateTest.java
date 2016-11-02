@@ -16,12 +16,12 @@ public class RotateTest {
     Rotate fixture;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fixture = new Rotate();
     }
 
     @Test
-    public void testRotate() throws Exception {
+    public void shouldRotate() {
         int[] input = {1,2,3,4,5};
         fixture.rotate(input, 2);
         int[] expected = {4,5,1,2,3};

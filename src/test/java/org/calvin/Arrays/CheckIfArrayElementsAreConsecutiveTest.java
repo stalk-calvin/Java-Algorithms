@@ -15,14 +15,20 @@ public class CheckIfArrayElementsAreConsecutiveTest {
     }
 
     @Test
-    public void testNotConsecutive() throws Exception {
+    public void shouldNotBeConsecutive() {
         int input[] = {76, 78, 76, 77, 73, 74};
         assertFalse(fixture.areConsecutive(input));
     }
 
     @Test
-    public void testConsecutive() throws Exception {
+    public void shouldBeConsecutive() {
         int input[] = {76, 78, 75, 77, 73, 74};
         assertTrue(fixture.areConsecutive(input));
+    }
+
+    @Test
+    public void shouldQuitAfterLongDistance() {
+        int input[] = {1, 78, 76, 77, 73, 74};
+        assertFalse(fixture.areConsecutive(input));
     }
 }

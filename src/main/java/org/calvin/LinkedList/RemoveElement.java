@@ -3,25 +3,25 @@ package org.calvin.LinkedList;
 public class RemoveElement {
     public ListNode removeElements(ListNode head, int val) {
         if (head == null) return null;
-        if (head.val == val) {
-            while (head != null && head.val == val) {
-                head = head.next;
+        if (head.getVal() == val) {
+            while (head != null && head.getVal() == val) {
+                head = head.getNext();
             }
         }
         ListNode tmpHead = head;
         ListNode prev = head;
         while (tmpHead != null) {
-            if (tmpHead.val == val) {
-                if (tmpHead.next != null) {
-                    tmpHead.val = tmpHead.next.val;
-                    tmpHead.next = tmpHead.next.next;
+            if (tmpHead.getVal() == val) {
+                if (tmpHead.getNext() != null) {
+                    tmpHead.setVal(tmpHead.getNext().getVal());
+                    tmpHead.setNext(tmpHead.getNext().getNext());
                     continue;
                 } else {
-                    prev.next = null;
+                    prev.setNext(null);
                 }
             }
             prev = tmpHead;
-            tmpHead = tmpHead.next;
+            tmpHead = tmpHead.getNext();
         }
         return head;
     }

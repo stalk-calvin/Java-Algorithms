@@ -2,13 +2,13 @@ package org.calvin.LinkedList;
 
 public class SwapNode {
     public ListNode swapPairs(ListNode head) {
-        if (head == null || head.next == null) return head;
+        if (head == null || head.getNext() == null) return head;
         ListNode tmpHead = head;
-        while (tmpHead != null && tmpHead.next != null) {
-            int val = tmpHead.next.val;
-            tmpHead.next.val = tmpHead.val;
-            tmpHead.val = val;
-            tmpHead = tmpHead.next.next;
+        while (tmpHead != null && tmpHead.getNext() != null) {
+            int val = tmpHead.getNext().getVal();
+            tmpHead.getNext().setVal(tmpHead.getVal());
+            tmpHead.setVal(val);
+            tmpHead = tmpHead.getNext().getNext();
         }
         return head;
     }

@@ -16,12 +16,12 @@ public class Intersection2Test {
     Intersection2 fixture;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fixture = new Intersection2();
     }
 
     @Test
-    public void testIntersection() throws Exception {
+    public void shouldHaveIntersection() {
         int[] input1 = {1,2,2,1};
         int[] input2 = {2,2};
 
@@ -29,4 +29,21 @@ public class Intersection2Test {
         assertTrue(Arrays.equals(expected, fixture.intersect(input1, input2)));
     }
 
+    @Test
+    public void shouldHaveNoIntersection() {
+        int[] input1 = {1,2,2,1};
+        int[] input2 = {3,3};
+
+        int[] expected = new int[0];
+        assertTrue(Arrays.equals(expected, fixture.intersect(input1, input2)));
+    }
+
+    @Test
+    public void shouldHaveEmptyArray() {
+        int[] input1 = null;
+        int[] input2 = {3,3};
+
+        int[] expected = new int[0];
+        assertTrue(Arrays.equals(expected, fixture.intersect(input1, input2)));
+    }
 }

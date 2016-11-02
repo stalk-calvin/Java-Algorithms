@@ -5,25 +5,25 @@ public class Palindrome {
         if (head == null) {
             return true;
         }
-        if (head.next == null) {
+        if (head.getNext() == null) {
             return true;
         }
         //algorithm
         //get middle
         ListNode slow = head;
         ListNode fast = slow;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        while (fast != null && fast.getNext() != null) {
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
         }
         slow = reverseNode(slow);
         fast = head;
         while (slow != null) {
-            if (fast.val != slow.val) {
+            if (fast.getVal() != slow.getVal()) {
                 return false;
             }
-            slow = slow.next;
-            fast = fast.next;
+            slow = slow.getNext();
+            fast = fast.getNext();
         }
         return true;
     }
@@ -33,13 +33,13 @@ public class Palindrome {
             return null;
         }
 
-        ListNode tmpHead = head.next;
-        ListNode cur = new ListNode(head.val);
+        ListNode tmpHead = head.getNext();
+        ListNode cur = new ListNode(head.getVal());
         while (tmpHead != null) {
-            ListNode n = new ListNode(tmpHead.val);
-            n.next = cur;
+            ListNode n = new ListNode(tmpHead.getVal());
+            n.setNext(cur);
             cur = n;
-            tmpHead = tmpHead.next;
+            tmpHead = tmpHead.getNext();
         }
 
         return cur;

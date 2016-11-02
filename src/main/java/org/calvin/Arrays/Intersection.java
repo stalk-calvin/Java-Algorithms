@@ -10,6 +10,9 @@ import java.util.Set;
 
 public class Intersection {
     public int[] intersection(int[] nums1, int[] nums2) {
+        if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) {
+            return new int[0];
+        }
         Set<Integer> nums1Set = new HashSet<>();
         for (int i = 0; i < nums1.length; i++) {
             nums1Set.add(nums1[i]);

@@ -15,18 +15,18 @@ public class DuplicateWithinkIndicesTest {
     DuplicateWithinkIndices fixture;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fixture = new DuplicateWithinkIndices();
     }
 
     @Test
-    public void testDuplicateWithinProvided() throws Exception {
+    public void testDuplicateWithinProvided() {
         int arr[] = {1, 2, 3, 11, 2, 5, 6};
         assertTrue(fixture.duplicate(arr, 3));
     }
 
     @Test
-    public void testNoDuplicateWithinProvided() throws Exception {
+    public void testNoDuplicateWithinProvided() {
         int arr[] = {1, 2, 3, 11, 4, 5, 2};
         assertFalse(fixture.duplicate(arr, 3));
     }

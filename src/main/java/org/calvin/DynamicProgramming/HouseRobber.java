@@ -1,3 +1,10 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
+package org.calvin.DynamicProgramming;
+
 public class HouseRobber {
     public int rob(int[] nums) {
         int L = nums.length;

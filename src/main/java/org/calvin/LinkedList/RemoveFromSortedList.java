@@ -9,17 +9,17 @@ public class RemoveFromSortedList {
             return head;
         }
         Set<Integer> tracker = new HashSet<>();
-        tracker.add(head.val);
-        ListNode tmpHead = head.next;
-        ListNode newHead = new ListNode(head.val);
+        tracker.add(head.getVal());
+        ListNode tmpHead = head.getNext();
+        ListNode newHead = new ListNode(head.getVal());
         ListNode result = newHead;
         while (tmpHead != null) {
-            if (!tracker.contains(tmpHead.val)) {
-                newHead.next = new ListNode(tmpHead.val);
-                newHead = newHead.next;
-                tracker.add(tmpHead.val);
+            if (!tracker.contains(tmpHead.getVal())) {
+                newHead.setNext(new ListNode(tmpHead.getVal()));
+                newHead = newHead.getNext();
+                tracker.add(tmpHead.getVal());
             }
-            tmpHead = tmpHead.next;
+            tmpHead = tmpHead.getNext();
         }
         return result;
     }

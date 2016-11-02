@@ -1,3 +1,10 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
+package org.calvin.BitManipulation;
+
 public class NumberOf1Bit {
     // you need to treat n as an unsigned value
     public int hammingWeight(int x) {

@@ -2,11 +2,11 @@ package org.calvin.LinkedList;
 
 public class DeleteNode {
     public void deleteNode(ListNode node) {
-        if (node == null || node.next == null) {
+        if (node == null || node.getNext() == null) {
             return;
         }
-        node.val = node.next.val;
-        node.next = node.next.next;
+        node.setVal(node.getNext().getVal());
+        node.setNext(node.getNext().getNext());
         return;
     }
 }

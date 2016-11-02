@@ -16,12 +16,12 @@ public class MergeSortedArrayTest {
     MergeSortedArray fixture;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         fixture = new MergeSortedArray();
     }
 
     @Test
-    public void shouldMergeTwoSortedArray() throws Exception {
+    public void shouldMergeTwoSortedArray() {
         int[] input1 = {2,4,6,0,0,0};
         int[] input2 = {1,3,5};
         fixture.merge(input1, 3, input2, 3);

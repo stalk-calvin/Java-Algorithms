@@ -2,17 +2,17 @@ package org.calvin.LinkedList;
 
 public class Cycle {
     public boolean hasCycle(ListNode head) {
-        if (head == null || head.next == null || head.next.next == null) {
+        if (head == null || head.getNext() == null || head.getNext().getNext() == null) {
             return false;
         }
         ListNode slow = head;
-        ListNode fast = head.next;
+        ListNode fast = head.getNext();
         while (!slow.equals(fast)) {
-            if (fast == null || fast.next == null || fast.next.next == null) {
+            if (fast == null || fast.getNext() == null || fast.getNext().getNext() == null) {
                 return false;
             }
-            slow = slow.next;
-            fast = fast.next.next;
+            slow = slow.getNext();
+            fast = fast.getNext().getNext();
         }
         return true;
     }

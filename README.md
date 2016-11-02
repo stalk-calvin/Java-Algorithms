@@ -13,6 +13,7 @@ Licensed with no license. I do not care how you publish as long as my copyright 
 ## How to install
 
 Requirement: Java 8, Lombok, JUnit 4, slf4j
+
 1. Clone and Load as Maven project with pom.xml selected.
 2. Need to enable annotiations / necessary plugins for Lombok
 

@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Numbers;
 
 public class RangeQueryImmutable {
@@ -12,6 +17,7 @@ public class RangeQueryImmutable {
     }
 
     public int sumRange(int i, int j) {
+        if (i > nums.length || j > nums.length) return -1;
         if (i == 0)
             return nums[j];
 

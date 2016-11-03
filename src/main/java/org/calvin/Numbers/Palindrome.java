@@ -1,3 +1,10 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
+package org.calvin.Numbers;
+
 public class Palindrome {
     public boolean isPalindrome(int x) {
         int a = 0;

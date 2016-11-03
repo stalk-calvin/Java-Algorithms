@@ -1,7 +1,7 @@
 package org.calvin.Numbers;
 
 public class BullsAndCows {
-    public String getHint(String secret, String guess) {
+    public String solve(String secret, String guess) {
         int bulls = 0;
         int cows = 0;
         int[] numbers = new int[10];

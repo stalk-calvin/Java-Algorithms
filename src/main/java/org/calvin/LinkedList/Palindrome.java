@@ -29,10 +29,6 @@ public class Palindrome {
     }
 
     private ListNode reverseNode(ListNode head) {
-        if (head == null) {
-            return null;
-        }
-
         ListNode tmpHead = head.getNext();
         ListNode cur = new ListNode(head.getVal());
         while (tmpHead != null) {

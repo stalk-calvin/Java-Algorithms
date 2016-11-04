@@ -1,5 +1,13 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.String;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class ExcelSheetColumnTitle {
     public String convertToTitle(int n) {
         String result = "";
@@ -9,7 +17,7 @@ public class ExcelSheetColumnTitle {
             result = excel + result;
             n = (n - 1) / 26;
         }
-        System.out.println(result);
+        log.info("Conversion Done: " + result);
         return result;
     }
 }

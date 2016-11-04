@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.String;
 
 public class CountAndSay {
@@ -9,7 +14,7 @@ public class CountAndSay {
         return s;
     }
 
-    public String countIdx(String s) {
+    private String countIdx(String s) {
         StringBuilder sb = new StringBuilder();
         char c = s.charAt(0);
         int count = 1;

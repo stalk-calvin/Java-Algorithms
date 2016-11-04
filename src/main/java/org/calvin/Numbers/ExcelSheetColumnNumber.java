@@ -15,9 +15,6 @@ public class ExcelSheetColumnNumber {
             char current = s.charAt(s.length() - 1 - i);
             int value = ((int) current) - 64; // convert to position of alphabet
             int offset = value * (int) Math.pow(26, i);
-            if (offset == 0) {
-                offset = value;
-            }
             result += offset;
         }
         return result;

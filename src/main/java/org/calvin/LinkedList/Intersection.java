@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.LinkedList;
 
 import lombok.extern.slf4j.Slf4j;

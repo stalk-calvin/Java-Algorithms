@@ -17,6 +17,7 @@ public class ReverseInteger {
             int y = x % 10;
             int newResult = result * 10 + y;
             if ((newResult - y) / 10 != result) {
+                //Simple arithmetic to make sure no overflow
                 return 0;
             }
             result = newResult;

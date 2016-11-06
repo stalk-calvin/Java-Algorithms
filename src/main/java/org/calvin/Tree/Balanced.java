@@ -1,10 +1,12 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Tree;
 
 public class Balanced {
     public boolean isBalanced(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
         if (root == null) {
             return true;
         }

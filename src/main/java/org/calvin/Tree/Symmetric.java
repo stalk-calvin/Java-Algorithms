@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Tree;
 
 public class Symmetric {
@@ -7,7 +12,7 @@ public class Symmetric {
         return isSymmetric(root.left, root.right);
     }
 
-    public boolean isSymmetric(TreeNode left, TreeNode right) {
+    private boolean isSymmetric(TreeNode left, TreeNode right) {
         if (left == null && right == null) return true;
         if (left == null || right == null) return false;
         return (left.val == right.val) && isSymmetric(left.left, right.right) && isSymmetric(left.right, right.left);

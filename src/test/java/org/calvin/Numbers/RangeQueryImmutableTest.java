@@ -12,10 +12,10 @@ import static org.junit.Assert.assertEquals;
 
 public class RangeQueryImmutableTest {
     RangeQueryImmutable fixture;
-    private static int[] input = {1,2,3,4,5,6,7,8,9};
 
     @Before
     public void setUp() {
+        int[] input = {1,2,3,4,5,6,7,8,9};
         fixture = new RangeQueryImmutable(input);
     }
 

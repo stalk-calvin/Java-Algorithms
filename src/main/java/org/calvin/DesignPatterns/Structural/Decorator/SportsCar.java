@@ -13,7 +13,7 @@ public class SportsCar extends CarDecorator {
     @Override
     public String assemble(){
         super.assemble();
-        System.out.print(" Adding features of Sports Car.");
+        System.out.println(" Adding features of Sports Car.");
         return "Sports Car";
     }
 }

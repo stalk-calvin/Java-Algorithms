@@ -11,12 +11,12 @@ import org.junit.Test;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class ValidAnagramTest {
-    ValidAnagram fixture;
+public class AnagramValidityTest {
+    AnagramValidity fixture;
 
     @Before
     public void setUp() {
-        fixture = new ValidAnagram();
+        fixture = new AnagramValidity();
     }
 
     @Test

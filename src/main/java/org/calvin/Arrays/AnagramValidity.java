@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Arrays;
 
 @Slf4j
-public class ValidAnagram {
+public class AnagramValidity {
     public boolean isAnagram(String s, String t) {
         return sorted(s).equals(sorted(t));
     }

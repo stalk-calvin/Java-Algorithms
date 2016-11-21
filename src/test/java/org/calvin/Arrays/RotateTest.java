@@ -21,11 +21,18 @@ public class RotateTest {
     }
 
     @Test
-    public void shouldRotate() {
+    public void shouldRotateRight() {
         int[] input = {1,2,3,4,5};
         fixture.rotate(input, 2);
         int[] expected = {4,5,1,2,3};
         assertTrue(Arrays.equals(expected,input));
     }
 
+    @Test
+    public void shouldRotateLeft() {
+        int[] input = {1,2,3,4,5};
+        fixture.arrayLeftRotation(input, input.length, 4);
+        int[] expected = {5,1,2,3,4};
+        assertTrue(Arrays.equals(expected,input));
+    }
 }

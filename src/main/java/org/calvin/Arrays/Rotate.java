@@ -22,4 +22,26 @@ public class Rotate {
             end--;
         }
     }
+
+    public int[] arrayLeftRotation(int[] a, int n, int k) {
+        if (a == null || a.length < n) {
+            return a;
+        }
+
+        for (int i = 0; i < k; i++) {
+            shiftleft(a);
+        }
+
+        return a;
+    }
+
+    private void shiftleft(int[] a) {
+        // store 1st value
+        int first = a[0];
+        for (int i = 0; i < a.length - 1; i++) {
+            a[i] = a[i+1];
+        }
+        //set last to first
+        a[a.length-1] = first;
+    }
 }

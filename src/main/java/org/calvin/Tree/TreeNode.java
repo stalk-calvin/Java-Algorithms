@@ -10,6 +10,7 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
     public TreeNode(int x) { val = x; }
+    public static Integer last_printed = null;
 
     private void setLeftChild(TreeNode left) {
         this.left = left;
@@ -40,6 +41,28 @@ public class TreeNode {
         return size;
     }
 
+    boolean checkBST(TreeNode n) {
+        if (n == null) {
+            return true;
+        }
+
+        // Check / recurse left
+        if (!checkBST(n.left)) {
+            return false;
+        }
+
+        // Check current
+        if (last_printed != null && n.val <= last_printed) {
+            return false;
+        }
+        last_printed = n.val;
+
+        // Check / recurse right
+        if (!checkBST(n.right)) {
+            return false;
+        }
+        return true;
+    }
     public boolean isBST() {
         if (left != null) {
             if (val < left.val || !left.isBST()) {

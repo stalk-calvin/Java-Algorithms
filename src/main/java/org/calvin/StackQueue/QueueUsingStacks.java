@@ -19,12 +19,7 @@ class QueueUsingStacks {
     // Removes the element from in front of queue.
     public void pop() {
         if (empty()) return;
-        if (s2.isEmpty()) {
-            // move s1 to s2
-            while (!s1.isEmpty()) {
-                s2.push(s1.pop());
-            }
-        }
+        shiftStack();
         s2.pop();
         return;
     }
@@ -32,12 +27,16 @@ class QueueUsingStacks {
     // Get the front element.
     public int peek() {
         if (empty()) return Integer.MIN_VALUE;
+        shiftStack();
+        return s2.peek();
+    }
+
+    private void shiftStack() {
         if (s2.isEmpty()) {
             while (!s1.isEmpty()) {
                 s2.push(s1.pop());
             }
         }
-        return s2.peek();
     }
 
     // Return whether the queue is empty.

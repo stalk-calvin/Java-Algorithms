@@ -5,7 +5,6 @@
 
 package org.calvin.DesignPatterns.Behaviorial.Visitor;
 
-public interface Visitable{
-    public void accept(Visitor visitor);
+interface CarElement {
+    void accept(CarElementVisitor visitor); // CarElements have to provide accept().
 }
-

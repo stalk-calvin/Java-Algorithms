@@ -5,9 +5,8 @@
 
 package org.calvin.DesignPatterns.Behaviorial.Visitor;
 
-public class DVD {
-    @Override
-    public String toString() {
-        return "DVD";
+class Body implements CarElement {
+    public void accept(CarElementVisitor visitor) {
+        visitor.visit(this);
     }
 }

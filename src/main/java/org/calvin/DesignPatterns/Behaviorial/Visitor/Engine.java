@@ -5,9 +5,8 @@
 
 package org.calvin.DesignPatterns.Behaviorial.Visitor;
 
-public class CD {
-    @Override
-    public String toString() {
-        return "CD";
+class Engine implements CarElement {
+    public void accept(CarElementVisitor visitor) {
+        visitor.visit(this);
     }
 }

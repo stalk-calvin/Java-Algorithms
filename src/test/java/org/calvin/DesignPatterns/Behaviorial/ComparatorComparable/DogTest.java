@@ -5,14 +5,14 @@
 
 package org.calvin.DesignPatterns.Behaviorial.ComparatorComparable;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 public class DogTest {
 
@@ -30,7 +30,7 @@ public class DogTest {
     public void shouldSortUsingComparable() {
         Collections.sort(list);
         for (int j = 0; j < list.size()-1; j++) {
-            assertTrue(list.get(j + 1).compareTo(list.get(j)) >= 0);
+            assertTrue(list.get(j + 1).getName().compareTo(list.get(j).getName()) >= 0);
         }
     }
 

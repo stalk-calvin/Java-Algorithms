@@ -8,7 +8,7 @@ package org.calvin.DesignPatterns.Structural.Facade;
 public class Square implements Shape {
 
     @Override
-    public void draw() {
-        System.out.println("Square::draw()");
+    public String draw() {
+        return "Square::draw()";
     }
 }

@@ -5,14 +5,19 @@
 
 package org.calvin.DesignPatterns.Structural.Adapter;
 
-public class Mp3Player implements AdvancedMediaPlayer{
+import lombok.Getter;
+
+@Getter
+public class Mp3Player implements MediaPlayer {
+    private static final String type = "mp3";
+
     @Override
-    public void playMp3(String fileName) {
-        System.out.println("Playing mp3 file. Name: "+ fileName);
+    public String getType() {
+        return type;
     }
 
     @Override
-    public void playMp4(String fileName) {
-        //do nothing
+    public String play(String fileName) {
+        return "Playing "+type+" file. Name: "+ fileName;
     }
 }

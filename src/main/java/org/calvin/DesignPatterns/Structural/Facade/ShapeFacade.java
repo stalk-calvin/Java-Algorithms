@@ -16,13 +16,13 @@ public class ShapeFacade {
         square = new Square();
     }
 
-    public void drawCircle(){
-        circle.draw();
+    public String drawCircle(){
+        return circle.draw();
     }
-    public void drawRectangle(){
-        rectangle.draw();
+    public String drawRectangle(){
+        return rectangle.draw();
     }
-    public void drawSquare(){
-        square.draw();
+    public String drawSquare(){
+        return square.draw();
     }
 }

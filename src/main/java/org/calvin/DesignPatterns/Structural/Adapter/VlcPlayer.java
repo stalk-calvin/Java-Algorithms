@@ -8,8 +8,8 @@ package org.calvin.DesignPatterns.Structural.Adapter;
 import lombok.Getter;
 
 @Getter
-public class Mp4Player implements MediaPlayer {
-    private static final String type = "mp4";
+public class VlcPlayer implements MediaPlayer {
+    private static final String type = "vlc";
 
     @Override
     public String getType() {

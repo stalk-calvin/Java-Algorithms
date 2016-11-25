@@ -6,5 +6,5 @@
 package org.calvin.DesignPatterns.Structural.Facade;
 
 public interface Shape {
-    void draw();
+    String draw();
 }

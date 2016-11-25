@@ -15,7 +15,7 @@ import com.google.common.base.Strings;
 public class AESEncryptionTest {
     private static final String password = "mypassword";
     @Test
-    public void shouldEncrypAndDecrypt() throws Exception {
+    public void shouldEncryptAndDecrypt() throws Exception {
         String passwordEnc = AESEncryption.encrypt(password);
         assertFalse(Strings.isNullOrEmpty(passwordEnc));
         assertFalse(passwordEnc.equals(password));

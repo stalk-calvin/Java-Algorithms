@@ -5,27 +5,47 @@
 
 package org.calvin.DesignPatterns.Structural.Adapter;
 
+import lombok.extern.slf4j.Slf4j;
+
+import org.apache.commons.lang3.Validate;
+
+@Slf4j
 public class MediaAdapter implements MediaPlayer {
 
-    AdvancedMediaPlayer advancedMusicPlayer;
+    MediaPlayer mediaPlayer;
 
     public MediaAdapter(String audioType){
         if("mp3".equalsIgnoreCase(audioType)){
-            advancedMusicPlayer = new Mp3Player();
-
-        }else if ("mp4".equalsIgnoreCase(audioType)){
-            advancedMusicPlayer = new Mp4Player();
+            mediaPlayer = new Mp3Player();
+        } else if ("mp4".equalsIgnoreCase(audioType)){
+            mediaPlayer = new Mp4Player();
+        } else if ("vlc".equalsIgnoreCase(audioType)){
+            mediaPlayer = new VlcPlayer();
         }
     }
 
     @Override
-    public void play(String audioType, String fileName) {
+    public String getType() {
+        return "Media Player";
+    }
 
-        if("vlc".equalsIgnoreCase(audioType)){
-            advancedMusicPlayer.playMp3(fileName);
+    @Override
+    public String play(String fileName) {
+        Validate.notNull(mediaPlayer);
+
+        String audioType = mediaPlayer.getType();
+        Validate.notEmpty(audioType);
+
+        String playString;
+        if("mp3".equalsIgnoreCase(audioType)){
+            playString = mediaPlayer.play(fileName);
+        } else if("mp4".equalsIgnoreCase(audioType)){
+            playString = mediaPlayer.play(fileName);
+        } else {
+            log.info("Unknown audioType: {}", audioType);
+            return "";
         }
-        else if("mp4".equalsIgnoreCase(audioType)){
-            advancedMusicPlayer.playMp4(fileName);
-        }
+        
+        return playString;
     }
 }

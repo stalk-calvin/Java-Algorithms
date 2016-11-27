@@ -8,7 +8,10 @@ package org.calvin.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class RemoveDuplicateSortedArrayTest {
     RemoveDuplicateSortedArray fixture;
@@ -21,14 +24,24 @@ public class RemoveDuplicateSortedArrayTest {
     @Test
     public void shouldRemoveDuplicates() {
         int[] input = {1,1,2,2,2,3,4,5};
+
         int actual = fixture.removeDuplicates(input);
+
+        int[] expectedArray = {1,2,3,4,5};
+        int[] actualArray = new int[actual];
+
+        System.arraycopy(input,0,actualArray,0,actual);
+
         assertEquals(5,actual);
+        assertTrue(Arrays.equals(expectedArray,actualArray));
     }
 
     @Test
-    public void shouldNotRemoveDuplicates() {
-        int[] input = new int[0];
-        int actual = fixture.removeDuplicates(input);
+    public void shouldNotEvenTryToRemoveDuplicates() {
+        int actual = fixture.removeDuplicates(null);
+        assertEquals(0,actual);
+
+        actual = fixture.removeDuplicates(new int[0]);
         assertEquals(0,actual);
     }
 

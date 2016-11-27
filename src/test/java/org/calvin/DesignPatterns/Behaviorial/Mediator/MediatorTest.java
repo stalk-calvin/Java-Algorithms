@@ -5,37 +5,51 @@
 
 package org.calvin.DesignPatterns.Behaviorial.Mediator;
 
-import static org.mockito.Matchers.startsWith;
-import static org.mockito.Mockito.atLeast;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.runners.MockitoJUnitRunner;
 
 import java.io.PrintStream;
 
-import org.junit.Test;
+import static org.mockito.Matchers.startsWith;
+import static org.mockito.Mockito.verify;
 
+@RunWith(MockitoJUnitRunner.class)
 public class MediatorTest {
-    @Test(timeout = 10000)
-    public void shouldProduceMessage() {
-        Mediator fixture = new Mediator();
+    Mediator fixture;
 
-        PrintStream ps = mock(PrintStream.class);
+    @Mock
+    PrintStream ps;
+
+    @Before
+    public void setup() {
         System.setOut(ps);
-        new Producer(fixture).start();
-
-        verify(ps, atLeast(1)).println(startsWith("p1"));
+        AEventHandler aEventHandler = new AEventHandler();
+        BEventHandler bEventHandler = new BEventHandler();
+        CEventHandler cEventHandler = new CEventHandler();
+        fixture = new Mediator(aEventHandler, bEventHandler, cEventHandler);
+    }
+    @Test
+    public void shouldBroadcastEventToBC() {
+        fixture.sendEvent("A", "send mail");
+        verify(ps).println(startsWith("B"));
+        verify(ps).println(startsWith("C"));
     }
 
-    @Test(timeout = 10000)
-    public void shouldProduceAndConsumeMessage() {
-        Mediator fixture = new Mediator();
-
-        PrintStream ps = mock(PrintStream.class);
-        System.setOut(ps);
-        new Producer(fixture).start();
-        new Consumer(fixture).start();
-
-        verify(ps, atLeast(1)).println(startsWith("p"));
-        verify(ps, atLeast(1)).println(startsWith("c"));
+    @Test
+    public void shouldBroadcastEventToAC() {
+        fixture.sendEvent("B", "send mail");
+        verify(ps).println(startsWith("A"));
+        verify(ps).println(startsWith("C"));
     }
+
+    @Test
+    public void shouldBroadcastEventToAB() {
+        fixture.sendEvent("C", "send mail");
+        verify(ps).println(startsWith("B"));
+        verify(ps).println(startsWith("A"));
+    }
+
 }

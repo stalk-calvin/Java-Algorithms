@@ -22,9 +22,9 @@ public class MoveZerosTest {
 
     @Test
     public void shouldMoveZeroesToEnd() {
-        int[] input = {0,1,0,3,12};
+        int[] input = {0,1,0,3,0};
         fixture.moveZeroes(input);
-        int[] expected = {1,3,12,0,0};
+        int[] expected = {1,3,0,0,0};
         assertTrue(Arrays.equals(expected,input));
     }
 

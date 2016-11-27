@@ -9,7 +9,7 @@ public class RemoveDuplicateSortedArray {
     public int removeDuplicates(int[] nums) {
         int i = 0;
         int k = 0;
-        if (nums.length == 0) {
+        if (nums == null || nums.length == 0) {
             return 0;
         }
         nums[k] = nums[i];

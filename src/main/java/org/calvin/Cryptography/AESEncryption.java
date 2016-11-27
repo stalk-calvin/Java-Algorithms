@@ -5,13 +5,10 @@
 
 package org.calvin.Cryptography;
 
-import java.security.Key;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
-
-import sun.misc.BASE64Decoder;
-import sun.misc.BASE64Encoder;
+import java.security.Key;
+import java.util.Base64;
 
 public class AESEncryption {
 
@@ -25,16 +22,16 @@ public class AESEncryption {
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.ENCRYPT_MODE, key);
         byte[] encVal = c.doFinal(Data.getBytes());
-        String encryptedValue = new BASE64Encoder().encode(encVal);
-        return encryptedValue;
+        byte[] encryptedValue = Base64.getEncoder().encode(encVal);
+        return new String(encryptedValue);
     }
 
     public static String decrypt(String encryptedData) throws Exception {
         Key key = generateKey();
         Cipher c = Cipher.getInstance(ALGO);
         c.init(Cipher.DECRYPT_MODE, key);
-        byte[] decordedValue = new BASE64Decoder().decodeBuffer(encryptedData);
-        byte[] decValue = c.doFinal(decordedValue);
+        byte[] decodedValue = Base64.getDecoder().decode(encryptedData);
+        byte[] decValue = c.doFinal(decodedValue);
         String decryptedValue = new String(decValue);
         return decryptedValue;
     }

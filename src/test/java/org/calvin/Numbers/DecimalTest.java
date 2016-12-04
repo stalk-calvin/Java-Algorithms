@@ -29,6 +29,4 @@ public class DecimalTest {
         int funds = 100;
         assertTrue(0 == Decimal.integerCalculation(funds));
     }
-
-
 }

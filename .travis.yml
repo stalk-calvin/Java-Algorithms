@@ -6,6 +6,13 @@ before_script:
 
 language: java
 
+notifications:
+  email:
+    recipients:
+      - stalk.calvin@gmail.com
+    on_success: change
+    on_failure: always
+
 jdk:
   - oraclejdk8
 

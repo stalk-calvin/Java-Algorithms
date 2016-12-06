@@ -5,6 +5,7 @@
 
 package org.calvin.Utils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.calvin.LinkedList.ListNode;
 import org.calvin.Tree.TreeNode;
 
@@ -96,7 +97,7 @@ public class AssortedMethods {
         return arrayToString(array, 0, array.length - 1);
     }
 
-    public static String arrayToString(int[] array, int start, int end) {
+    private static String arrayToString(int[] array, int start, int end) {
         StringBuilder sb = new StringBuilder();
         for (int i = start; i <= end; i++) {
             int v = array[i];
@@ -114,7 +115,9 @@ public class AssortedMethods {
         for (String v : array) {
             sb.append(v + ", ");
         }
-        return sb.toString();
+        String result = sb.toString().trim();
+        result = StringUtils.stripEnd(result, ",");
+        return result;
     }
 
     public static String toFullBinaryString(int a) {

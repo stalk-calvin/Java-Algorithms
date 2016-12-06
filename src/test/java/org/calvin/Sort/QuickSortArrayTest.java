@@ -21,7 +21,7 @@ public class QuickSortArrayTest {
     @Test
     public void shouldQuickSort() {
         int[] input = {9,30,5,11,7,10};
-        log.info("Input (Unsorted): " + Arrays.toString(input));
+        log.info("QuickSort: Input (Unsorted): " + Arrays.toString(input));
         PrintStream ps = mock(PrintStream.class);
         System.setOut(ps);
 
@@ -51,7 +51,7 @@ public class QuickSortArrayTest {
         log.info("Verify ordering for Quicksort, done. ");
 
         // Assert Sorted After
-        log.info("Input (Sorted): " + Arrays.toString(input));
+        log.info("QuickSort: Input (Sorted): " + Arrays.toString(input));
         int previous = start;
         for(int i : input) {
             assertTrue(previous <= i);

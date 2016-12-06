@@ -21,7 +21,7 @@ public class MergeSortArrayTest {
     @Test
     public void shouldMergeSort() {
         int[] input = {9,30,5,11,7,10};
-        log.info("Input (Unsorted): " + Arrays.toString(input));
+        log.info("MergeSortArray: Input (Unsorted): " + Arrays.toString(input));
         PrintStream ps = mock(PrintStream.class);
         System.setOut(ps);
 
@@ -51,7 +51,7 @@ public class MergeSortArrayTest {
         log.info("Verify ordering for Mergesort, done. ");
 
         // Assert Sorted After
-        log.info("Input (Sorted): " + Arrays.toString(input));
+        log.info("MergeSortArray: Input (Sorted): " + Arrays.toString(input));
         int previous = start;
         for(int i : input) {
             assertTrue(previous <= i);

@@ -5,13 +5,17 @@
 
 package org.calvin.Sort;
 
+import lombok.extern.slf4j.Slf4j;
 import org.calvin.LinkedList.ListNode;
 import org.calvin.Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
 
+@Slf4j
 public class MergeSortListTest {
     MergeSortList fixture;
 
@@ -22,12 +26,14 @@ public class MergeSortListTest {
 
     @Test
     public void shouldSortList() {
-        int[] vals = {1,5,2,10,3,24,4};
-        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+        int[] input = {9,30,5,11,7,10};
+        log.info("MergeSortList: Input (Unsorted): " + Arrays.toString(input));
+        ListNode list1 = AssortedMethods.createLinkedListFromArray(input);
 
         ListNode actual = fixture.sortList(list1);
+        log.info("MergeSortList: Input (Sorted): " + actual.printForward());
 
-        int[] expectedVals = {1,2,3,4,5,10,24};
+        int[] expectedVals = {5,7,9,10,11,30};
         ListNode expected = AssortedMethods.createLinkedListFromArray(expectedVals);
 
         assertEquals(expected, actual);

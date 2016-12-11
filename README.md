@@ -10,6 +10,10 @@ Calvin Lee, @stalk.calvin
 <br/>
 <a href="https://www.linkedin.com/in/stalkme"><img alt="Add me to Linkedin" src="https://image.freepik.com/free-icon/linkedin-logo_318-50643.jpg" height="20px" width="20px"/></a> <span><a href="https://www.linkedin.com/in/stalkme">LinkedIn</a></span>
 
+## Dependancies
+
+Dependancies are listed in the [pom.xml](https://github.com/stalk-calvin/Java-Algorithms/blob/master/pom.xml) file. See dependancies tag.
+
 ## License
 
 Licensed with no license. I do not care how you publish as long as my copyright is in place.

@@ -1,4 +1,4 @@
-# Calvin's "Playground" Project [![CI](https://api.travis-ci.org/stalk-calvin/Algorithms.svg?branch=master)](https://travis-ci.org/stalk-calvin/Algorithms)
+# Calvin's "Playground" Project [![CI](https://api.travis-ci.org/stalk-calvin/Java-Algorithms.svg?branch=master)](https://travis-ci.org/stalk-calvin/Java-Algorithms)
 
 This is where I play and learn different kind of algorithms, data structures, concepts, techniques, etc. Anything related to Programming. Most of the problems included are basics for now which I personally find important. I plan to continue contributing more problems here for the future.
 

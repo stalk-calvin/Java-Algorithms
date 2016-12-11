@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Search.Graph;
+package org.calvin.Graph;
 
 public class Node {
     public Node[] child;

@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Search.Graph;
+package org.calvin.Graph;
 
 public class Graph {
     public int count; // num of vertices

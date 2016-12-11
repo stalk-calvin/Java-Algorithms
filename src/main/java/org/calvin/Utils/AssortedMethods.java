@@ -9,8 +9,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.calvin.LinkedList.ListNode;
 import org.calvin.Tree.TreeNode;
 
-import java.util.HashSet;
-
 public class AssortedMethods {
     public static int randomInt(int n) {
         return (int) (Math.random() * n);
@@ -144,64 +142,6 @@ public class AssortedMethods {
         return s;
     }
 
-    public static void printMatrix(int[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j] < 10 && matrix[i][j] > -10) {
-                    System.out.print(" ");
-                }
-                if (matrix[i][j] < 100 && matrix[i][j] > -100) {
-                    System.out.print(" ");
-                }
-                if (matrix[i][j] >= 0) {
-                    System.out.print(" ");
-                }
-                System.out.print(" " + matrix[i][j]);
-            }
-            System.out.println();
-        }
-    }
-
-    public static void printMatrix(boolean[][] matrix) {
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                if (matrix[i][j]) {
-                    System.out.print("1");
-                } else {
-                    System.out.print("0");
-                }
-            }
-            System.out.println();
-        }
-    }
-
-    public static void printIntArray(int[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println("");
-    }
-
-    public static String charArrayToString(char[] array) {
-        StringBuilder buffer = new StringBuilder(array.length);
-        for (char c : array) {
-            if (c == 0) {
-                break;
-            }
-            buffer.append(c);
-        }
-        return buffer.toString();
-    }
-
-    public static TreeNode randomBST(int N, int min, int max) {
-        int d = randomIntInRange(min, max);
-        TreeNode root = new TreeNode(d);
-        for (int i = 1; i < N; i++) {
-            root.insertInOrder(randomIntInRange(min, max));
-        }
-        return root;
-    }
-
     /* Creates tree by mapping the array left to right, top to bottom. */
     public static TreeNode createTreeFromArray(int[] array) {
         if (array.length > 0) {
@@ -231,28 +171,6 @@ public class AssortedMethods {
         } else {
             return null;
         }
-    }
-
-    public static String getLongTextBlob() {
-        String book = "As they rounded a bend in the path that ran beside the river, Lara recognized the silhouette of a fig tree atop a nearby hill. The weather was hot and the days were long. The fig tree was in full leaf, but not yet bearing fruit. "
-                + "Soon Lara spotted other landmarks�an outcropping of limestone beside the path that had a silhouette like a man�s face, a marshy spot beside the river where the waterfowl were easily startled, a tall tree that looked like a man with his arms upraised. They were drawing near to the place where there was an island in the river. The island was a good spot to make camp. They would sleep on the island tonight."
-                + "Lara had been back and forth along the river path many times in her short life. Her people had not created the path�it had always been there, like the river�but their deerskin-shod feet and the wooden wheels of their handcarts kept the path well worn. Lara�s people were salt traders, and their livelihood took them on a continual journey. ";
-        String book_mod = book.replace('.', ' ').replace(',', ' ')
-                .replace('-', ' ');
-        return book_mod;
-    }
-
-    public static String[] getLongTextBlobAsStringList() {
-        return getLongTextBlob().split(" ");
-    }
-
-    public static HashSet<String> getWordListAsHashSet() {
-        String[] wordList = getListOfWords();
-        HashSet<String> wordSet = new HashSet<String>();
-        for (String s : wordList) {
-            wordSet.add(s);
-        }
-        return wordSet;
     }
 
     public static String[] getListOfWords() {

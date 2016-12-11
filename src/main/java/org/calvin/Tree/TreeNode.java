@@ -1,8 +1,10 @@
 package org.calvin.Tree;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.calvin.Utils.BTreePrinter;
 
+@EqualsAndHashCode(exclude={"size"})
 @Data
 public class TreeNode {
     public int val;
@@ -10,7 +12,7 @@ public class TreeNode {
     public TreeNode left;
     public TreeNode right;
     public TreeNode(int x) { val = x; }
-    public static Integer last_printed = null;
+    public Integer last_printed = null;
 
     private void setLeftChild(TreeNode left) {
         this.left = left;
@@ -41,7 +43,7 @@ public class TreeNode {
         return size;
     }
 
-    boolean checkBST(TreeNode n) {
+    public boolean checkBST(TreeNode n) {
         if (n == null) {
             return true;
         }
@@ -63,21 +65,6 @@ public class TreeNode {
         }
         return true;
     }
-    public boolean isBST() {
-        if (left != null) {
-            if (val < left.val || !left.isBST()) {
-                return false;
-            }
-        }
-
-        if (right != null) {
-            if (val >= right.val || !right.isBST()) {
-                return false;
-            }
-        }
-
-        return true;
-    }
 
     public int height() {
         int leftHeight = left != null ? left.height() : 0;
@@ -86,17 +73,16 @@ public class TreeNode {
     }
 
     public TreeNode find(int d) {
-        if (d == val) {
-            return this;
-        } else if (d <= val) {
+        if (d < val) {
             return left != null ? left.find(d) : null;
         } else if (d > val) {
             return right != null ? right.find(d) : null;
+        } else {
+            return this;
         }
-        return null;
     }
 
-    private static TreeNode createMinimalBST(int arr[], int start, int end){
+    public static TreeNode createMinimalBST(int arr[], int start, int end){
         if (end < start) {
             return null;
         }

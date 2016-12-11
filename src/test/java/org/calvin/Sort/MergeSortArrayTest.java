@@ -6,6 +6,7 @@
 package org.calvin.Sort;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InOrder;
 
@@ -18,6 +19,11 @@ import static org.mockito.Mockito.mock;
 
 @Slf4j
 public class MergeSortArrayTest {
+    private MergeSortArray fixture;
+    @Before
+    public void setup() {
+        fixture = new MergeSortArray();
+    }
     @Test
     public void shouldMergeSort() {
         int[] input = {9,30,5,11,7,10};
@@ -25,21 +31,23 @@ public class MergeSortArrayTest {
         PrintStream ps = mock(PrintStream.class);
         System.setOut(ps);
 
-        int start = 0;
-        int last = input.length - 1;
-        QuickSortArray.quickSort(input, start, last);
+        fixture.sort(input);
 
         log.info("Verify ordering for Mergesort ");
         InOrder inorder = inOrder(ps);
-        inorder.verify(ps).print(5);
-        inorder.verify(ps).print(7);
-        inorder.verify(ps).println();
-        inorder.verify(ps).print(10);
-        inorder.verify(ps).print(11);
-        inorder.verify(ps).println();
-        inorder.verify(ps).print(10);
-        inorder.verify(ps).print(11);
+        inorder.verify(ps).print(9);
         inorder.verify(ps).print(30);
+        inorder.verify(ps).println();
+        inorder.verify(ps).print(5);
+        inorder.verify(ps).print(9);
+        inorder.verify(ps).print(30);
+        inorder.verify(ps).println();
+        inorder.verify(ps).print(7);
+        inorder.verify(ps).print(11);
+        inorder.verify(ps).println();
+        inorder.verify(ps).print(7);
+        inorder.verify(ps).print(10);
+        inorder.verify(ps).print(11);
         inorder.verify(ps).println();
         inorder.verify(ps).print(5);
         inorder.verify(ps).print(7);
@@ -47,12 +55,11 @@ public class MergeSortArrayTest {
         inorder.verify(ps).print(10);
         inorder.verify(ps).print(11);
         inorder.verify(ps).print(30);
-        inorder.verify(ps).println();
         log.info("Verify ordering for Mergesort, done. ");
 
         // Assert Sorted After
         log.info("MergeSortArray: Input (Sorted): " + Arrays.toString(input));
-        int previous = start;
+        int previous = 0;
         for(int i : input) {
             assertTrue(previous <= i);
             previous = i;
@@ -62,40 +69,11 @@ public class MergeSortArrayTest {
     @Test
     public void shouldNotSortWhenInputIsNotDefined() {
         int[] input = null;
-        QuickSortArray.quickSort(input, 0, 0);
+        fixture.sort(null);
         assertTrue(input == null);
 
         int[] input2 = {2};
-        QuickSortArray.quickSort(input2, 0, 0);
+        fixture.sort(input2);
         assertTrue(Arrays.equals(new int[]{2}, input2));
-    }
-
-    @Test
-    public void shouldQuickSortOnlySpecifiedBoundary() {
-        int[] input = {9,30,5,11,7,10};
-
-        int start = 0;
-        int last = 2;
-        log.info("Input (All Unsorted): " + Arrays.toString(input));
-        PrintStream ps = mock(PrintStream.class);
-        System.setOut(ps);
-
-        QuickSortArray.quickSort(input, start, last);
-
-        log.info("Verify ordering for Mergesort ");
-        InOrder inorder = inOrder(ps);
-        inorder.verify(ps).print(5);
-        inorder.verify(ps).print(9);
-        inorder.verify(ps).print(30);
-        inorder.verify(ps).println();
-        log.info("Verify ordering for Mergesort, done. ");
-
-        // Assert Sorted After
-        log.info("Input (Partially Sorted, index from " + start + " to " + last + "): " + Arrays.toString(input));
-        int previous = start;
-        for(int i = start; i <= last; i++) {
-            assertTrue(previous <= i);
-            previous = i;
-        }
     }
 }

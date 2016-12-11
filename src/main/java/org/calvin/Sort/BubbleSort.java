@@ -5,7 +5,7 @@
 
 package org.calvin.Sort;
 
-public class BubbleSort {
+class BubbleSort {
     public static void sort(int[] input) {
         if (input == null || input.length < 2) return;
         int n = input.length;

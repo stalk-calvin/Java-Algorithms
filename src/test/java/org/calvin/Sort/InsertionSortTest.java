@@ -18,7 +18,7 @@ public class InsertionSortTest {
     public void shouldInsertionSort() {
         int[] input = {9,30,5,11,7,10};
         log.info("InsertionSort: Input (Unsorted): " + Arrays.toString(input));
-        SelectionSort.sort(input);
+        InsertionSort.sort(input);
         int[] expected = {5,7,9,10,11,30};
         log.info("InsertionSort: Input (Sorted): " + Arrays.toString(input));
         assertTrue(Arrays.equals(expected, input));

@@ -71,7 +71,7 @@ public class StackImpl implements Stack {
     @Override
     public Object peek() throws EmptyStackException {
         if (!isEmpty()) {
-            return entry[last];
+            return entry[last - 1];
         } else {
             throw new EmptyStackException("Stack Exception on peek: Stack empty");
         }

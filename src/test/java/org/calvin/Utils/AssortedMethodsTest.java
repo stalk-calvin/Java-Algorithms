@@ -120,4 +120,10 @@ public class AssortedMethodsTest {
         String actual = AssortedMethods.toBaseNString(16, 16);
         assertEquals("10", actual);
     }
+
+    @Test
+    public void shouldGetListOfWords() {
+        String[] words = AssortedMethods.getListOfWords();
+        assertEquals(2018, words.length);
+    }
 }

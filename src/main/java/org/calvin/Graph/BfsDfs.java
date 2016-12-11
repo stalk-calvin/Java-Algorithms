@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Search.Graph;
+package org.calvin.Graph;
 
 import lombok.AllArgsConstructor;
 

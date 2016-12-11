@@ -1,13 +1,13 @@
 package org.calvin.StackQueue;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.EmptyStackException;
-
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
+
+import java.util.EmptyStackException;
+
+import static org.junit.Assert.assertEquals;
 
 public class MinStackTest {
     MinStack fixture;
@@ -33,6 +33,13 @@ public class MinStackTest {
         fixture.push(2);
         fixture.pop();
         assertEquals(1, fixture.top());
+    }
+
+    @Test
+    public void shouldDoMinOperation() {
+        assertEquals(0, fixture.getMin());
+        fixture.push(2);
+        assertEquals(2, fixture.getMin());
     }
 
     @Test

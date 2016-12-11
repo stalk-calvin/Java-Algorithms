@@ -16,5 +16,5 @@ notifications:
 jdk:
   - oraclejdk8
 
-script: "mvn clean test"
+script: "mvn clean test jacoco:report coveralls:report"
 

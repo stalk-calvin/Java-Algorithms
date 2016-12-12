@@ -25,24 +25,24 @@ public class MediaAdapter implements MediaPlayer {
     }
 
     @Override
-    public String getType() {
-        return "Media Player";
-    }
+    public String getType() { return "Media Player"; }
 
     @Override
     public String play(String fileName) {
-        Validate.notNull(mediaPlayer);
+        String playString = "";
+        if (mediaPlayer != null) {
+            String audioType = mediaPlayer.getType();
+            Validate.notEmpty(audioType);
 
-        String audioType = mediaPlayer.getType();
-        Validate.notEmpty(audioType);
-
-        String playString;
-        if("mp3".equalsIgnoreCase(audioType)){
-            playString = mediaPlayer.play(fileName);
-        } else if("mp4".equalsIgnoreCase(audioType)){
-            playString = mediaPlayer.play(fileName);
+            if ("mp3".equalsIgnoreCase(audioType)) {
+                playString = mediaPlayer.play(fileName);
+            } else if ("mp4".equalsIgnoreCase(audioType)) {
+                playString = mediaPlayer.play(fileName);
+            } else if ("vlc".equalsIgnoreCase(audioType)) {
+                playString = mediaPlayer.play(fileName);
+            }
         } else {
-            log.info("Unknown audioType: {}", audioType);
+            log.info("Unknown media player: " + mediaPlayer);
             return "";
         }
         

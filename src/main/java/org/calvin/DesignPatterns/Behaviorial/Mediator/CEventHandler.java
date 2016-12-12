@@ -12,10 +12,6 @@ public class CEventHandler {
         this.pMediator = pMediator;
     }
 
-    public void fireEvent(String ev) {
-        pMediator.sendEvent("C", ev);
-    }
-
     public void receiveEvent(String name, String ev) {
         System.out.println("C: Receive " + ev + " Event from " + name);
     }

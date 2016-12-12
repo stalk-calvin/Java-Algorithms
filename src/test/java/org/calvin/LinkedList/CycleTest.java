@@ -33,6 +33,13 @@ public class CycleTest {
     }
 
     @Test
+    public void shouldListHaveNoCycleBaseCase() {
+        listBase = new ListNode(5);
+        boolean actual = fixture.hasCycle(listBase);
+        assertFalse(actual);
+    }
+
+    @Test
     public void shouldListHaveNoCycle() {
         boolean actual = fixture.hasCycle(listBase);
         assertFalse(actual);

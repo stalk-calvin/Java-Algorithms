@@ -12,10 +12,6 @@ public class BEventHandler {
         this.pMediator = pMediator;
     }
 
-    public void fireEvent(String ev) {
-        pMediator.sendEvent("B", ev);
-    }
-
     public void receiveEvent(String name, String ev) {
         System.out.println("B: Receive " + ev + " Event from " + name);
     }

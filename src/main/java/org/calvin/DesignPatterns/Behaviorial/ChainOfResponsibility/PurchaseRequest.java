@@ -20,11 +20,4 @@ class PurchaseRequest {
     public void setAmount(double amt)  {
         amount = amt;
     }
-
-    public String getPurpose() {
-        return purpose;
-    }
-    public void setPurpose(String reason) {
-        purpose = reason;
-    }
 }

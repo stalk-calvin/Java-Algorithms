@@ -9,17 +9,6 @@ public enum Elvis {
     INSTANCE;
     String fname;
 
-    public void leaveTheBuilding() {
-        System.out.println("Whoa baby, I'm outta here!");
-    }
-
-    @Override
-    public String toString() {
-        return "Elvis{" +
-                "fname='" + fname + '\'' +
-                '}';
-    }
-
     public void setFname(String fname) {
         this.fname = fname;
     }

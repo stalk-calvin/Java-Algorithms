@@ -5,14 +5,14 @@
 
 package org.calvin.BinarySearch;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
 public class FirstBadVersionTest {
-    FirstBadVersion fixture;
-    public static final int SIZE = 100;
+    private FirstBadVersion fixture;
+    private static final int SIZE = 100;
 
     @Before
     public void setUp() {

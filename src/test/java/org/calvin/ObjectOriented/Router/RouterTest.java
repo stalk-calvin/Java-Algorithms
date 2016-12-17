@@ -13,12 +13,12 @@ import static org.junit.Assert.fail;
 
 public class RouterTest {
     private static final Router[] routers = new Router[6];
-    RoutingTable routingTable1 = new RoutingTable();
-    RoutingTable routingTable2 = new RoutingTable();
-    RoutingTable routingTable3 = new RoutingTable();
-    RoutingTable routingTable4 = new RoutingTable();
-    RoutingTable routingTable5 = new RoutingTable();
-    RoutingTable routingTable6 = new RoutingTable();
+    private RoutingTable routingTable1 = new RoutingTable();
+    private RoutingTable routingTable2 = new RoutingTable();
+    private RoutingTable routingTable3 = new RoutingTable();
+    private RoutingTable routingTable4 = new RoutingTable();
+    private RoutingTable routingTable5 = new RoutingTable();
+    private RoutingTable routingTable6 = new RoutingTable();
 
     @Before
     public void setup() {

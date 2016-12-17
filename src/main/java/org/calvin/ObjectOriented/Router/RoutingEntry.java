@@ -22,10 +22,6 @@ public class RoutingEntry {
         return destination;
     }
 
-    public String getNextHop() {
-        return nextHop;
-    }
-
     public String getNetMask() {
         return netmask;
     }

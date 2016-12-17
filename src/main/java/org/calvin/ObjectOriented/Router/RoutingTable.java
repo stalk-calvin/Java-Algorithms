@@ -9,17 +9,13 @@ package org.calvin.ObjectOriented.Router;
 import java.util.ArrayList;
 
 public class RoutingTable {
-    private ArrayList routingEntries;
+    private ArrayList<RoutingEntry> routingEntries;
 
-    public RoutingTable(ArrayList routingEntries) {
-        this.routingEntries = routingEntries;
+    RoutingTable() {
+        routingEntries = new ArrayList<>();
     }
 
-    public RoutingTable() {
-        routingEntries = new ArrayList();
-    }
-
-    public void addRoutingEntry(RoutingEntry element) {
+    void addRoutingEntry(RoutingEntry element) {
         routingEntries.add(element);
     }
 
@@ -35,13 +31,12 @@ public class RoutingTable {
     }
 
     public RoutingEntry getRoutingEntry(int i) {
-        return (RoutingEntry) routingEntries.get(i);
+        return routingEntries.get(i);
     }
 
     public String toString() {
         String s = String.format("| %15s | %15s | %15s | %15s |\n", "Destination","Next Hop","NetMask","Hops");
-        for (int i = 0; i < routingEntries.size(); i++)
-            s += routingEntries.get(i).toString() + "\n";
+        for (RoutingEntry routingEntry : routingEntries) s += routingEntry.toString() + "\n";
         return s;
     }
 }

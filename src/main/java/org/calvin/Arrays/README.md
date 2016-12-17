@@ -6,6 +6,10 @@ Checks how far apart 2 given strings are from being anagram
 
 Checks given 2 strings are anagram or not.
 
+## AnagramGrouper.java
+
+Given an array of strings, group anagrams together.
+
 ## CheckIfArrayElementsAreConsecutive.java
 
 Checks if all the numbers in the array are consecutive.

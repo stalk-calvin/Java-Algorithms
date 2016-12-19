@@ -9,28 +9,28 @@ import java.util.ArrayList;
 
 public class Router {
     private RoutingTable routingTable;
-    private ArrayList receivedTables;
+    private ArrayList<Message> receivedTables;
     private Router[] neighbors;
-    private String[] inetAddresses;
+    private String[] iNetAddresses;
 
     public Router(RoutingTable initialRoutingTable) {
         routingTable = initialRoutingTable;
-        receivedTables = new ArrayList();
+        receivedTables = new ArrayList<Message>();
     }
 
-    public void setNeighbors(Router[] neighbors, String[] inetAddresses) {
+    public void setNeighbors(Router[] neighbors, String[] iNetAddresses) {
         this.neighbors = neighbors;
-        this.inetAddresses = inetAddresses;
+        this.iNetAddresses = iNetAddresses;
     }
 
-    public void advertiseTable(String sender, RoutingTable table) {
+    private void advertiseTable(String sender, RoutingTable table) {
         receivedTables.add(new Message(sender, table));
     }
 
     public boolean broadcast() {
         boolean changed = false;
         while (receivedTables.size() > 0) {
-            Message msg = (Message) receivedTables.get(0);
+            Message msg = receivedTables.get(0);
             for (int i = 0; i < msg.table.getSize(); i++) {
                 RoutingEntry neighborEntry = msg.table.getRoutingEntry(i);
                 RoutingEntry myEntry = routingTable.find(neighborEntry.getDestination());
@@ -51,7 +51,7 @@ public class Router {
         }
 
         for (int i = 0; i < neighbors.length; i++)
-            neighbors[i].advertiseTable(inetAddresses[i], routingTable);
+            neighbors[i].advertiseTable(iNetAddresses[i], routingTable);
 
         return changed;
     }

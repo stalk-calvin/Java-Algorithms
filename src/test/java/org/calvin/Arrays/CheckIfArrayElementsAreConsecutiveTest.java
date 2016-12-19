@@ -21,6 +21,12 @@ public class CheckIfArrayElementsAreConsecutiveTest {
 
     @Test
     public void shouldNotBeConsecutive() {
+        int input[] = {72, 78, 76, 77, 73, 74};
+        assertFalse(fixture.areConsecutive(input));
+    }
+
+    @Test
+    public void shouldNotBeConsecutiveContainsDuplicate() {
         int input[] = {76, 78, 76, 77, 73, 74};
         assertFalse(fixture.areConsecutive(input));
     }

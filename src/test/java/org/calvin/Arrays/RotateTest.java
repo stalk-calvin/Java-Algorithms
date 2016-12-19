@@ -23,7 +23,7 @@ public class RotateTest {
     @Test
     public void shouldRotateRight() {
         int[] input = {1,2,3,4,5};
-        fixture.rotate(input, 2);
+        fixture.arrayRightRotation(input, 2);
         int[] expected = {4,5,1,2,3};
         assertTrue(Arrays.equals(expected,input));
     }

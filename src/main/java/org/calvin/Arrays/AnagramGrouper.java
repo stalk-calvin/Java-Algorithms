@@ -12,9 +12,9 @@ import java.util.List;
 import java.util.Map;
 
 public class AnagramGrouper {
-    // Note 3 dots would not trigger new String[]{...}
+    // Performance note: 3 dots would not trigger, new String[]{...}
     public List<List<String>> groupAnagrams(String... words) {
-        Arrays.sort(words);
+        Arrays.sort(words); // could be ignored depending on the requirement
 
         Map<String, List<String>> map = new LinkedHashMap<>();
         for (String word : words) {
@@ -33,7 +33,6 @@ public class AnagramGrouper {
     private String sortWordLetters(String word) {
         char[] letters = word.toCharArray();
         Arrays.sort(letters);
-
         return new String(letters);
     }
 }

@@ -15,3 +15,4 @@ public class AnagramCounter {
         return count;
     }
 }
+

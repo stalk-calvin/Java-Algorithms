@@ -5,16 +5,16 @@
 
 package org.calvin.Guava;
 
-import com.google.common.base.Predicates;
 import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -57,14 +57,14 @@ public class ListTest {
     public void shouldPartitionList() {
         List<String> input = Lists.newArrayList("alpha", "beta", "gamma");
         List<List<String>> actual = Lists.partition(input, 2);
-        List<List<String>> expected = Lists.newArrayList(Lists.newArrayList("alpha", "beta"), Lists.newArrayList("gamma"));
+        List<List<String>> expected = Arrays.asList(Lists.newArrayList("alpha", "beta"), Lists.newArrayList("gamma"));
         assertEquals(expected,actual);
     }
 
     @Test
     public void shouldRemoveNullValues() {
         List<String> input = Lists.newArrayList("a", null, "b", "c");
-        Iterable<String> withoutNulls = Iterables.filter(input, Predicates.notNull());
+        Iterable<String> withoutNulls = input.stream().filter(o -> o != null).collect(Collectors.toList());
         withoutNulls.forEach((x) -> assertFalse(x == null));
     }
 

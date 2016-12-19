@@ -6,10 +6,11 @@
 package org.calvin.Arrays;
 
 public class MoveZeros {
-    public void moveZeroes(int[] A) {
+    public int moveAndReturnNumberOfZeroes(int[] A) {
         if (A == null) {
-            return;
+            return 0;
         }
+        int counter = 0;
         int k = A.length - 1;
         int pointer = A.length - 1;
         for (int i = A.length - 1; i >= 0; i--) {
@@ -23,7 +24,9 @@ public class MoveZeros {
                 k--;
             } else {
                 k--;
+                counter++;
             }
         }
+        return counter;
     }
 }

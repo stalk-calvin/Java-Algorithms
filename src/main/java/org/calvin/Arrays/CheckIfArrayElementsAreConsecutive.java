@@ -5,26 +5,21 @@
 
 package org.calvin.Arrays;
 
-public class CheckIfArrayElementsAreConsecutive {
+import java.util.HashSet;
+import java.util.Set;
 
-    public boolean areConsecutive(int input[]) {
+public class CheckIfArrayElementsAreConsecutive {
+    public boolean areConsecutive(int[] input) {
+        if (input == null || input.length < 2) return true;
+        Set<Integer> tracker = new HashSet<>();
         int min = Integer.MAX_VALUE;
-        for (int i = 0; i < input.length; i++) {
-            if (input[i] < min) {
-                min = input[i];
-            }
+        for (int num : input) {
+            if (tracker.contains(num)) return false;
+            tracker.add(num);
+            min = Math.min(num,min);
         }
-        for (int i = 0; i < input.length; i++) {
-            if (Math.abs(input[i]) - min >= input.length) {
-                return false;
-            }
-            if (input[Math.abs(input[i]) - min] < 0) {
-                return false;
-            }
-            input[Math.abs(input[i]) - min] = -input[Math.abs(input[i]) - min];
-        }
-        for (int i = 0; i < input.length; i++) {
-            input[i] = Math.abs(input[i]);
+        for (int i = min; i < min + input.length; i++) {
+            if (!tracker.remove(i)) return false;
         }
         return true;
     }

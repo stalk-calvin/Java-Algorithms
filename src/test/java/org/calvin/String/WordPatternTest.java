@@ -5,14 +5,14 @@
 
 package org.calvin.String;
 
-import static junit.framework.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 public class WordPatternTest {
-    WordPattern fixture;
+    private WordPattern fixture;
 
     @Before
     public void setUp() {

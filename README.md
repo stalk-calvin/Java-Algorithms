@@ -17,7 +17,7 @@ Dependancies are listed in the [pom.xml](https://github.com/stalk-calvin/Java-Al
 
 ## License
 
-Licensed with no license. I do not care how you publish as long as my copyright is in place.
+Copyleft aka open but please leave my copyright comments alone
 
 ## How to install
 

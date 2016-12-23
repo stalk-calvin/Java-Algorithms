@@ -5,14 +5,13 @@
 
 package org.calvin.DesignPatterns.Creational.Prototype;
 
-import static org.junit.Assert.assertEquals;
-
-import java.util.List;
-
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.google.common.collect.Lists;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class EmployeesTest {
     private static final List<String> testData = Lists.newArrayList("Calvin","Lee");
@@ -36,4 +35,5 @@ public class EmployeesTest {
         Employees actual = (Employees) fixture.clone();
         assertEquals(expected, actual.getEmpList());
     }
+
 }

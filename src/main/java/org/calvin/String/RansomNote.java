@@ -30,7 +30,7 @@ public class RansomNote {
         // use the constructed map
         words = note.split(" ");
         for(String s : words) {
-            if (magazineMap.get(s) != null && magazineMap.get(s) < 0) {
+            if (magazineMap.get(s) != null && magazineMap.get(s) < 1) {
                 this.solution = false;
             } else if (magazineMap.get(s) != null) {
                 magazineMap.put(s, magazineMap.get(s) - 1);

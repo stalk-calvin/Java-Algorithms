@@ -9,9 +9,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class Services {
-    private Services() {
-    } // Prevents instantiation (Item 4)
-
     // Maps service names to services
     private static final Map<String, Provider> providers = new ConcurrentHashMap<String, Provider>();
     public static final String DEFAULT_PROVIDER_NAME = "<def>";

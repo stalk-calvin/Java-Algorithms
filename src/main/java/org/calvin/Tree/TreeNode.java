@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.calvin.Utils.BTreePrinter;
 
-@EqualsAndHashCode(exclude={"size"})
+@EqualsAndHashCode(exclude={"size", "left", "right"})
 @Data
 public class TreeNode {
     public int val;

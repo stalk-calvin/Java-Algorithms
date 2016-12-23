@@ -7,6 +7,7 @@ package org.calvin.String;
 
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class RansomNoteTest {
@@ -18,4 +19,21 @@ public class RansomNoteTest {
         assertTrue(fixture.solve());
     }
 
+    @Test
+    public void shouldNotSolve() {
+        fixture = new RansomNote("give me one grand today night", "ABC DEF GHI");
+        assertFalse(fixture.solve());
+    }
+
+    @Test
+    public void shouldSolveRepeated() {
+        fixture = new RansomNote("me me me me me", "me me me me");
+        assertFalse(fixture.solve());
+    }
+
+    @Test
+    public void shouldNotSolveRepeated() {
+        fixture = new RansomNote("me me me me", "me me me me me");
+        assertFalse(fixture.solve());
+    }
 }

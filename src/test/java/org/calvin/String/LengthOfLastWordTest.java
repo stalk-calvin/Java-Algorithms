@@ -5,10 +5,10 @@
 
 package org.calvin.String;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class LengthOfLastWordTest {
     LengthOfLastWord fixture;
@@ -22,5 +22,4 @@ public class LengthOfLastWordTest {
     public void shouldFindLastwordLength() {
         assertEquals(3, fixture.lengthOfLastWord("he is a great man"));
     }
-
 }

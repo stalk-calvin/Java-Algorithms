@@ -28,7 +28,7 @@ public class RansomNoteTest {
     @Test
     public void shouldSolveRepeated() {
         fixture = new RansomNote("me me me me me", "me me me me");
-        assertFalse(fixture.solve());
+        assertTrue(fixture.solve());
     }
 
     @Test

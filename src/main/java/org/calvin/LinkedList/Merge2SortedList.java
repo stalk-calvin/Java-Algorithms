@@ -5,7 +5,7 @@
 
 package org.calvin.LinkedList;
 
-public class Merge2List {
+public class Merge2SortedList {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null && l2 == null) {
             return null;

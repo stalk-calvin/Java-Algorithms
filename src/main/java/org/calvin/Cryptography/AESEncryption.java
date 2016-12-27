@@ -32,13 +32,11 @@ public class AESEncryption {
         c.init(Cipher.DECRYPT_MODE, key);
         byte[] decodedValue = Base64.getDecoder().decode(encryptedData);
         byte[] decValue = c.doFinal(decodedValue);
-        String decryptedValue = new String(decValue);
-        return decryptedValue;
+        return new String(decValue);
     }
 
     private static Key generateKey() throws Exception {
-        Key key = new SecretKeySpec(keyValue, ALGO);
-        return key;
+        return new SecretKeySpec(keyValue, ALGO);
     }
 
 }

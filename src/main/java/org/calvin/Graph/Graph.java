@@ -7,7 +7,7 @@ package org.calvin.Graph;
 
 public class Graph {
     public int count; // num of vertices
-    private Node vertices[];
+    private Node[] vertices;
 
     public Graph() {
         vertices = new Node[8];

@@ -1,5 +1,6 @@
 package org.calvin.Numbers;
 
+import org.calvin.BinarySearch.FindMinimumNumber;
 import org.junit.Before;
 import org.junit.Test;
 

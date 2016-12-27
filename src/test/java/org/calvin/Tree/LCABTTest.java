@@ -1,10 +1,10 @@
 package org.calvin.Tree;
 
+import static org.junit.Assert.assertEquals;
+
 import org.calvin.Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class LCABTTest {
     private LCABT fixture;

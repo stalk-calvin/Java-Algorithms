@@ -11,12 +11,12 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class Merge2ListTest {
-    Merge2List fixture;
+public class Merge2SortedListTest {
+    Merge2SortedList fixture;
 
     @Before
     public void setUp() {
-        fixture = new Merge2List();
+        fixture = new Merge2SortedList();
     }
 
     @Test

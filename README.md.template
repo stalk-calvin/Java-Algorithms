@@ -28,6 +28,6 @@ Requirement: Java 8, Lombok, JUnit 4, slf4j
 
 Enjoy!
 
-## Algorithm Statistics
+## How many algorithms?
 
 {% number_of_algorithms %}

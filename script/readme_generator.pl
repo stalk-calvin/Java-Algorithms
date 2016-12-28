@@ -34,8 +34,10 @@ my @java_files = get_javas($destination);
 my $javas;
 my $algorithm_count = 0;
 foreach my $java_file (@java_files) {
+	$java_file = trim($java_file);
     my $copy_file = $java_file;
     $java_file =~ s/.*calvin\/(.*)/$1/;
+    next if ($java_file =~ m/test.java/i);
     next if (exists $exclude{$java_file});
     $javas .= $java_file."\n";
 	if ($copy_file !~ /test.java/i) {
@@ -57,7 +59,7 @@ open(my $fh, $read_me_file_location) || die "Could not open file to read: $read_
 my $data = "";
 while(my $line = <$fh>) {
 	if ($line =~ "^{% number_of_algorithms %}") {
-		$data .= "See list of algorithm [source files](script/list_of_src_files) for all the algorithms here.";
+		$data .= "There are roughly ". scalar @java_files . " java algorithms exists.  \nSee list of algorithm [source files](script/list_of_src_files) for all the algorithms here.";
 	} else {
 		$data .= $line;
 	}

@@ -1,8 +1,9 @@
 package org.calvin.Tree;
 
+import org.calvin.Utils.BTreePrinter;
+
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import org.calvin.Utils.BTreePrinter;
 
 @EqualsAndHashCode(exclude={"size", "left", "right"})
 @Data

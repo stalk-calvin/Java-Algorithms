@@ -1,3 +1,7 @@
+## Range
+
+Should be able to store and fetch variety of ranges, search by binary search.
+
 ## AddDigit
 
 Given a non-negative integer `num`, repeatedly add all its digits until the result has only one digit.
@@ -79,6 +83,14 @@ Example: 19 is a happy number
 
 Calculate the sum/subtraction of two integers a and b, but you are not allowed to use the operator + and -.
 
+## Largest Number
+
+Given a list of non negative integers, arrange them such that they form the largest number.
+
+For example, given `[3, 30, 34, 5, 9]`, the largest formed number is `9534330`.
+
+Note: The result may be very large, so you need to return a string instead of an integer.
+
 ## Palindrome
 
 Determine whether an integer is a palindrome. Do this without extra space.
@@ -121,6 +133,42 @@ Given an integer (signed 32 bits), write a function to check whether it is a pow
 
 Example:  
 Given num = 16, return true. Given num = 5, return false.
+
+## RandomizedSet - Insert Delete GetRandom O(1)
+
+Design a data structure that supports all following operations in average O(1) time.
+
+1. `insert(val)`: Inserts an item val to the set if not already present.  
+2. `remove(val)`: Removes an item val from the set if present.  
+3. `getRandom`: Returns a random element from current set of elements. Each element must have the same probability of being returned.  
+
+Example:
+
+```
+// Init an empty set.
+RandomizedSet randomSet = new RandomizedSet();
+
+// Inserts 1 to the set. Returns true as 1 was inserted successfully.
+randomSet.insert(1);
+
+// Returns false as 2 does not exist in the set.
+randomSet.remove(2);
+
+// Inserts 2 to the set, returns true. Set now contains [1,2].
+randomSet.insert(2);
+
+// getRandom should return either 1 or 2 randomly.
+randomSet.getRandom();
+
+// Removes 1 from the set, returns true. Set now contains [2].
+randomSet.remove(1);
+
+// 2 was already in the set, so return false.
+randomSet.insert(2);
+
+// Since 1 is the only number in the set, getRandom always return 1.
+randomSet.getRandom();
+```
 
 ## RangeQueryImmutable
 
@@ -192,6 +240,22 @@ If ***nums*** = `[1,2,2]`, a solution is:
   [2,2],
   [1,2],
   []
+]
+```
+
+## ThreeSum
+
+Given an array S of *n* integers, are there elements *a*, *b*, *c* in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.
+
+**Note**: The solution set must not contain duplicate triplets.
+
+```
+For example, given array S = [-1, 0, 1, 2, -1, -4],
+
+A solution set is:
+[
+  [-1, 0, 1],
+  [-1, -1, 2]
 ]
 ```
 

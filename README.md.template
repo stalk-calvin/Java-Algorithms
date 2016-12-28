@@ -30,5 +30,4 @@ Enjoy!
 
 ## Algorithm Statistics
 
-There are roughly 391 java algorithms exists.
-See [algorithm list](scripts/algorithm) for details.
+{% number_of_algorithms %}

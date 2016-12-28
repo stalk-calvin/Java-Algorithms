@@ -5,10 +5,10 @@
 
 package org.calvin.Numbers;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class AddDigitTest {
     AddDigit fixture;
@@ -19,8 +19,12 @@ public class AddDigitTest {
     }
 
     @Test
-    public void addDigits() {
-        assertEquals(9, fixture.addDigits(18));
+    public void shouldAddDigits() {
+        assertEquals(2, fixture.addDigits(38));
     }
 
+    @Test
+    public void shouldNotAddNegative() {
+        assertEquals(-1, fixture.addDigits(-1));
+    }
 }

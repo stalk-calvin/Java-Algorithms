@@ -7,26 +7,19 @@ package org.calvin.Numbers;
 
 public class AddDigit {
     public int addDigits(int num) {
-        if (num < 0) return -1;
-        if (num == 0) return 0;
-        int sum = 0;
-        int limit = 20;
-        while (num > 0) {
-            int x = num % 10;
-            sum += x;
+        int r = 0;
+        while(num > 0) {
+            r += num % 10;
             num /= 10;
-            if (num < 1) {
-                num = sum;
-                if (sum < 10) {
-                    return sum;
+            if (num == 0) {
+                if (r > 9) {
+                    num = r;
+                    r = 0;
+                } else {
+                    return r;
                 }
-                sum = 0;
             }
-            if (limit < 0) {
-                return -1;
-            }
-            limit--;
         }
-        return -1;
+        return num;
     }
 }

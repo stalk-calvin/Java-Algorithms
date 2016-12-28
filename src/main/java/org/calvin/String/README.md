@@ -18,6 +18,18 @@ The count-and-say sequence is the sequence of integers beginning as follows:
 
 Given an integer n, generate the nth sequence.
 
+## Integer to English Words
+
+Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 2<sup>31</sup> - 1.
+
+For example,
+
+```
+123 -> "One Hundred Twenty Three"
+12345 -> "Twelve Thousand Three Hundred Forty Five"
+1234567 -> "One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven"
+```
+
 ## ExcelSheetColumnTitle
 
 Given a positive integer, return its corresponding column title as appear in an Excel sheet.
@@ -97,6 +109,15 @@ Given s = "hello", return "holle".
 
 Example 2:  
 Given s = "leetcode", return "leotcede".
+
+## SimplifyPath
+
+Given an absolute path for a file (Unix-style), simplify it.
+
+For example,
+
+**path** = `"/home/"` => `"/home"`  
+**path** = `"/a/./b/../../c/"` => `"/c"`
 
 ## StrStr
 

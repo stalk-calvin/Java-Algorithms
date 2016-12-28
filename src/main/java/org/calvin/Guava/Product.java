@@ -5,11 +5,14 @@
 
 package org.calvin.Guava;
 
+import javax.annotation.Nonnull;
+
 import com.google.common.collect.ComparisonChain;
 import com.google.common.collect.Ordering;
-import lombok.ToString;
 
-@ToString
+import lombok.Data;
+
+@Data
 public class Product implements Comparable<Product> {
     private String name;
     private String description;
@@ -29,7 +32,7 @@ public class Product implements Comparable<Product> {
     }
 
     @Override
-    public int compareTo(Product that) {
+    public int compareTo(@Nonnull Product that) {
         return ComparisonChain.start()
                 .compare(description, that.getDescription(), Ordering.natural().nullsFirst())
                 .compare(name, that.getName(), Ordering.natural().nullsFirst())

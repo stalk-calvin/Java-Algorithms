@@ -28,7 +28,7 @@ Requirement: Java 8, Lombok, JUnit 4, slf4j
 
 Enjoy!
 
-## Algorithm Statistics
+## How many algorithms?
 
-There are roughly 391 java algorithms exists.
-See [algorithm list](scripts/algorithm) for details.
+There are roughly 391 java algorithms exists.  
+See list of algorithm [source files](script/list_of_src_files) for all the algorithms here.

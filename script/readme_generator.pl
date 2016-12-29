@@ -46,17 +46,17 @@ my @java_files = get_javas($destination);
 my $javas;
 my $algorithm_count = 0;
 my $algorithm_test_count = 0;
-foreach my $java_file (@java_files) {
+MAIN: foreach my $java_file (@java_files) {
 	$java_file = trim($java_file);
-	next if ($java_file =~ /abstract/i);
     my $copy_file = $java_file;
     $java_file =~ s/.*calvin\/(.*)/$1/;
     next if (exists $exclude_files{$java_file});
-    
 	open(my $fh, $copy_file) || die "Could not open file to read: $java_file";
 	my $skip_counter = 0;
 	while(my $line = <$fh>) {
-		next if ($java_file =~ /public interface/);
+		if ($line =~ /(abstract|interface).*{/) {
+			next MAIN;
+		}
 		if ($skip_counter > 0) {
 			$skip_counter--;
 			next;

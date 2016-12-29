@@ -134,6 +134,10 @@ Given an integer (signed 32 bits), write a function to check whether it is a pow
 Example:  
 Given num = 16, return true. Given num = 5, return false.
 
+## PowerOfN
+
+Implement `pow(x, n)`.
+
 ## RandomizedSet - Insert Delete GetRandom O(1)
 
 Design a data structure that supports all following operations in average O(1) time.
@@ -222,6 +226,12 @@ Output: 0
 ```
 
 In this case, no transaction is done, i.e. max profit = 0.
+
+## Square Root
+
+Implement `int sqrt(int x)`.
+
+Compute and return the square root of x.
 
 ## SubsetsWithDuplicates
 

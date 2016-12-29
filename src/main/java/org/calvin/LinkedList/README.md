@@ -55,6 +55,22 @@ Merge *k* sorted linked lists and return it as one sorted list. Analyze and desc
 
 Given a singly linked list, determine if it is a palindrome.
 
+## RemoveDuplicateFromSortedList
+
+Given a sorted linked list, delete all duplicates such that each element appear only once.
+
+For example,  
+Given `1->1->2`, return `1->2`.  
+Given `1->1->2->3->3`, return `1->2->3`.
+
+## RemoveDuplicateFromSortedList2
+
+Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+
+For example,  
+Given `1->2->3->3->4->4->5`, return `1->2->5`.  
+Given `1->1->1->2->3`, return `2->3`.
+
 ## RemoveElement
 
 Remove all elements from a linked list of integers that have value val.
@@ -81,6 +97,10 @@ For example,
 ## ReverseList
 
 Reverse a singly linked list.
+
+## Sort List
+
+Sort a linked list in O(n log n) time using constant space complexity.
 
 ## SwapNode
 

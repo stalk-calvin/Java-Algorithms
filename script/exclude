@@ -1,4 +1,39 @@
+### FILES
 LinkedList/ListNode.java
 Tree/TreeNode.java
 Utils/AssortedMethods.java
 Utils/BTreePrinter.java
+### END
+public int mySqrt(int x) {
+protected double getAllowable(){
+protected String getRole(){
+protected double getAllowable(){
+protected String getRole(){
+protected double getAllowable(){
+protected String getRole(){
+public String draw() {
+public String assemble(){
+public String assemble() {
+public int compareTo(@Nonnull Range r) {
+public Node[] getNode() {
+public void addChildNode(Node adj) {
+public Node[] getChild() {
+public String getVertex() {
+public String getName() {
+public String play(String fileName) {
+public String getType() {
+public CarElement[] getElements() {
+public int compareTo(Dog d) {
+public int compare(Dog d, Dog d1) {
+public Iterator getIterator();
+public boolean hasNext();
+public Object next();
+public Iterator getIterator() {
+public boolean hasNext() {
+public Object next() {
+public void setMediator(IMediator pMediator) {
+public void receiveEvent(String name, String ev) {
+public void setMediator(IMediator pMediator) {
+public void receiveEvent(String name, String ev) {
+public void setMediator(IMediator pMediator) {
+public void receiveEvent(String name, String ev) {

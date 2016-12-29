@@ -5,10 +5,12 @@ Arrays/CheckIfArrayElementsAreConsecutive.java
 Arrays/ContainsDuplicate.java
 Arrays/DuplicateWithinkIndices.java
 Arrays/FindDuplicates.java
+Arrays/GasStation.java
 Arrays/Intersection.java
 Arrays/Intersection2.java
 Arrays/LongestConsecutive.java
 Arrays/MajorityElement.java
+Arrays/MajorityElement2.java
 Arrays/MergeSortedArray.java
 Arrays/MoveZeros.java
 Arrays/RemoveDuplicateSortedArray.java
@@ -58,13 +60,6 @@ DesignPatterns/Behaviorial/Visitor/CarElementPrintVisitor.java
 DesignPatterns/Behaviorial/Visitor/CarElementVisitor.java
 DesignPatterns/Behaviorial/Visitor/Engine.java
 DesignPatterns/Behaviorial/Visitor/Wheel.java
-DesignPatterns/Creational/AbstractFactory/Computer.java
-DesignPatterns/Creational/AbstractFactory/ComputerAbstractFactory.java
-DesignPatterns/Creational/AbstractFactory/ComputerFactory.java
-DesignPatterns/Creational/AbstractFactory/PC.java
-DesignPatterns/Creational/AbstractFactory/PCFactory.java
-DesignPatterns/Creational/AbstractFactory/Server.java
-DesignPatterns/Creational/AbstractFactory/ServerFactory.java
 DesignPatterns/Creational/Builder/NutritionFacts.java
 DesignPatterns/Creational/Builder/NutritionFactsLombok.java
 DesignPatterns/Creational/Factory/Circle.java
@@ -122,9 +117,12 @@ LinkedList/LRUCache.java
 LinkedList/Merge2SortedList.java
 LinkedList/MergeKSortedLists.java
 LinkedList/Palindrome.java
+LinkedList/RemoveDuplicateFromSortedList.java
+LinkedList/RemoveDuplicateFromSortedList2.java
 LinkedList/RemoveElement.java
 LinkedList/RemoveLastNthNode.java
 LinkedList/ReverseList.java
+LinkedList/SortList.java
 LinkedList/SwapNode.java
 Numbers/AddDigit.java
 Numbers/BullsAndCows.java
@@ -142,6 +140,7 @@ Numbers/PascalsTriangle2.java
 Numbers/PowerOf2.java
 Numbers/PowerOf3.java
 Numbers/PowerOf4.java
+Numbers/PowerOfN.java
 Numbers/RandomizedSet.java
 Numbers/Range/Range.java
 Numbers/Range/RangeQuery.java
@@ -149,6 +148,7 @@ Numbers/RangeQueryImmutable.java
 Numbers/ReverseInteger.java
 Numbers/RomanToInt.java
 Numbers/SellStock.java
+Numbers/SquareRoot.java
 Numbers/SubsetsWithDuplicates.java
 Numbers/ThreeSum.java
 Numbers/TwoSum.java
@@ -201,6 +201,7 @@ String/Reverse.java
 String/ReverseVowel.java
 String/SimplifyPath.java
 String/StrStr.java
+String/SummaryRanges.java
 String/ValidPalindrome.java
 String/WordPattern.java
 String/ZigZag.java

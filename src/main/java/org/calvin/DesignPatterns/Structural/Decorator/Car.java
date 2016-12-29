@@ -6,5 +6,5 @@
 package org.calvin.DesignPatterns.Structural.Decorator;
 
 public interface Car {
-    public String assemble();
+    String assemble();
 }

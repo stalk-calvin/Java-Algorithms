@@ -9,8 +9,6 @@ use FindBin qw($Bin);
 
 $| = 1;
 
-my %stats;
-
 GetOptions('readme=s'    => \my $read_me_file_location,
 		   'source=s'	 => \my $destination
 		   );
@@ -20,36 +18,72 @@ if (!$read_me_file_location || !$destination) {
 	exit;
 }
 
-my %exclude = ();
+my %exclude_files = ();
+my %exclude_code = ();
+my $isFile = 0;
 if (-e $Bin.'/'.'exclude') {
 	open(my $efh, $Bin.'/'.'exclude') || die "Could not open file to read: exclude";
 	while(my $line = <$efh>) {
-		$exclude{trim($line)} = 1;
+		$line = trim($line);
+		if ($line =~ /### FILES/) {
+			$isFile = 1;
+			next;
+		}
+		if ($isFile && $line =~ /### END/) {
+			$isFile = 0;
+			next;
+		}
+		if ($isFile) {
+			$exclude_files{$line} = 1;
+		} else {
+			$exclude_code{$line} = 1;
+		}
 	}
 }
-
 # Parse source
 print "Parse: $destination\n";
 my @java_files = get_javas($destination); 
 my $javas;
 my $algorithm_count = 0;
+my $algorithm_test_count = 0;
 foreach my $java_file (@java_files) {
 	$java_file = trim($java_file);
+	next if ($java_file =~ /abstract/i);
     my $copy_file = $java_file;
     $java_file =~ s/.*calvin\/(.*)/$1/;
-    next if ($java_file =~ m/test.java/i);
-    next if (exists $exclude{$java_file});
-    $javas .= $java_file."\n";
-	if ($copy_file !~ /test.java/i) {
-		open(my $fh, $copy_file) || die "Could not open file to read: $java_file";
-		while(my $line = <$fh>) {
-			$line = trim($line);
-			next if ($line =~ /^(return|private)/);
-			if ($line =~ /(public|protected|static|\s) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])/) {
-				$algorithm_count++;
-			}
+    next if (exists $exclude_files{$java_file});
+    
+	open(my $fh, $copy_file) || die "Could not open file to read: $java_file";
+	my $skip_counter = 0;
+	while(my $line = <$fh>) {
+		next if ($java_file =~ /public interface/);
+		if ($skip_counter > 0) {
+			$skip_counter--;
+			next;
+		}
+		$line = trim($line);
+		next if ($line =~ /^(return|private)/);
+		next if (exists $exclude_code{$line});
+		if ($line =~ /\@before/i) {
+			$skip_counter++;
+			next;
+		}
+		if ($line =~ /\@test/i) {
+			$algorithm_test_count++;
+			next;
+		}
+		next if ($copy_file =~ /test.java/i);
+		if ($line =~ /(?:public|protected|static|\s) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])/) {
+			next if ($line =~ /abstract/);
+			next if ($line =~ /tostring()/i);
+			next if ($line =~ /get/);
+			#print $line."\n";
+			$algorithm_count++;
 		}
 	}
+	next if ($java_file =~ m/test.java/i);
+	$javas .= $java_file."\n";
+
 }
 write_file($Bin.'/'.'list_of_src_files', $javas);
 print "Saved: list_of_src_files\n";
@@ -59,7 +93,7 @@ open(my $fh, $read_me_file_location) || die "Could not open file to read: $read_
 my $data = "";
 while(my $line = <$fh>) {
 	if ($line =~ "^{% number_of_algorithms %}") {
-		$data .= "There are roughly ". scalar @java_files . " java algorithms exists.  \nSee [list of algorithm source files](script/list_of_src_files) for all the algorithms here.";
+		$data .= "There are roughly ". $algorithm_count . " java algorithms exists with ".$algorithm_test_count." test cases.  \nSee [list of algorithm source files](script/list_of_src_files) for all the algorithms here.";
 	} else {
 		$data .= $line;
 	}

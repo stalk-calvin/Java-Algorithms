@@ -253,6 +253,16 @@ If ***nums*** = `[1,2,2]`, a solution is:
 ]
 ```
 
+## SumOfFibonacci
+
+Return the sum of all Fibonacci numbers up to and including the passed number if it is a Fibonacci number.
+ 
+The first few numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8, and each subsequent number is the sum of the previous two numbers.
+ 
+As an example, passing 4 to the function should return 7 because all Fibonacci numbers under 4 are 1, 1, 2 and 3.
+
+Bonus: Calculate sum of odd fibonacci, example: passing 4 => 5 as fibonacci numbers under 4 are 1, 1 and 3.
+
 ## ThreeSum
 
 Given an array S of *n* integers, are there elements *a*, *b*, *c* in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.

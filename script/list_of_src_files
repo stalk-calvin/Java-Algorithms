@@ -140,6 +140,7 @@ Numbers/RomanToInt.java
 Numbers/SellStock.java
 Numbers/SquareRoot.java
 Numbers/SubsetsWithDuplicates.java
+Numbers/SumOfFibonacci.java
 Numbers/ThreeSum.java
 Numbers/TwoSum.java
 Numbers/UglyNumber.java

@@ -1,4 +1,4 @@
-## BinarySearch.java
+## BinarySearch
 
 Just a plain binary search against int array. I see the middle key generation can cause overflow.
 
@@ -7,7 +7,7 @@ It is better to write:
 int mid = first + (last-first)/2;
 ```
 
-## FindMinimumNumber.java
+## FindMinimumNumber
 
 Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 
@@ -15,8 +15,8 @@ Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 
 Find the minimum element.
 
-The array may contain duplicates.
+The array may contain duplicates (findMinWithDuplicated function)
 
-## FirstBadVersion.java
+## FirstBadVersion
 
 Search first bad integer (chosen randomly) using binary search from given 0 to n.

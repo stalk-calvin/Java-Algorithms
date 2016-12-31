@@ -77,6 +77,10 @@ s = "loveleetcode",
 return 2.
 ```
 
+## PermutationCombination
+
+Shows algorithm to generate Permutation and Combination on a given string.
+
 ## LongestCommonPrefix
 
 Write a function to find the longest common prefix string amongst an array of strings.

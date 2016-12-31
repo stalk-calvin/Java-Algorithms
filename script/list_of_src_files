@@ -18,7 +18,7 @@ Arrays/RemoveElement.java
 Arrays/Rotate.java
 Arrays/SlidingWindowMaximum.java
 BinarySearch/BinarySearch.java
-BinarySearch/FindMinimumNumber.java
+BinarySearch/FindMinInRotatedSorted.java
 BinarySearch/FirstBadVersion.java
 BitManipulation/AddBinary.java
 BitManipulation/NumberOf1Bit.java

@@ -183,6 +183,7 @@ String/IntegerToString.java
 String/Isomorphic.java
 String/LengthOfLastWord.java
 String/LongestCommonPrefix.java
+String/LookAndSay.java
 String/NonRepeated.java
 String/PermutationCombination.java
 String/RansomNote.java

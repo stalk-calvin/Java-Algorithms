@@ -108,6 +108,10 @@ Shows algorithm to generate Permutation and Combination on a given string.
 
 Write a function to find the longest common prefix string amongst an array of strings.
 
+## LookAndSay
+
+Same as CountAndSay with different approach to solve the problem.
+
 ## RansomNote
 
 Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.

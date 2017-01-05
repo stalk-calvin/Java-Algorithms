@@ -8,6 +8,7 @@ package org.calvin.Arrays;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class ContainsDuplicate {
     public boolean containsDuplicateFirst(int[] nums) {
@@ -23,6 +24,42 @@ public class ContainsDuplicate {
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] == nums[i - 1])
                 return true;
+        }
+        return false;
+    }
+
+    public boolean containsNearbyDuplicate(int[] nums, int k) {
+        Set<Integer> mark = new HashSet<>();
+        for (int i = 0; i < nums.length; i++) {
+            if (!mark.add(nums[i])) {
+                return true;
+            }
+            if (i >= k) {
+                //remove first element;
+                mark.remove(nums[i - k]);
+            }
+        }
+        return false;
+    }
+
+    public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
+        if (nums.length < 2 || k == 0) {
+            return false;
+        }
+        TreeSet<Long> set = new TreeSet<>();
+
+        int i = 0;
+        while (i < nums.length) {
+            Long floor = set.floor((long) nums[i]);
+            Long ceiling = set.ceiling((long) nums[i]);
+            if ((floor != null && nums[i] - floor <= t ) ||
+                    (ceiling != null && ceiling - nums[i] <= t)) {
+                return true;
+            }
+            set.add((long) nums[i++]);
+            if (i > k) {
+                set.remove((long) nums[i - k - 1]);
+            }
         }
         return false;
     }

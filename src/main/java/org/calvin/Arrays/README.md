@@ -16,7 +16,10 @@ Checks if all the numbers in the array are consecutive.
 
 ## ContainsDuplicate
 
-Checks if input int array has any duplicate item.
+containsDuplicateFirst: Checks if input int array has any duplicate item.
+containsDuplicateSecond: Variated method for solving duplicate
+containsNearbyDuplicate: Given an array of integers and an integer *k*, find out whether there are two distinct indices *i* and *j* in the array such that **nums[i]** = **nums[j]** and the **absolute** difference between *i* and *j* is at most *k*.
+containsNearbyAlmostDuplicate: Given an array of integers, find out whether there are two distinct indices *i* and *j* in the array such that the **absolute** difference between **nums[i]** and **nums[j]** is at most *t* and the **absolute** difference between *i* and *j* is at most *k*.
 
 ## DuplicateWithinkIndices
 

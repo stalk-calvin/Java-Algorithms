@@ -20,6 +20,7 @@ Arrays/SlidingWindowMaximum.java
 BinarySearch/BinarySearch.java
 BinarySearch/FindMinInRotatedSorted.java
 BinarySearch/FirstBadVersion.java
+BinarySearch/SearchForARange.java
 BitManipulation/AddBinary.java
 BitManipulation/NumberOf1Bit.java
 BitManipulation/ReverseBit.java

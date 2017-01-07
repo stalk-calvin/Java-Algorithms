@@ -75,8 +75,8 @@ MAIN: foreach my $java_file (@java_files) {
 		next if ($copy_file =~ /test.java/i);
 		if ($line =~ /(?:public|protected|static|\s) +[\w\<\>\[\]]+\s+(\w+) *\([^\)]*\) *(\{?|[^;])/) {
 			next if ($line =~ /abstract/);
-			next if ($line =~ /tostring()/i);
-			next if ($line =~ /get/);
+			next if ($line =~ /toString\(\)/);
+			next if ($line =~ /get([A-Z]|\()/);
 			#print $line."\n";
 			$algorithm_count++;
 		}

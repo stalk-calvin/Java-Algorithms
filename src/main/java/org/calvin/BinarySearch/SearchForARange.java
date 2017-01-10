@@ -21,7 +21,7 @@ public class SearchForARange {
             return ret;
         j = n; // reset j to end
         while (i < j) {
-            int mid = i + (j - i + 1)/2;  // make mid biased to right
+            int mid = i + (j - i)/2 + 1;  // make mid biased to right
             if (nums[mid] == target)
                 i = mid;
             else if (nums[mid] > target)

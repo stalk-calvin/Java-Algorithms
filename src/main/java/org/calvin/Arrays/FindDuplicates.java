@@ -1,25 +1,21 @@
 package org.calvin.Arrays;
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class FindDuplicates {
     public int findDuplicate(int[] nums) {
         if (nums == null || nums.length == 0)
             return 0;
-        Arrays.sort(nums);
-        int low = 1, high = nums.length - 1, mid;
-        while (low < high) {
-            mid = low + (high - low) / 2;
-            int count = 0;
-            for (int num : nums) {
-                if (num <= mid)
-                    count++;
+        Map<Integer, Integer> tracker = new HashMap<>();
+        for (int i=0; i < nums.length; i++) {
+            if (tracker.containsKey(nums[i])) {
+                return tracker.get(nums[i]);
+            } else {
+                tracker.put(nums[i], i);
             }
-            if (count > mid)
-                high = mid;
-            else
-                low = mid + 1;
         }
-        return low;
+
+        return 0;
     }
 }

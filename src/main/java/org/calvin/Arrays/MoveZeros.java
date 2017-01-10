@@ -12,18 +12,19 @@ public class MoveZeros {
         }
         int counter = 0;
         int k = A.length - 1;
-        int pointer = A.length - 1;
         for (int i = A.length - 1; i >= 0; i--) {
             if (A[i] == 0) {
-                for (int j = k; j < pointer; j++) {
-                    int tmp = A[j + 1];
-                    A[j + 1] = A[j];
-                    A[j] = tmp;
+                int x = i;
+                while (x < k) {
+                    int tmp = A[x + 1];
+                    A[x + 1] = A[x];
+                    A[x] = tmp;
+                    x++;
                 }
-                pointer--;
-                k--;
+                if (x >= k) {
+                    k--;
+                }
             } else {
-                k--;
                 counter++;
             }
         }

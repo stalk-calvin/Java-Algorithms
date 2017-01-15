@@ -7,7 +7,7 @@ It is better to write:
 int mid = first + (last-first)/2;
 ```
 
-## FindMinimumNumber
+## FindMinimumNumberInRotatedArray
 
 Suppose a sorted array is rotated at some pivot unknown to you beforehand.
 
@@ -17,9 +17,33 @@ Find the minimum element.
 
 The array may contain duplicates (findMinWithDuplicated function)
 
+## FindNumberInRotatedArray
+
+Suppose a sorted array is rotated at some pivot unknown to you beforehand. (i.e., 0 1 2 4 5 6 7 might become 4 5 6 7 0 1 2). How do you find an element in the rotated array efficiently? You may assume no duplicate exists in the array.
+
 ## FirstBadVersion
 
 Search first bad integer (chosen randomly) using binary search from given 0 to n.
+
+## PerfectSquare
+
+Given a positive integer *num*, write a function which returns True if *num* is a perfect square else False.
+
+**Note**: **Do not** use any built-in library function such as `sqrt`.
+
+**Example 1**:
+
+```
+Input: 16
+Returns: True
+```
+
+**Example 2**:
+
+```
+Input: 14
+Returns: False
+```
 
 ## Search For A Range
 

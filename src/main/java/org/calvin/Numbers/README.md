@@ -91,6 +91,10 @@ For example, given `[3, 30, 34, 5, 9]`, the largest formed number is `9534330`.
 
 Note: The result may be very large, so you need to return a string instead of an integer.
 
+## MostFrequent
+
+Find the most frequent integer in an array
+
 ## Palindrome
 
 Determine whether an integer is a palindrome. Do this without extra space.

@@ -19,9 +19,9 @@ Arrays/Rotate.java
 Arrays/SlidingWindowMaximum.java
 BinarySearch/BinarySearch.java
 BinarySearch/FindMinimumNumberInRotatedArray.java
-BinarySearch/FindMinInRotatedSorted.java
 BinarySearch/FindNumberInRotatedArray.java
 BinarySearch/FirstBadVersion.java
+BinarySearch/PerfectSquare.java
 BinarySearch/SearchForARange.java
 BitManipulation/AddBinary.java
 BitManipulation/NumberOf1Bit.java
@@ -127,6 +127,7 @@ Numbers/FactorialTrailingZeros.java
 Numbers/HappyNumber.java
 Numbers/IntegerAddSubtract.java
 Numbers/LargestNumber.java
+Numbers/MostFrequent.java
 Numbers/Palindrome.java
 Numbers/PascalsTriangle.java
 Numbers/PascalsTriangle2.java

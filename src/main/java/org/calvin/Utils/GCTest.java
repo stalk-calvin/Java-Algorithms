@@ -3,7 +3,7 @@ package org.calvin.Utils;
 import java.lang.ref.WeakReference;
 
 public class GCTest {
-    private final static int ALLOC_SIZE = (int) (Runtime.getRuntime().maxMemory() * 0.60);
+    private final static int ALLOC_SIZE = (int) (2147483648 * 0.60);
 
     public void allocate() {
         System.out.println("Before first allocation");

@@ -23,6 +23,7 @@ BinarySearch/FindNumberInRotatedArray.java
 BinarySearch/FirstBadVersion.java
 BinarySearch/PerfectSquare.java
 BinarySearch/SearchForARange.java
+BinarySearch/SquareRoot.java
 BitManipulation/AddBinary.java
 BitManipulation/NumberOf1Bit.java
 BitManipulation/ReverseBit.java
@@ -142,7 +143,6 @@ Numbers/RangeQueryImmutable.java
 Numbers/ReverseInteger.java
 Numbers/RomanToInt.java
 Numbers/SellStock.java
-Numbers/SquareRoot.java
 Numbers/SubsetsWithDuplicates.java
 Numbers/SumOfFibonacci.java
 Numbers/ThreeSum.java

@@ -231,12 +231,6 @@ Output: 0
 
 In this case, no transaction is done, i.e. max profit = 0.
 
-## Square Root
-
-Implement `int sqrt(int x)`.
-
-Compute and return the square root of x.
-
 ## SubsetsWithDuplicates
 
 Given a collection of integers that might contain duplicates, ***nums***, return all possible subsets.

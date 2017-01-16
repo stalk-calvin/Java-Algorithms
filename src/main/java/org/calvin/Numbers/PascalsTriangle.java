@@ -17,7 +17,7 @@ public class PascalsTriangle {
         List<Integer> current = new ArrayList<>();
         current.add(1);
         result.add(current);
-        for (int i = 1; i < numRows; i++) {
+        while (numRows > 1) {
             List<Integer> tmp = new ArrayList<>();
             tmp.add(1);
             for (int j = 1; j < current.size(); j++) {
@@ -26,6 +26,7 @@ public class PascalsTriangle {
             tmp.add(1);
             result.add(tmp);
             current = tmp;
+            numRows--;
         }
         return result;
     }

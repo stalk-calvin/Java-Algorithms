@@ -19,8 +19,17 @@ public class ReverseTest {
     }
 
     @Test
-    public void reverseString() {
-        assertEquals("kcalS", fixture.reverseString("Slack"));
+    public void shouldReverseString1() {
+        assertEquals("kcalS", fixture.reverseString1("Slack"));
     }
 
+    @Test
+    public void shouldReverseString2() {
+        assertEquals("kcalS", fixture.reverseString2("Slack"));
+    }
+
+    @Test
+    public void shouldReverseString3() {
+        assertEquals("kcalS", fixture.reverseString3("Slack"));
+    }
 }

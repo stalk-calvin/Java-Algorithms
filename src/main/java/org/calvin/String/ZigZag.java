@@ -24,10 +24,10 @@ public class ZigZag {
             }
             index += incre;
         }
-        String re = "";
-        for (int i = 0; i < sb.length; i++) {
-            re += sb[i];
+        StringBuilder result = new StringBuilder();
+        for (StringBuilder aSb : sb) {
+            result.append(aSb.toString());
         }
-        return re.toString();
+        return result.toString();
     }
 }

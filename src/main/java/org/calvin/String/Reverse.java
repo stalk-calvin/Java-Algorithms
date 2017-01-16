@@ -6,7 +6,7 @@
 package org.calvin.String;
 
 public class Reverse {
-    public String reverseString(String s) {
+    public String reverseString1(String s) {
         char[] charArray = s.toCharArray();
         int start = 0;
         int end = charArray.length - 1;
@@ -18,5 +18,20 @@ public class Reverse {
             end--;
         }
         return new String(charArray);
+    }
+
+    public String reverseString2(String in) {
+        if (in == null || in.length() < 2) return in;
+        StringBuilder result = new StringBuilder(in);
+        return result.reverse().toString();
+    }
+
+    public String reverseString3(String in) {
+        if (in == null || in.length() < 2) return in;
+        StringBuilder result = new StringBuilder();
+        for (int i = in.length() - 1; i >= 0; i--) {
+            result.append(in.charAt(i));
+        }
+        return result.toString();
     }
 }

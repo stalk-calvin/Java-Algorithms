@@ -1,4 +1,4 @@
-package org.calvin.Numbers;
+package org.calvin.BinarySearch;
 
 public class SquareRoot {
     public int mySqrt(int x) {

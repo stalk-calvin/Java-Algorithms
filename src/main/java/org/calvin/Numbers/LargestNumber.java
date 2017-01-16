@@ -14,13 +14,10 @@ public class LargestNumber {
             s_num[i] = String.valueOf(num[i]);
 
         // Comparator to decide which string should come first in concatenation
-        Comparator<String> comp = new Comparator<String>(){
-            @Override
-            public int compare(String str1, String str2){
-                String s1 = str1 + str2;
-                String s2 = str2 + str1;
-                return s2.compareTo(s1); // reverse order here, so we can do append() later
-            }
+        Comparator<String> comp = (str1, str2) -> {
+            String s1 = str1 + str2;
+            String s2 = str2 + str1;
+            return s2.compareTo(s1); // reverse order here, so we can do append() later
         };
 
         Arrays.sort(s_num, comp);

@@ -1,4 +1,4 @@
-package org.calvin.Numbers;
+package org.calvin.BinarySearch;
 
 import static org.junit.Assert.assertEquals;
 

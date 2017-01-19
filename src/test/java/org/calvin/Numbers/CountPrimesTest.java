@@ -5,13 +5,16 @@
 
 package org.calvin.Numbers;
 
+import static org.junit.Assert.assertEquals;
+
+import java.util.List;
+
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-
 public class CountPrimesTest {
-    CountPrimes fixture;
+    private CountPrimes fixture;
 
     @Before
     public void setUp() {
@@ -19,8 +22,11 @@ public class CountPrimesTest {
     }
 
     @Test
-    public void countPrimes() {
-        assertEquals(4, fixture.countPrimes(10));
+    public void shouldGetPrimeUptoGivenNumber() {
+        List<Integer> expected = Lists.newArrayList(2,3,5,7);
+        List<Integer> actual = fixture.countPrimes(11);
+        assertEquals(expected, actual);
+        assertEquals(4, actual.size());
     }
 
 }

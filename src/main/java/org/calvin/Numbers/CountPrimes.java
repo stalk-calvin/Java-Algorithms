@@ -5,19 +5,22 @@
 
 package org.calvin.Numbers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CountPrimes {
-    public int countPrimes(int n) {
+    public List<Integer> countPrimes(int n) {
+        List<Integer> result = new ArrayList<>();
         boolean[] m = new boolean[n];
-        int count = 0;
         for (int i = 2; i < n; i++) {
             if (m[i])
                 continue;
 
-            count++;
+            result.add(i);
             for (int j = i; j < n; j = j + i)
                 m[j] = true;
         }
 
-        return count;
+        return result;
     }
 }

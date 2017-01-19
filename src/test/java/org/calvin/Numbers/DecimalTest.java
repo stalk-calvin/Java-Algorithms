@@ -5,27 +5,27 @@
 
 package org.calvin.Numbers;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 public class DecimalTest {
     @Test
-    public void shouldBeBroken() {
+    public void shouldBeBrokenWhenNaturalDoubleUsed() {
         double funds = 1.00;
         assertTrue(0 < Decimal.brokenCalculation(funds));
     }
 
     @Test
-    public void shouldUseBigDecimal() {
+    public void shouldBeCorrectWhenBigDecimalUsed() {
         BigDecimal funds = new BigDecimal("1.00");
         assertTrue(0 == Decimal.bigDecimalCalculation(funds).intValue());
     }
 
     @Test
-    public void shouldUseInt() {
+    public void shouldBeCorrectWhenIntUsed() {
         int funds = 100;
         assertTrue(0 == Decimal.integerCalculation(funds));
     }

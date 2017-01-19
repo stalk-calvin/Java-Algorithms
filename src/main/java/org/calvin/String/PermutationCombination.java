@@ -7,19 +7,17 @@ import lombok.Data;
 
 @Data
 public class PermutationCombination {
-    private final List<String> result;
+    private final List<String> result = new ArrayList<>();
     private final String in;
     private boolean[] used;
     private StringBuilder out = new StringBuilder();
 
     public PermutationCombination() {
-        result = new ArrayList<>();
         in = "";
     }
     public PermutationCombination(final String str ){
         in = str;
         used = new boolean[ in.length() ];
-        result = new ArrayList<>();
     }
 
     public void permute( ){

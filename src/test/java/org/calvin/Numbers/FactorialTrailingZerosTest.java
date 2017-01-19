@@ -5,10 +5,10 @@
 
 package org.calvin.Numbers;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class FactorialTrailingZerosTest {
     FactorialTrailingZeros fixture;
@@ -18,6 +18,8 @@ public class FactorialTrailingZerosTest {
         fixture = new FactorialTrailingZeros();
     }
 
+
+    //20! is 2432902008176640000
     @Test
     public void shouldHaveCorrectTrailingZeroes() {
         assertEquals(4, fixture.trailingZeroes(20));

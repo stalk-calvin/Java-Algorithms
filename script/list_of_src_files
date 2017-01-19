@@ -124,6 +124,7 @@ Numbers/ContainsNearbyDuplicate.java
 Numbers/CountPrimes.java
 Numbers/Decimal.java
 Numbers/ExcelSheetColumnNumber.java
+Numbers/Factorial.java
 Numbers/FactorialTrailingZeros.java
 Numbers/HappyNumber.java
 Numbers/IntegerAddSubtract.java

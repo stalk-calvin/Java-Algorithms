@@ -231,6 +231,14 @@ Output: 0
 
 In this case, no transaction is done, i.e. max profit = 0.
 
+## SmallestNFromList
+
+Given an input array with *N*, Find smallest *N* numbers and return it in a list.
+
+## SmallestProductN
+
+Find the smallest number which digit numbers product is equal to a given N
+
 ## SubsetsWithDuplicates
 
 Given a collection of integers that might contain duplicates, ***nums***, return all possible subsets.

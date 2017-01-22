@@ -144,6 +144,7 @@ Numbers/RangeQueryImmutable.java
 Numbers/ReverseInteger.java
 Numbers/RomanToInt.java
 Numbers/SellStock.java
+Numbers/SmallestNFromList.java
 Numbers/SmallestProductN.java
 Numbers/SubsetsWithDuplicates.java
 Numbers/SumOfFibonacci.java

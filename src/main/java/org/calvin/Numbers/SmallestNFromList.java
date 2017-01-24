@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class SmallestNFromList {
+
+    // Sorting - O(nlogn)
     public List<Integer> findSmallestUsingSort(int[] input, int x) {
         List<Integer> result = new ArrayList<>();
         if (input == null || input.length < 1) {
@@ -18,6 +20,8 @@ public class SmallestNFromList {
         return result;
     }
 
+    // heapify - O(logn)
+    // fetch min elements from heap - O(1)
     public List<Integer> findSmallestUsingHeap(int[] input, int x) {
         List<Integer> result = new ArrayList<>();
         if (input == null || input.length < 1) {

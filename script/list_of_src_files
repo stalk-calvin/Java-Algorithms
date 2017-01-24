@@ -11,6 +11,7 @@ Arrays/Intersection2.java
 Arrays/LongestConsecutive.java
 Arrays/MajorityElement.java
 Arrays/MajorityElement2.java
+Arrays/MaximumSubarray.java
 Arrays/MergeSortedArray.java
 Arrays/MoveZeros.java
 Arrays/RemoveDuplicateSortedArray.java

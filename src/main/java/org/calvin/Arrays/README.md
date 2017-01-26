@@ -64,6 +64,12 @@ Given an array of size n, find the majority element. The majority element is the
 
 Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times. The algorithm should run in linear time and in O(1) space.
 
+## MaximumProductSubarray
+
+Find the contiguous subarray within an array (containing at least one number) which has the largest product.
+
+For example, given the array `[2,3,-2,4]`, the contiguous subarray `[2,3]` has the largest product = 6.
+
 ## MaximumSubarray
 
 Find the contiguous subarray within an array (containing at least one number) which has the largest sum.

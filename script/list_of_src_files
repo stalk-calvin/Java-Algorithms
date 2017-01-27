@@ -188,6 +188,7 @@ String/CompareVersion.java
 String/CountAndSay.java
 String/ExcelSheetColumnTitle.java
 String/FindDifference.java
+String/FizzBuzz.java
 String/IntegerToString.java
 String/Isomorphic.java
 String/LengthOfLastWord.java
@@ -199,6 +200,7 @@ String/PermutationCombination.java
 String/RansomNote.java
 String/Reverse.java
 String/ReverseVowel.java
+String/ReverseWordsInAString.java
 String/SimplifyPath.java
 String/StrStr.java
 String/SummaryRanges.java

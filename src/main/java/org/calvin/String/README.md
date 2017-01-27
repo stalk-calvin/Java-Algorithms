@@ -68,6 +68,10 @@ Explanation:
 'e' is the letter that was added.
 ```
 
+## FizzBuzz
+
+Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
 ## Isomorphic
 
 Given two strings s and t, determine if they are isomorphic.
@@ -152,6 +156,14 @@ Given s = "hello", return "holle".
 
 Example 2:  
 Given s = "leetcode", return "leotcede".
+
+## ReverseWordsInAString
+
+Given an input string, reverse the string word by word.
+
+For example,
+Given s = "`the sky is blue`",
+return "`blue is sky the`".
 
 ## SimplifyPath
 

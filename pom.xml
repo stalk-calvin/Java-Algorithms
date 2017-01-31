@@ -81,36 +81,6 @@
         <profile>
             <repositories>
                 <repository>
-                    <id>mvnrepo</id>
-                    <url>http://central.maven.org/maven2/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>java.net</id>
-                    <url>https://maven.java.net/content/repositories/public/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>central</id>
-                    <url>http://repo1.maven.org/maven2/</url>
-                    <releases>
-                        <enabled>true</enabled>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
                     <id>mvnrepository.com</id>
                     <url>https://mvnrepository.com/artifact</url>
                     <releases>

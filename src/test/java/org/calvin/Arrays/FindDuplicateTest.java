@@ -1,35 +1,35 @@
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Before;
 import org.junit.Test;
 
-public class FindDuplicatesTest {
-    private FindDuplicates fixture;
+public class FindDuplicateTest {
+    private FindDuplicate fixture;
 
     @Before
     public void setUp() throws Exception {
-        fixture = new FindDuplicates();
+        fixture = new FindDuplicate();
     }
 
     @Test
     public void shouldFindDuplicateLeft() throws Exception {
         int[] input = {1,8,2,3,5,1};
-        int actual = fixture.findDuplicate(input);
-        assertEquals(1, input[actual]);
+        boolean actual = fixture.findDuplicate(input);
+        assertTrue(actual);
     }
 
     @Test
     public void shouldFindDuplicateRight() throws Exception {
         int[] input = {8,8,2,3,5,1};
-        int actual = fixture.findDuplicate(input);
-        assertEquals(8, input[actual]);
+        boolean actual = fixture.findDuplicate(input);
+        assertTrue(actual);
     }
 
     @Test
     public void shouldNotFindDuplicate() throws Exception {
-        int actual = fixture.findDuplicate(null);
-        assertEquals(0, actual);
+        assertFalse(fixture.findDuplicate(null));
     }
 }

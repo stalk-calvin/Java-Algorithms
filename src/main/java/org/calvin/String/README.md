@@ -128,6 +128,10 @@ Given `"pwwkew"`, the answer is `"wke"`, with the length of 3. Note that the ans
 
 Same as CountAndSay with different approach to solve the problem.
 
+## PrintPossibleCorrectParentheses
+
+Prints all possible correct combinations of n opening and closing parentheses. All possible combinations for n = 3 are: ((())) (()()) (())() ()(()) ()()()
+
 ## RansomNote
 
 Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.

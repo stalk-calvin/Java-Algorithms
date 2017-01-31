@@ -34,6 +34,14 @@ Friend's guess: "0111"
 
 In this case, the 1st `1` in friend's guess is a bull, the 2nd or 3rd `1` is a cow, and your function should return `"1A1B"`.
 
+## ClosestToZero
+
+Write a program that prints the temperature closest to 0 among input data. If two numbers are equally close to zero, positive integer has to be considered closest to zero (for instance, if the temperatures are -5 and 5, then display 5).
+
+Example:
+
+`[1 -2 -8 4 5]` should give `1`
+
 ## ContainsNearbyDuplicate
 
 Given an array of integers and an integer k, find out whether there are two distinct indices i and j in the array such that nums[i] = nums[j] and the difference between i and j is at most k.

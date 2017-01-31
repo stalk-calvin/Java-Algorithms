@@ -4,7 +4,7 @@ Arrays/AnagramValidity.java
 Arrays/CheckIfArrayElementsAreConsecutive.java
 Arrays/ContainsDuplicate.java
 Arrays/DuplicateWithinkIndices.java
-Arrays/FindDuplicates.java
+Arrays/FindDuplicate.java
 Arrays/GasStation.java
 Arrays/Intersection.java
 Arrays/Intersection2.java
@@ -122,6 +122,7 @@ LinkedList/SortList.java
 LinkedList/SwapNode.java
 Numbers/AddDigit.java
 Numbers/BullsAndCows.java
+Numbers/ClosestToZero.java
 Numbers/ContainsNearbyDuplicate.java
 Numbers/CountPrimes.java
 Numbers/Decimal.java
@@ -197,6 +198,7 @@ String/LongestSubstringWithoutRepeat.java
 String/LookAndSay.java
 String/NonRepeated.java
 String/PermutationCombination.java
+String/PrintPossibleCorrectParentheses.java
 String/RansomNote.java
 String/Reverse.java
 String/ReverseVowel.java

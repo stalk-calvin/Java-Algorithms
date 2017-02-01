@@ -194,6 +194,7 @@ String/IntegerToString.java
 String/Isomorphic.java
 String/LengthOfLastWord.java
 String/LongestCommonPrefix.java
+String/LongestPalindromicSubstring.java
 String/LongestSubstringWithoutRepeat.java
 String/LookAndSay.java
 String/NonRepeated.java

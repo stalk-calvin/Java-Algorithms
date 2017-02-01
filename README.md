@@ -30,5 +30,5 @@ Enjoy!
 
 ## How many algorithms?
 
-There are roughly 250 java algorithms exists with 451 test cases.  
+There are roughly 251 java algorithms exists with 453 test cases.  
 See [list of algorithm source files](script/list_of_src_files) for all the algorithms here.

@@ -112,6 +112,28 @@ Shows algorithm to generate Permutation and Combination on a given string.
 
 Write a function to find the longest common prefix string amongst an array of strings.
 
+## LongestPalindromicSubstring
+
+Given a string *s*, find the longest palindromic substring in *s*. You may assume that the maximum length of *s* is 1000.
+
+**Example**:
+
+```
+Input: "babad"
+
+Output: "bab"
+
+Note: "aba" is also a valid answer.
+```
+
+**Example**:
+
+```
+Input: "cbbd"
+
+Output: "bb"
+```
+
 ## Longest Substring Without Repeating Characters
 
 Given a string, find the length of the **longest substring** without repeating characters.

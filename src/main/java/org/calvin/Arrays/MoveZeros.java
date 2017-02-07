@@ -6,7 +6,7 @@
 package org.calvin.Arrays;
 
 public class MoveZeros {
-    public int moveAndReturnNumberOfZeroes(int[] A) {
+    public int moveAndReturnNumberOfNonZeroes(int[] A) {
         if (A == null) {
             return 0;
         }

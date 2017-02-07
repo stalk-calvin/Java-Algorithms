@@ -23,7 +23,7 @@ public class MoveZerosTest {
     @Test
     public void shouldMoveZeroesToEnd() {
         int[] input = {0,1,0,3,0};
-        int length = fixture.moveAndReturnNumberOfZeroes(input);
+        int length = fixture.moveAndReturnNumberOfNonZeroes(input);
         int[] expected = {1,3};
         assertTrue(Arrays.equals(expected, Arrays.copyOfRange(input, 0, length)));
     }
@@ -31,7 +31,7 @@ public class MoveZerosTest {
     @Test
     public void shouldNotMove() {
         int[] input = null;
-        fixture.moveAndReturnNumberOfZeroes(input);
+        fixture.moveAndReturnNumberOfNonZeroes(input);
         int[] expected = null;
         assertTrue(Arrays.equals(expected,input));
     }

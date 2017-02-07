@@ -213,6 +213,7 @@ String/ZigZag.java
 Tree/Balanced.java
 Tree/BFS.java
 Tree/BFS2.java
+Tree/BSTDistance.java
 Tree/FindClosestNumber.java
 Tree/InvertTree.java
 Tree/LCABST.java

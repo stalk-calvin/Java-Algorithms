@@ -166,6 +166,10 @@ canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
 ```
 
+## RemoveComment
+
+Given a String array, we are going to read it element by element, can you write a method to remove block of comments marked with '/*' and '*\'.
+
 ## Reverse String
 
 Write a function that takes a string as input and returns the string reversed.

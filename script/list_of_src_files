@@ -201,6 +201,7 @@ String/NonRepeated.java
 String/PermutationCombination.java
 String/PrintPossibleCorrectParentheses.java
 String/RansomNote.java
+String/RemoveComment.java
 String/Reverse.java
 String/ReverseVowel.java
 String/ReverseWordsInAString.java

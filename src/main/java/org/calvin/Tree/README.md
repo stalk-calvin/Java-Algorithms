@@ -63,6 +63,13 @@ return its bottom-up level order traversal as:
 ```
 
 ## FindClosestNumber
+
+Find a distance between the closest node to the given integer, *x*.
+
+## FindMinNumberAtPosition
+
+Given a Binary Search Tree, can you write a method to obtain the *n*th min element?
+
 ## InvertTree
 
 Invert a binary tree.

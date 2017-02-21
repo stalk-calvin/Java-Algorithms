@@ -516,5 +516,11 @@ public class AssortedMethods {
                 "officials", "operator", "Senate", "lend", "hearts", "embers", "abused", "resins", "trendy", "ssdsy" };
         return wordList;
     }
+
+    public static void validateInput(Object input) {
+        if (input == null) {
+            throw new IllegalArgumentException("You can't pass a null input as argument.");
+        }
+    }
 }
 

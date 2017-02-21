@@ -1,12 +1,17 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Numbers;
 
 import static org.junit.Assert.assertEquals;
 
 import java.util.List;
 
-import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
+import com.google.common.collect.Lists;
 
 public class SmallestNFromListTest {
     private SmallestNFromList fixture;

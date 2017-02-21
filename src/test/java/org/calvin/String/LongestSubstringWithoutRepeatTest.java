@@ -1,9 +1,14 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.String;
+
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class LongestSubstringWithoutRepeatTest {
     private LongestSubstringWithoutRepeat fixture;

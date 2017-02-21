@@ -1,10 +1,15 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Tree;
+
+import static org.junit.Assert.assertEquals;
 
 import org.calvin.Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class FindClosestNumberTest {
     private FindClosestNumber fixture;

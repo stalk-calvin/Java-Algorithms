@@ -5,12 +5,12 @@
 
 package org.calvin.StackQueue;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Stack;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.Before;
+import org.junit.Test;
 
 public class SortUsingStackTest {
     private SortUsingStack fixture;
@@ -23,36 +23,23 @@ public class SortUsingStackTest {
     @Test
     public void shouldSortUsingStacks() {
         Stack<Integer> input = new Stack<>();
-        input.push(5);
-        input.push(1);
+        input.push(6);
+        input.push(8);
+        input.push(2);
         input.push(3);
         input.push(9);
-        input.push(6);
-        input.push(7);
-
-        Stack<Integer> expected = new Stack<>();
-        expected.push(7);
-        expected.push(6);
-        expected.push(9);
-        expected.push(3);
-        expected.push(1);
-        expected.push(5);
-
-        for (Integer anInput : input) {
-            assertEquals(expected.pop(), anInput);
-        }
 
         input = fixture.sort(input);
 
-        expected.push(9);
-        expected.push(7);
-        expected.push(6);
-        expected.push(5);
+        Stack<Integer> expected = new Stack<>();
+        expected.push(2);
         expected.push(3);
-        expected.push(1);
+        expected.push(6);
+        expected.push(8);
+        expected.push(9);
 
-        for (Integer anInput : input) {
-            assertEquals(expected.pop(), anInput);
+        for (int i = 0; i < input.size(); i++) {
+            assertEquals(expected.pop(), input.pop());
         }
     }
 

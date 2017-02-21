@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.String;
 
 import static org.junit.Assert.assertEquals;
@@ -7,9 +12,6 @@ import java.util.List;
 
 import org.junit.Test;
 
-/**
- * Created by calvin.lee on 2016-12-25.
- */
 public class PermutationCombinationTest {
     private PermutationCombination fixture;
 

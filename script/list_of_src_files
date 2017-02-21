@@ -208,6 +208,7 @@ String/ReverseWordsInAString.java
 String/SimplifyPath.java
 String/StrStr.java
 String/SummaryRanges.java
+String/UniqueChars.java
 String/ValidPalindrome.java
 String/WordPattern.java
 String/ZigZag.java

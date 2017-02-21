@@ -1,13 +1,18 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.StackQueue;
+
+import static org.junit.Assert.assertEquals;
+
+import java.util.EmptyStackException;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
-
-import java.util.EmptyStackException;
-
-import static org.junit.Assert.assertEquals;
 
 public class MinStackTest {
     MinStack fixture;

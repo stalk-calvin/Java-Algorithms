@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.Numbers;
 
 import static org.junit.Assert.assertEquals;
@@ -8,9 +13,6 @@ import java.util.List;
 import org.junit.Test;
 import com.google.common.collect.Lists;
 
-/**
- * Created by calvin.lee on 2016-12-25.
- */
 public class SubsetsWithDuplicatesTest {
     @Test
     public void shouldShowSubsets() throws Exception {

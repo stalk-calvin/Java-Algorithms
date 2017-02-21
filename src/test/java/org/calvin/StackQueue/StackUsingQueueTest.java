@@ -1,11 +1,16 @@
-package org.calvin.StackQueue;
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
 
-import org.junit.Before;
-import org.junit.Test;
+package org.calvin.StackQueue;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class StackUsingQueueTest {
     StackUsingQueue fixture;

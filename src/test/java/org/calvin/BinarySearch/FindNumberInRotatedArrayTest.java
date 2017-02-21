@@ -1,3 +1,8 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.BinarySearch;
 
 import static junit.framework.TestCase.assertEquals;

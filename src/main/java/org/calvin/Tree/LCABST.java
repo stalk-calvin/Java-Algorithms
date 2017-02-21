@@ -16,6 +16,6 @@ public class LCABST {
                 return root;
             }
         }
-        return root;
+        return null;
     }
 }

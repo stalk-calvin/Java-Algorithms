@@ -214,6 +214,10 @@ Given a sorted integer array without duplicates, return the summary of its range
 
 For example, given `[0,1,2,4,5,7]`, return `["0->2","4->5","7"]`.
 
+## UniqueChars
+
+Implement an algorithm to determine if a string has all unique characters. What if you cannot use additional data structures?
+
 ## ValidPalindrome
 
 Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.

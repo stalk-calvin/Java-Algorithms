@@ -1,8 +1,13 @@
+/*
+ * Copyright Calvin Lee - 2016.
+ * All Rights Reserved.
+ */
+
 package org.calvin.BitManipulation;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.Arrays;
+
+import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class AddBinary {

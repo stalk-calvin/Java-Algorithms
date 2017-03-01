@@ -62,6 +62,10 @@ return its bottom-up level order traversal as:
 ]
 ```
 
+## EqualTree
+
+Given two binary trees, can you write a method to check if this trees are equals?
+
 ## FindClosestNumber
 
 Find a distance between the closest node to the given integer, *x*.

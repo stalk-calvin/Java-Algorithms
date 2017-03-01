@@ -216,6 +216,7 @@ Tree/Balanced.java
 Tree/BFS.java
 Tree/BFS2.java
 Tree/BSTDistance.java
+Tree/EqualTree.java
 Tree/FindClosestNumber.java
 Tree/FindMinNumberAtPosition.java
 Tree/InvertTree.java

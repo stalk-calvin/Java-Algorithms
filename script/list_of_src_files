@@ -133,6 +133,7 @@ Numbers/HappyNumber.java
 Numbers/IntegerAddSubtract.java
 Numbers/LargestNumber.java
 Numbers/MostFrequent.java
+Numbers/MultiplicationWithoutMultiply.java
 Numbers/Palindrome.java
 Numbers/PascalsTriangle.java
 Numbers/PascalsTriangle2.java

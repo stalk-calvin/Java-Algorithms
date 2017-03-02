@@ -103,6 +103,10 @@ Note: The result may be very large, so you need to return a string instead of an
 
 Find the most frequent integer in an array
 
+## MultiplicationWithoutMultiply
+
+Given two integers passed as parameter, can you write a method to multiply it and return the result without use "*" operator?
+
 ## Palindrome
 
 Determine whether an integer is a palindrome. Do this without extra space.

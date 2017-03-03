@@ -107,6 +107,10 @@ Find the most frequent integer in an array
 
 Given two integers passed as parameter, can you write a method to multiply it and return the result without use "*" operator?
 
+## MultiplyArrayElements
+
+Given an array of elements, write a method to multiply every value for the rest of elements and return a new array with this values. Can you resolve this problem without use "/" operator?
+
 ## Palindrome
 
 Determine whether an integer is a palindrome. Do this without extra space.

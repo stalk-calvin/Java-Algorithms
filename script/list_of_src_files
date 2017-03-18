@@ -201,12 +201,17 @@ String/LongestSubstringWithoutRepeat.java
 String/LookAndSay.java
 String/NonRepeated.java
 String/PermutationCombination.java
+String/pojo/json/Menu.java
+String/pojo/json/MenuItem.java
+String/pojo/xml/Person.java
+String/pojo/xml/PhoneNumber.java
 String/PrintPossibleCorrectParentheses.java
 String/RansomNote.java
 String/RemoveComment.java
 String/Reverse.java
 String/ReverseVowel.java
 String/ReverseWordsInAString.java
+String/SimpleRegularExpression.java
 String/SimplifyPath.java
 String/StrStr.java
 String/SummaryRanges.java
@@ -236,3 +241,5 @@ Tree/Traversal/DFS/Postorder.java
 Tree/Traversal/DFS/Preorder.java
 Tree/Trie/Trie.java
 Tree/Trie/TrieNode.java
+String/pojo/reader/JSON.java
+String/pojo/reader/XML.java

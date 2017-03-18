@@ -195,6 +195,15 @@ For example,
 Given s = "`the sky is blue`",
 return "`blue is sky the`".
 
+## SimpleRegularExpression
+
+Method to analyze some strings with regular expressions and return true if the expression matches with the word?
+
+Expressions supported are:
+
+`.` Matches any single character.
+`*` Matches zero or more of the preceding element.
+
 ## SimplifyPath
 
 Given an absolute path for a file (Unix-style), simplify it.

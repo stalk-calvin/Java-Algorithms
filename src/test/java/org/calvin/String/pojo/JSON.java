@@ -35,6 +35,7 @@ public class JSON {
     public void shouldReadJson() throws Exception {
         assertEquals("SVG Viewer", fixture.getHeader());
         assertEquals("Open", fixture.getMenuItems().get(0).getId());
+        assertEquals(null, fixture.getMenuItems().get(0).getLabel());
     }
 
     @Test

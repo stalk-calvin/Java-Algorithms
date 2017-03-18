@@ -30,6 +30,10 @@ public class XML {
     public void shouldReadXML() throws Exception {
         Person newPerson = (Person) xstream.fromXML(FileUtils.readFileToString(new File(INPUT_TEST_XML)));
         assertEquals("Joe", newPerson.getFirstname());
+        assertEquals("Walnes", newPerson.getLastname());
+        assertEquals(123, newPerson.getPhone().getCode());
+        assertEquals("1234-456", newPerson.getPhone().getNumber());
+        assertEquals(123, newPerson.getFax().getCode());
         assertEquals("9999-999", newPerson.getFax().getNumber());
     }
 

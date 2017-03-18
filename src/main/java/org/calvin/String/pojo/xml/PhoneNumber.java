@@ -6,14 +6,15 @@
 package org.calvin.String.pojo.xml;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class PhoneNumber {
+    @Getter
     private int code;
+    @Getter
     private String number;
     // ... constructors and methods
 }

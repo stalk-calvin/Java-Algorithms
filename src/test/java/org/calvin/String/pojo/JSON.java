@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.String.pojo.reader;
+package org.calvin.String.pojo;
 
 import static org.junit.Assert.assertEquals;
 

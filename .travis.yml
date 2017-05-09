@@ -16,6 +16,9 @@ notifications:
 jdk:
   - oraclejdk8
 
+env:
+  - CODACY_PROJECT_TOKEN=ae6a2f5f152b4f7bbdd99377aa44d28a
+
 before_install:
   - sudo apt-get install jq
   - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)

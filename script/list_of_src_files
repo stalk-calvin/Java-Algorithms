@@ -20,6 +20,7 @@ Arrays/RemoveDuplicateSortedArray.java
 Arrays/RemoveElement.java
 Arrays/Rotate.java
 Arrays/SlidingWindowMaximum.java
+Arrays/kDiffPairs.java
 BinarySearch/BinarySearch.java
 BinarySearch/FindMinimumNumberInRotatedArray.java
 BinarySearch/FindNumberInRotatedArray.java
@@ -159,6 +160,7 @@ Numbers/ThreeSum.java
 Numbers/TwoSum.java
 Numbers/UglyNumber.java
 Numbers/ValidSudoku.java
+Numbers/ThirdMax.java
 ObjectOriented/Router/Message.java
 ObjectOriented/Router/Router.java
 ObjectOriented/Router/RoutingEntry.java
@@ -206,10 +208,6 @@ String/LongestSubstringWithoutRepeat.java
 String/LookAndSay.java
 String/NonRepeated.java
 String/PermutationCombination.java
-String/pojo/json/Menu.java
-String/pojo/json/MenuItem.java
-String/pojo/xml/Person.java
-String/pojo/xml/PhoneNumber.java
 String/PrintPossibleCorrectParentheses.java
 String/RansomNote.java
 String/RemoveComment.java
@@ -224,10 +222,14 @@ String/UniqueChars.java
 String/ValidPalindrome.java
 String/WordPattern.java
 String/ZigZag.java
-Tree/Balanced.java
+String/pojo/json/Menu.java
+String/pojo/json/MenuItem.java
+String/pojo/xml/Person.java
+String/pojo/xml/PhoneNumber.java
 Tree/BFS.java
 Tree/BFS2.java
 Tree/BSTDistance.java
+Tree/Balanced.java
 Tree/EqualTree.java
 Tree/FindClosestNumber.java
 Tree/FindMinNumberAtPosition.java

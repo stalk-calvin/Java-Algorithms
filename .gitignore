@@ -1,4 +1,5 @@
 *.prefs
+build/
 
 # Eclipse
 *.classpath

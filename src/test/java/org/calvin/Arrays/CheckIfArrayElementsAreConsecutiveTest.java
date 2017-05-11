@@ -15,7 +15,7 @@ public class CheckIfArrayElementsAreConsecutiveTest {
     CheckIfArrayElementsAreConsecutive fixture;
 
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new CheckIfArrayElementsAreConsecutive();
     }
 

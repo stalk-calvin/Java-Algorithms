@@ -19,7 +19,7 @@ public class DogTest {
     private List<Dog> list;
 
     @Before
-    public void setup() {
+    public void setUp() {
         list = new ArrayList<>();
         list.add(new Dog("Lacy", 2));
         list.add(new Dog("Roger", 10));

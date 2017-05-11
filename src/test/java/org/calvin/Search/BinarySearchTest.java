@@ -19,7 +19,7 @@ public class BinarySearchTest {
 
     private SearchInterface<Integer> fixture;
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new BinarySearch<>();
     }
 

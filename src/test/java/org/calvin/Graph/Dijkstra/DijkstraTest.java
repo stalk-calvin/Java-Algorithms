@@ -23,7 +23,7 @@ public class DijkstraTest {
             .toArray(List[]::new);
 
     @Before
-    public void setup() {
+    public void setUp() {
         createGraph();
     }
 

@@ -18,12 +18,11 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class DirectorPPowerTest {
-    PurchasePower fixture;
-    PurchaseRequest purchaseRequest;
-    PurchasePower successor;
+    private PurchasePower fixture;
+    private PurchaseRequest purchaseRequest;
+    private PurchasePower successor;
 
-    @Mock
-    PrintStream ps;
+    @Mock private PrintStream ps;
 
     @Before
     public void setUp() {

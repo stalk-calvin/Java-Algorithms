@@ -24,5 +24,4 @@ public class AnagramCounterTest {
         int actual = fixture.numberNeeded("cde", "abc");
         assertEquals(expected, actual);
     }
-
 }

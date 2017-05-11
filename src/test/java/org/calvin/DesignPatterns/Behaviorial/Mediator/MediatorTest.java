@@ -24,7 +24,7 @@ public class MediatorTest {
     PrintStream ps;
 
     @Before
-    public void setup() {
+    public void setUp() {
         System.setOut(ps);
         AEventHandler aEventHandler = new AEventHandler();
         BEventHandler bEventHandler = new BEventHandler();

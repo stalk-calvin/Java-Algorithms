@@ -15,7 +15,7 @@ public class FindClosestNumberTest {
     private FindClosestNumber fixture;
 
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new FindClosestNumber();
     }
 

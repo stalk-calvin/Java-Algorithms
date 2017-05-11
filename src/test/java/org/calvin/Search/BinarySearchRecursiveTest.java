@@ -20,7 +20,7 @@ public class BinarySearchRecursiveTest {
     private SearchInterface<Integer> fixture;
 
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new BinarySearchRecursive<>();
     }
 

@@ -19,7 +19,7 @@ public class BfsDfsTest {
     private List<String> vertices = Lists.newArrayList();
 
     @Before
-    public void setup() {
+    public void setUp() {
         newGraph = createNewGraph();
         fixture = new BfsDfs(vertices);
     }

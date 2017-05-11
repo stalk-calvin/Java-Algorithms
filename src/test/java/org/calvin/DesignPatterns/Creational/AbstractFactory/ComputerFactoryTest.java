@@ -14,7 +14,7 @@ public class ComputerFactoryTest {
     ComputerFactory fixture;
 
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new ComputerFactory();
     }
 

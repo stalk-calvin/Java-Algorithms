@@ -15,7 +15,7 @@ public class InvertTreeTest {
     InvertTree fixture;
 
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new InvertTree();
     }
 

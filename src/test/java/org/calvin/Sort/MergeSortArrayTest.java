@@ -21,7 +21,7 @@ import static org.mockito.Mockito.mock;
 public class MergeSortArrayTest {
     private MergeSortArray fixture;
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new MergeSortArray();
     }
     @Test

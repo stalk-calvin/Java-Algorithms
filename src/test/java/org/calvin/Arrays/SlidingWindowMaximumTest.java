@@ -15,7 +15,7 @@ public class SlidingWindowMaximumTest {
     SlidingWindowMaximum fixture;
 
     @Before
-    public void setup() {
+    public void setUp() {
         fixture = new SlidingWindowMaximum();
     }
 

@@ -21,7 +21,7 @@ public class RouterTest {
     private RoutingTable routingTable6 = new RoutingTable();
 
     @Before
-    public void setup() {
+    public void setUp() {
         routingTable1.addRoutingEntry(new RoutingEntry("140.1.1.0", "direct", "255.255.255.0", 1));
         routingTable1.addRoutingEntry(new RoutingEntry("140.1.2.0", "direct", "255.255.255.0", 1));
         routingTable1.addRoutingEntry(new RoutingEntry("140.1.3.0", "direct", "255.255.255.0", 1));

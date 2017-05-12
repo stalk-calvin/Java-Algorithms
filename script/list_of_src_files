@@ -20,7 +20,7 @@ Arrays/RemoveDuplicateSortedArray.java
 Arrays/RemoveElement.java
 Arrays/Rotate.java
 Arrays/SlidingWindowMaximum.java
-Arrays/kDiffPairs.java
+Arrays/KDiffPairs.java
 BinarySearch/BinarySearch.java
 BinarySearch/FindMinimumNumberInRotatedArray.java
 BinarySearch/FindNumberInRotatedArray.java

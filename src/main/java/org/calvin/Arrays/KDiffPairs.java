@@ -5,14 +5,10 @@
 
 package org.calvin.Arrays;
 
-import com.google.common.collect.Sets;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-import org.apache.commons.lang3.ArrayUtils;
 
-public class kDiffPairs {
+public class KDiffPairs {
     public int findPairs(int[] nums, int k) {
         if (k < 0) return 0;
 

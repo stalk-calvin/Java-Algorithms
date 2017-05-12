@@ -10,11 +10,11 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class kDiffPairsTest {
-    private kDiffPairs fixture;
+public class KDiffPairsTest {
+    private KDiffPairs fixture;
 
     @Before public void setUp() throws Exception {
-        fixture = new kDiffPairs();
+        fixture = new KDiffPairs();
     }
 
     @Test public void shouldNotFindPairsWithNegativeK() throws Exception {

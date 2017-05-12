@@ -285,6 +285,41 @@ As an example, passing 4 to the function should return 7 because all Fibonacci n
 
 Bonus: Calculate sum of odd fibonacci, example: passing 4 => 5 as fibonacci numbers under 4 are 1, 1 and 3.
 
+## ThirdMax
+
+Given a non-empty array of integers, return the third maximum number in this array. If it does not exist, return the maximum number. The time complexity must be in O(n).
+
+**Example 1**:
+
+```text
+Input: [3, 2, 1]
+
+Output: 1
+
+Explanation: The third maximum is 1.
+```
+
+**Example 2**:
+
+```text
+Input: [1, 2]
+
+Output: 2
+
+Explanation: The third maximum does not exist, so the maximum (2) is returned instead.
+```
+
+**Example 3**:
+
+```text
+Input: [2, 2, 3, 1]
+
+Output: 1
+
+Explanation: Note that the third maximum here means the third maximum distinct number.
+Both numbers with value 2 are both considered as second maximum.
+```
+
 ## ThreeSum
 
 Given an array S of *n* integers, are there elements *a*, *b*, *c* in S such that a + b + c = 0? Find all unique triplets in the array which gives the sum of zero.

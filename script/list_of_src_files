@@ -161,6 +161,7 @@ Numbers/TwoSum.java
 Numbers/UglyNumber.java
 Numbers/ValidSudoku.java
 Numbers/ThirdMax.java
+Numbers/CircularPrime.java
 ObjectOriented/Router/Message.java
 ObjectOriented/Router/Router.java
 ObjectOriented/Router/RoutingEntry.java

@@ -249,5 +249,6 @@ Tree/Traversal/DFS/Postorder.java
 Tree/Traversal/DFS/Preorder.java
 Tree/Trie/Trie.java
 Tree/Trie/TrieNode.java
+PropertyTesting/Calculator.java
 String/pojo/JSON.java
 String/pojo/XML.java

@@ -250,5 +250,6 @@ Tree/Traversal/DFS/Preorder.java
 Tree/Trie/Trie.java
 Tree/Trie/TrieNode.java
 PropertyTesting/Calculator.java
+LoadingProperties/ApacheCommons/Config.java
 String/pojo/JSON.java
 String/pojo/XML.java

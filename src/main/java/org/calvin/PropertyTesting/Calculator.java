@@ -8,7 +8,7 @@ package org.calvin.PropertyTesting;
 
 public class Calculator {
 
-    int valueDisplayed;
+    private int valueDisplayed;
 
     public Calculator() {
         this.valueDisplayed = 0;

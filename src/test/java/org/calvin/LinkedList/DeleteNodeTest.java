@@ -34,8 +34,7 @@ public class DeleteNodeTest {
 
     @Test
     public void shouldNotDeleteSingleElement() {
-        listBase = new ListNode(5);
-        fixture.deleteNode(listBase);
-        assertEquals("5", listBase.printForward());
+        fixture.deleteNode(listBase.getNext());
+        assertEquals("1->3", listBase.printForward());
     }
 }

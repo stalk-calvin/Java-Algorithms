@@ -40,9 +40,9 @@ public class EqualTreeTest {
 
     @Test
     public void shouldFindDifferentTreesUsingRecursive() {
-        int[] input = {1,2,3,4,5,6,7,8};
+        int[] input = {1,2,3,4,5,6};
         TreeNode root1 = AssortedMethods.createTreeFromArray(input);
-        int[] input2 = {1,2,3,4,5,9,7,8};
+        int[] input2 = {1,2,3,4,5,6,7,8};
         TreeNode root2 = AssortedMethods.createTreeFromArray(input2);
 
         // Trees different
@@ -69,9 +69,9 @@ public class EqualTreeTest {
 
     @Test
     public void shouldFindDifferentTreesUsingIterative() {
-        int[] input = {1,2,3,4,5,6,7,8};
+        int[] input = {1,2,3,4,5,6};
         TreeNode root1 = AssortedMethods.createTreeFromArray(input);
-        int[] input2 = {1,2,3,4,5,9,7,8};
+        int[] input2 = {1,2,3,4,5,6,7,8};
         TreeNode root2 = AssortedMethods.createTreeFromArray(input2);
 
         // Trees different

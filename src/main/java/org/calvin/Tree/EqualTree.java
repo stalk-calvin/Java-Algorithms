@@ -29,23 +29,31 @@ public class EqualTree {
         Queue<TreeNode> q2 = new LinkedList<>();
         q1.add(tree1);
         q2.add(tree2);
-        while (!q1.isEmpty()) {
+        while (!(q1.isEmpty() && q2.isEmpty())) {
             TreeNode node1 = q1.poll();
             TreeNode node2 = q2.poll();
-            if (!node1.equals(node2)) {
+            if (node1 != null && !node1.equals(node2)) {
                 return false;
             }
-            if (node1.getLeft() != null) {
-                q1.add(node1.getLeft());
+            if (node2 != null && !node2.equals(node1)) {
+                return false;
             }
-            if (node1.getRight() != null) {
-                q1.add(node1.getRight());
+            if (node1 != null) {
+                if (node1.getLeft() != null) {
+                    q1.add(node1.getLeft());
+                }
+                if (node1.getRight() != null) {
+                    q1.add(node1.getRight());
+                }
             }
-            if (node2.getLeft() != null) {
-                q2.add(node2.getLeft());
-            }
-            if (node2.getRight() != null) {
-                q2.add(node2.getRight());
+
+            if (node2 != null) {
+                if (node2.getLeft() != null) {
+                    q2.add(node2.getLeft());
+                }
+                if (node2.getRight() != null) {
+                    q2.add(node2.getRight());
+                }
             }
         }
 

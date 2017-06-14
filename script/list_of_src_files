@@ -249,7 +249,10 @@ Tree/Traversal/DFS/Postorder.java
 Tree/Traversal/DFS/Preorder.java
 Tree/Trie/Trie.java
 Tree/Trie/TrieNode.java
+Tree/MergeTrees.java
 PropertyTesting/Calculator.java
+LoadingProperties/POJO/Config.java
 LoadingProperties/ApacheCommons/Config.java
+LoadingProperties/Spring/Config.java
 String/pojo/JSON.java
 String/pojo/XML.java

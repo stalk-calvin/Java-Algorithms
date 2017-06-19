@@ -5,10 +5,6 @@
 
 package org.calvin.Tree;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 public class MergeTrees {
     public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
         if (t1 == null && t2 == null) return null;

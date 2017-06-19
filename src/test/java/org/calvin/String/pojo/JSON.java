@@ -7,12 +7,14 @@ package org.calvin.String.pojo;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.calvin.String.pojo.json.Menu;
+import org.calvin.String.pojo.json.MenuItem;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -40,7 +42,14 @@ public class JSON {
 
     @Test
     public void shouldWriteJson() throws Exception {
-        String json = gson.toJson(fixture);
-        assertEquals(FileUtils.readFileToString(new File(INPUT_TEST_JSON)), json);
+        Menu tempMenu = new Menu();
+        tempMenu.setHeader("SVG Viewer");
+        List<MenuItem> menuItems = new ArrayList<>();
+        menuItems.add(MenuItem.builder().id("Open").build());
+        menuItems.add(MenuItem.builder().id("OpenNew").label("Open New").build());
+        tempMenu.setMenuItems(menuItems);
+        String json = "{\"header\":\"SVG Viewer\",\"items\":[{\"id\":\"Open\"},{\"id\":\"OpenNew\",\"label\":\"Open "
+                + "New\"}]}";
+        assertEquals(new GsonBuilder().create().toJson(tempMenu), json);
     }
 }

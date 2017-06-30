@@ -16,6 +16,6 @@ public class Gazillion {
     }
 
     void report() {
-        System.out.print(" " + row + col);
+        System.out.print(" " + row + col + " size:" + num);
     }
 }

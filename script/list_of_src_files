@@ -31,6 +31,7 @@ BinarySearch/SquareRoot.java
 BitManipulation/AddBinary.java
 BitManipulation/NumberOf1Bit.java
 BitManipulation/ReverseBit.java
+BitManipulation/NumberCompliment.java
 Cryptography/AESEncryption.java
 DesignPatterns/Behaviorial/ChainOfResponsibility/DirectorPPower.java
 DesignPatterns/Behaviorial/ChainOfResponsibility/ManagerPPower.java
@@ -52,7 +53,7 @@ DesignPatterns/Behaviorial/Observer/Subject.java
 DesignPatterns/Behaviorial/Strategy/OperationAdd.java
 DesignPatterns/Behaviorial/Strategy/OperationDivide.java
 DesignPatterns/Behaviorial/Strategy/OperationMultiply.java
-DesignPatterns/Behaviorial/Strategy/OperationStrategy.java
+DesignPatterns/Behaviorial/Strategy/OperationFactory.java
 DesignPatterns/Behaviorial/Strategy/OperationSubstract.java
 DesignPatterns/Behaviorial/Visitor/Body.java
 DesignPatterns/Behaviorial/Visitor/Car.java

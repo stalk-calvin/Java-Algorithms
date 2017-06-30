@@ -36,7 +36,7 @@ public class GazillionTest {
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLS; j++) {
                 matrix[i][j].report();
-                verify(ps).print(" " + i + j);
+                verify(ps).print(" " + i + j + " size:" + ROWS*COLS);
             }
         }
     }

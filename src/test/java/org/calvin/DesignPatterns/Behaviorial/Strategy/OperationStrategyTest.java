@@ -12,22 +12,22 @@ import org.junit.Test;
 public class OperationStrategyTest {
     @Test
     public void shouldExecuteAddOperation() {
-        OperationStrategy ct = new OperationStrategy(new OperationAdd());
+        OperationFactory ct = new OperationFactory(new OperationAdd());
         assertEquals(3, ct.executeStrategy(1,2));
     }
     @Test
     public void shouldExecuteSubtractOperation() {
-        OperationStrategy ct = new OperationStrategy(new OperationSubstract());
+        OperationFactory ct = new OperationFactory(new OperationSubstract());
         assertEquals(1, ct.executeStrategy(2,1));
     }
     @Test
     public void shouldExecuteMultiplyOperation() {
-        OperationStrategy ct = new OperationStrategy(new OperationMultiply());
+        OperationFactory ct = new OperationFactory(new OperationMultiply());
         assertEquals(2, ct.executeStrategy(1,2));
     }
     @Test
     public void shouldExecuteDivideOperation() {
-        OperationStrategy ct = new OperationStrategy(new OperationDivide());
+        OperationFactory ct = new OperationFactory(new OperationDivide());
         assertEquals(2, ct.executeStrategy(4,2));
     }
 

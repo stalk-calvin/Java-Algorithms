@@ -7,6 +7,17 @@ a = `"11"`
 b = `"1"`  
 Return `"100"`.
 
+## NumberCompliment
+
+Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.
+
+**Example**:
+```
+Input: 5
+Output: 2
+Explanation: The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.
+```
+
 ## NumberOf1Bit
 
 Write a function that takes an unsigned integer and returns the number of ’1' bits it has (also known as the [Hamming weight](https://en.wikipedia.org/wiki/Hamming_weight)).

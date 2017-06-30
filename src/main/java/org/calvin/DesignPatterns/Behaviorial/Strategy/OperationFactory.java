@@ -5,10 +5,10 @@
 
 package org.calvin.DesignPatterns.Behaviorial.Strategy;
 
-public class OperationStrategy {
+public class OperationFactory {
     private Strategy strategy;
 
-    public OperationStrategy(Strategy strategy){
+    public OperationFactory(Strategy strategy){
         this.strategy = strategy;
     }
 

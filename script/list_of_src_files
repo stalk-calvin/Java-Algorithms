@@ -21,6 +21,7 @@ Arrays/RemoveElement.java
 Arrays/Rotate.java
 Arrays/SlidingWindowMaximum.java
 Arrays/KDiffPairs.java
+Arrays/ReshapeMatrix.java
 BinarySearch/BinarySearch.java
 BinarySearch/FindMinimumNumberInRotatedArray.java
 BinarySearch/FindNumberInRotatedArray.java

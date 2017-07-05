@@ -2,7 +2,7 @@ package org.calvin.Arrays;
 
 import java.util.Arrays;
 
-public class ArrayPartition1 {
+public class ArrayPartition {
     public int arrayPairSum(int[] nums) {
         Arrays.sort(nums);
         int result = 0;

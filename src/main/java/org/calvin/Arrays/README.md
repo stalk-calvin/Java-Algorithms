@@ -10,7 +10,7 @@ Checks given 2 strings are anagram or not.
 
 Given an array of strings, group anagrams together.
 
-## ArrayPartition1
+## ArrayPartition
 
 Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
 
@@ -37,6 +37,32 @@ containsDuplicateFirst: Checks if input int array has any duplicate item.
 containsDuplicateSecond: Variated method for solving duplicate
 containsNearbyDuplicate: Given an array of integers and an integer *k*, find out whether there are two distinct indices *i* and *j* in the array such that **nums[i]** = **nums[j]** and the **absolute** difference between *i* and *j* is at most *k*.
 containsNearbyAlmostDuplicate: Given an array of integers, find out whether there are two distinct indices *i* and *j* in the array such that the **absolute** difference between **nums[i]** and **nums[j]** is at most *t* and the **absolute** difference between *i* and *j* is at most *k*.
+
+## DistributeCandies
+
+Given an integer array with **even** length, where different numbers in this array represent different **kinds** of 
+candies. Each number means one candy of the corresponding kind. You need to distribute these candies **equally** in 
+number to brother and sister. Return the maximum number of **kinds** of candies the sister could gain.
+
+**Example 1**:
+
+```
+Input: candies = [1,1,2,2,3,3]
+Output: 3
+Explanation:
+There are three different kinds of candies (1, 2 and 3), and two candies for each kind.
+Optimal distribution: The sister has candies [1,2,3] and the brother has candies [1,2,3], too. 
+The sister has three different kinds of candies. 
+```
+
+**Example 2**:
+
+```
+Input: candies = [1,1,2,3]
+Output: 2
+Explanation: For example, the sister has candies [2,3] and the brother has candies [1,1]. 
+The sister has two different kinds of candies, the brother has only one kind of candies. 
+```
 
 ## DuplicateWithinkIndices
 

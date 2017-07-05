@@ -5,12 +5,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ArrayPartition1Test {
-    private ArrayPartition1 fixture;
+public class ArrayPartitionTest {
+    private ArrayPartition fixture;
 
     @Before
     public void setUp() {
-        fixture = new ArrayPartition1();
+        fixture = new ArrayPartition();
     }
 
     @Test

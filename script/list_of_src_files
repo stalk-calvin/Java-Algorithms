@@ -1,7 +1,7 @@
 Arrays/AnagramCounter.java
 Arrays/AnagramGrouper.java
 Arrays/AnagramValidity.java
-Arrays/ArrayPartition1.java
+Arrays/DistributeCandies.java
 Arrays/CheckIfArrayElementsAreConsecutive.java
 Arrays/ContainsDuplicate.java
 Arrays/DuplicateWithinkIndices.java
@@ -22,6 +22,7 @@ Arrays/Rotate.java
 Arrays/SlidingWindowMaximum.java
 Arrays/KDiffPairs.java
 Arrays/ReshapeMatrix.java
+Arrays/ArrayPartition.java
 BinarySearch/BinarySearch.java
 BinarySearch/FindMinimumNumberInRotatedArray.java
 BinarySearch/FindNumberInRotatedArray.java

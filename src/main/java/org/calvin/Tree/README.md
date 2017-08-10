@@ -70,9 +70,14 @@ Given two binary trees, can you write a method to check if this trees are equals
 
 Find a distance between the closest node to the given integer, *x*.
 
+## FindLargestElementInBST
+
+Find largest element from BST and second largest as well
+
 ## FindMinNumberAtPosition
 
 Given a Binary Search Tree, can you write a method to obtain the *n*th min element?
+
 
 ## InvertTree
 

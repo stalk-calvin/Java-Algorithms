@@ -173,6 +173,27 @@ public class AssortedMethods {
         }
     }
 
+    public static TreeNode sortedArrayToBalancedBST(int arr[], int start, int end) {
+        /* Base Case */
+        if (start > end) {
+            return null;
+        }
+
+        /* Get the middle element and make it root */
+        int mid = (start + end) / 2;
+        TreeNode node = new TreeNode(arr[mid]);
+
+        /* Recursively construct the left subtree and make it
+         left child of root */
+        node.left = sortedArrayToBalancedBST(arr, start, mid - 1);
+
+        /* Recursively construct the right subtree and make it
+         right child of root */
+        node.right = sortedArrayToBalancedBST(arr, mid + 1, end);
+
+        return node;
+    }
+
     public static String[] getListOfWords() {
         // Words in the dictionary.
         String[] wordList = { "the", "of", "and", "a", "to", "in", "is", "be",

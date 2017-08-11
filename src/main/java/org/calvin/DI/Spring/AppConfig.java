@@ -3,12 +3,12 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Spring;
+package org.calvin.DI.Spring;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan(basePackages = {"org.calvin.Spring"})
+@ComponentScan(basePackages = {"org.calvin.DI.Spring"})
 public class AppConfig {
 }

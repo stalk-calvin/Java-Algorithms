@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Spring;
+package org.calvin.DI.Spring;
 
 import lombok.Data;
 import org.springframework.stereotype.Service;

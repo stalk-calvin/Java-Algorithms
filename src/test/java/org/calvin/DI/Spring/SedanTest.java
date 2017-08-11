@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Spring;
+package org.calvin.DI.Spring;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsInstanceOf.instanceOf;

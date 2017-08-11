@@ -1,4 +1,4 @@
-package org.calvin.Spring.componentscan;
+package org.calvin.DI.Spring.componentscan;
 
 import org.springframework.stereotype.Component;
 

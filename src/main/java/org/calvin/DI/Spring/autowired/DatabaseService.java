@@ -1,4 +1,4 @@
-package org.calvin.Spring.autowired;
+package org.calvin.DI.Spring.autowired;
 
 import org.springframework.beans.factory.annotation.Autowired;
 

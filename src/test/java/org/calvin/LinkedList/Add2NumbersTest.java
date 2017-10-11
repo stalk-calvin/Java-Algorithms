@@ -12,8 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class Add2NumbersTest {
-    private static final int[] vals1 = {2, 4, 3};
-    private static final int[] vals2 = {5, 6, 4};
+    private static final int[] vals1 = {0, 0, 5};
+    private static final int[] vals2 = {0, 0, 5};
     private Add2Numbers fixture;
     private ListNode number1;
     private ListNode number2;
@@ -27,10 +27,17 @@ public class Add2NumbersTest {
 
     @Test
     public void shouldAddTwoNumbers() throws Exception {
-        int[] expectedArray = {7, 0, 8};
+        int[] expectedArray = {0, 0, 0, 1};
         ListNode expected = AssortedMethods.createLinkedListFromArray(expectedArray);
         ListNode actual = fixture.addTwoNumbers(number1, number2);
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void shouldAddTwoNumbersIterative() throws Exception {
+        int[] expectedArray = {0, 0, 0, 1};
+        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedArray);
+        ListNode actual = fixture.addListsIterative(number1, number2);
+        assertEquals(expected, actual);
+    }
 }

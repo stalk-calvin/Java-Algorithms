@@ -31,6 +31,21 @@ Explanation: n is 2, and the maximum sum of pairs is 4.
 
 Checks if all the numbers in the array are consecutive.
 
+## Combination Sum
+
+Given a set of candidate numbers (without duplicates) and a target number, find all combinations in C where the candidate numbers sums to target number.
+
+The same repeated number may be chosen from candidate unlimited times
+
+NOTE:
+ - All numbers will be positive integers
+ - The solution set must not contain duplicate combinations
+
+Example:
+
+given [2,3,6,7] and target 7
+output should be [ [7], [2,2,3] ]
+
 ## ContainsDuplicate
 
 containsDuplicateFirst: Checks if input int array has any duplicate item.

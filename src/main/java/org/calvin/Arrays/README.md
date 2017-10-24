@@ -83,6 +83,25 @@ The sister has two different kinds of candies, the brother has only one kind of 
 
 Checks if input int array has any duplicate item within a set of window.
 
+## Find All Number Dissapeared in an Array
+
+Given an array of itegers where 0 < a[i] <= n (n = size of array), some elements appear twice and others appear once
+
+Find all the elements of [1,n] inclusive that do not appear in the array
+
+ - Without extra spaces
+ - Time Complexity: O(n)
+
+**Example**:
+
+```
+Input:
+[4,3,2,7,8,2,3,1]
+
+Output:
+[5,6]
+```
+
 ## FindDuplicates
 
 Given an array *nums* containing *n* + 1 integers where each integer is between 1 and *n* (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
@@ -173,6 +192,10 @@ For example, given the array `[−2,1,−3,4,−1,2,1,−5,4]`, the contiguous s
 ## MergeSortedArray
 
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+
+## Missing Number
+
+Given an array containing n consecutive numbers taken from 0,1,2,...,n, find the one that is missing from the array.
 
 ## MoveZeros
 

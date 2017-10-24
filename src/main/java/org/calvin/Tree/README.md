@@ -233,3 +233,18 @@ But the following `[1,2,2,null,3,null,3]` is not:
    \   \
    3    3
 ```
+
+## TreeDiameter
+
+Given a binary tree which has T nodes, you need to find the diameter of that binary tree. The diameter of a tree is
+the number of nodes on the longest path between two leaves in the tree.
+
+```
+    1
+   / \
+  2   2
+   \   \
+   3    3
+```
+
+above example should output 5 for the path, 3-2-1-2-3

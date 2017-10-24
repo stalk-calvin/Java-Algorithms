@@ -6,7 +6,9 @@
 package org.calvin.String;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import lombok.Data;
 
@@ -47,6 +49,18 @@ public class PermutationCombination {
         for (int i = 0; i < n; i++) {
             String newPrefix = tracker + set[i];
             combination(set, newPrefix, n, k - 1);
+        }
+    }
+
+    public static void combination2(int n, int k, int start, List<Integer> tracker, List<List<Integer>> result) {
+        if (k == 0) {
+            result.add(tracker);
+            return;
+        }
+        for (int i = start; i <= n; i++) {
+            List<Integer> tmp = new ArrayList<>(tracker);
+            tmp.add(i);
+            combination2(n, k-1, i+1, tmp, result);
         }
     }
 }

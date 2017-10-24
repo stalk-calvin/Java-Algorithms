@@ -14,7 +14,7 @@ public class CountAndSay {
         return s;
     }
 
-    private String countIdx(String s) {
+    public String countIdx(String s) {
         StringBuilder sb = new StringBuilder();
         char c = s.charAt(0);
         int count = 1;

@@ -22,9 +22,9 @@ public class SearchForARangeTest {
 
     @Test
     public void shouldSearchRangeLeft() {
-        int[] input = {5, 5, 5, 7, 7, 8, 8, 8, 9, 9, 10, 10, 18};
+        int[] input = {5, 5, 5, 5, 5, 7, 7, 8, 8, 8, 9, 9, 10, 10, 18};
         int[] actual = fixture.searchRange(input, 5);
-        int[] expected = {0,2};
+        int[] expected = {0,4};
         assertTrue(Arrays.equals(expected, actual));
     }
 
@@ -38,9 +38,9 @@ public class SearchForARangeTest {
 
     @Test
     public void shouldSearchRangeRight() {
-        int[] input = {5, 5, 5, 7, 7, 8, 8, 8, 9, 9, 10, 10, 18};
+        int[] input = {5, 5, 5, 7, 7, 8, 8, 8, 9, 9, 10, 10, 10, 10};
         int[] actual = fixture.searchRange(input, 10);
-        int[] expected = {10,11};
+        int[] expected = {10,13};
         assertTrue(Arrays.equals(expected, actual));
     }
 

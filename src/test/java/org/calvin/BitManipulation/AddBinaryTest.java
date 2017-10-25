@@ -5,10 +5,10 @@
 
 package org.calvin.BitManipulation;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class AddBinaryTest {
     AddBinary fixture;
@@ -29,4 +29,11 @@ public class AddBinaryTest {
         String actual = fixture.addBinary("", "010");
         assertEquals("10", actual);
     }
+
+    @Test
+    public void shouldAddBinaryNatural() {
+        String actual = fixture.addBinaryNatural("011", "010");
+        assertEquals("101", actual);
+    }
+
 }

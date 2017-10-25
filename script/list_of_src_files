@@ -178,6 +178,7 @@ ObjectOriented/Twitter/User.java
 Search/BinarySearch.java
 Search/BinarySearchRecursive.java
 Search/LinearSearch.java
+Search/SearchInsertPosition.java
 Sort/BubbleSort.java
 Sort/CountingSort.java
 Sort/HeapSort.java

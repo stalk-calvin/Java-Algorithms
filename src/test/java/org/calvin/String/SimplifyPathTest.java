@@ -20,7 +20,7 @@ public class SimplifyPathTest {
 
     @Test
     public void simplifyPath() throws Exception {
-        String input = "/a/./b/../../c/";
+        String input = "/a/b/../../c/";
         String actual = fixture.simplifyPath(input);
         assertEquals("/c", actual);
     }

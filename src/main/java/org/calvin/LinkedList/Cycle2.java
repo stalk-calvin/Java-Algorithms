@@ -41,6 +41,6 @@ public class Cycle2 {
             slow = slow.getNext();
         }
         // Both now point to the start of the loop.
-        return fast;
+        return slow;
     }
 }

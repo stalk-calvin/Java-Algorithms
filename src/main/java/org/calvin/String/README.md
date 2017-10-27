@@ -141,6 +141,12 @@ Given "paper", "title", return true.
 
 Calulate the character length of last word separated by a space.
 
+## MinMove
+
+Find out # of moves you need to make to make into the target string
+
+EX: input aaabbccaaa abbca -> minMove
+
 ## NonRepeated
 
 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
@@ -154,6 +160,11 @@ return 0.
 s = "loveleetcode",
 return 2.
 ```
+
+## NumberOfSegments
+
+Count the number of segments in a string, where a segment is defined to be a contiguous sequence if non-space
+character (Don't use split)
 
 ## PermutationCombination
 

@@ -201,6 +201,16 @@ Given an array containing n consecutive numbers taken from 0,1,2,...,n, find the
 
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
+## PowerSet
+
+Find PowerSet from a set.
+
+Complexity: O(2^n)
+
+The powerset of {1, 2, 3} is:
+
+{{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
+
 ## RemoveDuplicateSortedArray
 
 Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.

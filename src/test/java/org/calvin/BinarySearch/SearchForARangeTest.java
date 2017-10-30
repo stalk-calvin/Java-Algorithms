@@ -30,9 +30,9 @@ public class SearchForARangeTest {
 
     @Test
     public void shouldSearchRangeMiddle() {
-        int[] input = {5, 5, 5, 7, 7, 8, 8, 8, 9, 9, 10, 10, 18};
+        int[] input = {5, 5, 5, 7, 7, 8, 8, 8, 8, 8, 8, 9, 9, 10, 10, 18};
         int[] actual = fixture.searchRange(input, 8);
-        int[] expected = {5,7};
+        int[] expected = {5,10};
         assertTrue(Arrays.equals(expected, actual));
     }
 

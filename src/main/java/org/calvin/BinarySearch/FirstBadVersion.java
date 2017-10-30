@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 class VersionControl {
     public final int random;
     public VersionControl(int n) {
-        this.random = ThreadLocalRandom.current().nextInt(1, n);
+        this.random = ThreadLocalRandom.current().nextInt(1, n+1);
     }
     public int isBadVersion(int mid) {
         return Integer.compare(random, mid);

@@ -166,6 +166,7 @@ Numbers/SumOfFibonacci.java
 Numbers/ThreeSum.java
 Numbers/TwoSum.java
 Numbers/UglyNumber.java
+Numbers/ValidNumber.java
 Numbers/ValidSudoku.java
 Numbers/ThirdMax.java
 Numbers/CircularPrime.java
@@ -230,6 +231,8 @@ String/RemoveComment.java
 String/Reverse.java
 String/ReverseVowel.java
 String/ReverseWordsInAString.java
+String/ReverseWordsInAStringWithChars.java
+String/ShortestPalindrome.java
 String/SimpleRegularExpression.java
 String/SimplifyPath.java
 String/StrStr.java

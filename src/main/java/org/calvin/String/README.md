@@ -268,6 +268,17 @@ Output: "s'teL ekat edoCteeL tsetnoc"
 ```
 **Note**: In the string, each word is separated by single space and there will not be any extra space in the string.
 
+## ShortestPalindrome
+
+Given a string S, you are allowed to convert it to a palindrome by adding characters in front of it. Find and return
+the shortest palindrome you can find by performing this transformation.
+
+**Example**:
+```
+Input: "aacecaaa", return "aaacecaaa".
+Output: "abcd", return "dcbabcd"
+```
+
 ## SimpleRegularExpression
 
 Method to analyze some strings with regular expressions and return true if the expression matches with the word?

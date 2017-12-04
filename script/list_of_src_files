@@ -252,11 +252,14 @@ String/UniqueChars.java
 String/ValidPalindrome.java
 String/WordPattern.java
 String/ZigZag.java
+Threads/Deadlock/DeadLock.java
 Threads/Semaphores/App.java
 Threads/Semaphores/Connection.java
 Threads/StartThreads/Extends.java
 Threads/StartThreads/Runnable.java
 Threads/StartThreads/UsingAnonymous.java
+Threads/TestingCountDownLatch/TestingCountDownLatch.java
+Threads/ThreadPool/ThreadPool.java
 Tree/Balanced.java
 Tree/BFS.java
 Tree/BFS2.java

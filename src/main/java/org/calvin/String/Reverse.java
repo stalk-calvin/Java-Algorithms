@@ -34,4 +34,18 @@ public class Reverse {
         }
         return result.toString();
     }
+
+    public String reverseStringXOR(String s) {
+        char[] charArray = s.toCharArray();
+        int start = 0;
+        int end = charArray.length - 1;
+        while (start < end) {
+            charArray[start] ^= charArray[end];
+            charArray[end] ^= charArray[start];
+            charArray[start] ^= charArray[end];
+            ++start;
+            --end;
+        }
+        return new String(charArray);
+    }
 }

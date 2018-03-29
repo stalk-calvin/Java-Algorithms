@@ -6,10 +6,7 @@
 package org.calvin.String;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
-
 import lombok.Data;
 
 @Data
@@ -41,6 +38,7 @@ public class PermutationCombination {
         }
     }
 
+    // accepting repetition
     public void combination(char set[], String tracker, int n, int k) {
         if (k == 0) {
             result.add(tracker);
@@ -52,15 +50,11 @@ public class PermutationCombination {
         }
     }
 
-    public static void combination2(int n, int k, int start, List<Integer> tracker, List<List<Integer>> result) {
-        if (k == 0) {
-            result.add(tracker);
-            return;
-        }
-        for (int i = start; i <= n; i++) {
-            List<Integer> tmp = new ArrayList<>(tracker);
-            tmp.add(i);
-            combination2(n, k-1, i+1, tmp, result);
+    // no repetition - simple
+    public void combination3(String prefix, String s) {
+        result.add(prefix);
+        for (int i = 0; i < s.length(); i++) {
+            combination3(prefix + s.charAt(i), s.substring(i+1));
         }
     }
 }

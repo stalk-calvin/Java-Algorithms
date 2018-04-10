@@ -228,6 +228,10 @@ canConstruct("aa", "ab") -> false
 canConstruct("aa", "aab") -> true
 ```
 
+## Regex
+
+Gathering different methods of regex usabilities
+
 ## RemoveComment
 
 Given a String array, we are going to read it element by element, can you write a method to remove block of comments marked with '/*' and '*\'.

@@ -32,4 +32,9 @@ public class ReverseTest {
     public void shouldReverseString3() {
         assertEquals("kcalS", fixture.reverseString3("Slack"));
     }
+
+    @Test
+    public void shouldReverseStringXOR() {
+        assertEquals("kcalS", fixture.reverseStringXOR("Slack"));
+    }
 }

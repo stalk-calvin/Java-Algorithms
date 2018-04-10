@@ -66,6 +66,36 @@ return its bottom-up level order traversal as:
 
 Given two binary trees, can you write a method to check if this trees are equals?
 
+## ExtractBinaryTreeLeaveDoubleLinkedList
+
+Given a Binary Tree, extract all leaves of it in a Doubly Linked List (DLL).
+
+Note that the DLL need to be created in-place. Assume that the node structure of DLL and Binary Tree is same,
+only the meaning of left and right pointers are different. In DLL, left means previous pointer and right means next pointer.
+
+```
+Let the following be input binary tree
+        1
+     /     \
+    2       3
+   / \       \
+  4   5       6
+ / \         / \
+7   8       9   10
+
+
+Output:
+Doubly Linked List
+7<->8<->5<->9<->10
+
+Modified Tree:
+        1
+     /     \
+    2       3
+   /         \
+  4           6
+```
+
 ## FindClosestNumber
 
 Find a distance between the closest node to the given integer, *x*.
@@ -77,7 +107,6 @@ Find largest element from BST and second largest as well
 ## FindMinNumberAtPosition
 
 Given a Binary Search Tree, can you write a method to obtain the *n*th min element?
-
 
 ## InvertTree
 

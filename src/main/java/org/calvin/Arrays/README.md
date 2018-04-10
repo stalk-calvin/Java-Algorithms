@@ -113,6 +113,10 @@ Given an array *nums* containing *n* + 1 integers where each integer is between 
 3. Your runtime complexity should be less than O(n<sup>2</sup>).
 4. There is only one duplicate number in the array, but it could be repeated more than once.
 
+## FindMaximumDiff
+
+Given an array, find the maximum j – i such that arr[j] > arr[i]
+
 ## GasStation
 
 There are *N* gas stations along a circular route, where the amount of gas at station *i* is `gas[i]`.

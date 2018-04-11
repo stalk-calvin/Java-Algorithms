@@ -215,6 +215,16 @@ The powerset of {1, 2, 3} is:
 
 {{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}
 
+## ProductArrayExceptSelf
+
+Given an array, find product of all element except itself.
+
+Example:
+
+```
+[1,2,3] => [6,3,2]
+```
+
 ## RemoveDuplicateSortedArray
 
 Given a sorted array, remove the duplicates in place such that each element appear only once and return the new length.

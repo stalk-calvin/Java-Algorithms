@@ -23,6 +23,7 @@ Arrays/MergeSortedArray.java
 Arrays/MissingNumber.java
 Arrays/MoveZeros.java
 Arrays/PowerSet.java
+Arrays/ProductArrayExceptSelf.java
 Arrays/RemoveDuplicateSortedArray.java
 Arrays/RemoveElement.java
 Arrays/ReshapeMatrix.java
@@ -222,7 +223,7 @@ String/DetectCapitals.java
 String/ExcelSheetColumnTitle.java
 String/FindDifference.java
 String/FizzBuzz.java
-String/IntegerToString.java
+String/IntegerToWordNumber.java
 String/Isomorphic.java
 String/LengthOfLastWord.java
 String/LongestCommonPrefix.java
@@ -248,6 +249,7 @@ String/ReverseWordsInAStringWithChars.java
 String/ShortestPalindrome.java
 String/SimpleRegularExpression.java
 String/SimplifyPath.java
+String/StringIntegerConversion.java
 String/StrStr.java
 String/SummaryRanges.java
 String/UniqueChars.java

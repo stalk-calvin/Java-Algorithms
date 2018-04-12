@@ -10,12 +10,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class IntegerToStringTest {
-    private IntegerToString fixture;
+public class IntegerToWordNumberTest {
+    private IntegerToWordNumber fixture;
 
     @Before
     public void setUp() throws Exception {
-        fixture = new IntegerToString();
+        fixture = new IntegerToWordNumber();
     }
 
     @Test

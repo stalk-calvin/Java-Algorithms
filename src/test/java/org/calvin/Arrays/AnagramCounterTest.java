@@ -20,8 +20,8 @@ public class AnagramCounterTest {
 
     @Test
     public void shouldReturnNumberOfChangesNeeded() {
-        int expected = 4;
-        int actual = fixture.numberNeeded("cde", "abc");
+        int expected = 1;
+        int actual = fixture.numberNeeded("string", "rings");
         assertEquals(expected, actual);
     }
 }

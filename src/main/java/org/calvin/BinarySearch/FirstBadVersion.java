@@ -27,8 +27,8 @@ public class FirstBadVersion extends VersionControl {
     public boolean findBadVersion() {
         int first = 1;
         int last = n;
-        int mid = first + (last - first) / 2;
         while (first <= last) {
+            int mid = first + (last - first) / 2;
             int i = isBadVersion(mid);
             if (i == 0) return true;
 
@@ -37,7 +37,6 @@ public class FirstBadVersion extends VersionControl {
             } else {
                 first = mid + 1;
             }
-            mid = first + (last - first) / 2;
         }
         return false;
     }

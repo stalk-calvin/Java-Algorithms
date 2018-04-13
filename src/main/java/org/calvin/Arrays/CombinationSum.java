@@ -1,7 +1,6 @@
 package org.calvin.Arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CombinationSum {
@@ -12,7 +11,6 @@ public class CombinationSum {
             if (input[0] == target) result.add(new ArrayList<>(input[0]));
             return result;
         }
-        Arrays.sort(input);
         findSumRecursively(input, new ArrayList<>(), result, target, 0);
         return result;
     }

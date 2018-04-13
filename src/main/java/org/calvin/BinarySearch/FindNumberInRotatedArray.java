@@ -6,23 +6,23 @@
 package org.calvin.BinarySearch;
 
 public class FindNumberInRotatedArray {
-    public int find(int[] A, int key) {
-        int L = 0;
-        int R = A.length - 1;
-        while (L <= R) {
-            int M = L + ((R-L) / 2);
-            if (A[M] == key) {
+    public int find(int[] nums, int key) {
+        int start = 0;
+        int end = nums.length - 1;
+        while (start <= end) {
+            int mid = start + ((end-start) / 2);
+            if (nums[mid] == key) {
                 return key;
-            } else if (A[M] >= A[L]) {
-                if (A[L] <= key && key < A[M])
-                    R = M - 1;
+            } else if (nums[mid] >= nums[start]) {
+                if (nums[start] <= key && key < nums[mid])
+                    end = mid - 1;
                 else
-                    L = M + 1;
+                    start = mid + 1;
             } else {
-                if (A[M] < key && key <= A[R])
-                    L = M + 1;
+                if (nums[mid] < key && key <= nums[end])
+                    start = mid + 1;
                 else
-                    R = M - 1;
+                    end = mid - 1;
             }
         }
         return -1;

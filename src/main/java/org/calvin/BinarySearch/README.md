@@ -45,6 +45,20 @@ Input: 14
 Returns: False
 ```
 
+## SearchFirstOccurrenceOfK
+
+Search a sorted array for first occurrence of k
+
+Example:
+
+```
+Given: [-14, -10, 2, 108, 108, 243, 285, 285, 285, 401]
+
+Return: 3, when k = 108
+Return: 6, when k = 295
+
+```
+
 ## Search For A Range
 
 Given an array of integers sorted in ascending order, find the starting and ending position of a given target value.

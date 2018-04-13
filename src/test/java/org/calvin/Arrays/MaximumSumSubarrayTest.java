@@ -10,12 +10,12 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MaximumSubarrayTest {
-    private MaximumSubarray fixture;
+public class MaximumSumSubarrayTest {
+    private MaximumSumSubarray fixture;
 
     @Before
     public void setUp() {
-        fixture = new MaximumSubarray();
+        fixture = new MaximumSumSubarray();
     }
 
     @Test

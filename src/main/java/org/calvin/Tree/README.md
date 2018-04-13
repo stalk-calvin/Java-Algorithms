@@ -130,6 +130,11 @@ to
 9   6 3   1
 ```
 
+## LargestBSTSubtree
+
+Given a binary tree, find the largest subtree which is a BST where largest means subtree with
+largest number of nodes in it.
+
 ## LCABST
 
 Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.

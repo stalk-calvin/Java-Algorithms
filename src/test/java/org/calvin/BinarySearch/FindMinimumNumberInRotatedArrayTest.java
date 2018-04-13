@@ -20,7 +20,7 @@ public class FindMinimumNumberInRotatedArrayTest {
 
     @Test
     public void shouldFindMin() {
-        int[] input = {3,4,5,1,2};
+        int[] input = {2,1,2};
         int actual = fixture.findMin(input);
         assertEquals(1,actual);
     }

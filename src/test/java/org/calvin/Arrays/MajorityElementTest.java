@@ -5,11 +5,10 @@
 
 package org.calvin.Arrays;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 public class MajorityElementTest {
     MajorityElement fixture;
@@ -26,9 +25,20 @@ public class MajorityElementTest {
     }
 
     @Test
-    public void shouldNotBeMajorityElement() {
-        int[] input = {1,2,3,4,5};
-        assertTrue(2 != fixture.majorityElement(input));
+    public void shouldBeMajorityElementLinear() {
+        int[] input = {1,2,2,2,3};
+        assertEquals(2, fixture.majorityElementLinear(input));
     }
 
+    @Test
+    public void shouldUnsortedBeMajorityElement() {
+        int[] input = {2,1,2,3,2};
+        assertEquals(2, fixture.majorityElement(input));
+    }
+
+    @Test
+    public void shouldUnsortedBeMajorityElementLinear() {
+        int[] input = {2,1,2,3,2};
+        assertEquals(2, fixture.majorityElementLinear(input));
+    }
 }

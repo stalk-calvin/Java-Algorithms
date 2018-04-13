@@ -5,7 +5,7 @@
 
 package org.calvin.Arrays;
 
-public class MaximumSubarray {
+public class MaximumSumSubarray {
     public int maxSubArray(int[] A) {
         int newsum=A[0];
         int max=A[0];

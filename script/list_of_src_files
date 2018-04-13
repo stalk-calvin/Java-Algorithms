@@ -276,6 +276,7 @@ Tree/FindMinNumberAtPosition.java
 Tree/InvertTree.java
 Tree/LCABST.java
 Tree/LCABT.java
+Tree/LeftViewOfBT.java
 Tree/MaxDepth.java
 Tree/MergeTrees.java
 Tree/MinDepth.java

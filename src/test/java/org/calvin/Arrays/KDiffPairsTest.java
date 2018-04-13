@@ -33,8 +33,8 @@ public class KDiffPairsTest {
     }
 
     @Test public void shouldFindPairsUptoZero() throws Exception {
-        int[] input = {1,3,1,5,4};
-        assertEquals(1, fixture.findPairs(input, 0));
+        int[] input = {1,2,3,4,5};
+        assertEquals(5, fixture.findPairs(input, 0));
     }
 
 }

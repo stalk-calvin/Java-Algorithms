@@ -29,12 +29,14 @@ public class DijkstraTest {
 
     @Test
     public void shouldGetShortestPaths() {
-        int[] dist = new int[n];
-        int[] pred = new int[n];
-        Dijkstra.shortestPaths(graph, 0, dist, pred);
-        assertTrue(0 == dist[0]);
-        assertTrue(3 == dist[1]);
-        assertTrue(1 == dist[2]);
+        int[] distance = new int[n]; // shortest known distance from "s"
+        int[] pred = new int[n]; // preceeding node in path
+        Dijkstra.shortestPaths(graph, 0, distance, pred);
+
+        assertTrue(0 == distance[0]);
+        assertTrue(3 == distance[1]);
+        assertTrue(1 == distance[2]);
+
         assertTrue(-1 == pred[0]);
         assertTrue(0 == pred[1]);
         assertTrue(1 == pred[2]);

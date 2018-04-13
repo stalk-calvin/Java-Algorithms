@@ -19,14 +19,10 @@ public class KDiffPairs {
 
         int count = 0;
         for (Map.Entry<Integer, Integer> entry : tracker.entrySet()) {
-            if (k == 0) {
-                if (entry.getValue() >= 2) {
-                    count++;
-                }
-            } else {
-                if (tracker.containsKey(entry.getKey() + k)) {
-                    count++;
-                }
+            if (k == 0 && entry.getValue() >= 2) {
+                count++;
+            } else if (tracker.containsKey(entry.getKey() + k)) {
+                count++;
             }
         }
 

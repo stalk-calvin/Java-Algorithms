@@ -252,10 +252,21 @@ String/SimplifyPath.java
 String/StringIntegerConversion.java
 String/StrStr.java
 String/SummaryRanges.java
+String/TopKLongest.java
 String/UniqueChars.java
 String/ValidPalindrome.java
 String/WordPattern.java
 String/ZigZag.java
+terview/epi/Ch11BST.java
+terview/epi/Ch1Primitives.java
+terview/epi/Ch2Arrays.java
+terview/epi/Ch3Strings.java
+terview/epi/Ch4LinkedList.java
+terview/epi/Ch5StacksAndQueues.java
+terview/epi/Ch6BinaryTrees.java
+terview/epi/Ch7Heaps.java
+terview/epi/Ch8Searching.java
+terview/epi/Ch9HashTables.java
 Threads/Deadlock/DeadLock.java
 Threads/Semaphores/App.java
 Threads/Semaphores/Connection.java
@@ -276,7 +287,6 @@ Tree/FindMinNumberAtPosition.java
 Tree/InvertTree.java
 Tree/LCABST.java
 Tree/LCABT.java
-Tree/LeftViewOfBT.java
 Tree/MaxDepth.java
 Tree/MergeTrees.java
 Tree/MinDepth.java
@@ -291,5 +301,6 @@ Tree/Traversal/DFS/Preorder.java
 Tree/TreeDiameter.java
 Tree/Trie/Trie.java
 Tree/Trie/TrieNode.java
+Tree/ViewOfBT.java
 String/pojo/JSON.java
 String/pojo/XML.java

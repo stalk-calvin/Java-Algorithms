@@ -34,6 +34,14 @@ public class Add2NumbersTest {
     }
 
     @Test
+    public void shouldAddTwoNumbersAlternative() throws Exception {
+        int[] expectedArray = {0, 0, 0, 1};
+        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedArray);
+        ListNode actual = fixture.add(number1, number2);
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldAddTwoNumbersIterative() throws Exception {
         int[] expectedArray = {0, 0, 0, 1};
         ListNode expected = AssortedMethods.createLinkedListFromArray(expectedArray);

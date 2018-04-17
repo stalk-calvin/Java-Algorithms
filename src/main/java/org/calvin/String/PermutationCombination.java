@@ -6,8 +6,12 @@
 package org.calvin.String;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import lombok.Data;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 @Data
 public class PermutationCombination {
@@ -36,6 +40,26 @@ public class PermutationCombination {
             used[i] = false;
             out.setLength( out.length() - 1 );
         }
+    }
+
+    public List<List<Character>> permute(char[] chars) {
+        List<List<Character>> ans = new ArrayList<List<Character>>();
+        if (chars.length ==0) return ans;
+        List<Character> l0 = new ArrayList<Character>();
+        l0.add(chars[0]);
+        ans.add(l0);
+        for (int i = 1; i< chars.length; ++i){
+            List<List<Character>> new_ans = new ArrayList<List<Character>>();
+            for (int j = 0; j<=i; ++j){
+                for (List<Character> l : ans){
+                    List<Character> new_l = new ArrayList<Character>(l);
+                    new_l.add(j,chars[i]);
+                    new_ans.add(new_l);
+                }
+            }
+            ans = new_ans;
+        }
+        return ans;
     }
 
     // accepting repetition

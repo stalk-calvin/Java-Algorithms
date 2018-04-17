@@ -52,4 +52,48 @@ public class Add2Numbers {
         }
         return result;
     }
+
+    // my way
+    public ListNode add(ListNode l1, ListNode l2) {
+        int sum = 0;
+        int val = 0;
+        int count = 0;
+        while (l1 != null) {
+            val = l1.getVal();
+            l1 = l1.getNext();
+            if (val > 0) {
+                val *= Math.pow((double)10,(double)count);
+            }
+            sum += val;
+            count++;
+        }
+        count = 0;
+        while (l2 != null) {
+            val = l2.getVal();
+            l2 = l2.getNext();
+            if (val > 0) {
+                val *= Math.pow((double)10,(double)count);
+            }
+            sum += val;
+            count++;
+        }
+
+        ListNode first = null;
+        ListNode head = null;
+        ListNode newNode = null;
+
+        while (sum > 0) {
+            int last = sum % 10;
+            if (newNode == null) {
+                newNode = new ListNode(last);
+                head = newNode;
+            } else {
+                first= new ListNode(last);
+                newNode.setNext(first);
+                newNode = first;
+            }
+            sum /= 10;
+        }
+        return head;
+    }
 }

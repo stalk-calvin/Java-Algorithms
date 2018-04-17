@@ -5,14 +5,16 @@
 
 package org.calvin.DesignPatterns.Structural.Decorator;
 
-public class LuxuryCar extends CarDecorator {
-    public LuxuryCar(Car c) {
-        super(c);
+public class LuxuryCar implements Car {
+    private Car decorated;
+
+    public LuxuryCar(Car decorated) {
+        this.decorated = decorated;
     }
 
     @Override
     public String assemble(){
-        super.assemble();
+        decorated.assemble();
         System.out.println(" Adding features of Luxury Car.");
         return "Luxury Car";
     }

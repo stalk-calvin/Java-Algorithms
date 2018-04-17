@@ -5,10 +5,10 @@
 
 package org.calvin.DesignPatterns.Creational.AbstractFactory;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class ComputerFactoryTest {
     ComputerFactory fixture;
@@ -28,6 +28,5 @@ public class ComputerFactoryTest {
         assertEquals("1 TB", server.getHDD());
         assertEquals("2.4 GHz", pc.getCPU());
         assertEquals("2.9 GHz", server.getCPU());
-
     }
 }

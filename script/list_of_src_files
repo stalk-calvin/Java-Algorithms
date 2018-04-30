@@ -19,6 +19,7 @@ Arrays/MajorityElement.java
 Arrays/MajorityElement2.java
 Arrays/MaximumProductSubarray.java
 Arrays/MaximumSumSubarray.java
+Arrays/MeetingRooms.java
 Arrays/MergeSortedArray.java
 Arrays/MissingNumber.java
 Arrays/MoveZeros.java
@@ -43,17 +44,12 @@ BitManipulation/NumberCompliment.java
 BitManipulation/NumberOf1Bit.java
 BitManipulation/ReverseBit.java
 Book/ctci/Big O/Example_16/Example.java
-Book/ctci/Big O/Example_16/Example16.java
 Book/ctci/Big O/QVI_11_Print_Sorted_Strings/Question.java
-Book/ctci/Big O/QVI_11_Print_Sorted_Strings/QVI_11_Print_Sorted_Strings.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_01_Is_Unique/QuestionA.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_01_Is_Unique/QuestionB.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_01_Is_Unique/Tester.java
-Book/ctci/Ch 01. Arrays and Strings/Q1_02_Check_Permutation/Q1_02_Check_PermutationA.java
-Book/ctci/Ch 01. Arrays and Strings/Q1_02_Check_Permutation/Q1_02_Check_PermutationB.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_02_Check_Permutation/QuestionA.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_02_Check_Permutation/QuestionB.java
-Book/ctci/Ch 01. Arrays and Strings/Q1_03_URLify/Q1_03_URLify.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_03_URLify/Question.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_04_Palindrome_Permutation/Common.java
 Book/ctci/Ch 01. Arrays and Strings/Q1_04_Palindrome_Permutation/QuestionA.java

@@ -196,6 +196,16 @@ Find the contiguous subarray within an array (containing at least one number) wh
 
 For example, given the array `[−2,1,−3,4,−1,2,1,−5,4]`, the contiguous subarray `[4,−1,2,1]` has the largest sum = 6.
 
+## MeetingRooms
+
+Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+
+**For example**
+```
+Given [[0, 30],[5, 10],[15, 20]],
+return 2.
+```
+
 ## MergeSortedArray
 
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.

@@ -43,7 +43,7 @@ public class AddBinary {
         int aLength = a.length() - 1;
         int bLength = b.length() - 1;
         int carry = 0;
-        while (aLength + bLength >= 0) {
+        while (aLength >= 0 || bLength >= 0) {
             int sum = carry;
             if (aLength >= 0) sum += a.charAt(aLength) - '0';
             if (bLength >= 0) sum += b.charAt(bLength) - '0';
@@ -52,6 +52,9 @@ public class AddBinary {
             aLength--;
             bLength--;
         }
-        return sb.toString();
+        if (carry == 1) {
+            sb.append(carry);
+        }
+        return sb.reverse().toString();
     }
 }

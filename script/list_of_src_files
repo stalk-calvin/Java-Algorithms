@@ -25,6 +25,7 @@ Arrays/MissingNumber.java
 Arrays/MoveZeros.java
 Arrays/PowerSet.java
 Arrays/ProductArrayExceptSelf.java
+Arrays/QueueReconstructionByHeight.java
 Arrays/RemoveDuplicateSortedArray.java
 Arrays/RemoveElement.java
 Arrays/ReshapeMatrix.java
@@ -685,6 +686,14 @@ DesignPatterns/Creational/Singleton/Enum/Elvis.java
 DesignPatterns/Creational/Singleton/Field/Elvis.java
 DesignPatterns/Creational/Singleton/Method/Elvis.java
 DesignPatterns/Creational/StaticFactory/Services.java
+DesignPatterns/Structural/Adapter/comparison/after/AdapterDemo.java
+DesignPatterns/Structural/Adapter/comparison/after/Line.java
+DesignPatterns/Structural/Adapter/comparison/after/LineAdapter.java
+DesignPatterns/Structural/Adapter/comparison/after/Rectangle.java
+DesignPatterns/Structural/Adapter/comparison/after/RectangleAdapter.java
+DesignPatterns/Structural/Adapter/comparison/before/AdapterDemo.java
+DesignPatterns/Structural/Adapter/comparison/before/Line.java
+DesignPatterns/Structural/Adapter/comparison/before/Rectangle.java
 DesignPatterns/Structural/Adapter/MediaAdapter.java
 DesignPatterns/Structural/Adapter/Mp3Player.java
 DesignPatterns/Structural/Adapter/Mp4Player.java

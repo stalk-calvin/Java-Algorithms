@@ -93,7 +93,7 @@ open(my $fh, $read_me_file_location) || die "Could not open file to read: $read_
 my $data = "";
 while(my $line = <$fh>) {
 	if ($line =~ "^{% number_of_algorithms %}") {
-		$data .= "There are roughly ". $algorithm_count . " java algorithms exists with ".$algorithm_test_count." test cases.  \nSee [list of algorithm source files](script/list_of_src_files) for all the algorithms here.";
+		$data .= "There are roughly ". $algorithm_count . " java algorithms exists with ".$algorithm_test_count." test cases.\nSee [list of algorithm source files](script/list_of_src_files) for all the algorithms here.";
 	} else {
 		$data .= $line;
 	}

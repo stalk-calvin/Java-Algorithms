@@ -32,8 +32,8 @@ public class AddBinaryTest {
 
     @Test
     public void shouldAddBinaryNatural() {
-        String actual = fixture.addBinaryNatural("011", "010");
-        assertEquals("101", actual);
+        String actual = fixture.addBinaryNatural("1", "11");
+        assertEquals("100", actual);
     }
 
 }

@@ -196,6 +196,10 @@ Input: "cbbd"
 Output: "bb"
 ```
 
+## LongestRecurringSubstr
+
+Find the longest recurring substring in the input (ignoring case) and returning a lower-case version of that string.
+
 ## Longest Substring Without Repeating Characters
 
 Given a string, find the length of the **longest substring** without repeating characters.

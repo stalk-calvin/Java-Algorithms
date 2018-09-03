@@ -25,7 +25,7 @@ public class Balanced {
     }
 }
 
-class Solution {
+class BalancedEfficient {
     static class BalanceStatusWithHeight {
         public boolean balanced;
         public int height;
@@ -36,7 +36,7 @@ class Solution {
         }
     }
 
-    private static BalanceStatusWithHeight checkBalanced(TreeNode tree) {
+    public static BalanceStatusWithHeight checkBalanced(TreeNode tree) {
         if (tree == null) {
             return new BalanceStatusWithHeight(true, -1); // Base case.
         }

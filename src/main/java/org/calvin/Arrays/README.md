@@ -218,6 +218,10 @@ Given an array containing n consecutive numbers taken from 0,1,2,...,n, find the
 
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
+## Next Greater Element
+
+You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
+
 ## PowerSet
 
 Find PowerSet from a set.

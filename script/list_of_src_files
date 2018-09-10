@@ -23,6 +23,7 @@ Arrays/MeetingRooms.java
 Arrays/MergeSortedArray.java
 Arrays/MissingNumber.java
 Arrays/MoveZeros.java
+Arrays/NextGreaterElement.java
 Arrays/PowerSet.java
 Arrays/ProductArrayExceptSelf.java
 Arrays/QueueReconstructionByHeight.java
@@ -730,12 +731,13 @@ DynamicProgramming/MinJumpToReachEnd.java
 DynamicProgramming/RangeSumQuery2D.java
 Enum/Operation.java
 Enum/PayrollDay.java
-Graph/BfsDfs.java
-Graph/Dijkstra/Dijkstra.java
-Graph/Dijkstra/Edge.java
-Graph/Graph.java
-Graph/Node.java
-Graph/State.java
+GraphMatrix/BfsDfs.java
+GraphMatrix/Dijkstra/Dijkstra.java
+GraphMatrix/Dijkstra/Edge.java
+GraphMatrix/Graph.java
+GraphMatrix/Node.java
+GraphMatrix/State.java
+GraphMatrix/TwoDMatrixBFS.java
 Guava/Product.java
 LinkedList/Add2Numbers.java
 LinkedList/Cycle.java

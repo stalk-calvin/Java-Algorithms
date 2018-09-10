@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Graph;
+package org.calvin.GraphMatrix;
 
 public class Graph {
     public int count; // num of vertices

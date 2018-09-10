@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Graph.Dijkstra;
+package org.calvin.GraphMatrix.Dijkstra;
 
 import static org.junit.Assert.assertTrue;
 

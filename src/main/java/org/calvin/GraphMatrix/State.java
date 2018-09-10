@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Graph;
+package org.calvin.GraphMatrix;
 
 public enum State {
     Visited, Unvisited;

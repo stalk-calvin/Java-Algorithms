@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.Graph.Dijkstra;
+package org.calvin.GraphMatrix.Dijkstra;
 
 public class Edge {
     int t, cost;

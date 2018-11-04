@@ -28,9 +28,9 @@ public class LongestPalindromicSubstringTest {
 
     @Test
     public void shouldFindLongestPanlindrome() {
-        String input = "abaefg";
+        String input = "aaaaaaaaaaaaaaaaaabcaaaaaaaaaaaaaaaaa";
         String actual = fixture.longestPalindrome(input);
-        String expected = "aba";
+        String expected = "aaaaaaaaaaaaaaaaaa";
         assertEquals(expected, actual);
     }
 

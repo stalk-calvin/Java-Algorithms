@@ -25,8 +25,14 @@ public class QuickSortArray {
             if (nums[i] < nums[pivot]) {
                 start++;
                 temp = nums[i];
-                System.arraycopy(nums, start, nums, start + 1, i - start);
-                nums[start] = temp;
+                // Can be replaced with:
+                // System.arraycopy(nums, start, nums, start + 1, i - start);
+                // nums[start] = temp;
+                int j;
+                for (j = i; j > start; j--) {
+                    nums[j] = nums[j - 1];
+                }
+                nums[j] = temp;
             }
         }
 

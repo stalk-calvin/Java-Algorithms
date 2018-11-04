@@ -12,6 +12,7 @@ import org.mockito.InOrder;
 import java.io.PrintStream;
 import java.util.Arrays;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.inOrder;
@@ -41,4 +42,29 @@ public class BinarySearchTest {
         inorder.verify(ps).println(eq("search lower"));
     }
 
+    @Test
+    public void shouldNotSearchUsingBinarySearch() {
+        PrintStream ps = mock(PrintStream.class);
+        System.setOut(ps);
+
+        Arrays.sort(input);
+
+        InOrder inorder = inOrder(ps);
+
+        assertFalse(fixture.binarySearch(90));
+        inorder.verify(ps, times(2)).println(eq("search higher"));
+        inorder.verify(ps).println(eq("search lower"));
+    }
+
+    @Test
+    public void shouldSearchUsingBinarySearchRecursive() {
+        Arrays.sort(input);
+        assertTrue(fixture.binarySearchRecursive(input,89));
+    }
+
+    @Test
+    public void shouldNotSearchUsingBinarySearchRecursive() {
+        Arrays.sort(input);
+        assertFalse(fixture.binarySearchRecursive(input,88));
+    }
 }

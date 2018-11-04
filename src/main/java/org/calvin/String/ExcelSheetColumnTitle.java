@@ -10,14 +10,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ExcelSheetColumnTitle {
     public String convertToTitle(int n) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         while (n > 0) {
             int digit = (n - 1) % 26;
             char excel = (char) (digit + 65);
-            result = excel + result;
+            result.insert(0, excel);
             n = (n - 1) / 26;
         }
         log.info("Conversion Done: " + result);
-        return result;
+        return result.toString();
     }
 }

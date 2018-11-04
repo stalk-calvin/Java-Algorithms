@@ -6,12 +6,8 @@
 package org.calvin.String;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import lombok.Data;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 @Data
 public class PermutationCombination {

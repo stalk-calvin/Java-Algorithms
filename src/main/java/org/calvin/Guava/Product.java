@@ -34,8 +34,8 @@ public class Product implements Comparable<Product> {
     @Override
     public int compareTo(@Nonnull Product that) {
         return ComparisonChain.start()
-                .compare(description, that.getDescription(), Ordering.natural().nullsFirst())
                 .compare(name, that.getName(), Ordering.natural().nullsFirst())
+                .compare(description, that.getDescription(), Ordering.natural().nullsFirst())
                 .result();
     }
 }

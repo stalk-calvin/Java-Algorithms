@@ -59,27 +59,4 @@ public class StringTest {
         String actual = CharMatcher.javaLetter().retainFrom(input);
         assertEquals("abc",actual);
     }
-
-    @Test
-    public void shouldGiveRightComparison() {
-        List<Product> actual = Lists.newArrayList(
-                new Product("a", "b"),
-                new Product("b", "b"),
-                new Product("c", "a"),
-                new Product("a", "d"),
-                new Product("a", "b"),
-                new Product(null, null)
-        );
-        Collections.sort(actual);
-        List<Product> expected = Lists.newArrayList(
-                new Product(null, null),
-                new Product("c", "a"),
-                new Product("a", "b"),
-                new Product("a", "b"),
-                new Product("b", "b"),
-                new Product("a", "d")
-        );
-        assertEquals(expected.toString(), actual.toString());
-    }
-
 }

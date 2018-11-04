@@ -7,6 +7,10 @@ a = `"11"`
 b = `"1"`  
 Return `"100"`.
 
+## DivideBy2or3
+
+Divide by a numbe by 2 or 3 without using operators / * + -
+
 ## NumberCompliment
 
 Given a positive integer, output its complement number. The complement strategy is to flip the bits of its binary representation.

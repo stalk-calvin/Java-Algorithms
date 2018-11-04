@@ -6,20 +6,21 @@
 package org.calvin.String;
 
 import java.util.Arrays;
+import java.util.Deque;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
-import java.util.Stack;
 
 public class SimplifyPath {
     public String simplifyPath(String path) {
-        Stack<String> stack = new Stack<>();
+        Deque<String> stack = new LinkedList<>();
         Set<String> skip = new HashSet<>(Arrays.asList("..",".",""));
         for (String dir : path.split("/")) {
             if (dir.equals("..") && !stack.isEmpty()) stack.pop();
             else if (!skip.contains(dir)) stack.push(dir);
         }
-        String res = "";
-        for (String dir : stack) res = "/" + dir + res;
-        return res.isEmpty() ? "/" : res;
+        StringBuilder res = new StringBuilder();
+        for (String dir : stack) res.insert(0, "/" + dir);
+        return (res.length() == 0) ? "/" : res.toString();
     }
 }

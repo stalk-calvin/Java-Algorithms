@@ -19,7 +19,7 @@ public class MinDepth {
         queue.add(magic);
         while (!queue.isEmpty()) {
             temp = queue.poll();
-            if (temp == magic) {
+            if (temp.equals(magic)) {
                 if (!queue.isEmpty()) {
                     depth++;
                     queue.add(magic);

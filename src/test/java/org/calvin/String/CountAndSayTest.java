@@ -22,9 +22,4 @@ public class CountAndSayTest {
     public void shouldCountAndSay() {
         assertEquals("1211", fixture.countAndSay(4));
     }
-
-    @Test
-    public void shouldCountIdx() {
-        assertEquals("111221", fixture.countIdx("1211"));
-    }
 }

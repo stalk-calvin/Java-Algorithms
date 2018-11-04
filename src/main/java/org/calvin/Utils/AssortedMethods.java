@@ -10,6 +10,14 @@ import org.calvin.LinkedList.ListNode;
 import org.calvin.Tree.TreeNode;
 
 public class AssortedMethods {
+    public static void reverse(char[] ca, int i, int j) {
+        for (; i < j; i++, j--) {
+            char tmp = ca[i];
+            ca[i] = ca[j];
+            ca[j] = tmp;
+        }
+    }
+
     public static int randomInt(int n) {
         return (int) (Math.random() * n);
     }
@@ -538,7 +546,7 @@ public class AssortedMethods {
         return wordList;
     }
 
-    public static void validateInput(Object input) {
+    public static void validateInputNull(Object input) {
         if (input == null) {
             throw new IllegalArgumentException("You can't pass a null input as argument.");
         }

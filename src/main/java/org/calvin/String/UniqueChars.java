@@ -5,7 +5,7 @@
 
 package org.calvin.String;
 
-import static org.calvin.Utils.AssortedMethods.validateInput;
+import static org.calvin.Utils.AssortedMethods.validateInputNull;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -16,7 +16,7 @@ public class UniqueChars {
      * O(N) solution using the set. N is the number of characters. This approach is same as findDuplicate pretty much.
      */
     public boolean hasUniqueChars(String input) {
-        validateInput(input);
+        validateInputNull(input);
 
         Set<Integer> tracker = new HashSet<>();
         for (char c : input.toCharArray()) {
@@ -34,7 +34,7 @@ public class UniqueChars {
      * O(1) space as we have above assumption
      **/
     public boolean hasASCIIUniqueChars(String input) {
-        validateInput(input);
+        validateInputNull(input);
 
         int[] chars = new int[256];
         for (char c : input.toCharArray()) {

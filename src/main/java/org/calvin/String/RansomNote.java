@@ -8,23 +8,17 @@ package org.calvin.String;
 import java.util.*;
 
 public class RansomNote {
-    Map<String, Integer> magazineMap;
-    Map<String, Integer> noteMap;
-    boolean solution;
+    private boolean solution;
 
     public RansomNote(String magazine, String note) {
-        magazineMap = new HashMap<String, Integer>();
-        noteMap = new HashMap<String, Integer>();
+        Map<String, Integer> magazineMap = new HashMap<String, Integer>();
+        Map<String, Integer> noteMap = new HashMap<String, Integer>();
         this.solution = true;
 
         //First set up the magazine map
         String[] words = magazine.split(" ");
         for(String w : words) {
-            if (magazineMap.get(w) != null) {
-                magazineMap.put(w, magazineMap.get(w) + 1);
-            } else {
-                magazineMap.put(w, 1);
-            }
+            magazineMap.merge(w, 1, (a, b) -> a + b);
         }
 
         // use the constructed map

@@ -5,6 +5,8 @@
 
 package org.calvin.String;
 
+import org.calvin.Utils.AssortedMethods;
+
 public class ReverseWordsInAStringWithChars {
     public String reverseWords(String s) {
         char[] ca = s.toCharArray();
@@ -12,18 +14,10 @@ public class ReverseWordsInAStringWithChars {
             if (ca[i] != ' ') {   // when i is a non-space
                 int j = i;
                 while (j + 1 < ca.length && ca[j + 1] != ' ') { j++; } // move j to the end of the word
-                reverse(ca, i, j);
+                AssortedMethods.reverse(ca, i, j);
                 i = j;
             }
         }
         return new String(ca);
-    }
-
-    private void reverse(char[] ca, int i, int j) {
-        for (; i < j; i++, j--) {
-            char tmp = ca[i];
-            ca[i] = ca[j];
-            ca[j] = tmp;
-        }
     }
 }

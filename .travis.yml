@@ -1,8 +1,4 @@
-before_script:
- - export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
- - export MAVEN_OPTS="-Xmx2048m"
- - echo $JAVA_TOOL_OPTIONS
- - echo $MAVEN_OPTS
+sudo: required
 
 language: java
 
@@ -13,18 +9,25 @@ notifications:
     on_success: change
     on_failure: always
 
+env:
+  global:
+    - DOCKER_COMPOSE_VERSION=1.22.0
+    - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+    - MAVEN_OPTS="-Xmx2048m"
+    - CODACY_PROJECT_TOKEN=ae6a2f5f152b4f7bbdd99377aa44d28a
+
+services:
+  - docker
+
 jdk:
   - oraclejdk8
 
-env:
-  - CODACY_PROJECT_TOKEN=ae6a2f5f152b4f7bbdd99377aa44d28a
-
 before_install:
-  - sudo apt-get install jq
-  - wget -O ~/codacy-coverage-reporter-assembly-latest.jar $(curl https://api.github.com/repos/codacy/codacy-coverage-reporter/releases/latest | jq -r .assets[0].browser_download_url)
-
-script: "mvn clean test jacoco:report coveralls:report"
-
-after_success:
-  - java -cp ~/codacy-coverage-reporter-assembly-latest.jar com.codacy.CodacyCoverageReporter -l Java -r target/site/jacoco/jacoco.xml --projectToken ae6a2f5f152b4f7bbdd99377aa44d28a
-
+  - sudo rm /usr/local/bin/docker-compose
+  - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
+  - chmod +x docker-compose
+  - sudo mv docker-compose /usr/local/bin
+  
+script:
+  - docker-compose build unit_test
+  - docker-compose run --rm unit_test

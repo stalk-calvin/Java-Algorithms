@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  unit_test:
+    build:
+      context: .
+      target: test
+    image: java-algorithms:latest
+    container_name: java-algorithms
+    volumes:
+      - .:/java-algorithms

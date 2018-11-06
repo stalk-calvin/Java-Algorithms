@@ -14,15 +14,14 @@ env:
     - DOCKER_COMPOSE_VERSION=1.22.0
     - JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
     - MAVEN_OPTS="-Xmx2048m"
+    - BRANCH=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo $TRAVIS_BRANCH; else echo $TRAVIS_PULL_REQUEST_BRANCH; fi)
 
 services:
   - docker
 
-jdk:
-  - oraclejdk8
-
 before_install:
-  - git checkout master
+  - echo "TRAVIS_BRANCH=$TRAVIS_BRANCH, PR=$PR, BRANCH=$BRANCH"
+  - git checkout $BRANCH
   - sudo rm /usr/local/bin/docker-compose
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose

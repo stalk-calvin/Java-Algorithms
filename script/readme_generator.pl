@@ -48,6 +48,7 @@ my $algorithm_count = 0;
 my $algorithm_test_count = 0;
 MAIN: foreach my $java_file (@java_files) {
 	$java_file = trim($java_file);
+	next if ($java_file =~ m/org\/calvin\/Book/);
     my $copy_file = $java_file;
     $java_file =~ s/.*calvin\/(.*)/$1/;
     next if (exists $exclude_files{$java_file});

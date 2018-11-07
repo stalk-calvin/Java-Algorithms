@@ -17,3 +17,6 @@ log/
 
 # Mac
 .DS_Store
+
+# source
+src/main/java/org/calvin/Book

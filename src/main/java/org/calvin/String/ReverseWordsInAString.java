@@ -9,9 +9,9 @@ public class ReverseWordsInAString {
     public String reverseWords(String s) {
         StringBuilder out = new StringBuilder();
         String[] words = s.trim().split("\\s+");
-        for (int i = words.length - 1; i > 0; i--) {
+        for (int i = words.length - 1; i > -1; i--) {
             out.append(words[i]).append(" ");
         }
-        return out + words[0];
+        return out.toString().trim();
     }
 }

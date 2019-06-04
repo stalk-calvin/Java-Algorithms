@@ -20,4 +20,12 @@ public class FindDifference {
         }
         return ' ';
     }
+
+    public char findTheDifferenceXOR(String a, String b) {
+        char x=0;
+        for (char c : (a + b).toCharArray()) {
+            x^=c;
+        }
+        return x;
+    }
 }

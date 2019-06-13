@@ -5,9 +5,12 @@
 
 package org.calvin.String;
 
-import java.util.ArrayList;
-import java.util.List;
 import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Data
 public class PermutationCombination {
@@ -22,6 +25,28 @@ public class PermutationCombination {
     public PermutationCombination(final String str ){
         in = str;
         used = new boolean[ in.length() ];
+    }
+
+    public List<String> showPossibilities(String str) {
+        List<String> result = new ArrayList<>();
+        Set<Integer> seen = new HashSet<>();
+        helper(str, seen, result, "");
+        return result;
+    }
+
+    private void helper(String str, Set<Integer> seen, List<String> result, String prefix) {
+        Set<Character> tracker = new HashSet<>();
+        if (prefix.length() != 0) {
+            result.add(prefix);
+        }
+        for (int i=0; i<str.length(); i++) {
+            if (!seen.contains(i) && !tracker.contains(str.charAt(i))) {
+                seen.add(i);
+                helper(str, seen, result, prefix+str.charAt(i));
+                tracker.add(str.charAt(i));
+                seen.remove(i);
+            }
+        }
     }
 
     public void permute( ){

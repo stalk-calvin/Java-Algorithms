@@ -6,9 +6,9 @@
 package org.calvin.LinkedList;
 
 public class Cycle2 {
-    public ListNode detectCycle(ListNode head) {
-        ListNode slow = head;
-        ListNode fast = head;
+    public ListNode<Integer> detectCycle(ListNode<Integer> head) {
+        ListNode<Integer> slow = head;
+        ListNode<Integer> fast = head;
 
         // Find meeting point
         while (fast != null && fast.getNext() != null) {

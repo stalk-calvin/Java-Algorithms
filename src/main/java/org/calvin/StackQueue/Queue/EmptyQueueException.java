@@ -5,7 +5,7 @@
 
 package org.calvin.StackQueue.Queue;
 
-public class EmptyQueueException extends Exception {
+public class EmptyQueueException extends RuntimeException {
     public EmptyQueueException(String message) {
         super(message);
     }

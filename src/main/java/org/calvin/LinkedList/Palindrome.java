@@ -6,7 +6,7 @@
 package org.calvin.LinkedList;
 
 public class Palindrome {
-    public boolean isPalindrome(ListNode head) {
+    public boolean isPalindrome(ListNode<Integer> head) {
         if (head == null) {
             return true;
         }
@@ -15,8 +15,8 @@ public class Palindrome {
         }
         //algorithm
         //get middle
-        ListNode slow = head;
-        ListNode fast = slow;
+        ListNode<Integer> slow = head;
+        ListNode<Integer> fast = slow;
         while (fast != null && fast.getNext() != null) {
             slow = slow.getNext();
             fast = fast.getNext().getNext();
@@ -33,11 +33,11 @@ public class Palindrome {
         return true;
     }
 
-    private ListNode reverseNode(ListNode head) {
-        ListNode tmpHead = head.getNext();
-        ListNode cur = new ListNode(head.getVal());
+    private ListNode<Integer> reverseNode(ListNode<Integer> head) {
+        ListNode<Integer> tmpHead = head.getNext();
+        ListNode<Integer> cur = new ListNode<Integer>(head.getVal());
         while (tmpHead != null) {
-            ListNode n = new ListNode(tmpHead.getVal());
+            ListNode<Integer> n = new ListNode<Integer>(tmpHead.getVal());
             n.setNext(cur);
             cur = n;
             tmpHead = tmpHead.getNext();

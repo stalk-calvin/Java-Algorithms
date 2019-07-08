@@ -8,11 +8,11 @@ package org.calvin.LinkedList;
 import lombok.Data;
 
 @Data
-public class ListNode {
-    private int val;
-    private ListNode next;
+public class ListNode<T> {
+    private T val;
+    private ListNode<T> next;
 
-    public ListNode(int x) {
+    public ListNode(T x) {
       val = x;
       next = null;
     }

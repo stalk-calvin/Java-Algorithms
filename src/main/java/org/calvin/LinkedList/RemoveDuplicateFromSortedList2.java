@@ -6,13 +6,13 @@
 package org.calvin.LinkedList;
 
 public class RemoveDuplicateFromSortedList2 {
-    public ListNode removeDuplicates(ListNode head) {
+    public ListNode<Integer> removeDuplicates(ListNode<Integer> head) {
         //use two pointers, slow - track the node before the dup nodes,
         // fast - to find the last node of dups.
-        ListNode dummy = new ListNode(0);
-        ListNode fast = head;
+        ListNode<Integer> dummy = new ListNode<Integer>(0);
+        ListNode<Integer> fast = head;
         dummy.setNext(fast);
-        ListNode slow = dummy;
+        ListNode<Integer> slow = dummy;
         while(fast != null) {
             while (fast.getNext() != null && fast.getVal() == fast.getNext().getVal()) {
                 fast = fast.getNext();    //while loop to find the last node of the dups.

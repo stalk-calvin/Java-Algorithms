@@ -6,7 +6,7 @@
 package org.calvin.LinkedList;
 
 public class Merge2SortedList {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode<Integer> mergeTwoLists(ListNode<Integer> l1, ListNode<Integer> l2) {
         if (l1 == null && l2 == null) {
             return null;
         }
@@ -17,15 +17,15 @@ public class Merge2SortedList {
             return l1;
         }
         // find out who has minimum head
-        ListNode newHead = new ListNode(Math.min(l1.getVal(), l2.getVal()));
+        ListNode<Integer> newHead = new ListNode<>(Math.min(l1.getVal(), l2.getVal()));
         if (l1.getVal() > l2.getVal()) {
             l2 = l2.getNext();
         } else {
             l1 = l1.getNext();
         }
-        ListNode returnHead = newHead;
+        ListNode<Integer> returnHead = newHead;
         while (l1 != null && l2 != null) {
-            ListNode n = new ListNode(Math.min(l1.getVal(), l2.getVal()));
+            ListNode<Integer> n = new ListNode<>(Math.min(l1.getVal(), l2.getVal()));
             newHead.setNext(n);
             newHead = newHead.getNext();
             if (l1.getVal() > l2.getVal()) {
@@ -36,14 +36,14 @@ public class Merge2SortedList {
         }
 
         while (l1 != null) {
-            ListNode n = new ListNode(l1.getVal());
+            ListNode<Integer> n = new ListNode<>(l1.getVal());
             newHead.setNext(n);
             newHead = newHead.getNext();
             l1 = l1.getNext();
         }
 
         while (l2 != null) {
-            ListNode n = new ListNode(l2.getVal());
+            ListNode<Integer> n = new ListNode<>(l2.getVal());
             newHead.setNext(n);
             newHead = newHead.getNext();
             l2 = l2.getNext();

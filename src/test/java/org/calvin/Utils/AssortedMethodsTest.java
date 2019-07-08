@@ -5,13 +5,12 @@
 
 package org.calvin.Utils;
 
-import org.calvin.LinkedList.ListNode;
-import org.junit.Test;
-
-import java.util.Arrays;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+
+import java.util.Arrays;
+import org.calvin.LinkedList.ListNode;
+import org.junit.Test;
 
 public class AssortedMethodsTest {
     @Test
@@ -70,23 +69,23 @@ public class AssortedMethodsTest {
     @Test
     public void shouldCreateRandomLinkedList() {
         int[] vals = {3, 3, 3};
-        ListNode expected = AssortedMethods.createLinkedListFromArray(vals);
-        ListNode actual = AssortedMethods.randomLinkedList(3, 3, 3);
+        ListNode<Integer> expected = AssortedMethods.createLinkedListFromArray(vals);
+        ListNode<Integer> actual = AssortedMethods.randomLinkedList(3, 3, 3);
         assertEquals(expected,actual);
     }
 
     @Test
     public void linkedListWithValue() {
         int[] vals = {3, 3, 3};
-        ListNode expected = AssortedMethods.createLinkedListFromArray(vals);
-        ListNode actual = AssortedMethods.linkedListWithValue(3, 3);
+        ListNode<Integer> expected = AssortedMethods.createLinkedListFromArray(vals);
+        ListNode<Integer> actual = AssortedMethods.linkedListWithValue(3, 3);
         assertEquals(expected,actual);
     }
 
     @Test
     public void shouldCreateLinkedListFromArray() {
         int[] vals = {3, 3, 3};
-        ListNode actual = AssortedMethods.createLinkedListFromArray(vals);
+        ListNode<Integer> actual = AssortedMethods.createLinkedListFromArray(vals);
         int count = 0;
         while (actual != null) {
             assertTrue(vals[count] == actual.getVal());

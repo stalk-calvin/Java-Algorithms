@@ -5,11 +5,11 @@
 
 package org.calvin.LinkedList;
 
+import static org.junit.Assert.assertEquals;
+
 import org.calvin.Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class Merge2SortedListTest {
     Merge2SortedList fixture;
@@ -22,13 +22,13 @@ public class Merge2SortedListTest {
     @Test
     public void shouldFirstListComeFirst() {
         int[] vals = {1,2,3,4};
-        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+        ListNode<Integer> list1 = AssortedMethods.createLinkedListFromArray(vals);
         int[] vals2 = {14, 15, 16};
-        ListNode list2 = AssortedMethods.createLinkedListFromArray(vals2);
+        ListNode<Integer> list2 = AssortedMethods.createLinkedListFromArray(vals2);
 
-        ListNode actual = fixture.mergeTwoLists(list1, list2);
+        ListNode<Integer> actual = fixture.mergeTwoLists(list1, list2);
         int[] expectedVals = {1,2,3,4,14,15,16};
-        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedVals);
+        ListNode<Integer> expected = AssortedMethods.createLinkedListFromArray(expectedVals);
 
         assertEquals(expected, actual);
     }
@@ -36,13 +36,13 @@ public class Merge2SortedListTest {
     @Test
     public void shouldSecondListComeFirst() {
         int[] vals = {14,15,16};
-        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+        ListNode<Integer> list1 = AssortedMethods.createLinkedListFromArray(vals);
         int[] vals2 = {1,2,3,4};
-        ListNode list2 = AssortedMethods.createLinkedListFromArray(vals2);
+        ListNode<Integer> list2 = AssortedMethods.createLinkedListFromArray(vals2);
 
-        ListNode actual = fixture.mergeTwoLists(list1, list2);
+        ListNode<Integer> actual = fixture.mergeTwoLists(list1, list2);
         int[] expectedVals = {1,2,3,4,14,15,16};
-        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedVals);
+        ListNode<Integer> expected = AssortedMethods.createLinkedListFromArray(expectedVals);
 
         assertEquals(expected, actual);
     }
@@ -50,11 +50,11 @@ public class Merge2SortedListTest {
     @Test
     public void shouldMergeOneList() {
         int[] vals1 = {14, 15, 16};
-        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals1);
+        ListNode<Integer> list1 = AssortedMethods.createLinkedListFromArray(vals1);
 
         int[] expectedVals = {14,15,16};
-        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedVals);
-        ListNode actual = fixture.mergeTwoLists(null, list1);
+        ListNode<Integer> expected = AssortedMethods.createLinkedListFromArray(expectedVals);
+        ListNode<Integer> actual = fixture.mergeTwoLists(null, list1);
 
         assertEquals(expected, actual);
 
@@ -64,7 +64,7 @@ public class Merge2SortedListTest {
 
     @Test
     public void shouldMergeNullLists() {
-        ListNode actual = fixture.mergeTwoLists(null,null);
+        ListNode<Integer> actual = fixture.mergeTwoLists(null,null);
         assertEquals(null, actual);
     }
 

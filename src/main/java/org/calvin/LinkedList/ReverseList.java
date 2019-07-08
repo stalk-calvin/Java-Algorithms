@@ -6,14 +6,14 @@
 package org.calvin.LinkedList;
 
 public class ReverseList {
-    public ListNode reverseList(ListNode n) {
+    public ListNode<Integer> reverseList(ListNode<Integer> n) {
         if (n == null || n.getNext() == null) {
             return n;
         }
-        ListNode newHead = new ListNode(n.getVal());
+        ListNode<Integer> newHead = new ListNode<Integer>(n.getVal());
         n = n.getNext();
         while (n != null) {
-            ListNode newN = new ListNode(n.getVal());
+            ListNode<Integer> newN = new ListNode<Integer>(n.getVal());
             newN.setNext(newHead);
             newHead = newN;
             n = n.getNext();

@@ -6,9 +6,9 @@
 package org.calvin.LinkedList;
 
 public class RemoveLastNthNode {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode start = new ListNode(0);
-        ListNode slow = start, fast = start;
+    public ListNode<Integer> removeNthFromEnd(ListNode<Integer> head, int n) {
+        ListNode<Integer> start = new ListNode<Integer>(0);
+        ListNode<Integer> slow = start, fast = start;
         slow.setNext(head);
 
         //Move fast in front so that the gap between slow and fast becomes n

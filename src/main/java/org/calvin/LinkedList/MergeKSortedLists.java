@@ -9,17 +9,17 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class MergeKSortedLists {
-    public ListNode mergeKSortedLists(ListNode[] lists) {
+    public ListNode<Integer> mergeKSortedLists(ListNode<Integer>[] lists) {
         if(lists == null || lists.length ==0) return null;
-        ListNode dummy = new ListNode(-1);
-        ListNode runner = dummy;
-        PriorityQueue<ListNode> minHeap = new PriorityQueue<ListNode>(lists.length, new Comparator<ListNode>() {
-            public int compare(ListNode n1, ListNode n2) {
+        ListNode<Integer> dummy = new ListNode<Integer>(-1);
+        ListNode<Integer> runner = dummy;
+        PriorityQueue<ListNode<Integer>> minHeap = new PriorityQueue<ListNode<Integer>>(lists.length, new Comparator<ListNode<Integer>>() {
+            public int compare(ListNode<Integer> n1, ListNode<Integer> n2) {
                 return n1.getVal() - n2.getVal();
             }});
-        for(ListNode node:lists) if(node!=null) minHeap.add(node);
+        for(ListNode<Integer> node:lists) if(node!=null) minHeap.add(node);
         while(!minHeap.isEmpty()){
-            ListNode node = minHeap.poll();
+            ListNode<Integer> node = minHeap.poll();
             runner.setNext(node);
             runner = runner.getNext();
             if(node.getNext() !=null) minHeap.add(node.getNext());

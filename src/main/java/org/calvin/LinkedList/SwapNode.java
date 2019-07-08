@@ -6,9 +6,9 @@
 package org.calvin.LinkedList;
 
 public class SwapNode {
-    public ListNode swapPairs(ListNode head) {
+    public ListNode<Integer> swapPairs(ListNode<Integer> head) {
         if (head == null || head.getNext() == null) return head;
-        ListNode tmpHead = head;
+        ListNode<Integer> tmpHead = head;
         while (tmpHead != null && tmpHead.getNext() != null) {
             int val = tmpHead.getNext().getVal();
             tmpHead.getNext().setVal(tmpHead.getVal());

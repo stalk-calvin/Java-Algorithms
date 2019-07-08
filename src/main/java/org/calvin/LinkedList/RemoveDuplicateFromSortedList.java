@@ -6,15 +6,15 @@
 package org.calvin.LinkedList;
 
 public class RemoveDuplicateFromSortedList {
-    public ListNode removeDuplicates(ListNode head) {
+    public ListNode<Integer> removeDuplicates(ListNode<Integer> head) {
         if (head == null || head.getNext() == null) return head;
-        ListNode newHead = new ListNode(head.getVal());
-        ListNode ret = newHead;
+        ListNode<Integer> newHead = new ListNode<Integer>(head.getVal());
+        ListNode<Integer> ret = newHead;
         while (head != null) {
             if (head.getVal() == newHead.getVal()) {
                 head = head.getNext();
             } else {
-                ListNode n = new ListNode(head.getVal());
+                ListNode<Integer> n = new ListNode<Integer>(head.getVal());
                 newHead.setNext(n);
                 newHead = n;
                 head = head.getNext();

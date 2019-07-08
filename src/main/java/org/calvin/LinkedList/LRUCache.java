@@ -8,6 +8,7 @@ package org.calvin.LinkedList;
 import java.util.HashMap;
 import java.util.Map;
 
+// double linked list to keep going forward/backward simpler
 class Node {
     int key;
     int value;

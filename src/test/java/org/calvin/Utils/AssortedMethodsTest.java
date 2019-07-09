@@ -9,6 +9,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 import org.calvin.LinkedList.ListNode;
 import org.junit.Test;
 
@@ -124,5 +126,12 @@ public class AssortedMethodsTest {
     public void shouldGetListOfWords() {
         String[] words = AssortedMethods.getListOfWords();
         assertEquals(2018, words.length);
+    }
+
+    @Test
+    public void shouldFindAWord() {
+        String[] words = AssortedMethods.getListOfWords();
+        Set<String> wordsSet = new HashSet<>(Arrays.asList(words));
+        assertTrue(wordsSet.contains("people"));
     }
 }

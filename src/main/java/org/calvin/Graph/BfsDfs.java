@@ -10,6 +10,7 @@ import lombok.AllArgsConstructor;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.Stack;
 
 @AllArgsConstructor
 public class BfsDfs {
@@ -26,6 +27,29 @@ public class BfsDfs {
             // recurse if unvisited
             if(n.state == State.Unvisited) {
                 dfs(n);
+            }
+        }
+    }
+
+    public void dfsStack(Node root) {
+        if(root == null) return;
+
+        Stack<Node> st = new Stack<>();
+        st.add(root);
+        root.state = State.Visited;
+
+        while(!st.isEmpty()) {
+            Node r = st.pop();
+
+            vertices.add(r.getVertex());
+
+            // go through each children
+            for (Node n : r.getChild()) {
+                // recurse if unvisited
+                if (n.state == State.Unvisited) {
+                    st.push(n);
+                    n.state = State.Visited;
+                }
             }
         }
     }

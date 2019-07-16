@@ -1,6 +1,6 @@
 package org.calvin.Tree;
 
-class BinaryTree {
+class BinarySearchTree {
 
     /* Class containing left and right child of current node and key value*/
     class Node {
@@ -17,7 +17,7 @@ class BinaryTree {
     Node root;
 
     // Constructor
-    BinaryTree() {
+    BinarySearchTree() {
         root = null;
     }
 
@@ -57,8 +57,47 @@ class BinaryTree {
         }
     }
 
+    void delete(int key) {
+        deleteRec(root, key);
+    }
+
+    Node deleteRec(Node node, int key) {
+        if (node==null) {
+            return null;
+        } else if (node.key < key) {
+            node.right = deleteRec(node.right, key);
+        } else if (node.key > key) {
+            node.left = deleteRec(node.left, key);
+        } else {
+            // when one side is null
+            if (node.left == null) {
+                return node.left;
+            } else if (node.right == null) {
+                return node.right;
+            }
+            // when both not empty, we have to recurse
+            else {
+                //search the min node
+                node.key = minValue(node);
+                node.right = deleteRec(node.right, node.key);
+            }
+        }
+        return node;
+    }
+
+    int minValue(Node root)
+    {
+        int minv = root.key;
+        while (root.left != null)
+        {
+            minv = root.left.key;
+            root = root.left;
+        }
+        return minv;
+    }
+
     public static void main(String[] args) {
-        BinaryTree t = new BinaryTree();
+        BinarySearchTree t = new BinarySearchTree();
         t.insert(10);
         t.insert(6);
         t.insert(18);
@@ -70,6 +109,10 @@ class BinaryTree {
         t.inorder();
 
         t.insert(17);
+
+        t.inorder();
+
+        t.delete(8);
 
         t.inorder();
     }

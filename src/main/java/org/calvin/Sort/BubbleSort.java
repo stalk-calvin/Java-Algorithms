@@ -5,6 +5,8 @@
 
 package org.calvin.Sort;
 
+import org.calvin.Utils.AssortedMethods;
+
 class BubbleSort {
     public static void sort(int[] input) {
         if (input == null || input.length < 2) return;
@@ -20,6 +22,22 @@ class BubbleSort {
                 }
             }
         }
+    }
 
+    public static void sortAdaptive(int[] input) {
+        if (input == null || input.length < 2) return;
+        int n = input.length;
+        for (int i=0; i< n; i++) {
+            boolean swapped = false;
+            for (int j = n -1; j > i; j--) {
+                if (input[j] < input[j-1]) {
+                    AssortedMethods.swap(input, j, j - 1);
+                    swapped = true;
+                }
+            }
+            if (!swapped) {
+                break;
+            }
+        }
     }
 }

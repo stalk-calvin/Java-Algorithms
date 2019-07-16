@@ -15,6 +15,16 @@ import static org.junit.Assert.assertTrue;
 @Slf4j
 public class BubbleSortTest {
     @Test
+    public void shouldBubbleSortAdaptive() {
+        int[] input = {9,30,5,11,7,10};
+        log.info("BubbleSort: Input (Unsorted): " + Arrays.toString(input));
+        BubbleSort.sortAdaptive(input);
+        int[] expected = {5,7,9,10,11,30};
+        log.info("BubbleSort: Input (Sorted): " + Arrays.toString(input));
+        assertTrue(Arrays.equals(expected, input));
+    }
+
+    @Test
     public void shouldBubbleSort() {
         int[] input = {9,30,5,11,7,10};
         log.info("BubbleSort: Input (Unsorted): " + Arrays.toString(input));

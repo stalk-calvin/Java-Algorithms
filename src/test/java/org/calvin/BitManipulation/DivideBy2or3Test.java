@@ -15,8 +15,8 @@ public class DivideBy2or3Test {
 
     @Test
     public void shouldAdd() throws Exception {
-        int expected = 144;
-        assertEquals(expected, fixture.add(100,44));
+        int expected = 14;
+        assertEquals(expected, fixture.add(7,7));
     }
 
     @Test

@@ -43,7 +43,8 @@ public class TreeNodeTest {
 
     @Test
     public void shouldNotBeBSTOfRight() {
-        fixture.getRight().getRight().setRight(new TreeNode(6));
+        fixture = new TreeNode(0);
+        fixture.setRight(new TreeNode(-1));
         fixture.setLeft(null);
         assertFalse(fixture.checkBST(fixture));
     }

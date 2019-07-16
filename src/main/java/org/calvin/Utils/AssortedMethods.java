@@ -10,6 +10,12 @@ import org.calvin.LinkedList.ListNode;
 import org.calvin.Tree.TreeNode;
 
 public class AssortedMethods {
+    public static void swap(int[] elements, int i, int j) {
+        int temp = elements[i];
+        elements[i] = elements[j];
+        elements[j] = temp;
+    }
+
     public static void reverse(char[] ca, int i, int j) {
         for (; i < j; i++, j--) {
             char tmp = ca[i];

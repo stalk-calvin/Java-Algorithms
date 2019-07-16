@@ -18,8 +18,8 @@ public class TopKLongestTest {
 
     @Test
     public void shouldFindTopKLongest() throws Exception {
-        List<String> expected = Lists.newArrayList("aaaa","aaaaa");
-        List<String> actual = fixture.topK(2, Lists.newArrayList("a","aa","aaa","aaaa","aaaaa").iterator());
+        List<String> expected = Lists.newArrayList("aaaasdsa","aaaaaaaa");
+        List<String> actual = fixture.topK(2, Lists.newArrayList("aa","aassds","aaaaaaaa","aaaa","aaaasdsa").iterator());
 
         assertEquals(expected, actual);
     }

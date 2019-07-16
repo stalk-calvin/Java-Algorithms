@@ -5,6 +5,8 @@
 
 package org.calvin.Arrays;
 
+import static org.calvin.Utils.AssortedMethods.swap;
+
 public class RemoveDuplicateSortedArray {
     public int removeDuplicates(int[] nums) {
         int i = 0;
@@ -19,5 +21,23 @@ public class RemoveDuplicateSortedArray {
             }
         }
         return k + 1;
+    }
+
+    public int removeDuplicatesMyWay(int[] nums) {
+        if (nums == null || nums.length < 2) {
+            return nums == null ? 0 : nums.length;
+        }
+
+        int p=0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i]==nums[p]) {
+                continue;
+            } else if ( nums[p+1] < nums[i]) {
+                swap(nums, p+1, i);
+            }
+            p++;
+        }
+
+        return p+1;
     }
 }

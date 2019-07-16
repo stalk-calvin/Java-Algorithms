@@ -5,6 +5,8 @@
 
 package org.calvin.Sort;
 
+import org.calvin.Utils.AssortedMethods;
+
 public class SelectionSort {
     public static void sort(int[] input) {
         if (input == null || input.length < 2) return;
@@ -19,10 +21,17 @@ public class SelectionSort {
                     min = input[j];
                 }
             }
-            //swap i with min
-            int temp = input[i];
-            input[i] = input[index];
-            input[index] = temp;
+            AssortedMethods.swap(input, i, index);
+        }
+    }
+
+    public static void selectSort(int[] input) {
+        for (int i = 0; i < input.length; i++) {
+            for (int j = i+1; j < input.length; j++) {
+                if (input[i] > input[j]) {
+                    AssortedMethods.swap(input, i, j);
+                }
+            }
         }
     }
 }

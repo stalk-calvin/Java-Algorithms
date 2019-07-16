@@ -14,7 +14,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class BfsDfsTest {
-    private Graph newGraph;
+    private GraphImpl newGraph;
     private BfsDfs fixture;
     private List<String> vertices = Lists.newArrayList();
 
@@ -27,19 +27,26 @@ public class BfsDfsTest {
     @Test
     public void shouldTraverseDFS() {
         List<String> expected = Lists.newArrayList("A","B","E","F","C","D");
-        fixture.dfs(newGraph.getNode()[0]);
+        fixture.dfs(newGraph.getVertices()[0]);
+        assertEquals(expected, vertices);
+    }
+
+    @Test
+    public void shouldTraverseDFSStack() {
+        List<String> expected = Lists.newArrayList("A", "D", "C", "B", "F", "E");
+        fixture.dfsStack(newGraph.getVertices()[0]);
         assertEquals(expected, vertices);
     }
 
     @Test
     public void shouldTraverseBFS() {
         List<String> expected = Lists.newArrayList("A","B","C","D","E","F");
-        fixture.bfs(newGraph.getNode()[0]);
+        fixture.bfs(newGraph.getVertices()[0]);
         assertEquals(expected, vertices);
     }
 
-    private static Graph createNewGraph() {
-        Graph g = new Graph();
+    private static GraphImpl createNewGraph() {
+        GraphImpl g = new GraphImpl();
         Node[] temp = new Node[8];
 
         temp[0] = new Node("A", 3);
@@ -63,7 +70,7 @@ public class BfsDfsTest {
         temp[5].addChildNode(temp[1]);
 
         for (int i = 0; i < 7; i++) {
-            g.addNode(temp[i]);
+            g.addEdge(temp[i]);
         }
         return g;
     }

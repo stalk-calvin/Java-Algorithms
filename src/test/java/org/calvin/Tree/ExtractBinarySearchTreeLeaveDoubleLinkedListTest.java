@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ExtractBinaryTreeLeaveDoubleLinkedListTest {
+public class ExtractBinarySearchTreeLeaveDoubleLinkedListTest {
     private ExtractBinaryTreeLeaveDoubleLinkedList fixture;
     @Before
     public void setUp() {

@@ -3,8 +3,6 @@ package org.calvin.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class QueueReconstructionByHeightTest {
     private QueueReconstructionByHeight fixture;
 
@@ -23,7 +21,12 @@ public class QueueReconstructionByHeightTest {
         input[3] = new int[]{5,0};
         input[4] = new int[]{6,1};
         input[5] = new int[]{5,2};
-        fixture.reconstructQueue(input);
+        int[][] actual = fixture.reconstructQueue(input);
+        for (int[] x : actual) {
+            for (int y : x) {
+                System.out.print(y+ " : ");
+            }
+            System.out.println();
+        }
     }
-
 }

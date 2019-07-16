@@ -13,7 +13,9 @@ public class TopKLongest {
 
         while (iter.hasNext()) {
             minHeap.add(iter.next());
-            if (minHeap.size() > k) minHeap.poll();
+            if (minHeap.size() > k) {
+                minHeap.poll();
+            }
         }
         return new ArrayList<>(minHeap);
     }

@@ -15,6 +15,15 @@ import static org.junit.Assert.assertTrue;
 @Slf4j
 public class SelectionSortTest {
     @Test
+    public void shouldSelectionSortAnother() {
+        int[] input = {9,30,5,11,7,10};
+        log.info("SelectionSort: Input (Unsorted): " + Arrays.toString(input));
+        SelectionSort.selectSort(input);
+        int[] expected = {5,7,9,10,11,30};
+        log.info("SelectionSort: Input (Sorted): " + Arrays.toString(input));
+        assertTrue(Arrays.equals(expected, input));
+    }
+    @Test
     public void shouldSelectionSort() {
         int[] input = {9,30,5,11,7,10};
         log.info("SelectionSort: Input (Unsorted): " + Arrays.toString(input));

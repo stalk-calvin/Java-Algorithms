@@ -28,4 +28,21 @@ public class ClosestToZero {
         }
         return tracker.get(min);
     }
+
+    public int closestToZeroNoExtraSpace(int[] input) {
+        int min = Integer.MAX_VALUE;
+        if (input == null || input.length < 1) {
+            return min;
+        }
+        int m = Math.abs(input[0]);
+        int mVal = input[0];
+        for (int i = 1; i < input.length; i++) {
+            int a = Math.abs(input[i]);
+            if (a <= m) {
+                m = a;
+                mVal = input[i];
+            }
+        }
+        return mVal;
+    }
 }

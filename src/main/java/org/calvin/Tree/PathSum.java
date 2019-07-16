@@ -24,7 +24,7 @@ public class PathSum {
 
         int total = 0;
         if (to==current) {
-            total += 1;
+            total = 1;
         }
 
         total += calculate_path_sum(tree.left, to, current);

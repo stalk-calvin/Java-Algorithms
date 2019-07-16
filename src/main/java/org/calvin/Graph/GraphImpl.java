@@ -5,23 +5,23 @@
 
 package org.calvin.Graph;
 
-public class Graph {
+public class GraphImpl {
     public int count; // num of vertices
     private Node[] vertices;
 
-    public Graph() {
+    public GraphImpl() {
         vertices = new Node[8];
         count = 0;
     }
 
-    public void addNode(Node n) {
+    public void addEdge(Node n) {
         if(count < 10) {
             vertices[count] = n;
             count++;
         }
     }
 
-    public Node[] getNode() {
+    public Node[] getVertices() {
         return vertices;
     }
 

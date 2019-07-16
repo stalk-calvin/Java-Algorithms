@@ -10,8 +10,7 @@ import org.junit.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class RemoveDuplicateSortedArrayTest {
     RemoveDuplicateSortedArray fixture;
@@ -45,4 +44,19 @@ public class RemoveDuplicateSortedArrayTest {
         assertEquals(0,actual);
     }
 
+
+    @Test
+    public void shouldRemoveDuplicatesMyWay() {
+        int[] input = {1,2,2,2,2,2,3,4,4,4,5};
+
+        int actual = fixture.removeDuplicatesMyWay(input);
+
+        int[] expectedArray = {1,2,3,4,5};
+        int[] actualArray = new int[actual];
+
+        System.arraycopy(input,0,actualArray,0,actual);
+
+        assertEquals(5,actual);
+        assertArrayEquals(expectedArray, actualArray);
+    }
 }

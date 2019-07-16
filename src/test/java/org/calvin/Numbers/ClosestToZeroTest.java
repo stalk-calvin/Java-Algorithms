@@ -5,10 +5,10 @@
 
 package org.calvin.Numbers;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ClosestToZeroTest {
     private ClosestToZero fixture;
@@ -56,6 +56,33 @@ public class ClosestToZeroTest {
     @Test
     public void shouldFindNothing() {
         int actual = fixture.closestToZero(null);
+        assertEquals(Integer.MAX_VALUE, actual);
+    }
+
+    @Test
+    public void shouldFindClosestToZeroNoExtra() {
+        int[] input = {1, -2, -8, 4, 5};
+        int actual = fixture.closestToZeroNoExtraSpace(input);
+        assertEquals(1, actual);
+    }
+
+    @Test
+    public void shouldFindClosestToZeroAllNegativeNoExtra() {
+        int[] input = {-12, -5, -137};
+        int actual = fixture.closestToZeroNoExtraSpace(input);
+        assertEquals(-5, actual);
+    }
+
+    @Test
+    public void shouldFindClosestToZeroComplexExampleNoExtra() {
+        int[] input = {-5, -4, -2, 12, -40, 4, 2, 18, 11, 5};
+        int actual = fixture.closestToZeroNoExtraSpace(input);
+        assertEquals(2, actual);
+    }
+
+    @Test
+    public void shouldFindNothingNoExtra() {
+        int actual = fixture.closestToZeroNoExtraSpace(null);
         assertEquals(Integer.MAX_VALUE, actual);
     }
 }

@@ -5,13 +5,16 @@
 
 package org.calvin.String;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-
-import java.io.PrintStream;
-
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.PrintStream;
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 public class PrintPossibleCorrectParenthesesTest {
     private PrintPossibleCorrectParentheses fixture;
@@ -39,5 +42,12 @@ public class PrintPossibleCorrectParenthesesTest {
         verify(ps).println("(())()");
         verify(ps).println("()(())");
         verify(ps).println("()()()");
+    }
+
+    @Test
+    public void shouldGatherAllParenthesis() {
+        List<String> actual = fixture.gatherAllParenthesis(3);
+        List<String> expected = Lists.newArrayList("((()))", "(()())", "(())()", "()(())", "()()()");
+        assertEquals(expected, actual);
     }
 }

@@ -1,4 +1,4 @@
-package org.calvin.Graph.Adjacency.AdjacencySet;
+package org.calvin.Graph.Adjacency.AdjacencySetGraph;
 
 import org.calvin.Graph.Adjacency.Graph;
 import org.calvin.Graph.GraphType;
@@ -6,13 +6,13 @@ import org.calvin.Graph.GraphType;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdjacencySetGraph implements Graph {
+public class AdjacencySet implements Graph {
     private List<Node> vertexList = new ArrayList<>();
     private GraphType graphType;
 
     private int numVertices = 0;
 
-    public AdjacencySetGraph(int numVertices, GraphType graphType) {
+    public AdjacencySet(int numVertices, GraphType graphType) {
         this.numVertices = numVertices;
         this.graphType = graphType;
         for (int i = 0; i < numVertices; i++) {

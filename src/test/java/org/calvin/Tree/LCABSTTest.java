@@ -38,4 +38,25 @@ public class LCABSTTest {
         TreeNode root = TreeNode.createMinimalBST(array);
         assertEquals(null, fixture.lowestCommonAncestor(null, root.right.right, root.right.left));
     }
+
+    @Test
+    public void shouldFindLowestCommonAncestorMyWayLeft() {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        TreeNode root = TreeNode.createMinimalBST(array);
+        assertEquals(root.left, fixture.lowestCommonAncestorMyWay(root, root.left.left, root.left.right.right));
+    }
+
+    @Test
+    public void shouldFindLowestCommonAncestorMyWayRight() {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        TreeNode root = TreeNode.createMinimalBST(array);
+        assertEquals(root.right, fixture.lowestCommonAncestorMyWay(root, root.right.right, root.right.left));
+    }
+
+    @Test
+    public void shouldReturnNullTreeMyWay() {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        TreeNode root = TreeNode.createMinimalBST(array);
+        assertEquals(null, fixture.lowestCommonAncestorMyWay(null, root.right.right, root.right.left));
+    }
 }

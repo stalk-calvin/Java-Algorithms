@@ -40,4 +40,20 @@ public class RemoveDuplicateSortedArray {
 
         return p+1;
     }
+
+    public int removeDuplicatesMyWayTwo(int[] nums) {
+        if (nums == null) return 0;
+        if (nums.length < 2) return 1;
+        int j = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i-1]) {
+                continue;
+            } else {
+                nums[j] = nums[i-1];
+                j++;
+            }
+        }
+        nums[j] = nums[nums.length-1];
+        return j+1;
+    }
 }

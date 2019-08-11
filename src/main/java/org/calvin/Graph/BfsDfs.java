@@ -7,10 +7,7 @@ package org.calvin.Graph;
 
 import lombok.AllArgsConstructor;
 
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 @AllArgsConstructor
 public class BfsDfs {
@@ -19,14 +16,16 @@ public class BfsDfs {
     public void dfs(Node root) {
         if(root == null) return;
 
-        vertices.add(root.getVertex());
+        vertices.add(root.getKey());
         root.state = State.Visited;
 
         // go through each children
-        for(Node n: root.getChild()) {
-            // recurse if unvisited
-            if(n.state == State.Unvisited) {
-                dfs(n);
+        for(Map.Entry<String, List<Node>> m : root.getChild().entrySet()) {
+            for (Node n : m.getValue()) {
+                // recurse if unvisited
+                if (n.state == State.Unvisited) {
+                    dfs(n);
+                }
             }
         }
     }
@@ -41,14 +40,16 @@ public class BfsDfs {
         while(!st.isEmpty()) {
             Node r = st.pop();
 
-            vertices.add(r.getVertex());
+            vertices.add(r.getKey());
 
             // go through each children
-            for (Node n : r.getChild()) {
-                // recurse if unvisited
-                if (n.state == State.Unvisited) {
-                    st.push(n);
-                    n.state = State.Visited;
+            for(Map.Entry<String, List<Node>> m : r.getChild().entrySet()) {
+                for (Node n : m.getValue()) {
+                    // recurse if unvisited
+                    if (n.state == State.Unvisited) {
+                        st.push(n);
+                        n.state = State.Visited;
+                    }
                 }
             }
         }
@@ -66,14 +67,16 @@ public class BfsDfs {
             Node r = queue.remove();
 
             // Gather vertex
-            vertices.add(r.getVertex());
+            vertices.add(r.getKey());
 
             // Go visit adjacent
-            for(Node n: r.getChild()) {
-                // if vertex is not visited, add to queue and set visited
-                if(n.state == State.Unvisited) {
-                    queue.add(n);
-                    n.state = State.Visited;
+            for(Map.Entry<String, List<Node>> m : r.getChild().entrySet()) {
+                for (Node n : m.getValue()) {
+                    // if vertex is not visited, add to queue and set visited
+                    if (n.state == State.Unvisited) {
+                        queue.add(n);
+                        n.state = State.Visited;
+                    }
                 }
             }
         }

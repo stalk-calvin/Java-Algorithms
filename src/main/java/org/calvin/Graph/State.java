@@ -6,5 +6,5 @@
 package org.calvin.Graph;
 
 public enum State {
-    Visited, Unvisited;
+    Visited, Visiting, Unvisited;
 }

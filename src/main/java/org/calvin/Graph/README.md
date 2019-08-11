@@ -8,12 +8,24 @@ Breadth First Search vs Depth First Search using Graphs. It shows the difference
 
 ## Graph
 
-Contains Nodes to create a graph
+Interface to the implementation, GraphImpl
+
+## GraphType
+
+Graph can be either UNDIRECTED or DIRECTED.
 
 ## Node
 
-Node to carry state, children and the value
+Node to carry the actual vertex information: node's key and state, incoming edges, adjacent weights, adjacent nodes
+
+## Shortest Path
+
+Implementation of another Dijikstra using existing graph functionality.
 
 ## State
 
 Enum to show different state of the graph
+
+## Topological sort
+
+Shows a path sorting for DAG (Directed Acyclic Graph).

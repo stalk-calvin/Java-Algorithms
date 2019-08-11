@@ -1,4 +1,4 @@
-Graph/Adjacency/Setup.java
+Graph/Setup.java
 String/pojo/JSON.java
 String/pojo/XML.java
 GraphMatrix/TwoDMatrixBFS.java
@@ -7,6 +7,7 @@ GraphMatrix/Graph.java
 GraphMatrix/BfsDfs.java
 GraphMatrix/Dijkstra/Dijkstra.java
 GraphMatrix/Dijkstra/Edge.java
+GraphMatrix/NumIslands.java
 GraphMatrix/State.java
 GraphMatrix/findpaths/Paths.java
 GraphMatrix/findpaths/Cell.java
@@ -24,6 +25,7 @@ Tree/ViewOfBT.java
 Tree/Trie/TrieNode.java
 Tree/Trie/Trie.java
 Tree/LargestBSTSubtree.java
+Tree/MaxDia.java
 Tree/Heap/Heap.java
 Tree/Symmetric.java
 Tree/FindLargestElementInBST.java
@@ -159,17 +161,15 @@ Enum/Operation.java
 Enum/PayrollDay.java
 Graph/GraphImpl.java
 Graph/Node.java
+Graph/TopologicalSort.java
 Graph/GraphType.java
-Graph/Adjacency/AdjacencySet/AdjacencySetGraph.java
-Graph/Adjacency/AdjacencySet/Node.java
 Graph/Adjacency/AdjacencyMatrixGraph/AdjacencyMatrix.java
-Graph/Adjacency/TopologicalSort.java
-Graph/Adjacency/DFS.java
-Graph/Adjacency/AdjacencyList/Node.java
-Graph/Adjacency/AdjacencyList/Graph.java
+Graph/Adjacency/AdjacencySetGraph/Node.java
+Graph/Adjacency/AdjacencySetGraph/AdjacencySet.java
 Graph/BfsDfs.java
 Graph/Dijkstra/Dijkstra.java
 Graph/Dijkstra/Edge.java
+Graph/ShortestPath.java
 Graph/State.java
 PropertyTesting/Calculator.java
 LoadingProperties/ApacheCommons/Config.java
@@ -325,6 +325,7 @@ String/StringIntegerConversion.java
 String/PrintPossibleCorrectParentheses.java
 String/LongestSubstringWithoutRepeat.java
 String/NumberOfSegments.java
+String/RunLengthEncodeDecode.java
 String/ReverseVowel.java
 String/LongestCommonPrefix.java
 String/CompareVersion.java

@@ -17,6 +17,8 @@ public class LongestPalindromicSubstring {
             extendPalindrome(s, i, i);  //assume odd length, try to extend Palindrome as possible
             extendPalindrome(s, i, i + 1); //assume even length.
         }
+        lo++;
+        maxLen--;
         return s.substring(lo, lo + maxLen);
     }
 
@@ -25,9 +27,9 @@ public class LongestPalindromicSubstring {
             j--;
             k++;
         }
-        if (maxLen < k - j - 1) {
-            lo = j + 1;
-            maxLen = k - j - 1;
+        if (maxLen < k - j) {
+            lo = j;
+            maxLen = k - j;
         }
     }
 }

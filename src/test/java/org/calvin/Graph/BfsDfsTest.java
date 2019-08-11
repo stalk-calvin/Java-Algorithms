@@ -14,12 +14,13 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public class BfsDfsTest {
-    private GraphImpl newGraph;
+    private Graph newGraph;
     private BfsDfs fixture;
     private List<String> vertices = Lists.newArrayList();
+    private static Node source;
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         newGraph = createNewGraph();
         fixture = new BfsDfs(vertices);
     }
@@ -27,51 +28,48 @@ public class BfsDfsTest {
     @Test
     public void shouldTraverseDFS() {
         List<String> expected = Lists.newArrayList("A","B","E","F","C","D");
-        fixture.dfs(newGraph.getVertices()[0]);
+        fixture.dfs(source);
         assertEquals(expected, vertices);
     }
 
     @Test
     public void shouldTraverseDFSStack() {
         List<String> expected = Lists.newArrayList("A", "D", "C", "B", "F", "E");
-        fixture.dfsStack(newGraph.getVertices()[0]);
+        fixture.dfsStack(source);
         assertEquals(expected, vertices);
     }
 
     @Test
     public void shouldTraverseBFS() {
         List<String> expected = Lists.newArrayList("A","B","C","D","E","F");
-        fixture.bfs(newGraph.getVertices()[0]);
+        fixture.bfs(source);
         assertEquals(expected, vertices);
     }
 
-    private static GraphImpl createNewGraph() {
-        GraphImpl g = new GraphImpl();
-        Node[] temp = new Node[8];
+    private static Graph createNewGraph() throws Exception {
+        int numNodes = 6;
+        Graph g = new GraphImpl(GraphType.UNDIRECTED);
+        Node[] temp = new Node[numNodes];
 
-        temp[0] = new Node("A", 3);
-        temp[1] = new Node("B", 3);
-        temp[2] = new Node("C", 1);
-        temp[3] = new Node("D", 1);
-        temp[4] = new Node("E", 1);
-        temp[5] = new Node("F", 1);
+        temp[0] = new Node("A");
+        temp[1] = new Node("B");
+        temp[2] = new Node("C");
+        temp[3] = new Node("D");
+        temp[4] = new Node("E");
+        temp[5] = new Node("F");
 
-        temp[0].addChildNode(temp[1]);
-        temp[0].addChildNode(temp[2]);
-        temp[0].addChildNode(temp[3]);
+        g.addEdge("A", "B", 1);
+        g.addEdge("A", "C", 2);
+        g.addEdge("A", "D", 3);
+        g.addEdge("B", "E", 4);
+        g.addEdge("B", "F", 5);
 
-        temp[1].addChildNode(temp[0]);
-        temp[1].addChildNode(temp[4]);
-        temp[1].addChildNode(temp[5]);
-
-        temp[2].addChildNode(temp[0]);
-        temp[3].addChildNode(temp[0]);
-        temp[4].addChildNode(temp[1]);
-        temp[5].addChildNode(temp[1]);
-
-        for (int i = 0; i < 7; i++) {
-            g.addEdge(temp[i]);
+        for (int i = 0; i < numNodes; i++) {
+            g.addNode(temp[i].getKey());
         }
+
+        source = g.getNode("A");
+
         return g;
     }
 }

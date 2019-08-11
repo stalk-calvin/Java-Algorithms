@@ -47,9 +47,24 @@ public class RemoveDuplicateSortedArrayTest {
 
     @Test
     public void shouldRemoveDuplicatesMyWay() {
-        int[] input = {1,2,2,2,2,2,3,4,4,4,5};
+        int[] input = {1,1,1,1,2,2,2,2,2,3,4,4,4,5};
 
         int actual = fixture.removeDuplicatesMyWay(input);
+
+        int[] expectedArray = {1,2,3,4,5};
+        int[] actualArray = new int[actual];
+
+        System.arraycopy(input,0,actualArray,0,actual);
+
+        assertEquals(5,actual);
+        assertArrayEquals(expectedArray, actualArray);
+    }
+
+    @Test
+    public void shouldRemoveDuplicatesMyWayTwo() {
+        int[] input = {1,1,1,1,2,2,2,2,2,3,4,4,4,5,5,5,5};
+
+        int actual = fixture.removeDuplicatesMyWayTwo(input);
 
         int[] expectedArray = {1,2,3,4,5};
         int[] actualArray = new int[actual];

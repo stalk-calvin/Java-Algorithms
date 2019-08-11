@@ -1,4 +1,4 @@
-package org.calvin.Graph.Adjacency.AdjacencySet;
+package org.calvin.Graph.Adjacency.AdjacencySetGraph;
 
 import java.util.*;
 
@@ -10,7 +10,7 @@ public class Node {
     private int vertexId;
     private Set<Integer> adjacencySet = new HashSet<>();
 
-    public Node (int vertexId) {
+    public Node(int vertexId) {
         this.vertexId = vertexId;
     }
 

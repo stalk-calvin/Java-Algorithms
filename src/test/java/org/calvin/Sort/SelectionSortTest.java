@@ -16,10 +16,10 @@ import static org.junit.Assert.assertTrue;
 public class SelectionSortTest {
     @Test
     public void shouldSelectionSortAnother() {
-        int[] input = {9,30,5,11,7,10};
+        int[] input = {9,7,5,30,30,30};
         log.info("SelectionSort: Input (Unsorted): " + Arrays.toString(input));
         SelectionSort.selectSort(input);
-        int[] expected = {5,7,9,10,11,30};
+        int[] expected = {5,7,9,30,30,30};
         log.info("SelectionSort: Input (Sorted): " + Arrays.toString(input));
         assertTrue(Arrays.equals(expected, input));
     }

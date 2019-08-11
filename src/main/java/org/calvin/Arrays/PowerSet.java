@@ -20,7 +20,7 @@ public class PowerSet {
             newSet.add(head);
             newSet.addAll(set);
             sets.add(newSet);
-            sets.add(set);
+//            sets.add(set);
         }
         return sets;
     }

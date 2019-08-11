@@ -6,14 +6,19 @@
 package org.calvin.Tree;
 
 public class FindClosestNumber {
-    public int findClosest(TreeNode n, int x) {
-        int closest = Integer.MAX_VALUE;
+    public static class Closest {
+        int val = Integer.MAX_VALUE;
+        int min = Integer.MAX_VALUE;
+    }
+    public void findClosest(TreeNode n, Closest c, int x) {
         if (n == null) {
-            return -1;
+            return;
         }
-        closest = Math.min(closest, Math.abs(n.getVal() - x));
-        findClosest(n.left, x);
-        findClosest(n.right, x);
-        return closest;
+        if (Math.abs(n.getVal() - x) < c.min) {
+            c.val = n.getVal();
+            c.min = Math.abs(n.getVal() - x);
+        }
+        findClosest(n.left, c, x);
+        findClosest(n.right, c, x);
     }
 }

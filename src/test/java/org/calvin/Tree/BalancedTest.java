@@ -31,8 +31,8 @@ public class BalancedTest {
 
     @Test
     public void shouldTreeNotBeBalanced() {
-        int[] input = {2,3,4};
-        TreeNode root = new TreeNode(1);
+        int[] input = {2,3,5,7,8,0,9};
+        TreeNode root = new TreeNode(4);
         for (int i : input) {
             root.insertInOrder(i);
         }

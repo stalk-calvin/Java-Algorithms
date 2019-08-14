@@ -1,119 +1,115 @@
 package org.calvin.Tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class BinarySearchTree {
-
-    /* Class containing left and right child of current node and key value*/
-    class Node {
-        int key;
-        Node left, right;
-
-        public Node(int item) {
-            key = item;
-            left = right = null;
-        }
-    }
-
     // Root of BST
-    Node root;
+    TreeNode root;
 
     // Constructor
     BinarySearchTree() {
         root = null;
     }
 
-    // This method mainly calls insertRec()
-    void insert(int key) {
-        root = insertRec(root, key);
+    void insertIterative(int val) {
+        TreeNode n = new TreeNode(val);
+        if (root == null) {
+            root = n;
+        } else {
+            TreeNode current = root;
+            while (current != null) {
+                TreeNode tmp = current;
+                if (current.val > val) {
+                    current = current.left;
+                    if (current == null) tmp.left = n;
+                } else {
+                    current = current.right;
+                    if (current == null) tmp.right = n;
+                }
+            }
+        }
     }
 
-    /* A recursive function to insert a new key in BST */
-    Node insertRec(Node root, int key) {
-        /* If the tree is empty, return a new node */
+    // This method mainly calls insertRec()
+    void insert(int val) {
+        root = insertRec(root, val);
+    }
+
+    /* A recursive function to insert a new val in BST */
+    TreeNode insertRec(TreeNode root, int val) {
+        /* If the tree is empty, return a new TreeNode */
         if (root == null) {
-            root = new Node(key);
+            root = new TreeNode(val);
             return root;
         }
 
         /* Otherwise, recur down the tree */
-        if (key < root.key)
-            root.left = insertRec(root.left, key);
-        else if (key > root.key)
-            root.right = insertRec(root.right, key);
+        if (val < root.val)
+            root.left = insertRec(root.left, val);
+        else if (val > root.val)
+            root.right = insertRec(root.right, val);
 
-        /* return the (unchanged) node pointer */
+        /* return the (unchanged) TreeNode pointer */
         return root;
     }
 
-    void inorder()  {
-        inorderRec(root);
+    List<Integer> inorder()  {
+        List<Integer> result = new ArrayList<>();
+        inorderRec(root, result);
+        return result;
     }
 
     // A utility function to do inorder traversal of BST
-    void inorderRec(Node root) {
+    private void inorderRec(TreeNode root, List<Integer> result) {
         if (root != null) {
-            inorderRec(root.left);
-            System.out.println(root.key);
-            inorderRec(root.right);
+            inorderRec(root.left,result);
+            result.add(root.val);
+            inorderRec(root.right,result);
         }
     }
 
-    void delete(int key) {
-        deleteRec(root, key);
+    void delete(int val) {
+        deleteRec(root, val);
     }
 
-    Node deleteRec(Node node, int key) {
-        if (node==null) {
+    TreeNode deleteRec(TreeNode TreeNode, int val) {
+        if (TreeNode==null) {
             return null;
-        } else if (node.key < key) {
-            node.right = deleteRec(node.right, key);
-        } else if (node.key > key) {
-            node.left = deleteRec(node.left, key);
+        } else if (TreeNode.val < val) {
+            TreeNode.right = deleteRec(TreeNode.right, val);
+        } else if (TreeNode.val > val) {
+            TreeNode.left = deleteRec(TreeNode.left, val);
         } else {
             // when one side is null
-            if (node.left == null) {
-                return node.left;
-            } else if (node.right == null) {
-                return node.right;
+            if (TreeNode.left == null && TreeNode.right == null) {
+                TreeNode = null;
+            } else if (TreeNode.left == null) {
+                return TreeNode.left;
+            } else if (TreeNode.right == null) {
+                return TreeNode.right;
             }
             // when both not empty, we have to recurse
             else {
-                //search the min node
-                node.key = minValue(node);
-                node.right = deleteRec(node.right, node.key);
+                // Find the minimum node on the right (could also max the left...)
+                TreeNode minRight = minValue(TreeNode.right);
+
+                // Duplicate it by copying its values here
+                TreeNode.val = minRight.val;
+
+                // Now go ahead and delete the node we just duplicated (same key)
+                TreeNode.right = deleteRec(TreeNode.right, minRight.val);
             }
         }
-        return node;
+        return TreeNode;
     }
 
-    int minValue(Node root)
+    TreeNode minValue(TreeNode root)
     {
-        int minv = root.key;
         while (root.left != null)
         {
-            minv = root.left.key;
             root = root.left;
         }
-        return minv;
-    }
-
-    public static void main(String[] args) {
-        BinarySearchTree t = new BinarySearchTree();
-        t.insert(10);
-        t.insert(6);
-        t.insert(18);
-        t.insert(4);
-        t.insert(8);
-        t.insert(15);
-        t.insert(21);
-
-        t.inorder();
-
-        t.insert(17);
-
-        t.inorder();
-
-        t.delete(8);
-
-        t.inorder();
+        return root;
     }
 }

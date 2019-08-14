@@ -12,9 +12,9 @@ import static org.calvin.Graph.Setup.createDAGForShortest;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-public class ShortestPathTest {
+public class ShortestPathPQTest {
     private Graph newGraph;
-    private ShortestPath fixture;
+    private ShortestPathPQ fixture;
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
@@ -22,7 +22,7 @@ public class ShortestPathTest {
     @Before
     public void setUp() throws Exception {
         newGraph = createDAGForShortest();
-        fixture = new ShortestPath(newGraph);
+        fixture = new ShortestPathPQ(newGraph);
     }
 
     @Test
@@ -31,6 +31,7 @@ public class ShortestPathTest {
         List<String> expected = Lists.newArrayList("A", "C", "F");
         assertEquals(expected, actual);
     }
+
 
     @Test
     public void shouldNotFindShortestPath() throws Exception {

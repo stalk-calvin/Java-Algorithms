@@ -8,7 +8,7 @@ import org.junit.rules.ExpectedException;
 
 import java.util.List;
 
-import static org.calvin.Graph.Setup.createUndirectedGraph;
+import static org.calvin.Graph.Setup.createDAGForShortest;
 import static org.junit.Assert.assertEquals;
 
 public class ShortestPathNoWeightTest {
@@ -20,7 +20,7 @@ public class ShortestPathNoWeightTest {
 
     @Before
     public void setUp() throws Exception {
-        newGraph = createUndirectedGraph();
+        newGraph = createDAGForShortest();
     }
 
     @Test

@@ -43,7 +43,7 @@ public class MeetingRooms {
 
         int[] tracker = new int[max+1];
         for (int i = 0; i < intervals.length; i++) {
-            for (int j = intervals[i].start; j <= intervals[i].end; j++) {
+            for (int j = intervals[i].start; j < intervals[i].end; j++) {
                 tracker[j]++;
             }
         }

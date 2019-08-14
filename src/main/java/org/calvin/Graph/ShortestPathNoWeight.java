@@ -30,7 +30,7 @@ public class ShortestPathNoWeight {
         Node sourceNode = G.getNode(source);
         queue.add(sourceNode);
         Map<String, String> prev_node_keys = new HashMap<>();
-        prev_node_keys.put("source_key", null);
+        prev_node_keys.put(source, null);
         sourceNode.state = State.Visited;
         while (!queue.isEmpty()) {
             Node node = queue.poll();

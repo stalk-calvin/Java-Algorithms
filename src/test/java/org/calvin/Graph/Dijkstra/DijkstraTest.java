@@ -5,14 +5,14 @@
 
 package org.calvin.Graph.Dijkstra;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class DijkstraTest {
     private static final int[][] cost = { { 0, 3, 2 }, { 0, 0, -2 }, { 0, 0, 0 } };
@@ -32,12 +32,12 @@ public class DijkstraTest {
         int[] dist = new int[n];
         int[] pred = new int[n];
         Dijkstra.shortestPaths(graph, 0, dist, pred);
-        assertTrue(0 == dist[0]);
-        assertTrue(3 == dist[1]);
-        assertTrue(1 == dist[2]);
-        assertTrue(-1 == pred[0]);
-        assertTrue(0 == pred[1]);
-        assertTrue(1 == pred[2]);
+        assertEquals(0, dist[0]);
+        assertEquals(3, dist[1]);
+        assertEquals(1, dist[2]);
+        assertEquals(-1, pred[0]);
+        assertEquals(0, pred[1]);
+        assertEquals(1, pred[2]);
     }
 
     private void createGraph() {

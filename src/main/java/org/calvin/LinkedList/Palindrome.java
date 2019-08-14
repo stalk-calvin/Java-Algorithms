@@ -6,6 +6,41 @@
 package org.calvin.LinkedList;
 
 public class Palindrome {
+    public boolean isPalindromeMyWay(ListNode<Integer> head) {
+        if (head == null) {
+            return true;
+        }
+        ListNode<Integer> curr = head;
+        int l = 0;
+        while (curr != null) {
+            l++;
+            curr = curr.getNext();
+        }
+        if (l < 2) {
+            return true;
+        }
+        curr = head;
+        ListNode<Integer> newHead = new ListNode<>(curr.getVal());
+        curr = curr.getNext();
+        for (int i =0; i<l/2-1; i++) {
+            ListNode<Integer> tmp = new ListNode<>(curr.getVal());
+            tmp.setNext(newHead);
+            newHead = tmp;
+            curr = curr.getNext();
+        }
+        if (l%2==1) {
+            curr = curr.getNext();
+        }
+        while (curr != null && newHead != null) {
+            if (!curr.getVal().equals(newHead.getVal())) {
+                return false;
+            }
+            curr = curr.getNext();
+            newHead = newHead.getNext();
+        }
+        return newHead == null;
+    }
+
     public boolean isPalindrome(ListNode<Integer> head) {
         if (head == null) {
             return true;

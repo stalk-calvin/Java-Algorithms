@@ -1,9 +1,9 @@
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class ArrayPartitionTest {
     private ArrayPartition fixture;
@@ -15,7 +15,7 @@ public class ArrayPartitionTest {
 
     @Test
     public void shouldFindLargestSumOfMinPairs() {
-        int[] input = {1,2,3,4,5,6};
+        int[] input = {3,2,1,6,5,4};
         assertEquals(9, fixture.arrayPairSum(input));
     }
 }

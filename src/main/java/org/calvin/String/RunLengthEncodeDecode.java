@@ -16,7 +16,7 @@ public class RunLengthEncodeDecode {
             }
         }
         result += String.valueOf(count) + prev;
-        return result;
+        return in.length() > result.length() ? result : in;
     }
 
     public String decode(String in) {
@@ -31,6 +31,6 @@ public class RunLengthEncodeDecode {
                 }
             }
         }
-        return sb.toString();
+        return sb.toString().isEmpty() ? in : sb.toString();
     }
 }

@@ -38,6 +38,22 @@ public class AdjacencyMatrix implements Graph {
     }
 
     @Override
+    public void addEdge(int v1, int v2, int weight) {
+        if (v1 >= numVertices || v2 >= numVertices || v1 < 0 || v2 < 0) {
+            throw new  IllegalArgumentException("Vertex number is not valid");
+        }
+        adjacencyMatrix[v1][v2] = weight;
+        if(graphType == GraphType.UNDIRECTED) {
+            adjacencyMatrix[v2][v1] = weight;
+        }
+    }
+
+    @Override
+    public int getWeightedEdge(int v1, int v2) {
+        return adjacencyMatrix[v1][v2];
+    }
+
+    @Override
     public List<Integer> getAdjacentVertices(int v) {
         if (v >= numVertices || v < 0) {
             throw new IllegalArgumentException("Invalid vertex!");

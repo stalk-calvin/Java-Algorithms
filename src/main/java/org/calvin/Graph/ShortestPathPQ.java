@@ -2,13 +2,17 @@ package org.calvin.Graph;
 
 import java.util.*;
 
-public class ShortestPath {
+/*
+ * It uses priority queue (heap) to solve the problem easier
+ * Rather than using the plain list to find minimum and set keys.
+ */
+public class ShortestPathPQ {
     private Graph G;
     private Map<String, String> previous;
     private Map<String, Integer> pathWeight;
-    private List<PathNode> remaining;
+    private PriorityQueue<PathNode> remaining;
 
-    private static class PathNode {
+    private class PathNode {
         String key;
         int weight;
         private PathNode(String k, int w) {
@@ -17,15 +21,19 @@ public class ShortestPath {
         }
     }
 
-    public ShortestPath(Graph g) {
+    public ShortestPathPQ(Graph g) {
         G = g;
         previous = new HashMap<>();
         pathWeight = new HashMap<>();
-        remaining = new ArrayList<>();
+        remaining = new PriorityQueue<>(G.getNumVertices(), new Comparator<PathNode>() {
+            @Override
+            public int compare(PathNode node1, PathNode node2) {
+                return Integer.compare(node1.weight, node2.weight);
+            }
+        });
         for (Map.Entry<String, Node> n : g.getNodes().entrySet()) {
             previous.put(n.getKey(), null);
             pathWeight.put(n.getKey(), Integer.MAX_VALUE);
-            remaining.add(new PathNode(n.getKey(), pathWeight.get(n.getKey())));
         }
     }
 
@@ -35,18 +43,18 @@ public class ShortestPath {
             throw new Exception("Invalid start or end!");
         }
         pathWeight.put(start, 0);
-        setKey(remaining, start, 0);
+        remaining.add(new PathNode(start, 0));
         while (!remaining.isEmpty()) {
-            PathNode p = extractMin();
+            PathNode p = remaining.poll();
             Node minNode = G.getNode(p.key);
             for (Map.Entry<String, List<Node>> key : minNode.adj_nodes.entrySet()) {
                 // Calculation will be off when weight is a negative value
                 // minnode is would be a negative here which would cause a cycle in calculating previous node
-                int new_weight = (minNode.adj_weights.get(key.getKey()) + pathWeight.get(p.key));
+                int new_weight = (minNode.adj_weights.get(key.getKey()) + p.weight);
                 if (pathWeight.get(key.getKey()) > new_weight) {
-                    previous.put(key.getKey(), minNode.getKey());
+                    previous.put(key.getKey(),p.key);
                     pathWeight.put(key.getKey(), new_weight);
-                    setKey(remaining, key.getKey(), new_weight);
+                    remaining.add(new PathNode(key.getKey(), new_weight));
                 }
             }
         }
@@ -58,28 +66,5 @@ public class ShortestPath {
             currentNodeKey = previous.get(currentNodeKey);
         }
         return result;
-    }
-
-    private PathNode extractMin() {
-        int minimum = Integer.MAX_VALUE;
-        int minimum_index = -1;
-        for (int i = 0; i < remaining.size(); i++) {
-            PathNode node = remaining.get(i);
-            if (node.weight < minimum) {
-                minimum = node.weight;
-                minimum_index = i;
-            }
-        }
-        PathNode p = remaining.remove(minimum_index);
-
-        return p;
-    }
-
-    private static void setKey(List<PathNode> current, String key, int value) {
-        for (PathNode p : current) {
-            if (p.key.equals(key)) {
-                p.weight = value;
-            }
-        }
     }
 }

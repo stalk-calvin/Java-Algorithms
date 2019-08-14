@@ -42,4 +42,26 @@ public class PalindromeTest {
         assertTrue(fixture.isPalindrome(null));
     }
 
+    @Test
+    public void shouldBePalindromeMyWay() {
+        int[] vals = {1,2,3,2,1};
+        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+        assertTrue(fixture.isPalindromeMyWay(list1));
+    }
+
+    @Test
+    public void shouldNotBePalindromeMyWay() {
+        int[] vals = {1,2,4,5,5,4,2,2};
+        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+        assertFalse(fixture.isPalindromeMyWay(list1));
+    }
+
+    @Test
+    public void shouldNullListBePalindromeMyWay() {
+        int[] vals = {1};
+        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+        assertTrue(fixture.isPalindromeMyWay(list1));
+        assertTrue(fixture.isPalindromeMyWay(null));
+    }
+
 }

@@ -22,6 +22,7 @@ Tree/FindClosestNumber.java
 Tree/BinarySearchTree.java
 Tree/LCABST.java
 Tree/ViewOfBT.java
+Tree/CalculateExpression.java
 Tree/Trie/TrieNode.java
 Tree/Trie/Trie.java
 Tree/LargestBSTSubtree.java
@@ -112,6 +113,7 @@ Guava/Product.java
 Cryptography/AESEncryption.java
 StackQueue/NodeWithMin.java
 StackQueue/MinStackNode.java
+StackQueue/SetOfStacks.java
 StackQueue/StackUsingQueue.java
 StackQueue/QueueUsingStacks.java
 StackQueue/MergeSort.java
@@ -166,11 +168,14 @@ Graph/GraphType.java
 Graph/Adjacency/AdjacencyMatrixGraph/AdjacencyMatrix.java
 Graph/Adjacency/AdjacencySetGraph/Node.java
 Graph/Adjacency/AdjacencySetGraph/AdjacencySet.java
+Graph/ShortestPathNoWeight.java
+Graph/CourseSchedule.java
 Graph/BfsDfs.java
 Graph/Dijkstra/Dijkstra.java
 Graph/Dijkstra/Edge.java
 Graph/ShortestPath.java
 Graph/State.java
+Graph/ShortestPathPQ.java
 PropertyTesting/Calculator.java
 LoadingProperties/ApacheCommons/Config.java
 LoadingProperties/POJO/Config.java
@@ -340,6 +345,7 @@ String/pojo/json/Menu.java
 String/pojo/json/MenuItem.java
 String/NonRepeated.java
 DynamicProgramming/MinJumpToReachEnd.java
+DynamicProgramming/KnapSack.java
 DynamicProgramming/Fibonacci.java
 DynamicProgramming/ClimbingStairs.java
 DynamicProgramming/HouseRobber.java

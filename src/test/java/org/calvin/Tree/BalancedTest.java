@@ -9,7 +9,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 
 public class BalancedTest {
     Balanced fixture;
@@ -21,12 +20,15 @@ public class BalancedTest {
 
     @Test
     public void shouldTreeBeBalanced() {
-        int[] input = {1,2,5,6};
+        int[] input = {1,5,6};
         TreeNode root = new TreeNode(4);
         for (int i : input) {
             root.insertInOrder(i);
         }
-        assertTrue(fixture.isBalanced(root));
+        root.left.left = new TreeNode(1);
+        root.left.left.left = new TreeNode(1);
+        root.right.right.right = new TreeNode(1);
+        assertFalse(fixture.isBalanced(root));
     }
 
     @Test

@@ -40,4 +40,4 @@ Algorithm partitions array so element on left side has less than the element or 
 
 Selection sort selects the lowest in the array and places in front.
 
-<center>![selectionsort](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)</center>
+<center>![selectionsort](https://upload.wikimedia.org/wikipedia/csliommons/9/94/Selection-Sort-Animation.gif)</center>

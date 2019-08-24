@@ -14,7 +14,7 @@ public class Balanced {
         if (Math.abs(diff) > 1) {
             return false;
         }
-        return true;//isBalanced(root.left) && isBalanced(root.right);
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 
     private int getHeight(TreeNode root) {

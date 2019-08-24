@@ -10,9 +10,9 @@ This is where I play and learn different kind of algorithms, data structures, co
 
 Calvin Lee, @stalk.calvin
 
-<a href="https://www.instagram.com/stalk.calvin/"><img alt="Add me to Instagram" src="http://www.dep.pa.gov/publishingimages/instagram.png" height="20px" width="20px"/></a> <span><a href="https://www.instagram.com/stalk.calvin/">Instagram</a></span>
+<a href="https://www.instagram.com/stalk.calvin/"><img alt="Add me to Instagram" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/128/Instagram-icon.png" height="20px" width="20px"/></a> <span><a href="https://www.instagram.com/stalk.calvin/">Instagram</a></span>
 <br/>
-<a href="https://www.linkedin.com/in/stalkme"><img alt="Add me to Linkedin" src="http://aspyra.com/wp-content/uploads/icon-linkedin-20px.png" height="20px" width="20px"/></a> <span><a href="https://www.linkedin.com/in/stalkme">LinkedIn</a></span>
+<a href="https://www.linkedin.com/in/stalkme"><img alt="Add me to Linkedin" src="https://image.freepik.com/free-icon/linkedin-logo_318-50643.jpg" height="20px" width="20px"/></a> <span><a href="https://www.linkedin.com/in/stalkme">LinkedIn</a></span>
 
 ## Dependancies
 
@@ -33,5 +33,5 @@ Enjoy!
 
 ## How many algorithms?
 
-There are roughly 455 java algorithms exists with 744 test cases.
+There are roughly 458 java algorithms exists with 749 test cases.
 See [list of algorithm source files](script/list_of_src_files) for all the algorithms here.

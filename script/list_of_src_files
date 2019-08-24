@@ -9,8 +9,6 @@ GraphMatrix/Dijkstra/Dijkstra.java
 GraphMatrix/Dijkstra/Edge.java
 GraphMatrix/NumIslands.java
 GraphMatrix/State.java
-GraphMatrix/findpaths/Paths.java
-GraphMatrix/findpaths/Cell.java
 Tree/MinDepth.java
 Tree/EqualTree.java
 Tree/MergeTrees.java
@@ -39,8 +37,10 @@ Tree/TreeDiameter.java
 Tree/LCABT.java
 Tree/ExtractBinaryTreeLeaveDoubleLinkedList.java
 Tree/InvertTree.java
+Tree/TrimBST.java
 Tree/PathSum.java
 Tree/BFS2.java
+Tree/AverageLevels.java
 Tree/MaxDepth.java
 Tree/Path.java
 Tree/FindMinNumberAtPosition.java
@@ -131,12 +131,15 @@ StackQueue/Stack/EmptyStackException.java
 ObjectOriented/Twitter/Twitter.java
 ObjectOriented/Twitter/User.java
 ObjectOriented/Twitter/Tweet.java
+ObjectOriented/HashTable/HashTable.java
+ObjectOriented/HashTable/Item.java
 ObjectOriented/Router/Message.java
 ObjectOriented/Router/Router.java
 ObjectOriented/Router/RoutingTable.java
 ObjectOriented/Router/RoutingEntry.java
 LinkedList/SwapNode.java
 LinkedList/DeleteNode.java
+LinkedList/SlidingWindowProduct.java
 LinkedList/RemoveElement.java
 LinkedList/RemoveLastNthNode.java
 LinkedList/SortList.java
@@ -176,6 +179,8 @@ Graph/Dijkstra/Edge.java
 Graph/ShortestPath.java
 Graph/State.java
 Graph/ShortestPathPQ.java
+Graph/findpaths/Paths.java
+Graph/findpaths/Cell.java
 PropertyTesting/Calculator.java
 LoadingProperties/ApacheCommons/Config.java
 LoadingProperties/POJO/Config.java
@@ -264,7 +269,6 @@ Threads/TestingCountDownLatch/TestingCountDownLatch.java
 Threads/Semaphores/Connection.java
 Threads/Semaphores/App.java
 Arrays/TheBiddingGame.java
-Arrays/MaximumSubarray.java
 Arrays/CheckIfArrayElementsAreConsecutive.java
 Arrays/ArrayPartition.java
 Arrays/MoveZeros.java
@@ -344,10 +348,11 @@ String/pojo/xml/PhoneNumber.java
 String/pojo/json/Menu.java
 String/pojo/json/MenuItem.java
 String/NonRepeated.java
+DynamicProgramming/LongestCommonSubstring.java
 DynamicProgramming/MinJumpToReachEnd.java
-DynamicProgramming/KnapSack.java
 DynamicProgramming/Fibonacci.java
 DynamicProgramming/ClimbingStairs.java
 DynamicProgramming/HouseRobber.java
 DynamicProgramming/RangeSumQuery2D.java
 DynamicProgramming/LongestCommonSubsequence.java
+DynamicProgramming/KnapSack01.java

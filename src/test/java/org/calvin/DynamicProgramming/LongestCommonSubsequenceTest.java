@@ -14,10 +14,11 @@ public class LongestCommonSubsequenceTest {
     }
 
     @Test
-    public void lcsDP() throws Exception {
-        String str1 = "ABCDGHLQR";
-        String str2 = "AEDPHR";
+    public void shouldFindLCSDP() throws Exception {
+        String str1 = "XMJYAUZ";
+        String str2 = "MZJAWXU";
         int result = fixture.lcsDP(str1.toCharArray(), str2.toCharArray());
+        // MJAU
         assertEquals(4, result);
     }
 

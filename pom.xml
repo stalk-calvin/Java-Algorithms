@@ -161,6 +161,9 @@
                        <artifactId>coveralls-maven-plugin</artifactId>
                        <version>4.3.0</version>
                        <configuration>
+                           <excludes>
+                               <exclude>**/Book/**</exclude>
+                           </excludes>
                            <repoToken>OAIxitSJWosysTGcF5aocbT02L2lzcgge</repoToken>
                        </configuration>
                    </plugin>

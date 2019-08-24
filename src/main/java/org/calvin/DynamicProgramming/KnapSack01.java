@@ -3,7 +3,7 @@ package org.calvin.DynamicProgramming;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KnapSack {
+public class KnapSack01 {
     public static class Item {
         private String label;
         private int value;

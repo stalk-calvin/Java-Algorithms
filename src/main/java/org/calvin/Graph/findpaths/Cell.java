@@ -1,4 +1,6 @@
-package org.calvin.GraphMatrix.findpaths;
+package org.calvin.Graph.findpaths;
+
+import org.calvin.Graph.State;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +8,7 @@ import java.util.List;
 public class Cell {
     private String id;
     private boolean isEnd = false;
-
+    private State visited = State.Unvisited;
     private List<Cell> neighbourhoods = new ArrayList<>();
 
     public Cell(String id) {
@@ -19,12 +21,16 @@ public class Cell {
         }
     }
 
-    public String getId() {
-        return id;
+    public State getVisited() {
+        return visited;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setVisited(State visited) {
+        this.visited = visited;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public boolean isEnd() {
@@ -39,14 +45,11 @@ public class Cell {
         return neighbourhoods;
     }
 
-    public void setNeighbourhoods(List<Cell> neighbourhoods) {
-        this.neighbourhoods = neighbourhoods;
-    }
-
     @Override
     public String toString() {
         return "Cell{" +
                 "id='" + id + '\'' +
+                ", visited=" + visited +
                 ", isEnd=" + isEnd +
                 '}';
     }

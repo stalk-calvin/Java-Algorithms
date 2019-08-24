@@ -98,6 +98,16 @@ For example,
 
 Reverse a singly linked list.
 
+## SlidingWindowMaximum
+
+Given an array nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+
+## Sliding Maximum Product
+
+Design a data structure to calculate the moving product of all elements in a sliding window of size k.
+
+*All methods should work in O(1) time.
+
 ## Sort List
 
 Sort a linked list in O(n log n) time using constant space complexity.

@@ -7,6 +7,9 @@ package org.calvin.String;
 
 import org.calvin.Utils.AssortedMethods;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ReverseWordsInAStringWithChars {
     public String reverseWords(String s) {
         char[] ca = s.toCharArray();
@@ -19,5 +22,15 @@ public class ReverseWordsInAStringWithChars {
             }
         }
         return new String(ca);
+    }
+
+    public String reverseWords2(String s) {
+        String[] strs = s.split(" ");
+        List<String> tmp = new ArrayList<>();
+        for (String str : strs) {
+            StringBuilder reversed = new StringBuilder(str).reverse();
+            tmp.add(reversed.toString());
+        }
+        return String.join(" ", tmp.toArray(new CharSequence[0]));
     }
 }

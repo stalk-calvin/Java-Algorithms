@@ -65,6 +65,7 @@ Numbers/PowerOf4.java
 Numbers/RomanToInt.java
 Numbers/ThreeSum.java
 Numbers/SumOfFibonacci.java
+Numbers/BaseConverter.java
 Numbers/PowerOfN.java
 Numbers/CircularPrime.java
 Numbers/MostFrequent.java
@@ -276,6 +277,7 @@ Arrays/GasStation.java
 Arrays/MaximumProductSubarray.java
 Arrays/DistributeCandies.java
 Arrays/NextGreaterElement.java
+Arrays/MergeKSortedArray.java
 Arrays/RemoveElement.java
 Arrays/ContainsDuplicate.java
 Arrays/FindDisappearedNumbers.java
@@ -312,6 +314,7 @@ String/ShortestPalindrome.java
 String/StrStr.java
 String/LongestRecurringSubstr.java
 String/SummaryRanges.java
+String/FirstNonRepeated.java
 String/ZigZag.java
 String/SimpleRegularExpression.java
 String/DetectCapitals.java
@@ -323,7 +326,6 @@ String/FizzBuzz.java
 String/IntegerToString.java
 String/LengthOfLastWord.java
 String/WordPattern.java
-String/IntegerToWordNumber.java
 String/ExcelSheetColumnTitle.java
 String/LookAndSay.java
 String/Isomorphic.java
@@ -347,7 +349,6 @@ String/pojo/xml/Person.java
 String/pojo/xml/PhoneNumber.java
 String/pojo/json/Menu.java
 String/pojo/json/MenuItem.java
-String/NonRepeated.java
 DynamicProgramming/LongestCommonSubstring.java
 DynamicProgramming/MinJumpToReachEnd.java
 DynamicProgramming/Fibonacci.java

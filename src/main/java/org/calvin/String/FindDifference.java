@@ -26,6 +26,6 @@ public class FindDifference {
         for (char c : (a + b).toCharArray()) {
             x^=c;
         }
-        return x;
+        return x == 0 ? ' ' : x;
     }
 }

@@ -206,6 +206,10 @@ Given [[0, 30],[5, 10],[15, 20]],
 return 2.
 ```
 
+## MergeKSortedArray
+
+Merge incoming K sorted arrays into a single array.
+
 ## MergeSortedArray
 
 Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.

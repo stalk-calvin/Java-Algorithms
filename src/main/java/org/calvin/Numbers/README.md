@@ -13,6 +13,11 @@ Given `num = 38`, the process is like: `3 + 8 = 11`, `1 + 1 = 2`. Since 2 has on
 Follow up:
 Could you do it without any loop/recursion in O(1) runtime?
 
+## BaseConverter
+
+1. Convert Decimal Number to any base number in String
+2. Convert any integer coming in with digits into a Decimal Number.
+
 ## BullsAndCows
 
 For example:

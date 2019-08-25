@@ -5,10 +5,10 @@
 
 package org.calvin.String;
 
-import static org.calvin.Utils.AssortedMethods.validateInputNull;
-
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.calvin.Utils.AssortedMethods.validateInputNull;
 
 public class UniqueChars {
 
@@ -36,9 +36,9 @@ public class UniqueChars {
     public boolean hasASCIIUniqueChars(String input) {
         validateInputNull(input);
 
-        int[] chars = new int[256];
+        int[] chars = new int[128];
         for (char c : input.toCharArray()) {
-            if (c > 256) return false;
+            if (c > 128) return false;
             if (chars[c] >= 1) {
                 return false;
             } else {

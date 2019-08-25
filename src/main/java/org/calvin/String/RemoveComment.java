@@ -13,20 +13,17 @@ public class RemoveComment {
     // O(N) where N is number of characters
     // O(N*c) where N is number of strings in the array.
     public String remove(String... input) {
-        if (input == null) {
-            throw new IllegalArgumentException("You can't pass a null input as argument.");
-        }
-
         StringBuilder result = new StringBuilder();
         boolean openComment = false;
         for (String anInput : input) {
             char previous = ANY_CHAR;
             int openIndex = -1;
 
-            char[] arr = anInput.toCharArray();
-            for (int i = 0; i < arr.length; i++) {
-                char c = arr[i];
-                if (openComment) {
+            for (int i = 0; i < anInput.length(); i++) {
+                char c = anInput.charAt(i);
+                if (c == SLASH && previous == SLASH) {
+                    return result.deleteCharAt(result.length() - 1).toString();
+                } else if (openComment) {
                     if (c == SLASH && previous == ASTERISK && openIndex < (i - 2)) {
                         openComment = false;
                     }

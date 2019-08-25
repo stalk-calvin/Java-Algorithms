@@ -5,51 +5,45 @@
 
 package org.calvin.String;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MinMove {
+    // O(n + m)
+    public int minMoveEnglishOnly(String a, String b) {
+        String[] longerShorter = longerShorter(a,b);
+        int[] freq = new int[26];
+        for (char x : longerShorter[0].toCharArray()) freq[x - 'a']++;
+        for (char x : longerShorter[1].toCharArray()) freq[x - 'a']--;
+
+        int r = 0;
+        for (int f : freq) r += f;
+        return r;
+    }
+
     public int minMove(String a, String b) {
-        //count chars
-        List<NamedObject> aInfo = getNamedObject(a);
-        List<NamedObject> bInfo = getNamedObject(b);
-
-        if (aInfo.size() != bInfo.size()) return -1;
-        int minMove = 0;
-        for (int i = 0; i < aInfo.size(); i++) {
-            minMove += Math.abs(aInfo.get(i).occurrence - bInfo.get(i).occurrence);
-        }
-
-        return minMove;
-    }
-
-    private List<NamedObject> getNamedObject(String a) {
-        List<NamedObject> result = new ArrayList<>();
-        char prev = a.charAt(0);
-        int count = 1;
-        for (int i = 1; i < a.length(); i++) {
-            if (prev == a.charAt(i)) {
-                count++;
-            } else {
-                result.add(new NamedObject(prev, count));
-                count = 1;
-                prev = a.charAt(i);
-            }
-            if (i == a.length() - 1) {
-                result.add(new NamedObject(prev, count));
+        String[] longerShorter = longerShorter(a,b);
+        Map<Character, Integer> tracker = new HashMap<>();
+        for (char x : longerShorter[0].toCharArray()) tracker.put(x, tracker.getOrDefault(x, 0) + 1);
+        for (char x : longerShorter[1].toCharArray()) {
+            if (tracker.containsKey(x)) {
+                tracker.put(x, tracker.get(x) - 1);
             }
         }
-
-        return result;
+        int r = 0;
+        for (Map.Entry<Character, Integer> x : tracker.entrySet()) {
+            r += x.getValue();
+        }
+        return r;
     }
-}
 
-class NamedObject {
-    public final Character name;
-    public final Integer occurrence;
-
-    public NamedObject(Character name, Integer occurrence) {
-        this.name = name;
-        this.occurrence = occurrence;
+    private String[] longerShorter(String a, String b) {
+        String longer = a;
+        String shorter = b;
+        if (b.length() > a.length()) {
+            longer = b;
+            shorter = a;
+        }
+        return new String[]{longer, shorter};
     }
 }

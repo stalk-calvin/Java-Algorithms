@@ -5,10 +5,10 @@
 
 package org.calvin.String;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class LongestSubstringWithoutRepeatTest {
     private LongestSubstringWithoutRepeat fixture;
@@ -19,73 +19,72 @@ public class LongestSubstringWithoutRepeatTest {
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringFirstMethod() {
+    public void shouldFindLengthOfLongestSubstringMethod() {
         String input = "bbbbb";
         int actual = fixture.lengthOfLongestSubstring(input);
         assertEquals(1,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringFirstMethod0() {
+    public void shouldFindLengthOfLongestSubstringMethod0() {
         String input = "abcabcbb";
         int actual = fixture.lengthOfLongestSubstring(input);
         assertEquals(3,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringFirstMethod1() {
+    public void shouldFindLengthOfLongestSubstringMethod1() {
         String input = "bbbbbaacc";
         int actual = fixture.lengthOfLongestSubstring(input);
         assertEquals(2,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringFirstMethod2() {
+    public void shouldFindLengthOfLongestSubstringMethod2() {
         String input = "au";
         int actual = fixture.lengthOfLongestSubstring(input);
         assertEquals(2,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringFirstMethod3() {
+    public void shouldFindLengthOfLongestSubstringMethod3() {
         String input = "c";
         int actual = fixture.lengthOfLongestSubstring(input);
         assertEquals(1,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringSecondMethod() {
+    public void shouldFindLengthOfLongestSubstringSimplerMethod() {
         String input = "bbbbb";
-        int actual = fixture.lengthOfLongestSubstring2(input);
+        int actual = fixture.lengthOfLongestSubstringSimpler(input);
         assertEquals(1,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringSecondMethod0() {
+    public void shouldFindLengthOfLongestSubstringSimplerMethod0() {
         String input = "abcabcbb";
-        int actual = fixture.lengthOfLongestSubstring2(input);
+        int actual = fixture.lengthOfLongestSubstringSimpler(input);
         assertEquals(3,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringSecondMethod1() {
+    public void shouldFindLengthOfLongestSubstringSimplerMethod1() {
         String input = "bbbbbaacc";
-        int actual = fixture.lengthOfLongestSubstring(input);
+        int actual = fixture.lengthOfLongestSubstringSimpler(input);
         assertEquals(2,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringSecondMethod2() {
+    public void shouldFindLengthOfLongestSubstringSimplerMethod2() {
         String input = "au";
-        int actual = fixture.lengthOfLongestSubstring(input);
+        int actual = fixture.lengthOfLongestSubstringSimpler(input);
         assertEquals(2,actual);
     }
 
     @Test
-    public void shouldFindLengthOfLongestSubstringSecondMethod3() {
+    public void shouldFindLengthOfLongestSubstringSimplerMethod3() {
         String input = "c";
-        int actual = fixture.lengthOfLongestSubstring(input);
+        int actual = fixture.lengthOfLongestSubstringSimpler(input);
         assertEquals(1,actual);
     }
-
 }

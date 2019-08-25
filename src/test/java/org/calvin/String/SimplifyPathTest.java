@@ -5,10 +5,10 @@
 
 package org.calvin.String;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class SimplifyPathTest {
     private SimplifyPath fixture;
@@ -19,7 +19,7 @@ public class SimplifyPathTest {
     }
 
     @Test
-    public void simplifyPath() throws Exception {
+    public void shouldSimplifyPath() throws Exception {
         String input = "/a/./b/../../c/";
         String actual = fixture.simplifyPath(input);
         assertEquals("/c", actual);

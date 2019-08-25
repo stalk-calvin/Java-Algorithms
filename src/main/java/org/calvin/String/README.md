@@ -119,6 +119,20 @@ Explanation:
 'e' is the letter that was added.
 ```
 
+## FirstNonRepeated
+
+Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
+Examples:
+
+```
+s = "leetcode"
+return 0.
+
+s = "loveleetcode",
+return 2.
+```
+
 ## FizzBuzz
 
 Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
@@ -146,20 +160,6 @@ Calulate the character length of last word separated by a space.
 Find out # of moves you need to make to make into the target string
 
 EX: input aaabbccaaa abbca -> minMove
-
-## NonRepeated
-
-Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
-
-Examples:
-
-```
-s = "leetcode"
-return 0.
-
-s = "loveleetcode",
-return 2.
-```
 
 ## NumberOfSegments
 

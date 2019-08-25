@@ -16,6 +16,12 @@ public class AnagramValidity {
     public boolean isAnagram(String s, String t) {
         return sorted(s).equals(sorted(t));
     }
+    private String sorted(String in) {
+        char[] inChars = in.toLowerCase().toCharArray();
+        Arrays.sort(inChars);
+        log.info("Sorted Chars: "+Arrays.toString(inChars));
+        return new String(inChars);
+    }
 
     public boolean isAnagramOnlyEnglish(String s, String t) {
         s = s.toLowerCase();
@@ -37,13 +43,7 @@ public class AnagramValidity {
         s = s.toLowerCase();
         t = t.toLowerCase();
         Map<Character, Integer> tracker = new HashMap<>();
-        for (Character c : s.toCharArray()) {
-            if (tracker.get(c) == null) {
-                tracker.put(c, 1);
-            } else {
-                tracker.put(c, tracker.get(c) + 1);
-            }
-        }
+        for (Character c : s.toCharArray()) tracker.put(c, tracker.getOrDefault(c,0) + 1);
         for (Character c: t.toCharArray()) {
             if (tracker.get(c) != null) {
                 if (tracker.get(c) < 0) return false;
@@ -56,12 +56,5 @@ public class AnagramValidity {
             if (entry.getValue() != 0) return false;
         }
         return true;
-    }
-
-    private String sorted(String in) {
-        char[] inChars = in.toLowerCase().toCharArray();
-        Arrays.sort(inChars);
-        log.info("Sorted Chars: "+Arrays.toString(inChars));
-        return new String(inChars);
     }
 }

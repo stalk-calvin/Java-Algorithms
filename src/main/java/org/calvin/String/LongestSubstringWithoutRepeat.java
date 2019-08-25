@@ -6,7 +6,9 @@
 package org.calvin.String;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 public class LongestSubstringWithoutRepeat {
     public int lengthOfLongestSubstring(String s) {
@@ -23,15 +25,15 @@ public class LongestSubstringWithoutRepeat {
         return max;
     }
 
-    public int lengthOfLongestSubstring2(String a) {
+    public int lengthOfLongestSubstringSimpler(String a) {
         if (a == null || a.length() == 0) return 0;
-        Map<Character, Integer> map = new HashMap<>();
+        Set<Character> tracker = new HashSet<>();
         int max = Integer.MIN_VALUE, count = 0;
         for (int i = 0; i < a.length(); i++) {
-            if (map.containsKey(a.charAt(i))) {
+            if (tracker.contains(a.charAt(i))) {
                 count = 0;
             } else {
-                map.put(a.charAt(i), 1);
+                tracker.add(a.charAt(i));
             }
             count++;
             max = Math.max(max, count);

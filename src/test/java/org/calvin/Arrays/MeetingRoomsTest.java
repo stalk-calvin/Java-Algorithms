@@ -34,11 +34,41 @@ public class MeetingRoomsTest {
     }
 
     @Test
-    public void shouldReturnMinimumMeetingRoomsMyWay() throws Exception {
+    public void shouldReturnMinimumMeetingRoomsBuckets() throws Exception {
         Interval[] input = new Interval[]{
                 new Interval(9,10),
-                new Interval(10,11)
+                new Interval(10,11),
+                new Interval(12,15),
+                new Interval(13,15),
+                new Interval(4,9),
+                new Interval(4,17)
         };
-        assertEquals(1, fixture.minMeetingRoomsMyway(input));
+        assertEquals(3, fixture.minMeetingRoomsBuckets(input));
+    }
+
+    @Test
+    public void shouldReturnMinimumMeetingRoomsPQ() throws Exception {
+        Interval[] input = new Interval[]{
+                new Interval(9,10),
+                new Interval(10,11),
+                new Interval(12,15),
+                new Interval(13,15),
+                new Interval(4,9),
+                new Interval(4,17)
+        };
+        assertEquals(3, fixture.minMeetingRoomsPQ(input));
+    }
+
+    @Test
+    public void shouldReturnMinimumMeetingRoomsTreeMap() throws Exception {
+        Interval[] input = new Interval[]{
+                new Interval(9,10),
+                new Interval(10,11),
+                new Interval(12,15),
+                new Interval(13,15),
+                new Interval(4,9),
+                new Interval(4,17)
+        };
+        assertEquals(3, fixture.minMeetingRoomsTreeMap(input));
     }
 }

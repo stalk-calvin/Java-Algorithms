@@ -21,4 +21,22 @@ public class SortUsingStack {
 
         return r;
     }
+
+    public void sortUsingStackRecursively(Stack<Integer> s) {
+        if (!s.isEmpty()) {
+            int val = s.pop();
+            sortUsingStackRecursively(s);
+            insert(s, val);
+        }
+    }
+
+    private void insert(Stack<Integer> s, int val) {
+        if (s.isEmpty() || val > s.peek()) {
+            s.push(val);
+        } else {
+            int tmp = s.pop();
+            insert(s, val);
+            s.push(tmp);
+        }
+    }
 }

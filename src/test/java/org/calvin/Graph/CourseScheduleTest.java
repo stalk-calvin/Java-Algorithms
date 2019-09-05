@@ -9,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
 public class CourseScheduleTest {
@@ -42,6 +43,10 @@ public class CourseScheduleTest {
         prereqs.put("CS103", list);
     }
 
+    @Test
+    public void shouldBeAbleToFinish() {
+        assertTrue(CourseSchedule.canFinish(prereqs));
+    }
     @Test
     public void shouldFindValidCourseOrder() throws Exception {
         List<String> actual = CourseSchedule.order(prereqs);

@@ -50,4 +50,9 @@ public class MinStackNodeTest {
         expectedException.expect(EmptyStackException.class);
         fixture.top();
     }
+
+    @Test
+    public void shouldGetMaxEmptyGetMin() {
+        assertEquals(Integer.MAX_VALUE, fixture.getMin());
+    }
 }

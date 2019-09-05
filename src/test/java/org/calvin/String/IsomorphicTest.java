@@ -5,11 +5,13 @@
 
 package org.calvin.String;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class IsomorphicTest {
     Isomorphic fixture;
@@ -37,6 +39,18 @@ public class IsomorphicTest {
     @Test
     public void shouldNotBeIsomorphicOnDifferentLength() {
         assertFalse(fixture.isIsomorphic("faceis", "ugly"));
+    }
+
+    @Test
+    public void shouldGroupIsomorphic() {
+        List<String> input = Lists.newArrayList("apple", "apply", "dog", "cog", "romi");
+        List<List<String>> actual = fixture.groupIsomorphicStrings(input);
+        List<List<String>> expected = Lists.newArrayList(
+                Lists.newArrayList("dog", "cog"),
+                Lists.newArrayList("romi"),
+                Lists.newArrayList("apple", "apply"));
+
+        assertEquals(expected, actual);
     }
 
 }

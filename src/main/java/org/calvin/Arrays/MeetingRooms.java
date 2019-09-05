@@ -1,6 +1,6 @@
 package org.calvin.Arrays;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class MeetingRooms {
     static class Interval {
@@ -29,7 +29,26 @@ public class MeetingRooms {
         return rooms;
     }
 
-    public int minMeetingRoomsMyway(Interval[] intervals) {
+    public int minMeetingRoomsTreeMap(Interval[] intervals) {
+        Map<Integer, Integer> t = new TreeMap<>();
+        for(Interval e : intervals) {
+            t.put(e.start, t.getOrDefault(e.start,0)+1);
+            t.put(e.end, t.getOrDefault(e.end,0)-1);
+        }
+
+        int cur = 0;
+        int max = Integer.MIN_VALUE;
+        for(Map.Entry<Integer, Integer> e : t.entrySet()) {
+            cur += e.getValue();
+            if (cur > max) {
+                max = cur;
+            }
+        }
+
+        return max;
+    }
+
+    public int minMeetingRoomsBuckets(Interval[] intervals) {
         if (intervals == null) {
             return 0;
         }
@@ -54,6 +73,27 @@ public class MeetingRooms {
         }
 
         return max;
+    }
+
+    public int minMeetingRoomsPQ(Interval[] intervals) {
+        Arrays.sort(intervals, new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                return o1.start - o2.start;
+            }
+        });
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        pq.add(intervals[0].end);
+        for (int i = 1; i < intervals.length; i++) {
+            Interval curr = intervals[i];
+            if (curr.start >= pq.peek()) {
+                pq.remove();
+            }
+            pq.add(curr.end);
+        }
+
+        return pq.size();
     }
 }
 

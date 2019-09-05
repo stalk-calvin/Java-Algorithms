@@ -10,6 +10,16 @@ import java.util.Stack;
 
 class MinStackNode {
 
+    static class NodeWithMin {
+        public int min;
+        public int data;
+
+        public NodeWithMin(int data, int min) {
+            this.data = data;
+            this.min = min;
+        }
+    }
+
     Stack<NodeWithMin> s;
 
     /**

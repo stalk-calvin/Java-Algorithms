@@ -16,7 +16,7 @@ Could you do it without any loop/recursion in O(1) runtime?
 ## BaseConverter
 
 1. Convert Decimal Number to any base number in String
-2. Convert any integer coming in with digits into a Decimal Number.
+2. Convert any integer into a Decimal Number.
 
 ## BullsAndCows
 

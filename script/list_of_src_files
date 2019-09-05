@@ -64,6 +64,7 @@ Numbers/ValidNumber.java
 Numbers/PowerOf4.java
 Numbers/RomanToInt.java
 Numbers/ThreeSum.java
+Numbers/LongestUnique.java
 Numbers/SumOfFibonacci.java
 Numbers/BaseConverter.java
 Numbers/PowerOfN.java
@@ -88,6 +89,7 @@ Numbers/MultiplicationWithoutMultiply.java
 Numbers/UglyNumber.java
 Numbers/ReverseInteger.java
 Numbers/Factorial.java
+Numbers/MinEditDistance.java
 Numbers/ContainsNearbyDuplicate.java
 Numbers/Palindrome.java
 Numbers/SubsetsWithDuplicates.java
@@ -112,7 +114,6 @@ Sort/SelectionSort.java
 Sort/MergeSortArray.java
 Guava/Product.java
 Cryptography/AESEncryption.java
-StackQueue/NodeWithMin.java
 StackQueue/MinStackNode.java
 StackQueue/SetOfStacks.java
 StackQueue/StackUsingQueue.java
@@ -324,6 +325,7 @@ String/CountAndSay.java
 String/BaseballGame.java
 String/FizzBuzz.java
 String/IntegerToString.java
+String/LongestPalindromicSubsequence.java
 String/LengthOfLastWord.java
 String/WordPattern.java
 String/ExcelSheetColumnTitle.java

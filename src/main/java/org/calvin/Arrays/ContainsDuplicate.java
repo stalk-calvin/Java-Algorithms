@@ -5,10 +5,7 @@
 
 package org.calvin.Arrays;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class ContainsDuplicate {
     public boolean containsDuplicateFirst(int[] nums) {
@@ -62,5 +59,21 @@ public class ContainsDuplicate {
             }
         }
         return false;
+    }
+
+    public String removeAdjacentDuplicates(String S) {
+        Stack<Character> tracker = new Stack<>();
+        for (int i = 0; i < S.length(); i++) {
+            if (!tracker.isEmpty() && tracker.peek() == S.charAt(i)) {
+                tracker.pop();
+            } else {
+                tracker.push(S.charAt(i));
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        for (Character a : tracker) {
+            sb.append(a);
+        }
+        return sb.toString();
     }
 }

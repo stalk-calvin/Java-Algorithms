@@ -14,7 +14,7 @@ import java.util.Map;
 public class AnagramGrouper {
     // Performance note: 3 dots would not trigger, new String[]{...}
     public List<List<String>> groupAnagrams(String... words) {
-        Arrays.sort(words); // could be ignored depending on the requirement
+        //Arrays.sort(words); // could be ignored depending on the requirement
 
         Map<String, List<String>> map = new LinkedHashMap<>();
         for (String word : words) {

@@ -8,8 +8,7 @@ package org.calvin.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ContainsDuplicateTest {
     ContainsDuplicate fixture;
@@ -81,5 +80,12 @@ public class ContainsDuplicateTest {
         int[] input = {1};
         boolean actual = fixture.containsNearbyAlmostDuplicate(input,3,3);
         assertFalse(actual);
+    }
+
+    @Test
+    public void shouldRemoveAdjacentDuplicate() {
+        String s = "ccbaabddd";
+        String actual = fixture.removeAdjacentDuplicates(s);
+        assertEquals("d", actual);
     }
 }

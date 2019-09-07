@@ -24,7 +24,7 @@ public class AnagramGrouperTest {
 
     @Test
     public void shouldGroupAnagrams() {
-        String[] input = {"eat", "tea", "tan", "ate", "atn", "bat"};
+        String[] input = {"code", "aaagmnrs", "anagrams", "doce"};
         List<List<String>> result = fixture.groupAnagrams(input);
         List<List<String>> expected = Arrays.asList(
                 Lists.newArrayList("ate", "eat", "tea"),

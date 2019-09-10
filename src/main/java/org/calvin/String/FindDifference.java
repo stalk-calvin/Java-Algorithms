@@ -28,4 +28,23 @@ public class FindDifference {
         }
         return x == 0 ? ' ' : x;
     }
+
+    public char findTheDifferenceBucket(String a, String b) {
+        int[] tracker = new int[26];
+        for (char x : a.toCharArray()) {
+            int pos = x - 'a';
+            tracker[pos]++;
+        }
+        for (char x : b.toCharArray()) {
+            int pos = x - 'a';
+            tracker[pos]--;
+        }
+        char ret = ' ';
+        for (int i = 0; i < tracker.length; i++) {
+            if (tracker[i] != 0) {
+                ret = (char) (i + 'a');
+            }
+        }
+        return ret;
+    }
 }

@@ -6,6 +6,7 @@
 package org.calvin.String;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FirstNonRepeated {
@@ -18,6 +19,19 @@ public class FirstNonRepeated {
             char c = x.charAt(i);
             if (tracker.get(c).equals(1)) {
                 return c;
+            }
+        }
+        return null;
+    }
+
+    public static Character findFirstNonRepeatedMyWay(String x) {
+        Map<Character, Integer> tracker = new LinkedHashMap<>();
+        for (char c : x.toCharArray()) {
+            tracker.put(c, tracker.getOrDefault(c, 0) + 1);
+        }
+        for (Map.Entry<Character, Integer> e : tracker.entrySet()) {
+            if (e.getValue() == 1) {
+                return e.getKey();
             }
         }
         return null;

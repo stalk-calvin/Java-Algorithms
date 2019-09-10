@@ -78,6 +78,7 @@ Numbers/PowerOf2.java
 Numbers/SmallestNFromList.java
 Numbers/PowerOf3.java
 Numbers/SmallestProductN.java
+Numbers/SumOfEvenNumbers.java
 Numbers/ExcelSheetColumnNumber.java
 Numbers/ToBase.java
 Numbers/ThirdMax.java
@@ -284,6 +285,7 @@ Arrays/ContainsDuplicate.java
 Arrays/FindDisappearedNumbers.java
 Arrays/SlidingWindowMaximum.java
 Arrays/MergeSortedArray.java
+Arrays/FallingDominos.java
 Arrays/Rotate.java
 Arrays/HighestRAM.java
 Arrays/FindDuplicate.java
@@ -351,6 +353,7 @@ String/pojo/xml/Person.java
 String/pojo/xml/PhoneNumber.java
 String/pojo/json/Menu.java
 String/pojo/json/MenuItem.java
+String/StringCalculator.java
 DynamicProgramming/LongestCommonSubstring.java
 DynamicProgramming/MinJumpToReachEnd.java
 DynamicProgramming/Fibonacci.java

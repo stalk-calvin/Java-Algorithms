@@ -37,4 +37,45 @@ public class Intersection {
         }
         return length;
     }
+
+    public ListNode<Integer> getIntersectionNodeMyWay(ListNode<Integer> a, ListNode<Integer> b) {
+        if (a == null) {
+            return b;
+        } else if (b == null) {
+            return a;
+        }
+
+        int len1=0;
+        ListNode<Integer> curr = a;
+        while (curr != null) {
+            len1++;
+            curr = curr.getNext();
+        }
+        curr = b;
+        int len2=0;
+        while (curr != null) {
+            len2++;
+            curr = curr.getNext();
+        }
+        if (len2 > len1) {
+            int tmp = len1;
+            len1 = len2;
+            len2 = tmp;
+            ListNode<Integer> t = a;
+            a = b;
+            b = t;
+        }
+
+        int len3 = len1 - len2;
+        for (int i = 0; i < len3; i++) {
+            a = a.getNext();
+        }
+
+        while (a!=b) {
+            a = a.getNext();
+            b = b.getNext();
+        }
+
+        return a;
+    }
 }

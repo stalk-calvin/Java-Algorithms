@@ -5,27 +5,27 @@
 
 package org.calvin.DesignPatterns.Behavioral.ComparatorComparable;
 
-import java.util.Comparator;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.Comparator;
+
 @AllArgsConstructor
 @Data
-class Dog implements Comparator<Dog>, Comparable<Dog> {
+class Dog implements Comparable<Dog> {
     private String name;
     private int age;
-
-    Dog() {
-    }
 
     // Overriding the compareTo method
     public int compareTo(Dog d) {
         return (this.name).compareTo(d.name);
     }
+}
 
-    // Overriding the compare method to sort the age
-    public int compare(Dog d, Dog d1) {
-        return d.age - d1.age;
+class DogByAgeComparator implements Comparator<Dog> {
+
+    @Override
+    public int compare(Dog o1, Dog o2) {
+        return o1.getAge() - o2.getAge();
     }
 }

@@ -24,7 +24,6 @@ public class Cycle2 {
             return null;
         }
 
-
 		/* Move slow to Head. Keep fast at Meeting Point. Each are k steps
 		/* from the Loop Start. If they move at the same pace, they must
 		 * meet at Loop Start. */
@@ -34,12 +33,6 @@ public class Cycle2 {
             fast = fast.getNext();
         }
 
-        while (slow.getNext() != null) {
-            if (slow.getNext() == fast) {
-                break;
-            }
-            slow = slow.getNext();
-        }
         // Both now point to the start of the loop.
         return fast;
     }

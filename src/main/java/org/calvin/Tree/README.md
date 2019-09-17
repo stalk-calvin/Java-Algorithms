@@ -62,6 +62,14 @@ return its bottom-up level order traversal as:
 ]
 ```
 
+## BinarySearchTree
+
+## BST Distance
+
+## Calculate Expression
+
+## DiagonalDistance
+
 ## EqualTree
 
 Given two binary trees, can you write a method to check if this trees are equals?

@@ -15,5 +15,6 @@ public class FindMinimumNumberInRotatedArray {
             else end=mid;
         }
         return nums[start];
+
     }
 }

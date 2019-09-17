@@ -24,11 +24,11 @@ public class AnagramGrouperTest {
 
     @Test
     public void shouldGroupAnagrams() {
-        String[] input = {"code", "aaagmnrs", "anagrams", "doce"};
+        String[] input = {"eat", "tea", "tan", "ate", "atn", "bat"};
         List<List<String>> result = fixture.groupAnagrams(input);
         List<List<String>> expected = Arrays.asList(
-                Lists.newArrayList("ate", "eat", "tea"),
-                Lists.newArrayList("atn","tan"),
+                Lists.newArrayList("eat", "tea", "ate"),
+                Lists.newArrayList("tan","atn"),
                 Lists.newArrayList("bat")
         );
         assertEquals(expected, result);

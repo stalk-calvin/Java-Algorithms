@@ -5,27 +5,22 @@
 
 package org.calvin.DesignPatterns.Behavioral.ComparatorComparable;
 
-import org.junit.Before;
+import com.google.common.collect.Lists;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
 public class DogTest {
+    private List<Dog> list = Lists.newArrayList(
+            new Dog("Lacy", 2),
+            new Dog("Roger", 10),
+            new Dog("Tommy", 4),
+            new Dog("Tammy", 1)
+    );
 
-    private List<Dog> list;
-
-    @Before
-    public void setUp() {
-        list = new ArrayList<>();
-        list.add(new Dog("Lacy", 2));
-        list.add(new Dog("Roger", 10));
-        list.add(new Dog("Tommy", 4));
-        list.add(new Dog("Tammy", 1));
-    }
     @Test
     public void shouldSortUsingComparable() {
         Collections.sort(list);
@@ -36,7 +31,7 @@ public class DogTest {
 
     @Test
     public void shouldSortUsingComparator() {
-        Collections.sort(list, new Dog());
+        list.sort(new DogByAgeComparator());
         for (int j = 0; j < list.size()-1; j++) {
             assertTrue(list.get(j + 1).getAge() >= list.get(j).getAge());
         }

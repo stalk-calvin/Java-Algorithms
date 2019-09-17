@@ -124,6 +124,21 @@ Given two integers passed as parameter, can you write a method to multiply it an
 
 Given an array of elements, write a method to multiply every value for the rest of elements and return a new array with this values. Can you resolve this problem without use "/" operator?
 
+## NumWaysToDecodeMessageTest
+
+Given a => '1', b => '2' ... z => '26', decode number of ways a String of input can be converted to represent as letters.
+
+For example,
+```
+input: 12345
+output: 3
+
+There are 3 possibilities:
+- abcde
+- lcde
+- axde
+```
+
 ## Palindrome
 
 Determine whether an integer is a palindrome. Do this without extra space.

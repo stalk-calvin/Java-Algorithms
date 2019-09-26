@@ -23,7 +23,7 @@ public class TopologicalSort {
             for (Map.Entry<String, List<Node>> n : adjacentVertices.entrySet()) {
                 String adjacentVertex = n.getKey();
                 int updatedIndegree = indegreeMap.get(adjacentVertex) - 1;
-                indegreeMap.remove(adjacentVertex);
+//                indegreeMap.remove(adjacentVertex);
                 indegreeMap.put(adjacentVertex, updatedIndegree);
 
                 if (updatedIndegree == 0) {

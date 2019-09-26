@@ -6,41 +6,38 @@
 package org.calvin.DesignPatterns.Structural.Adapter;
 
 import lombok.extern.slf4j.Slf4j;
-
+import org.apache.commons.lang3.EnumUtils;
 import org.apache.commons.lang3.Validate;
+
+import static org.calvin.DesignPatterns.Structural.Adapter.MediaAdapter.MediaType.NONE;
 
 @Slf4j
 public class MediaAdapter implements MediaPlayer {
 
+    public enum MediaType { MP3, MP4, AVI, NONE }
     MediaPlayer mediaPlayer;
 
-    public MediaAdapter(String audioType){
-        if("mp3".equalsIgnoreCase(audioType)){
+    public MediaAdapter(MediaType audioType){
+        if(MediaType.MP3.equals(audioType)){
             mediaPlayer = new Mp3Player();
-        } else if ("mp4".equalsIgnoreCase(audioType)){
+        } else if (MediaType.MP4.equals(audioType)){
             mediaPlayer = new Mp4Player();
-        } else if ("vlc".equalsIgnoreCase(audioType)){
-            mediaPlayer = new VlcPlayer();
+        } else if (MediaType.AVI.equals(audioType)){
+            mediaPlayer = new AviPlayer();
         }
     }
 
     @Override
-    public String getType() { return "Media Player"; }
+    public MediaType getType() { return NONE; }
 
     @Override
     public String play(String fileName) {
         String playString = "";
         if (mediaPlayer != null) {
-            String audioType = mediaPlayer.getType();
-            Validate.notEmpty(audioType);
-
-            if ("mp3".equalsIgnoreCase(audioType)) {
-                playString = mediaPlayer.play(fileName);
-            } else if ("mp4".equalsIgnoreCase(audioType)) {
-                playString = mediaPlayer.play(fileName);
-            } else if ("vlc".equalsIgnoreCase(audioType)) {
-                playString = mediaPlayer.play(fileName);
-            }
+            MediaType audioType = mediaPlayer.getType();
+            Validate.notNull(audioType); //make sure type is valid as well.
+            EnumUtils.isValidEnum(MediaType.class, audioType.toString());
+            playString = mediaPlayer.play(fileName);
         } else {
             log.info("Unknown media player: " + mediaPlayer);
             return "";

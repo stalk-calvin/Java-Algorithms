@@ -6,6 +6,6 @@
 package org.calvin.DesignPatterns.Structural.Adapter;
 
 public interface MediaPlayer {
-    String getType();
+    MediaAdapter.MediaType getType();
     String play(String fileName);
 }

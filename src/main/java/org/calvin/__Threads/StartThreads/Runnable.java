@@ -1,10 +1,11 @@
-package org.calvin.Threads.StartThreads;
+package org.calvin.__Threads.StartThreads;
 
-class Runner extends Thread {
+class RunnerRunnable implements java.lang.Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 5; i++) {
             System.out.println("Hello: " + i + " Thread: " + Thread.currentThread().getName());
+
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -14,12 +15,11 @@ class Runner extends Thread {
     }
 }
 
-public class Extends {
+public class Runnable {
     public static void main(String[] args) {
-        Runner runner1 = new Runner();
-        runner1.start();
-
-        Runner runner2 = new Runner();
-        runner2.start();
+        Thread thread1 = new Thread(new RunnerRunnable());
+        Thread thread2 = new Thread(new RunnerRunnable());
+        thread1.start();
+        thread2.start();
     }
 }

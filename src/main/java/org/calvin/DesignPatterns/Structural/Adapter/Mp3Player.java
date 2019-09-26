@@ -9,15 +9,13 @@ import lombok.Getter;
 
 @Getter
 public class Mp3Player implements MediaPlayer {
-    private static final String type = "mp3";
-
     @Override
-    public String getType() {
-        return type;
+    public MediaAdapter.MediaType getType() {
+        return MediaAdapter.MediaType.MP3;
     }
 
     @Override
     public String play(String fileName) {
-        return "Playing "+type+" file. Name: "+ fileName;
+        return "Playing "+getType()+" file. Name: "+ fileName;
     }
 }

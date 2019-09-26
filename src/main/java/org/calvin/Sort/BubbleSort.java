@@ -5,7 +5,7 @@
 
 package org.calvin.Sort;
 
-import org.calvin.Utils.AssortedMethods;
+import org.calvin.__Utils.AssortedMethods;
 
 class BubbleSort {
     public static void sort(int[] input) {

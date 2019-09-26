@@ -186,9 +186,6 @@ Graph/GraphImpl.java
 Graph/Node.java
 Graph/TopologicalSort.java
 Graph/GraphType.java
-Graph/Adjacency/AdjacencyMatrixGraph/AdjacencyMatrix.java
-Graph/Adjacency/AdjacencySetGraph/Node.java
-Graph/Adjacency/AdjacencySetGraph/AdjacencySet.java
 Graph/ShortestPathNoWeight.java
 Graph/CourseSchedule.java
 Graph/BfsDfs.java

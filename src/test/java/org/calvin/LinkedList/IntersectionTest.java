@@ -5,7 +5,7 @@
 
 package org.calvin.LinkedList;
 
-import org.calvin.Utils.AssortedMethods;
+import org.calvin.__Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
 

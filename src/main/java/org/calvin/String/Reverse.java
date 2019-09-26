@@ -5,7 +5,7 @@
 
 package org.calvin.String;
 
-import org.calvin.Utils.AssortedMethods;
+import org.calvin.__Utils.AssortedMethods;
 
 public class Reverse {
     public String reverseString1(String s) {

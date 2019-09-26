@@ -5,12 +5,15 @@
 
 package org.calvin.Tree;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
-import org.calvin.Utils.AssortedMethods;
+import com.google.common.collect.Lists;
+import org.calvin.__Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class PathSumTest {
     PathSum fixture;
@@ -34,5 +37,14 @@ public class PathSumTest {
         TreeNode root = AssortedMethods.createTreeFromArray(input);
 
         assertEquals(4, fixture.calculate_path_sum(root,4, 0));
+    }
+
+    @Test
+    public void shouldGatherPathSum() {
+        int[] input = {5,4,8,11,13,4,7,2,1};
+        TreeNode root = AssortedMethods.createTreeFromArray(input);
+        List<String> expected = Lists.newArrayList("5->4->11->2", "5->4->13");
+
+        assertEquals(expected, fixture.showPathSum(root,22));
     }
 }

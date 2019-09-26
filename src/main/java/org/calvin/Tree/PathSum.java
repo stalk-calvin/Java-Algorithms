@@ -5,6 +5,9 @@
 
 package org.calvin.Tree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PathSum {
     public boolean hasPathSum(TreeNode root, int sum) {
         if (root == null)
@@ -31,5 +34,24 @@ public class PathSum {
         total += calculate_path_sum(tree.right, to, current);
 
         return total;
+    }
+
+    List<String> showPathSum(TreeNode root, int target) {
+        List<String> answer = new ArrayList<String>();
+        if (root != null) gatherPathSum(root, target, "", answer);
+        return answer;
+    }
+
+    private void gatherPathSum(TreeNode root, int sum, String path, List<String> answer) {
+        if (root == null)
+            return;
+
+        if (root.left == null && root.right == null && root.val == sum) {
+            answer.add(path + root.val);
+            return;
+        }
+
+        gatherPathSum(root.left, sum - root.val, path + root.val + "->", answer);
+        gatherPathSum(root.right, sum - root.val,path + root.val + "->", answer);
     }
 }

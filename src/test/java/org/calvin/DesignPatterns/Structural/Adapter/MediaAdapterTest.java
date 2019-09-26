@@ -15,34 +15,30 @@ public class MediaAdapterTest {
 
     @Test
     public void shouldPlayMp3() {
-        String type = "mp3";
-        fixture = new MediaAdapter(type);
+        fixture = new MediaAdapter(MediaAdapter.MediaType.MP3);
         String actual = fixture.play("mp3file");
-        assertTrue(actual.contains(type));
+        assertTrue(actual.contains("MP3"));
     }
 
     @Test
     public void shouldPlayMp4() {
-        String type = "mp4";
-        fixture = new MediaAdapter(type);
-        assertEquals("Media Player", fixture.getType());
-        assertEquals("mp4", fixture.mediaPlayer.getType());
+        fixture = new MediaAdapter(MediaAdapter.MediaType.MP4);
+        assertEquals(MediaAdapter.MediaType.NONE, fixture.getType());
+        assertEquals(MediaAdapter.MediaType.MP4, fixture.mediaPlayer.getType());
         String actual = fixture.play("mp4file");
-        assertTrue(actual.contains(type));
+        assertTrue(actual.contains("MP4"));
     }
 
     @Test
-    public void shouldPlayVlc() {
-        String type = "vlc";
-        fixture = new MediaAdapter(type);
-        String actual = fixture.play("vlcFile");
-        assertTrue(actual.contains(type));
+    public void shouldPlayAvi() {
+        fixture = new MediaAdapter(MediaAdapter.MediaType.AVI);
+        String actual = fixture.play("avifile");
+        assertTrue(actual.contains("AVI"));
     }
 
     @Test
     public void shouldNotPlayUnknown() {
-        String type = "unknown";
-        fixture = new MediaAdapter(type);
-        assertEquals("", fixture.play(type));
+        fixture = new MediaAdapter(MediaAdapter.MediaType.NONE);
+        assertEquals("", fixture.play("unknown"));
     }
 }

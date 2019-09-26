@@ -1,3 +1,17 @@
+## AddOne
+
+Given a int array/list, add 1 to it and return the resulting array.
+
+**Example**:
+```
+[1,2,3,4] => [1,2,3,5]
+```
+
+**Example**:
+```
+[9,9,9] => [1,0,0,0]
+```
+
 ## AnagramCounter
 
 Checks how far apart 2 given strings are from being anagram
@@ -30,6 +44,25 @@ Explanation: n is 2, and the maximum sum of pairs is 4.
 ## CheckIfArrayElementsAreConsecutive
 
 Checks if all the numbers in the array are consecutive.
+
+## ChunkedPalindrome
+
+Given a string, return the number of its possible chunked palindrome meaning a palindrome formed by substring in the case when it is not formed by characters of the string. For better understanding look at the example
+
+**Examples**:
+```
+Input : ghiabcdefhelloadamhelloabcdefghi 
+Output : 7
+(ghi)(abcdef)(hello)(adam)(hello)(abcdef)(ghi)
+
+Input : merchant
+Output : 1
+(merchant)
+
+Input : antaprezatepzapreanta
+Output : 11
+(a)(nt)(a)(pre)(za)(tpe)(za)(pre)(a)(nt)(a)
+```
 
 ## Combination Sum
 
@@ -204,6 +237,19 @@ Given an array of meeting time intervals consisting of start and end times [[s1,
 ```
 Given [[0, 30],[5, 10],[15, 20]],
 return 2.
+```
+
+## MergeOverlapping
+
+You are given an array of intervals - that is, an array of tuples (start, end). The array may not be sorted, and could contain overlapping intervals. Return another array where the overlapping intervals are merged.
+
+**Example**:
+```
+[(1, 3), (5, 8), (4, 10), (20, 25)]
+
+Return [(1, 3), (4, 10), (20, 25)] 
+ 
+(5, 8) and (4, 10) can be merged into (4, 10)
 ```
 
 ## MergeKSortedArray

@@ -9,6 +9,7 @@ GraphMatrix/Dijkstra/Dijkstra.java
 GraphMatrix/Dijkstra/Edge.java
 GraphMatrix/NumIslands.java
 GraphMatrix/State.java
+GraphMatrix/SpiralGrid.java
 Tree/MinDepth.java
 Tree/EqualTree.java
 Tree/MergeTrees.java
@@ -215,6 +216,8 @@ DesignPatterns/Creational/Prototype/Employees.java
 DesignPatterns/Creational/Singleton/Enum/Elvis.java
 DesignPatterns/Creational/Singleton/Field/Elvis.java
 DesignPatterns/Creational/Singleton/Method/Elvis.java
+DesignPatterns/Creational/Builder/Hierarchical/NyPizza.java
+DesignPatterns/Creational/Builder/Hierarchical/VeggiePizza.java
 DesignPatterns/Creational/Builder/NutritionFacts.java
 DesignPatterns/Creational/Builder/NutritionFactsLombok.java
 DesignPatterns/Creational/Factory/Circle.java
@@ -261,7 +264,6 @@ DesignPatterns/Structural/Facade/Square.java
 DesignPatterns/Structural/Forwarding_Composition_Inheritance/InstrumentedSet.java
 DesignPatterns/Structural/Forwarding_Composition_Inheritance/InheritedHashSet.java
 DesignPatterns/Structural/Adapter/Mp4Player.java
-DesignPatterns/Structural/Adapter/VlcPlayer.java
 DesignPatterns/Structural/Adapter/Mp3Player.java
 DesignPatterns/Structural/Adapter/MediaAdapter.java
 DesignPatterns/Structural/Adapter/comparison/before/AdapterDemo.java
@@ -272,22 +274,17 @@ DesignPatterns/Structural/Adapter/comparison/after/AdapterDemo.java
 DesignPatterns/Structural/Adapter/comparison/after/Rectangle.java
 DesignPatterns/Structural/Adapter/comparison/after/LineAdapter.java
 DesignPatterns/Structural/Adapter/comparison/after/Line.java
+DesignPatterns/Structural/Adapter/AviPlayer.java
 DesignPatterns/Structural/Composite/Row.java
 DesignPatterns/Structural/Composite/Col.java
 DesignPatterns/Structural/Composite/Composite.java
 DesignPatterns/Structural/Composite/Primitive.java
 DesignPatterns/Structural/FlyWeight/Gazillion.java
-Threads/StartThreads/UsingAnonymous.java
-Threads/StartThreads/Runnable.java
-Threads/StartThreads/Extends.java
-Threads/ThreadPool/ThreadPool.java
-Threads/Deadlock/DeadLock.java
-Threads/TestingCountDownLatch/TestingCountDownLatch.java
-Threads/Semaphores/Connection.java
-Threads/Semaphores/App.java
 Arrays/TheBiddingGame.java
 Arrays/CheckIfArrayElementsAreConsecutive.java
 Arrays/ArrayPartition.java
+Arrays/AddOne.java
+Arrays/Interval.java
 Arrays/MoveZeros.java
 Arrays/GasStation.java
 Arrays/MaximumProductSubarray.java
@@ -302,6 +299,7 @@ Arrays/MergeSortedArray.java
 Arrays/FallingDominos.java
 Arrays/Rotate.java
 Arrays/HighestRAM.java
+Arrays/MergeOverlapping.java
 Arrays/FindDuplicate.java
 Arrays/AnagramCounter.java
 Arrays/MajorityElement2.java
@@ -316,6 +314,7 @@ Arrays/MissingNumber.java
 Arrays/AnagramValidity.java
 Arrays/QueueReconstructionByHeight.java
 Arrays/CombinationSum.java
+Arrays/ChunkedPalindrome.java
 Arrays/MajorityElement.java
 Arrays/MaximumSumSubarray.java
 Arrays/RemoveDuplicateSortedArray.java
@@ -327,6 +326,7 @@ String/order/ByIgnoreCase.java
 String/order/ByNumeric.java
 String/order/ByLength.java
 String/ValidPalindrome.java
+String/BuddyString.java
 String/PermutationCombination.java
 String/LongestPalindromicSubstring.java
 String/Regex.java

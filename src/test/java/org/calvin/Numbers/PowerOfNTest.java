@@ -5,10 +5,10 @@
 
 package org.calvin.Numbers;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class PowerOfNTest {
     private PowerOfN fixture;
@@ -35,4 +35,21 @@ public class PowerOfNTest {
         assertEquals(16, actual, 0);
     }
 
+    @Test
+    public void shouldCalculateNegativePow() throws Exception {
+        double actual = fixture.pow(2,-2);
+        assertEquals(0.25, actual, 0);
+    }
+
+    @Test
+    public void shouldCalculatePowOdd() throws Exception {
+        double actual = fixture.pow(2,3);
+        assertEquals(8, actual, 0);
+    }
+
+    @Test
+    public void shouldCalculatePowEven() throws Exception {
+        double actual = fixture.pow(2,4);
+        assertEquals(16, actual, 0);
+    }
 }

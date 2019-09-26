@@ -106,6 +106,9 @@ print "Saved README.md file\n";
 sub get_javas {
     my $path    = shift;
 
+    # print "PATH: " . $path . "\n";
+    return if $path =~ /\/__.*/;
+
     opendir (DIR, $path)
         or die "Unable to open $path: $!";
 

@@ -1,4 +1,4 @@
-package org.calvin.Threads.Deadlock;
+package org.calvin.__Threads.Deadlock;
 
 public class DeadLock {
     public static final Object lock1 = new Object();

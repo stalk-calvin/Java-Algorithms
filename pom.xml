@@ -163,6 +163,7 @@
                        <configuration>
                            <excludes>
                                <exclude>**/Book/**</exclude>
+                               <exclude>**/__*/**</exclude>
                            </excludes>
                            <repoToken>OAIxitSJWosysTGcF5aocbT02L2lzcgge</repoToken>
                        </configuration>

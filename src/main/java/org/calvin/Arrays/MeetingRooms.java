@@ -3,12 +3,6 @@ package org.calvin.Arrays;
 import java.util.*;
 
 public class MeetingRooms {
-    static class Interval {
-        int start;
-        int end;
-        Interval(int s, int e) { start = s; end = e; }
-    }
-
     public int minMeetingRooms(Interval[] intervals) {
         int[] starts = new int[intervals.length];
         int[] ends = new int[intervals.length];

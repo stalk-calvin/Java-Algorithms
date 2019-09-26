@@ -1,4 +1,4 @@
-package org.calvin.Threads.Semaphores;
+package org.calvin.__Threads.Semaphores;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

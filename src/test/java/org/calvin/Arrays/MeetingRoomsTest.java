@@ -1,6 +1,5 @@
 package org.calvin.Arrays;
 
-import org.calvin.Arrays.MeetingRooms.Interval;
 import org.junit.Before;
 import org.junit.Test;
 

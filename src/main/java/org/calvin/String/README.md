@@ -49,6 +49,36 @@ Round 7: You could get 9 + 5 = 14 points. The sum is 27.
   - The size of the input list will be between 1 and 1000.
   - Every integer represented in the list will be between -30000 and 30000.
 
+## BuddyString
+
+Given two strings A and B of lowercase letters, return true if and only if we can swap two letters in A so that the result equals B.
+
+**Example 1**:
+```
+Input: A = "ab", B = "ba"
+Output: true
+```
+**Example 2**:
+```
+Input: A = "ab", B = "ab"
+Output: false
+```
+**Example 3**:
+```
+Input: A = "aa", B = "aa"
+Output: true
+```
+**Example 4**:
+```
+Input: A = "aaaaaaabc", B = "aaaaaaacb"
+Output: true
+```
+**Example 5**:
+```
+Input: A = "", B = "aa"
+Output: false
+```
+
 ## CompareVersion
 
 Compare two version numbers version1 and version2.  

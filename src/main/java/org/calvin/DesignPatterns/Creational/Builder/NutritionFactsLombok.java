@@ -6,12 +6,12 @@
 package org.calvin.DesignPatterns.Creational.Builder;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.ToString;
-import lombok.experimental.Builder;
 
+@Builder
 @AllArgsConstructor
 @ToString
-@Builder
 public class NutritionFactsLombok {
     private final int servingSize;
     private final int servings;

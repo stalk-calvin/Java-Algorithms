@@ -2,7 +2,7 @@ package org.calvin.Tree;
 
 import static org.junit.Assert.assertEquals;
 
-import org.calvin.Utils.AssortedMethods;
+import org.calvin.__Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -150,7 +150,11 @@
                        <version>3.6.1</version>
                        <configuration>
                            <excludes>
-                               <exclude>**/Book/**</exclude>
+                               <exclude>**/__Book/**</exclude>
+                               <exclude>**/__Threads/**/*</exclude>
+                               <exclude>**/__CohesionCoupling/**/*</exclude>
+                               <exclude>**/__Adjacency/**/*</exclude>
+                               <exclude>**/__Utils/**/*</exclude>
                            </excludes>
                            <source>1.8</source>
                            <target>1.8</target>
@@ -162,8 +166,11 @@
                        <version>4.3.0</version>
                        <configuration>
                            <excludes>
-                               <exclude>**/Book/**</exclude>
-                               <exclude>**/__*/**</exclude>
+                               <exclude>**/__Book/**</exclude>
+                               <exclude>**/__Threads/**/*</exclude>
+                               <exclude>**/__CohesionCoupling/**/*</exclude>
+                               <exclude>**/__Adjacency/**/*</exclude>
+                               <exclude>**/__Utils/**/*</exclude>
                            </excludes>
                            <repoToken>OAIxitSJWosysTGcF5aocbT02L2lzcgge</repoToken>
                        </configuration>

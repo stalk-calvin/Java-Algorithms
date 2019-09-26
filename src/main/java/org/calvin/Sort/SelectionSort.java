@@ -5,7 +5,7 @@
 
 package org.calvin.Sort;
 
-import org.calvin.Utils.AssortedMethods;
+import org.calvin.__Utils.AssortedMethods;
 
 public class SelectionSort {
     public static void sort(int[] input) {

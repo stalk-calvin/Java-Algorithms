@@ -1,10 +1,8 @@
 package org.calvin.Tree;
 
-import org.calvin.Utils.AssortedMethods;
+import org.calvin.__Utils.AssortedMethods;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ExtractBinarySearchTreeLeaveDoubleLinkedListTest {
     private ExtractBinaryTreeLeaveDoubleLinkedList fixture;

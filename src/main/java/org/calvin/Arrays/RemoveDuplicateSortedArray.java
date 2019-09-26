@@ -5,7 +5,7 @@
 
 package org.calvin.Arrays;
 
-import static org.calvin.Utils.AssortedMethods.swap;
+import static org.calvin.__Utils.AssortedMethods.swap;
 
 public class RemoveDuplicateSortedArray {
     public int removeDuplicates(int[] nums) {

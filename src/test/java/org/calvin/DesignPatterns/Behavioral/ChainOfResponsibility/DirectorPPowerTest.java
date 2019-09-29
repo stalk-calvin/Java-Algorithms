@@ -20,14 +20,13 @@ import static org.mockito.Mockito.verify;
 public class DirectorPPowerTest {
     private PurchasePower fixture;
     private PurchaseRequest purchaseRequest;
-    private PurchasePower successor;
 
     @Mock private PrintStream ps;
 
     @Before
     public void setUp() {
         System.setOut(ps);
-        purchaseRequest = new PurchaseRequest(9999, "Bar");
+        purchaseRequest = new PurchaseRequest(9999);
         fixture = new DirectorPPower();
         fixture.setSuccessor(new PresidentPPower());
     }

@@ -16,20 +16,15 @@ public class NameRepository implements Container {
     // prevent instantiation
     private class NameIterator implements Iterator {
 
-        int index;
+        private int index;
 
         @Override
         public boolean hasNext() {
-
-            if(index < names.length){
-                return true;
-            }
-            return false;
+            return index < names.length;
         }
 
         @Override
         public Object next() {
-
             if(this.hasNext()){
                 return names[index++];
             }

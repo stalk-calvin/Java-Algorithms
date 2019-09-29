@@ -13,6 +13,7 @@ GraphMatrix/SpiralGrid.java
 Tree/MinDepth.java
 Tree/EqualTree.java
 Tree/MergeTrees.java
+Tree/DeepestNode.java
 Tree/BFS.java
 Tree/Balanced.java
 Tree/SameTree.java
@@ -119,6 +120,7 @@ Sort/MergeSortArray.java
 Guava/Product.java
 Cryptography/AESEncryption.java
 StackQueue/MinStackNode.java
+StackQueue/DailyTemperatures.java
 StackQueue/SetOfStacks.java
 StackQueue/StackUsingQueue.java
 StackQueue/QueueUsingStacks.java

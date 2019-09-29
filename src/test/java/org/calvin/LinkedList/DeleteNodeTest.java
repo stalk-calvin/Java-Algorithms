@@ -14,8 +14,8 @@ import static org.junit.Assert.assertEquals;
 public class DeleteNodeTest {
     private static final int[] vals = {1,2,3};
 
-    DeleteNode fixture;
-    ListNode listBase;
+    private DeleteNode fixture;
+    private ListNode listBase;
 
     @Before
     public void setUp() {

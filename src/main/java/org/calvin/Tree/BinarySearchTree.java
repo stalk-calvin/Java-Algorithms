@@ -5,14 +5,14 @@ import java.util.List;
 
 class BinarySearchTree {
     // Root of BST
-    TreeNode root;
+    private TreeNode root;
 
     // Constructor
-    BinarySearchTree() {
+    public BinarySearchTree() {
         root = null;
     }
 
-    void insertIterative(int val) {
+    public void insertIterative(int val) {
         TreeNode n = new TreeNode(val);
         if (root == null) {
             root = n;
@@ -32,12 +32,12 @@ class BinarySearchTree {
     }
 
     // This method mainly calls insertRec()
-    void insert(int val) {
+    public void insert(int val) {
         root = insertRec(root, val);
     }
 
     /* A recursive function to insert a new val in BST */
-    TreeNode insertRec(TreeNode root, int val) {
+    public TreeNode insertRec(TreeNode root, int val) {
         /* If the tree is empty, return a new TreeNode */
         if (root == null) {
             root = new TreeNode(val);
@@ -54,7 +54,7 @@ class BinarySearchTree {
         return root;
     }
 
-    List<Integer> inorder()  {
+    public List<Integer> inorder()  {
         List<Integer> result = new ArrayList<>();
         inorderRec(root, result);
         return result;
@@ -69,11 +69,11 @@ class BinarySearchTree {
         }
     }
 
-    void delete(int val) {
+    public void delete(int val) {
         deleteRec(root, val);
     }
 
-    TreeNode deleteRec(TreeNode TreeNode, int val) {
+    public TreeNode deleteRec(TreeNode TreeNode, int val) {
         if (TreeNode==null) {
             return null;
         } else if (TreeNode.val < val) {
@@ -104,7 +104,7 @@ class BinarySearchTree {
         return TreeNode;
     }
 
-    TreeNode minValue(TreeNode root)
+    public TreeNode minValue(TreeNode root)
     {
         while (root.left != null)
         {

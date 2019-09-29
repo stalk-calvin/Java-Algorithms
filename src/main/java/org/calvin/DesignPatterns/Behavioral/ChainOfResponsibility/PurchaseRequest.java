@@ -7,11 +7,9 @@ package org.calvin.DesignPatterns.Behavioral.ChainOfResponsibility;
 
 class PurchaseRequest {
     private double amount;
-    private String purpose;
 
-    public PurchaseRequest(double amount, String purpose) {
+    public PurchaseRequest(double amount) {
         this.amount = amount;
-        this.purpose = purpose;
     }
 
     public double getAmount() {

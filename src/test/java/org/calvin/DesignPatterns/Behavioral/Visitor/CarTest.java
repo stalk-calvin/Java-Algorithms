@@ -5,18 +5,17 @@
 
 package org.calvin.DesignPatterns.Behavioral.Visitor;
 
-import static org.mockito.Matchers.contains;
-import static org.mockito.Matchers.startsWith;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-
-import java.io.PrintStream;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.PrintStream;
+
+import static org.mockito.Matchers.contains;
+import static org.mockito.Matchers.startsWith;
+import static org.mockito.Mockito.*;
+
 public class CarTest {
-    Car fixture;
+    private Car fixture;
 
     @Before
     public void setUp() {

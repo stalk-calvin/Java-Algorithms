@@ -6,9 +6,9 @@
 package org.calvin.DesignPatterns.Behavioral.Mediator;
 
 public class Mediator implements IMediator {
-    AEventHandler aEventHandler = new AEventHandler();
-    BEventHandler bEventHandler = new BEventHandler();
-    CEventHandler cEventHandler = new CEventHandler();
+    private AEventHandler aEventHandler = new AEventHandler();
+    private BEventHandler bEventHandler = new BEventHandler();
+    private CEventHandler cEventHandler = new CEventHandler();
 
     public Mediator(AEventHandler aEventHandler, BEventHandler bEventHandler, CEventHandler cEventHandler) {
         aEventHandler.setMediator(this);
@@ -35,4 +35,4 @@ public class Mediator implements IMediator {
                 break;
         }
     }
-};
+}

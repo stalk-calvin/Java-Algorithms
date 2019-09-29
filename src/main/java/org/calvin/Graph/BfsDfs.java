@@ -11,7 +11,7 @@ import java.util.*;
 
 @AllArgsConstructor
 public class BfsDfs {
-    List<String> vertices;
+    private List<String> vertices;
 
     public void dfs(Node root) {
         if(root == null) return;

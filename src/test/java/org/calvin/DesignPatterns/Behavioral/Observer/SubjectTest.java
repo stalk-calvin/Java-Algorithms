@@ -5,17 +5,17 @@
 
 package org.calvin.DesignPatterns.Behavioral.Observer;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+
 public class SubjectTest {
-    Subject fixture;
-    Auctioneer auctioneer;
-    Bidder b1;
-    Bidder b2;
-    Bidder b3;
+    private Subject fixture;
+    private Auctioneer auctioneer;
+    private Bidder b1;
+    private Bidder b2;
+    private Bidder b3;
 
     @Before
     public void setUp() {

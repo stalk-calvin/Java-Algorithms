@@ -18,18 +18,15 @@ import static org.mockito.Mockito.verify;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MediatorTest {
-    Mediator fixture;
+    private Mediator fixture;
 
     @Mock
-    PrintStream ps;
+    private PrintStream ps;
 
     @Before
     public void setUp() {
         System.setOut(ps);
-        AEventHandler aEventHandler = new AEventHandler();
-        BEventHandler bEventHandler = new BEventHandler();
-        CEventHandler cEventHandler = new CEventHandler();
-        fixture = new Mediator(aEventHandler, bEventHandler, cEventHandler);
+        fixture = new Mediator(new AEventHandler(), new BEventHandler(), new CEventHandler());
     }
     @Test
     public void shouldBroadcastEventToBC() {

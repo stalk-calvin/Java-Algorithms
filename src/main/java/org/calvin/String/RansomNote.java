@@ -12,7 +12,6 @@ public class RansomNote {
 
     public RansomNote(String magazine, String note) {
         Map<String, Integer> magazineMap = new HashMap<String, Integer>();
-        Map<String, Integer> noteMap = new HashMap<String, Integer>();
         this.solution = true;
 
         //First set up the magazine map

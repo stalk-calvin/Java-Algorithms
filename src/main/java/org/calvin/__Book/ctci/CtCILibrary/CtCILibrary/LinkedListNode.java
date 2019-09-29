@@ -1,4 +1,4 @@
-package org.calvin.Book.ctci.CtCILibrary.CtCILibrary;
+package CtCILibrary;
 
 public class LinkedListNode {
 	public LinkedListNode next;

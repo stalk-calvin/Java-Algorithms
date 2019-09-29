@@ -6,7 +6,7 @@
 package org.calvin.DesignPatterns.Behavioral.Visitor;
 
 class Car implements CarElement{
-    CarElement[] elements;
+    private CarElement[] elements;
 
     public CarElement[] getElements() {
         return elements.clone(); // Return a copy of the array of references.

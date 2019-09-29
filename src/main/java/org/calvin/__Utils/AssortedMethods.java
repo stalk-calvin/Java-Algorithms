@@ -162,29 +162,35 @@ public class AssortedMethods {
             TreeNode root = new TreeNode(array[0]);
             java.util.Queue<TreeNode> queue = new java.util.LinkedList<TreeNode>();
             queue.add(root);
-            boolean done = false;
             int i = 1;
-            while (!done) {
-                TreeNode r = (TreeNode) queue.element();
+            do {
+                TreeNode r = queue.element();
                 if (r.left == null) {
-                    r.left = new TreeNode(array[i]);
+                    r.left = addToTree(r.left, array[i]);
                     i++;
-                    queue.add(r.left);
+                    if (r.left != null) queue.add(r.left);
                 } else if (r.right == null) {
-                    r.right = new TreeNode(array[i]);
+                    r.right = addToTree(r.right, array[i]);
                     i++;
-                    queue.add(r.right);
+                    if (r.right != null) queue.add(r.right);
                 } else {
                     queue.remove();
                 }
-                if (i == array.length) {
-                    done = true;
-                }
-            }
+            } while (i != array.length);
+
             return root;
         } else {
             return null;
         }
+    }
+
+    private static TreeNode addToTree(TreeNode r, int val) {
+        if (val == Integer.MIN_VALUE) {
+            r = null;
+        } else {
+            r = new TreeNode(val);
+        }
+        return r;
     }
 
     public static TreeNode sortedArrayToBalancedBST(int arr[], int start, int end) {

@@ -1,7 +1,8 @@
-package org.calvin.Book.ctci.CtCILibrary.CtCILibrary;
+package CtCILibrary;
 
-import java.util.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class AssortedMethods {
 	public static int randomInt(int n) {

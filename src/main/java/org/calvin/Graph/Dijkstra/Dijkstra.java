@@ -27,8 +27,8 @@ public class Dijkstra {
             visited[u] = true;
 
             for (Edge e : graph[u]) {
-                int v = e.t;
-                int nprio = prio[u] + e.cost;
+                int v = e.getT();
+                int nprio = prio[u] + e.getCost();
                 if (prio[v] > nprio) {
                     prio[v] = nprio;
                     pred[v] = u;

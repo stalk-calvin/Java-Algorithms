@@ -5,8 +5,11 @@
 
 package org.calvin.Graph.Dijkstra;
 
+import lombok.Data;
+
+@Data
 public class Edge {
-    int t, cost;
+    private int t, cost;
 
     public Edge(int t, int cost) {
         this.t = t;

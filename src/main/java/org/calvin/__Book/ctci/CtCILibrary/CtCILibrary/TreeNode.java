@@ -1,4 +1,4 @@
-package org.calvin.Book.ctci.CtCILibrary.CtCILibrary;
+package CtCILibrary;
 
 /* One node of a binary tree. The data element stored is a single 
  * character.

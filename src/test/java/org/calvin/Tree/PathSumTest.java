@@ -41,7 +41,7 @@ public class PathSumTest {
 
     @Test
     public void shouldGatherPathSum() {
-        int[] input = {5,4,8,11,13,4,7,2,1};
+        int[] input = {5,4,8,11,Integer.MIN_VALUE,13,4,7,2,Integer.MIN_VALUE,Integer.MIN_VALUE,1};
         TreeNode root = AssortedMethods.createTreeFromArray(input);
         List<String> expected = Lists.newArrayList("5->4->11->2", "5->4->13");
 

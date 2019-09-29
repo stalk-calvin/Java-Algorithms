@@ -5,19 +5,18 @@
 
 package org.calvin.DesignPatterns.Behavioral.Iterator;
 
-import static org.junit.Assert.assertTrue;
-
-import java.util.List;
-
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.google.common.collect.Lists;
+import java.util.List;
+
+import static org.junit.Assert.assertTrue;
 
 public class NameRepositoryTest {
     private static final List<String> NAMES = Lists.newArrayList("Robert" , "John" ,"Julie" , "Lora");
 
-    NameRepository fixture;
+    private NameRepository fixture;
 
     @Before
     public void setUp() {

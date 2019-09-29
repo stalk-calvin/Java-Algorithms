@@ -1,8 +1,9 @@
 package org.calvin.BitManipulation;
 
-public class DivideBy2or3 {
-    public int add(int x, int y)
-    {
+class DivideBy2or3 {
+    int add(int n1, int n2) {
+        int x = n1;
+        int y = n2;
         while (x > 0) {
             int t = (x & y) << 1;
             y ^= x;
@@ -17,8 +18,8 @@ public class DivideBy2or3 {
 //        return carry == 0 ? sum : addRecursive(carry, sum);
 //    }
 
-    public int divideby2or3(int num, int x)
-    {
+    int divideby2or3(int incoming, int x) {
+        int num = incoming;
         if (x == 2) {
             return num >> 1;
         }

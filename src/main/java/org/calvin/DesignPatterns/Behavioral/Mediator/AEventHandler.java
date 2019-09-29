@@ -6,7 +6,7 @@
 package org.calvin.DesignPatterns.Behavioral.Mediator;
 
 public class AEventHandler {
-    IMediator pMediator;
+    private IMediator pMediator;
 
     public void setMediator(IMediator pMediator) {
         this.pMediator = pMediator;

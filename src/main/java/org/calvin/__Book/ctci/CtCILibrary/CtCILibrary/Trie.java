@@ -1,4 +1,4 @@
-package org.calvin.Book.ctci.CtCILibrary.CtCILibrary;
+package CtCILibrary;
 
 import java.util.ArrayList;
 

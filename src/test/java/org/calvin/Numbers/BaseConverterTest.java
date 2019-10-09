@@ -27,6 +27,18 @@ public class BaseConverterTest {
         assertEquals(1001, BaseConverter.toDecimal("V9", 32));
     }
 
+
+    /*
+        Support base from 2 to 32.
+     */
+    @Test
+    public void shouldConvertFromBaseToBase() {
+        assertEquals("1001", BaseConverter.convertBase("1111101001", 2, 10));
+        assertEquals("1001", BaseConverter.convertBase("1101002", 3, 10));
+        assertEquals("1001", BaseConverter.convertBase("3E9", 16, 10));
+        assertEquals("1001", BaseConverter.convertBase("V9", 32,  10));
+    }
+
     @Test
     public void shouldNotConvertFromDecimalOverLimit() throws Exception {
         exception.expectMessage("Bases greater than 36 not handled");

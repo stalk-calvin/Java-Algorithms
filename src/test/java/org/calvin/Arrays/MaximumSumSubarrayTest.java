@@ -5,10 +5,13 @@
 
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertEquals;
-
+import com.google.common.collect.Lists;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 public class MaximumSumSubarrayTest {
     private MaximumSumSubarray fixture;
@@ -26,10 +29,17 @@ public class MaximumSumSubarrayTest {
     }
 
     @Test
-    public void shouldFindMaxSubArrayDRPSum() {
+    public void shouldFindMaxSubArrayDPSum() {
         int[] input = {-2 , 1, -3, 4, -1, 2, 1, -5, 7};
         int actual = fixture.maxSubArrayDP(input);
         assertEquals(8, actual);
     }
 
+
+    @Test
+    public void shouldFindMaxSumSubArray() {
+        List<Integer> input = Lists.newArrayList(-2 , 1, -3, 4, -1, 2, 1, -5, 7);
+        int actual = fixture.findMaximumSubarray(input);
+        assertEquals(8, actual);
+    }
 }

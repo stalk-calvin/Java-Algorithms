@@ -66,4 +66,58 @@ public class MergeOverlappingTest {
         );
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldMergeOverlappingIntervalSimpler() {
+        List<Interval> input = Lists.newArrayList(
+                new Interval(1,3),
+                new Interval(5,8),
+                new Interval(2,10),
+                new Interval(20,25)
+        );
+        List<Interval> actual = MergeOverlapping.mergeAnotherWay(input);
+        List<Interval> expected = Lists.newArrayList(
+                new Interval(1,3),
+                new Interval(2,10),
+                new Interval(20,25)
+        );
+        assertEquals(expected, actual);
+
+        input = Lists.newArrayList(
+                new Interval(1,3),
+                new Interval(5,8),
+                new Interval(2,10),
+                new Interval(3,10)
+        );
+        actual = MergeOverlapping.mergeAnotherWay(input);
+        expected = Lists.newArrayList(
+                new Interval(1,3),
+                new Interval(2,10)
+        );
+        assertEquals(expected, actual);
+
+        input = Lists.newArrayList(
+                new Interval(0,50),
+                new Interval(5,8),
+                new Interval(2,10),
+                new Interval(3,10)
+        );
+        actual = MergeOverlapping.mergeAnotherWay(input);
+        expected = Lists.newArrayList(
+                new Interval(0,50)
+        );
+        assertEquals(expected, actual);
+
+        input = Lists.newArrayList(
+                new Interval(0,50),
+                new Interval(0,10),
+                new Interval(0,20),
+                new Interval(0,30)
+        );
+        actual = MergeOverlapping.mergeAnotherWay(input);
+        expected = Lists.newArrayList(
+                new Interval(0,50)
+        );
+        assertEquals(expected, actual);
+    }
 }

@@ -7,4 +7,6 @@ package org.calvin.DesignPatterns.Structural.Decorator;
 
 public interface Car {
     String assemble();
+    public String getDescription();
+    public abstract double cost();
 }

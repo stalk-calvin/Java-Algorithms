@@ -5,7 +5,7 @@
 
 package org.calvin.LoadingProperties.ApacheCommons;
 
-import lombok.experimental.Builder;
+import lombok.Builder;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.apache.commons.lang3.Validate;

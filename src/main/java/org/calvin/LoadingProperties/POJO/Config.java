@@ -5,10 +5,11 @@
 
 package org.calvin.LoadingProperties.POJO;
 
+import lombok.Builder;
+import org.apache.commons.lang3.Validate;
+
 import java.io.IOException;
 import java.util.Properties;
-import lombok.experimental.Builder;
-import org.apache.commons.lang3.Validate;
 
 @Builder
 public class Config {

@@ -41,4 +41,26 @@ public class RemoveElementTest {
         assertEquals(expected, fixture.removeElements(list1, 1));
     }
 
+    @Test
+    public void shouldRemoveElementsMyWay() {
+        int[] vals = {1,2,3,2,1};
+        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+
+        int[] expectedVals = {1,2,2,1};
+        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedVals);
+
+        assertEquals(expected, fixture.removeElementsMyWay(list1, 3));
+    }
+
+    @Test
+    public void shouldRemoveFirstElementsMyWay() {
+        int[] vals = {1,1,1,2,1};
+        ListNode list1 = AssortedMethods.createLinkedListFromArray(vals);
+
+        int[] expectedVals = {2};
+        ListNode expected = AssortedMethods.createLinkedListFromArray(expectedVals);
+
+        assertEquals(expected, fixture.removeElementsMyWay(list1, 1));
+    }
+
 }

@@ -24,4 +24,25 @@ public class PowerSet {
         }
         return sets;
     }
+
+    public static List <List <Integer >> generatePowerSet(List <Integer > inputSet) {
+        List <List <Integer >> powerSet = new ArrayList <>();
+        directedPowerSet(inputSet , 0, new ArrayList <Integer >(), powerSet);
+        return powerSet;
+    }
+
+    private static void directedPowerSet(List <Integer > inputSet , int toBeSelected ,
+                                         List <Integer > selectedSoFar ,
+                                         List <List <Integer >> powerSet) {
+        if (toBeSelected == inputSet.size()) {
+            powerSet.add(new ArrayList <>(selectedSoFar));
+            return;
+        }
+        // Generate all subsets that contain inputSet[toBeSelected].
+        selectedSoFar.add(inputSet.get(toBeSelected));
+        directedPowerSet(inputSet , toBeSelected + 1, selectedSoFar , powerSet);
+        // Generate all subsets that do not contain inputSet[toBeSelected].
+        selectedSoFar.remove(selectedSoFar.size() - 1);
+        directedPowerSet(inputSet , toBeSelected + 1, selectedSoFar , powerSet);
+    }
 }

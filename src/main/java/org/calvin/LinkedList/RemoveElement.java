@@ -6,6 +6,22 @@
 package org.calvin.LinkedList;
 
 public class RemoveElement {
+    public ListNode<Integer> removeElementsMyWay(ListNode<Integer> head, int val) {
+        if (head == null) {
+            return head;
+        }
+        ListNode<Integer> dummy = new ListNode<>(-1);
+        dummy.setNext(head);
+        ListNode<Integer> current = dummy;
+        while (current != null && current.getNext() != null) {
+            if (current.getNext().getVal() == val) {
+                current.setNext(current.getNext().getNext());
+            } else {
+                current = current.getNext();
+            }
+        }
+        return dummy.getNext();
+    }
     public ListNode<Integer> removeElements(ListNode<Integer> head, int val) {
         if (head == null) return null;
         if (head.getVal() == val) {

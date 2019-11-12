@@ -8,7 +8,8 @@ package org.calvin.Tree;
 class Wrapper {
     int size;
     int lower, upper;
-    boolean isBST;
+    boolean
+            isBST;
 
     public Wrapper() {
         lower = Integer.MAX_VALUE;

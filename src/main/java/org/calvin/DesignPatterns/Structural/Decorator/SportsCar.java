@@ -5,15 +5,21 @@
 
 package org.calvin.DesignPatterns.Structural.Decorator;
 
-public class SportsCar extends CarDecorator {
+public class SportsCar extends CarFactory {
     public SportsCar(Car c) {
-        super(c);
+        decoratedFrom = c;
+        description = "Sports";
     }
 
     @Override
     public String assemble(){
         super.assemble();
-        System.out.println(" Adding features of Sports Car.");
-        return "Sports Car";
+        System.out.print(" -> Adding features of Sports Car");
+        return description + " Car";
+    }
+
+    @Override
+    public double cost() {
+        return 99999.99;
     }
 }

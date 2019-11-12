@@ -5,6 +5,8 @@
 
 package org.calvin.Arrays;
 
+import java.util.List;
+
 public class MaximumSumSubarray {
     public int maxSubArray(int[] A) {
         int newsum=A[0];
@@ -27,5 +29,19 @@ public class MaximumSumSubarray {
         }
 
         return max;
+    }
+
+    public int findMaximumSubarray(List<Integer > A) {
+        int minSum = 0, runningSum = 0, maxSum = 0;
+        for (int i = 0; i < A.size(); ++i) {
+            runningSum += A.get(i);
+            if (runningSum < minSum) {
+                minSum = runningSum;
+            }
+            if (runningSum - minSum > maxSum) {
+                maxSum = runningSum - minSum;
+            }
+        }
+        return maxSum;
     }
 }

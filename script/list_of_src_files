@@ -1,6 +1,7 @@
 Graph/Setup.java
 String/pojo/JSON.java
 String/pojo/XML.java
+GraphMatrix/TwoDWays.java
 GraphMatrix/TwoDMatrixBFS.java
 GraphMatrix/Node.java
 GraphMatrix/Graph.java
@@ -18,6 +19,7 @@ Tree/BFS.java
 Tree/Balanced.java
 Tree/SameTree.java
 Tree/SegmentTree.java
+Tree/RecoverBST.java
 Tree/FindClosestNumber.java
 Tree/BinarySearchTree.java
 Tree/LCABST.java
@@ -30,6 +32,8 @@ Tree/MaxDia.java
 Tree/Heap/Heap.java
 Tree/Symmetric.java
 Tree/FindLargestElementInBST.java
+Tree/TrieAnother/TrieNode.java
+Tree/TrieAnother/Trie.java
 Tree/Traversal/DFS/Inorder.java
 Tree/Traversal/DFS/Preorder.java
 Tree/Traversal/DFS/Postorder.java
@@ -83,6 +87,7 @@ Numbers/SmallestNFromList.java
 Numbers/PowerOf3.java
 Numbers/SmallestProductN.java
 Numbers/SumOfEvenNumbers.java
+Numbers/RandomNumberGenerator.java
 Numbers/ExcelSheetColumnNumber.java
 Numbers/ToBase.java
 Numbers/ThirdMax.java
@@ -253,8 +258,8 @@ DesignPatterns/Behavioral/Strategy/OperationDivide.java
 DesignPatterns/Behavioral/Strategy/OperationMultiply.java
 DesignPatterns/Behavioral/Strategy/OperationAdd.java
 DesignPatterns/Structural/Decorator/SportsCar.java
-DesignPatterns/Structural/Decorator/CarDecorator.java
 DesignPatterns/Structural/Decorator/BasicCar.java
+DesignPatterns/Structural/Decorator/ElectricCar.java
 DesignPatterns/Structural/Decorator/LuxuryCar.java
 DesignPatterns/Structural/Facade/Circle.java
 DesignPatterns/Structural/Facade/Rectangle.java
@@ -321,6 +326,7 @@ Arrays/ProductArrayExceptSelf.java
 Arrays/AnagramGrouper.java
 Arrays/PowerSet.java
 Arrays/MeetingRooms.java
+String/PalindromicSubstrings.java
 String/order/ByIgnoreCase.java
 String/order/ByNumeric.java
 String/order/ByLength.java

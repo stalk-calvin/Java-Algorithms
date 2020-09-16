@@ -31,6 +31,22 @@ Requirement: Java 8, Lombok, JUnit 4, slf4j
 
 Enjoy!
 
+## Contribute
+
+It's easy to find a mistake in the repository. They are literally everywhere!
+
+When you spot a mistake needs correction, please do not hesitate to create a `Pull Request` as instructed below:
+
+1. Create a local clone of the repository / pull to the latest changes.
+5. Create a new branch to work on (`git checkout -b`)! Branch from `master` (no `develop` here :p).
+6. Introduce a new algorithm OR correction to the existing one.
+7. Please write/adapt unit tests and run them!
+8. Add or change the documentation as needed.
+9. Push your branch. Open a pull request targeting the project's master branch!
+
+Note: Always write your commit messages in the present tense.
+Your commit message should describe what the commit, when applied, does to the code - not what you did to the code.
+
 ## How many algorithms?
 
 {% number_of_algorithms %}

@@ -42,4 +42,20 @@ public class MostFrequentTest {
         List<Integer> actual = fixture.topKFrequent(input, 2);
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldFindTopKFrequentUnderKSize() throws Exception {
+        List<Integer> expected = Lists.newArrayList(3,4,2);
+        int[] input = {4,3,2,3,3,4};
+        List<Integer> actual = fixture.kTopStream(input, input.length, 5);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldFindTopKFrequentOverKSize() throws Exception {
+        List<Integer> expected = Lists.newArrayList(3,4,2);
+        int[] input = {4,3,2,3,3,4};
+        List<Integer> actual = fixture.kTopStream(input, input.length, 15);
+        assertEquals(expected, actual);
+    }
 }

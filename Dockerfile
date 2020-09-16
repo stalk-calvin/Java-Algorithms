@@ -1,19 +1,13 @@
-FROM java:8 AS base
+FROM maven:3-jdk-8 AS base
 
-RUN rm /etc/apt/sources.list && rm /etc/apt/sources.list.d/jessie-backports.list
-COPY sources.list /etc/apt/sources.list
-
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 40976EAF437D05B5 && \
-#    apt-get -o Acquire::Check-Valid-Until=false update && \
-    apt-get update && \
-    apt-get install -y maven
+MAINTAINER Calvin Lee <stalk.calvin@gmail.com>
 
 WORKDIR /java-algorithms
 
 RUN git config --global core.autocrlf false && \
-	git config --global core.safecrlf false && \
-	git config --global core.eol = lf && \
-	git config --global core.editor = vim
+    git config --global core.safecrlf false && \
+    git config --global core.eol = lf && \
+    git config --global core.editor = vim
 
 FROM base AS test
 

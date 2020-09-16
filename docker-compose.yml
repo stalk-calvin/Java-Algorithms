@@ -8,4 +8,6 @@ services:
     image: java-algorithms:latest
     container_name: java-algorithms
     volumes:
-      - .:/java-algorithms
+      - ./.git:/java-algorithms/.git
+      - ./src:/java-algorithms/src
+      - ./pom.xml:/java-algorithms/pom.xml

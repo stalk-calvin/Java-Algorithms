@@ -34,19 +34,19 @@ public class PrintPossibleCorrectParentheses {
 
     public List<String> gatherAllParenthesis(int n) {
         List<String> result = new ArrayList<>();
-        gatherAllParenthesis(n, n, "", result, 0);
+        gatherAllParenthesis(n, n, "", result);
         return result;
     }
 
-    public void gatherAllParenthesis(int opening, int closing, String curr, List<String> result, int index) {
+    public void gatherAllParenthesis(int opening, int closing, String curr, List<String> result) {
         if (closing == 0) {
             result.add(curr);
         }
         if (opening > 0) {
-            gatherAllParenthesis(opening - 1, closing, curr + "(", result, index + 1);
+            gatherAllParenthesis(opening - 1, closing, curr + "(", result);
         }
         if (closing > opening) {
-            gatherAllParenthesis(opening, closing - 1, curr + ")", result,index + 1);
+            gatherAllParenthesis(opening, closing - 1, curr + ")", result);
         }
     }
 

@@ -42,8 +42,7 @@ if (-e $Bin.'/'.'exclude') {
 }
 # Parse source
 print "Parse: $destination\n";
-my @java_files = get_javas($destination); 
-my $javas;
+my @java_files = get_javas($destination);
 my $algorithm_count = 0;
 my $algorithm_test_count = 0;
 MAIN: foreach my $java_file (@java_files) {
@@ -83,18 +82,15 @@ MAIN: foreach my $java_file (@java_files) {
 		}
 	}
 	next if ($java_file =~ m/test.java/i);
-	$javas .= $java_file."\n";
 
 }
-write_file($Bin.'/'.'list_of_src_files', $javas);
-print "Saved: list_of_src_files\n";
 
 print "README.md: $read_me_file_location\n";
 open(my $fh, $read_me_file_location) || die "Could not open file to read: $read_me_file_location";
 my $data = "";
 while(my $line = <$fh>) {
 	if ($line =~ "^{% number_of_algorithms %}") {
-		$data .= "There are roughly ". $algorithm_count . " java algorithms exists with ".$algorithm_test_count." test cases.\nSee [list of algorithm source files](script/list_of_src_files) for all the algorithms here.";
+		$data .= "There are roughly ". $algorithm_count . " java algorithms exists with ".$algorithm_test_count." test cases.";
 	} else {
 		$data .= $line;
 	}
@@ -129,11 +125,11 @@ sub get_javas {
 
 sub write_file {
     my ($filename, $content) = @_;
- 
+
     open my $out, '>:encoding(UTF-8)', $filename or die "Could not open '$filename' for writing $!";;
     print $out $content;
     close $out;
- 
+
     return;
 }
 

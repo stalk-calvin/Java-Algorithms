@@ -44,10 +44,10 @@ When you spot a mistake needs correction, please do not hesitate to create a `Pu
 8. Add or change the documentation as needed.
 9. Push your branch. Open a pull request targeting the project's master branch!
 
-Note: Always write your commit messages in the present tense. 
-Your commit message should describe what the commit, when applied, does to the code – not what you did to the code.
+Note: Always write your commit messages in the present tense.
+Your commit message should describe what the commit, when applied, does to the code - not what you did to the code.
 
 ## How many algorithms?
 
-There are roughly 530 java algorithms exists with 813 test cases.
+There are roughly 531 java algorithms exists with 815 test cases.
 See [list of algorithm source files](script/list_of_src_files) for all the algorithms here.

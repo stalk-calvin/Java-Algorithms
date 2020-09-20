@@ -18,11 +18,11 @@ public class MajorityElement {
     public int majorityElementLinear(int[] nums) {
         int result = 0, count = 0;
 
-        for (int i = 0; i < nums.length; i++) {
+        for (int num : nums) {
             if (count == 0) {
-                result = nums[i];
+                result = num;
                 count = 1;
-            } else if (result == nums[i]) {
+            } else if (result == num) {
                 count++;
             } else {
                 count--;

@@ -5,10 +5,10 @@
 
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class MajorityElementTest {
     MajorityElement fixture;
@@ -26,7 +26,7 @@ public class MajorityElementTest {
 
     @Test
     public void shouldBeMajorityElementLinear() {
-        int[] input = {1,2,2,2,3};
+        int[] input = {2,2,2,6,7,7};
         assertEquals(2, fixture.majorityElementLinear(input));
     }
 

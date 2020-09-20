@@ -1,15 +1,10 @@
-/*
- * Copyright Calvin Lee Since 2017.
- * All Rights Reserved.
- */
-
-package org.calvin.Arrays;
+package org.calvin.HashMap;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class KDiffPairs {
-    public int findPairs(int[] nums, int k) {
+    public static int findPairs(int[] nums, int k) {
         if (k < 0) return 0;
 
         Map<Integer, Integer> tracker = new HashMap<>();

@@ -1,6 +1,19 @@
 package org.calvin.Arrays;
 
+import lombok.Data;
+
 import java.util.*;
+
+@Data
+class Interval {
+    int start;
+    int end;
+
+    Interval(int s, int e) {
+        start = s;
+        end = e;
+    }
+}
 
 public class MeetingRooms {
     public int minMeetingRooms(Interval[] intervals) {

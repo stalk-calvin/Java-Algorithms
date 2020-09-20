@@ -8,9 +8,7 @@ package org.calvin.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertArrayEquals;
 
 public class IntersectionTest {
     Intersection fixture;
@@ -25,14 +23,13 @@ public class IntersectionTest {
         int[] input1 = {1, 2, 3, 4, 5};
         int[] input2 = {6, 7, 3, 3, 3};
         int[] expected = {3};
-        assertTrue(Arrays.equals(expected, fixture.intersection(input1, input2)));
+        assertArrayEquals(expected, fixture.intersectionSet(input1, input2));
     }
 
     @Test
     public void shouldReturnNoIntersection() {
-        int[] input1 = null;
         int[] input2 = {6, 7, 3, 3, 3};
         int[] expected = new int[0];
-        assertTrue(Arrays.equals(expected, fixture.intersection(input1, input2)));
+        assertArrayEquals(expected, fixture.intersectionSet(null, input2));
     }
 }

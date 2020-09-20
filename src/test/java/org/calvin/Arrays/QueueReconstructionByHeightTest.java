@@ -1,16 +1,8 @@
 package org.calvin.Arrays;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class QueueReconstructionByHeightTest {
-    private QueueReconstructionByHeight fixture;
-
-    @Before
-    public void setUp() throws Exception {
-        fixture = new QueueReconstructionByHeight();
-    }
-
     @Test
     public void reconstructQueue() throws Exception {
         //[[7,0], [4,4], [7,1], [5,0], [6,1], [5,2]]
@@ -21,7 +13,7 @@ public class QueueReconstructionByHeightTest {
         input[3] = new int[]{5,0};
         input[4] = new int[]{6,1};
         input[5] = new int[]{5,2};
-        int[][] actual = fixture.reconstructQueue(input);
+        int[][] actual = QueueReconstructionByHeight.reconstructQueue(input);
         for (int[] x : actual) {
             for (int y : x) {
                 System.out.print(y+ " : ");

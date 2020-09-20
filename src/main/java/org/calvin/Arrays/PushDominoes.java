@@ -1,6 +1,6 @@
 package org.calvin.Arrays;
 
-public class FallingDominos {
+public class PushDominoes {
     public static String pushDominoes(String s) {
         char[] t = s.toCharArray();
         for (int i = 1; i < t.length; i++) {

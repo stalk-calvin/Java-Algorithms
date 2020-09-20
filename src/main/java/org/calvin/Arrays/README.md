@@ -1,3 +1,5 @@
+# Array Problems
+
 ## AddOne
 
 Given a int array/list, add 1 to it and return the resulting array.
@@ -19,14 +21,6 @@ Checks how far apart 2 given strings are from being anagram
 ## AnagramValidity
 
 Checks given 2 strings are anagram or not.
-
-## AnagramGrouper
-
-Given an array of strings, group anagrams together.
-
-## ArrayPartition
-
-Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
 
 **Example 1:**
 
@@ -115,10 +109,6 @@ Explanation: For example, the sister has candies [2,3] and the brother has candi
 The sister has two different kinds of candies, the brother has only one kind of candies. 
 ```
 
-## DuplicateWithinkIndices
-
-Checks if input int array has any duplicate item within a set of window.
-
 ## Find All Number Dissapeared in an Array
 
 Given an array of itegers where 0 < a[i] <= n (n = size of array), some elements appear twice and others appear once
@@ -137,6 +127,10 @@ Input:
 Output:
 [5,6]
 ```
+
+## FindDisappearedNumbers
+
+Given array of numbers, find all of the missing numbers. 
 
 ## FindDuplicates
 
@@ -161,17 +155,15 @@ You have a car with an unlimited gas tank and it costs `cost[i]` of gas to trave
 
 Return the starting gas station's index if you can travel around the circuit once, otherwise return -1.
 
+## HighestRAM
+
+You have a log of multiple rams with running duration. Return the peak amount of rams.
+
 ## Intersection
 
+- IntersectionSet
+
 Given 2 int arrays, returns 1 array that contains all items intersected.
-
-## Intersection2
-
-Given 2 int arrays, returns 1 array that contains all items intersected. Items can appear more than once.
-
-## KDiffPairs
-
-Given an array of integers and an integer k, you need to find the number of unique k-diff pairs in the array. Here a k-diff pair is defined as an integer pair (i, j), where i and j are both numbers in the array and their absolute difference is k.
 
 **Example 1**:
 
@@ -203,7 +195,6 @@ Explanation: There is one 0-diff pair in the array, (1, 1).
 1. The pairs (i, j) and (j, i) count as the same pair.
 2. The length of the array won't exceed 10,000.
 3. All the integers in the given input belong to the range: [-1e7, 1e7].
-
 
 ## LongestConsecutive
 
@@ -268,7 +259,7 @@ Given an array containing n consecutive numbers taken from 0,1,2,...,n, find the
 
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
-## Next Greater Element
+## NextGreaterElement
 
 You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
 
@@ -291,6 +282,13 @@ Example:
 ```
 [1,2,3] => [6,3,2]
 ```
+
+## PushDominoes
+
+Given a string "S" representing the initial state. 
+ - S[i] = 'L', if the i-th domino has been pushed to the left 
+ - S[i] = 'R', if the i-th domino has been pushed to the right 
+ - S[i] = '.', if the i-th domino has not been pushed.
 
 ## RemoveDuplicateSortedArray
 

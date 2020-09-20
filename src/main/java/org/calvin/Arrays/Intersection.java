@@ -5,11 +5,10 @@
 
 package org.calvin.Arrays;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Intersection {
-    public int[] intersection(int[] nums1, int[] nums2) {
+    public int[] intersectionSet(int[] nums1, int[] nums2) {
         if (nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0) {
             return new int[0];
         }
@@ -30,4 +29,6 @@ public class Intersection {
         }
         return r;
     }
+
+
 }

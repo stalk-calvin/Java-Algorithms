@@ -25,11 +25,6 @@ public class AnagramValidityTest {
     }
 
     @Test
-    public void shouldHaveAnagramNoSort() {
-        assertTrue(fixture.isAnagramWithoutSort("Ray Adverb","Dave Barry"));
-    }
-
-    @Test
     public void shouldHaveAnagramOnlyEnglish() {
         assertTrue(fixture.isAnagramOnlyEnglish("RayAdverb","DaveBarry"));
     }
@@ -37,11 +32,6 @@ public class AnagramValidityTest {
     @Test
     public void shouldHaveNoAnagram() {
         assertFalse(fixture.isAnagram("Ray Adverb","Dave Barri"));
-    }
-
-    @Test
-    public void shouldNotHaveAnagramNoSort() {
-        assertFalse(fixture.isAnagramWithoutSort("Ray Adverb","Dave Barri"));
     }
 
     @Test

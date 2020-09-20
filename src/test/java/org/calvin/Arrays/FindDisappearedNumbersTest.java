@@ -5,13 +5,11 @@
 
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import com.google.common.collect.Lists;
-import java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class FindDisappearedNumbersTest {
     private FindDisappearedNumbers fixture;
@@ -21,12 +19,7 @@ public class FindDisappearedNumbersTest {
     }
 
     @Test public void shouldFindAllMissingNumbers() {
-        int[] input = {4, 3, 2, 7, 8, 2, 3, 1};
-        assertEquals(Lists.newArrayList(5, 6), fixture.findDisappearedNumbers(input));
-    }
-
-    @Test public void shouldFindAllMissingNumbersNoExtraSpace() {
-        int[] input = {4, 3, 2, 7, 8, 2, 3, 1};
-        assertTrue(Arrays.equals(new int[]{5, 6}, fixture.findDisappearedNumbersNoExtraSpace(input)));
+        int[] input = {-2, -7, 4, 3, 2, -3, 7, 8, 2, -4, 3, 1, -6};
+        assertEquals(Lists.newArrayList(-5, -1, 0, 5, 6), fixture.findDisappearedNumbers(input));
     }
 }

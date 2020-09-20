@@ -33,13 +33,13 @@ public class ContainsDuplicateTest {
     @Test
     public void shouldContainsDuplicateSecondMethod() {
         int[] input = {1 ,2, 3, 4, 5, 6, 7, 8, 9, 1};
-        assertTrue(fixture.containsDuplicateSecond(input));
+        assertTrue(fixture.containsDuplicateUsingSort(input));
     }
 
     @Test
     public void shouldContainsNoDuplicateSecondMethod() {
         int[] input = {1 ,2, 3, 4, 5, 6, 7, 8, 9};
-        assertFalse(fixture.containsDuplicateSecond(input));
+        assertFalse(fixture.containsDuplicateUsingSort(input));
     }
 
     @Test

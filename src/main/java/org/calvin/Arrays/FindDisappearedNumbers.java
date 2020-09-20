@@ -6,7 +6,6 @@
 package org.calvin.Arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -16,34 +15,20 @@ public class FindDisappearedNumbers {
         List<Integer> result = new ArrayList<>();
         if (nums == null || nums.length < 2) return result;
         Set<Integer> tracker = new HashSet<>();
+        int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
         for (int num : nums) {
             tracker.add(num);
             max = Math.max(max, num);
+            min = Math.min(min, num);
         }
 
-        for (int i = 1; i <= max; i++) {
+        for (int i = min; i <= max; i++) {
             if (!tracker.contains(i)) {
                 result.add(i);
             }
         }
 
         return result;
-    }
-
-    public int[] findDisappearedNumbersNoExtraSpace(int[] nums) {
-        for (int i = 0; i < nums.length; i++) {
-            int val = Math.abs(nums[i]) - 1;
-            if (nums[val] > 0) {
-                nums[val] = -nums[val];
-            }
-        }
-        int k = 0;
-        for (int i=0; i<nums.length; i++) {
-            if (nums[i] >0) {
-                nums[k++] = i + 1;
-            }
-        }
-        return Arrays.copyOfRange(nums, 0, k);
     }
 }

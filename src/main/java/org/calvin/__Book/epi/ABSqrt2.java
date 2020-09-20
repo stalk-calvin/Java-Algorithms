@@ -1,4 +1,4 @@
-package org.calvin.__Book.epi;
+spackage org.calvin.__Book.epi;
 
 import epi.test_framework.EpiTest;
 import epi.test_framework.GenericTest;

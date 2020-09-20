@@ -16,7 +16,7 @@ public class CombinationSumTest {
 
     @Test
     public void combinationSum() throws Exception {
-        int[] input = {2,3,6,7};
+        int[] input = {2,3,6,7,8,12};
         assertEquals(Lists.newArrayList(Lists.newArrayList(2,2,3), Lists.newArrayList(7)), fixture.combinationSum(input, 7));
     }
 

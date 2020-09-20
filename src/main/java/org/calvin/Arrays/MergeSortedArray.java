@@ -21,7 +21,6 @@ public class MergeSortedArray {
                 A[i] = B[k];
                 k--;
             }
-
         }
     }
 }

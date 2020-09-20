@@ -10,13 +10,13 @@ import java.util.*;
 public class ContainsDuplicate {
     public boolean containsDuplicateFirst(int[] nums) {
         Set<Integer> checker = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (!checker.add(nums[i])) return true;
+        for (int num : nums) {
+            if (!checker.add(num)) return true;
         }
         return false;
     }
 
-    public boolean containsDuplicateSecond(int[] nums) {
+    public boolean containsDuplicateUsingSort(int[] nums) {
         Arrays.sort(nums);
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] == nums[i - 1])

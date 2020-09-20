@@ -1,6 +1,37 @@
 package org.calvin.Arrays;
 
 public class AddOne {
+    public static int addOneNoArithmetic(int[] nums) {
+        int len = nums.length - 1;
+
+        int endResult = 0;
+        int carry = 0;
+        int i = 0;
+        while (len >= 0) {
+            int result = 0;
+            int lastDigit = nums[nums.length - 1 - i];
+            if (i == 0) {
+                lastDigit += 1;
+            }
+
+            result += lastDigit % 10;
+
+            if (carry > 0) {
+                result += carry;
+            }
+
+            result *= Math.pow(10, i);
+
+            endResult += result;
+            carry = lastDigit / 10;
+            len--;
+            i++;
+        }
+
+        return endResult;
+    }
+
+
     public static int[] addOne(int[] nums) {
         int num = convertToDigit(nums);
         num++;

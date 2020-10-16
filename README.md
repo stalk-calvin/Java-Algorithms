@@ -37,12 +37,15 @@ It's easy to find a mistake in the repository. They are literally everywhere!
 
 When you spot a mistake needs correction, please do not hesitate to create a `Pull Request` as instructed below:
 
-1. Create a local clone of the repository / pull to the latest changes.
-5. Create a new branch to work on (`git checkout -b`)! Branch from `master` (no `develop` here :p).
-6. Introduce a new algorithm OR correction to the existing one.
-7. Please write/adapt unit tests and run them!
-8. Add or change the documentation as needed.
-9. Push your branch. Open a pull request targeting the project's master branch!
+1. Create a personal fork of this Java Playground project on Github.
+2. Clone the fork on your local machine (the remote `origin`). If you created your fork a while ago be sure to pull upstream changes into your local repository.
+4. Create a new branch to work on (`git checkout -b`)! Branch from `master` (no `develop` here :p).
+5. Implement/fix the algorithms/tests, comment your code where applicable.
+6. Please write/adapt unit tests as needed.
+7. Add or change the documentation as needed.
+8. Squash your commits into a single commit for relevant changes.
+9. Push your branch to your fork on Github (the remote `origin`).
+10. From your fork open a pull request. Target this project's `master` branch. *ex) into stalk-calvin:master from bumblebee:knapsack01_bug*
 
 Note: Always write your commit messages in the present tense.
 Your commit message should describe what the commit, when applied, does to the code - not what you did to the code.

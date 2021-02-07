@@ -18,8 +18,10 @@ notifications:
 jdk:
   - oraclejdk8
 
+env:
+  - CODACY_PROJECT_TOKEN=ae6a2f5f152b4f7bbdd99377aa44d28a
+
 before_install:
   - sudo apt-get install jq
 
 script: "mvn clean test jacoco:report coveralls:report"
-

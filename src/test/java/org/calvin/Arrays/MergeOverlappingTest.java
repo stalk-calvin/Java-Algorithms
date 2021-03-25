@@ -17,14 +17,13 @@ public class MergeOverlappingTest {
     public void shouldMergeOverlappingInterval() {
         List<Interval> input = Lists.newArrayList(
             new Interval(1,3),
-            new Interval(5,8),
+            new Interval(2,8),
             new Interval(2,10),
             new Interval(20,25)
         );
         List<Interval> actual = MergeOverlapping.mergeOverlappingInterval(input);
         List<Interval> expected = Lists.newArrayList(
-                new Interval(1,3),
-                new Interval(2,10),
+                new Interval(1,10),
                 new Interval(20,25)
         );
         assertEquals(expected, actual);
@@ -37,8 +36,7 @@ public class MergeOverlappingTest {
         );
         actual = MergeOverlapping.mergeOverlappingInterval(input);
         expected = Lists.newArrayList(
-                new Interval(1,3),
-                new Interval(2,10)
+                new Interval(1,10)
         );
         assertEquals(expected, actual);
 

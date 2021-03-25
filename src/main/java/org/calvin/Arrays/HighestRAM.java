@@ -2,10 +2,12 @@ package org.calvin.Arrays;
 
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class HighestRAM {
-    public static long findHighRAM(List<HighestRAM.LogEntry> logEntries, Map<Long, Long> times) {
+    public static long findHighRAM(List<HighestRAM.LogEntry> logEntries) {
         long curRAM = 0, highRAM = 0;
+        Map<Long, Long> times = new TreeMap<>();
 
         for (LogEntry entry : logEntries) {
             if (times.get(entry.startTime) != null) {

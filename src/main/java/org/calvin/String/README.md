@@ -88,6 +88,21 @@ Here is an example of version numbers ordering:
 
 ```0.1 < 1.1 < 1.2 < 13.37```
 
+## Compress String
+
+Return the length of the shortest string you can make by compressing the consecutive characters.
+
+Brackets in the examples represent their shortest string.
+
+Note: Compressing must be done from the beginning. See Example #5.
+
+**Example**:
+ 1. "aabbaccc" = 7 (2a2ba3c)
+ 2. "ababcdcdababcdcd" = 9 (2ababcdcd)
+ 3. "abcabcdede" = 8 (2abcdede) 
+ 4. "abcabcabcabcdededededede" (2abcabc2dedede) = 14
+ 5. "xababcdcdababcdcd" (xababcdcdababcdcd) = 17
+
 ## CountAndSay
 
 The count-and-say sequence is the sequence of integers beginning as follows:

@@ -30,13 +30,17 @@ public class MergeOverlapping {
         Interval t = intervals.get(0);
         for (Interval iv : intervals) {
             if (t.end < iv.end) {
-                result.add(t);
-                t = iv;
+                Interval newInterval = new Interval(Math.min(t.start, iv.start), iv.end);
+                if (t.end < iv.start) {
+                    newInterval = iv;
+                }
+                result.add(newInterval);
+                t = newInterval;
             }
         }
 
-        if (!result.contains(t)) {
-            result.add(t);
+        if(result.isEmpty()) {
+            result.add(intervals.get(0));
         }
 
         return result;

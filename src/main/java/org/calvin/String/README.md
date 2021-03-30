@@ -99,6 +99,17 @@ The count-and-say sequence is the sequence of integers beginning as follows:
 
 Given an integer n, generate the nth sequence.
 
+## Create new_id with Rules
+
+Rules:
+1. Should return all lowercase
+2. Only allows `alphabets, numbers, -, _, .`
+3. If two or more `.` repeats, squash them to just one.
+4. String ends with a period (`.`) in front or back is removed
+5. When String is empty, return `a`.
+6. When String length is greater than 15, remove everything thereafter. (If you have period at the end, after removal, also get rid of it.)
+7. When String length is less than 3, add last character to the string until length is 3. 
+
 ## Integer to English Words
 
 Convert a non-negative integer to its english words representation. Given input is guaranteed to be less than 2<sup>31</sup> - 1.

@@ -35,6 +35,14 @@ Explanation: n is 2, and the maximum sum of pairs is 4.
 1. n is a positive integer, which is in the range of [1, 10000].
 2. All the integers in the array will be in the range of [-10000, 10000].
 
+## BoundSmallestWindowForSorted
+
+Given an array of integers out of order, determine the bounds of the smallest window that must be sorted in order for the entire array to be sorted. 
+
+**Example:**
+
+Given [3, 7, 5, 6, 9], you should return (1, 3).
+
 ## CheckIfArrayElementsAreConsecutive
 
 Checks if all the numbers in the array are consecutive.

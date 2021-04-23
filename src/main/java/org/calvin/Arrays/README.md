@@ -35,6 +35,14 @@ Explanation: n is 2, and the maximum sum of pairs is 4.
 1. n is a positive integer, which is in the range of [1, 10000].
 2. All the integers in the array will be in the range of [-10000, 10000].
 
+## BoundSmallestWindowForSorted
+
+Given an array of integers out of order, determine the bounds of the smallest window that must be sorted in order for the entire array to be sorted. 
+
+**Example:**
+
+Given [3, 7, 5, 6, 9], you should return (1, 3).
+
 ## CheckIfArrayElementsAreConsecutive
 
 Checks if all the numbers in the array are consecutive.
@@ -272,6 +280,16 @@ Given an array nums, write a function to move all 0's to the end of it while mai
 ## NextGreaterElement
 
 You are given two arrays (without duplicates) nums1 and nums2 where nums1’s elements are subset of nums2. Find all the next greater numbers for nums1's elements in the corresponding places of nums2.
+
+## NonDecreasingArraySingleModification
+
+You are given an array of integers in an arbitrary order. Return whether or not it is possible to make the array non-decreasing by modifying at most 1 element to any value.
+
+We define an array is non-decreasing if array[i] <= array[i + 1] holds for every i (1 <= i < n).
+
+**Example**:
+ - [13, 4, 7] should return true, since we can modify 13 to any value 4 or less, to make it non-decreasing.
+ - [13, 4, 1] however, should return false, since there is no way to modify just one element to make the array non-decreasing.
 
 ## PowerSet
 

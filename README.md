@@ -49,4 +49,4 @@ Your commit message should describe what the commit, when applied, does to the c
 
 ## How many algorithms?
 
-There are roughly 536 java algorithms exists with 830 test cases.
+There are roughly 539 java algorithms exists with 830 test cases.

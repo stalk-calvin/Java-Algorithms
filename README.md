@@ -46,7 +46,3 @@ When you spot a mistake needs correction, please do not hesitate to create a `Pu
 
 Note: Always write your commit messages in the present tense.
 Your commit message should describe what the commit, when applied, does to the code - not what you did to the code.
-
-## How many algorithms?
-
-There are roughly 539 java algorithms exists with 830 test cases.

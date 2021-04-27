@@ -175,6 +175,23 @@ Explanation:
 'e' is the letter that was added.
 ```
 
+## FindStartingPoint
+
+Given a string and a pattern, find the starting indices of all occurrences of the pattern in the string. 
+
+**For example**: *s = input, p = pattern*
+```
+Input: 
+s = "abracadabra" 
+p = "abr"
+
+Output: 
+[0, 7]
+
+Explanation:
+We have "abr" appearing at 0th and 7th indices.
+```
+
 ## FirstNonRepeated
 
 Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.

@@ -10,10 +10,6 @@ This is where I play and learn different kind of algorithms, data structures, co
 
 [![](https://contrib.rocks/image?repo=stalk-calvin/Java-Algorithms)](https://github.com/stalk-calvin/Java-Algorithms/graphs/contributors)
 
-<a href="https://www.instagram.com/stalk.calvin/"><img alt="Add me to Instagram" src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/128/Instagram-icon.png" height="20px" width="20px"/></a> <span><a href="https://www.instagram.com/stalk.calvin/">Instagram</a></span>
-<br/>
-<a href="https://www.linkedin.com/in/stalkme"><img alt="Add me to Linkedin" src="https://image.freepik.com/free-icon/linkedin-logo_318-50643.jpg" height="20px" width="20px"/></a> <span><a href="https://www.linkedin.com/in/stalkme">LinkedIn</a></span>
-
 ## Dependancies
 
 Dependancies are listed in the [pom.xml](https://github.com/stalk-calvin/Java-Algorithms/blob/master/pom.xml) file. See dependancies tag.

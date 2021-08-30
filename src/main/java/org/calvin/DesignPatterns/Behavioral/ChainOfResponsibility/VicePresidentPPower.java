@@ -7,7 +7,7 @@ package org.calvin.DesignPatterns.Behavioral.ChainOfResponsibility;
 
 class VicePresidentPPower extends PurchasePower {
     protected double getAllowable(){
-        return BASE*40;
+        return BASE*30;
     }
 
     protected String getRole(){

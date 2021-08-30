@@ -22,6 +22,14 @@ class Dog implements Comparable<Dog> {
     }
 }
 
+class DogByNameComparator implements Comparator<Dog> {
+
+    @Override
+    public int compare(Dog o1, Dog o2) {
+        return o1.getName().compareTo(o2.getName());
+    }
+}
+
 class DogByAgeComparator implements Comparator<Dog> {
 
     @Override

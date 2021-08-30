@@ -10,8 +10,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class SubjectTest {
-    private Subject fixture;
+public class ObserverTest {
     private Auctioneer auctioneer;
     private Bidder b1;
     private Bidder b2;
@@ -19,8 +18,7 @@ public class SubjectTest {
 
     @Before
     public void setUp() {
-        fixture = new Subject();
-        auctioneer = new Auctioneer(fixture);
+        auctioneer = new Auctioneer(new Subject());
         b1 = new Bidder(auctioneer);
         b2 = new Bidder(auctioneer);
         b3 = new Bidder(auctioneer);

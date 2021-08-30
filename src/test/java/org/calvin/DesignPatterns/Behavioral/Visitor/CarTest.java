@@ -10,7 +10,6 @@ import org.junit.Test;
 
 import java.io.PrintStream;
 
-import static org.mockito.Matchers.contains;
 import static org.mockito.Matchers.startsWith;
 import static org.mockito.Mockito.*;
 
@@ -23,29 +22,33 @@ public class CarTest {
     }
 
     @Test
-    public void shouldAcceptPrintVisitor() {
+    public void shouldAcceptPrintAndDoVisitor() {
         PrintStream ps = mock(PrintStream.class);
         System.setOut(ps);
-        CarElementPrintVisitor printVisitor = new CarElementPrintVisitor();
+        CarElementVisitor printVisitor = new CarElementPrintVisitor();
         fixture.accept(printVisitor);
-        verify(ps).println(contains("front left"));
-        verify(ps).println(contains("front right"));
-        verify(ps).println(contains("back left"));
-        verify(ps).println(contains("back right"));
-        verify(ps).println(contains("engine"));
-        verify(ps).println(contains("body"));
-        verify(ps).println(contains("car"));
-    }
+        //Wheels
+        verify(ps).println(startsWith("Visiting front left"));
+        verify(ps).println(startsWith("Visiting front right"));
+        verify(ps).println(startsWith("Visiting back left"));
+        verify(ps).println(startsWith("Visiting back right"));
+        //Engine
+        verify(ps).println(startsWith("Visiting engine"));
+        //Body
+        verify(ps).println(startsWith("Visiting body"));
+        //Printing Car
+        verify(ps).println(startsWith("Visiting car"));
 
-    @Test
-    public void shouldAcceptDoVisitor() {
-        PrintStream ps = mock(PrintStream.class);
-        System.setOut(ps);
-        CarElementDoVisitor doVisitor = new CarElementDoVisitor();
+        CarElementVisitor doVisitor = new CarElementDoVisitor();
         fixture.accept(doVisitor);
+        //Wheels
         verify(ps, times(4)).println(startsWith("Kicking"));
-        verify(ps, times(2)).println(startsWith("Starting"));
+        //Body
         verify(ps, times(1)).println(startsWith("Moving"));
+        //Engine
+        verify(ps, times(1)).println(startsWith("Vroom"));
+        //Starting Car - Vroom
+        verify(ps, times(1)).println(startsWith("Starting"));
     }
 
 }

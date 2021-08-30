@@ -7,20 +7,22 @@ package org.calvin.DesignPatterns.Behavioral.ChainOfResponsibility;
 
 abstract class PurchasePower {
     protected static final double BASE = 500;
-    protected PurchasePower successor;
+    protected PurchasePower reportTo;
 
     abstract protected double getAllowable();
     abstract protected String getRole();
 
-    public void setSuccessor(PurchasePower successor) {
-        this.successor = successor;
+    public void setReportTo(PurchasePower reportTo) {
+        this.reportTo = reportTo;
     }
 
     public void processRequest(PurchaseRequest request){
         if (request.getAmount() < this.getAllowable()) {
             System.out.println(this.getRole() + " will approve $" + request.getAmount());
-        } else if (successor != null) {
-            successor.processRequest(request);
+        } else if (reportTo != null) {
+            reportTo.processRequest(request);
+        } else {
+            System.out.println(this.getRole() + " unable to approve $" + request.getAmount());
         }
     }
 }

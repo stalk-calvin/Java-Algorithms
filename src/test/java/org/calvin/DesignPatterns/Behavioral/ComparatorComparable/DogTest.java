@@ -14,7 +14,7 @@ import java.util.List;
 import static org.junit.Assert.assertTrue;
 
 public class DogTest {
-    private List<Dog> list = Lists.newArrayList(
+    private final List<Dog> list = Lists.newArrayList(
             new Dog("Lacy", 2),
             new Dog("Roger", 10),
             new Dog("Tommy", 4),
@@ -30,7 +30,15 @@ public class DogTest {
     }
 
     @Test
-    public void shouldSortUsingComparator() {
+    public void shouldSortUsingNameComparator() {
+        list.sort(new DogByNameComparator());
+        for (int j = 0; j < list.size()-1; j++) {
+            assertTrue(list.get(j + 1).getName().compareTo(list.get(j).getName()) >= 0);
+        }
+    }
+
+    @Test
+    public void shouldSortUsingAgeComparator() {
         list.sort(new DogByAgeComparator());
         for (int j = 0; j < list.size()-1; j++) {
             assertTrue(list.get(j + 1).getAge() >= list.get(j).getAge());

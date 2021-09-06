@@ -27,14 +27,14 @@ public class FirstNonRepeatedTest {
     @Test
     public void shouldFindNonRepeatedMyWay() throws Exception {
         String input = "tetfa";
-        Character actual = FirstNonRepeated.findFirstNonRepeatedMyWay(input);
+        Character actual = FirstNonRepeated.findFirstNonRepeatedAllLowercase(input);
         assertEquals('e', (char) actual);
     }
 
     @Test
     public void shouldNotFindRepeatedMyWay() throws Exception {
         String input = "teetet";
-        Character actual = FirstNonRepeated.findFirstNonRepeatedMyWay(input);
+        Character actual = FirstNonRepeated.findFirstNonRepeatedAllLowercase(input);
         assertEquals(null, actual);
     }
 }

@@ -6,7 +6,6 @@
 package org.calvin.String;
 
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class FirstNonRepeated {
@@ -24,14 +23,17 @@ public class FirstNonRepeated {
         return null;
     }
 
-    public static Character findFirstNonRepeatedMyWay(String x) {
-        Map<Character, Integer> tracker = new LinkedHashMap<>();
-        for (char c : x.toCharArray()) {
-            tracker.put(c, tracker.getOrDefault(c, 0) + 1);
+    public static Character findFirstNonRepeatedAllLowercase(String input) {
+        input = input.toLowerCase();
+        int[] visited = new int[26];
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            visited[c - 'a']++;
         }
-        for (Map.Entry<Character, Integer> e : tracker.entrySet()) {
-            if (e.getValue() == 1) {
-                return e.getKey();
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            if (visited[c - 'a'] == 1) {
+                return c;
             }
         }
         return null;

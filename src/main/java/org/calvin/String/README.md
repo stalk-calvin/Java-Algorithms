@@ -206,6 +206,16 @@ s = "loveleetcode",
 return 2.
 ```
 
+## FirstRecurring
+
+Given a string, return the first recurring character in it, or null if there is no recurring character.
+
+For example, 
+
+```
+Given the string "acbbac", return "b". Given the string "abcdef", return null.
+```
+
 ## FizzBuzz
 
 Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".

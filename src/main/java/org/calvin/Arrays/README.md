@@ -273,6 +273,19 @@ Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one s
 
 Given an array containing n consecutive numbers taken from 0,1,2,...,n, find the one that is missing from the array.
 
+## Missing Ranges
+
+Given a **sorted** list of numbers, and two integers low and high representing the lower and upper bound of a range, return a list of (inclusive) ranges where the numbers are missing. A range should be represented by a tuple in the format of (lower, upper).
+
+Here's an example and some starting code:
+```
+def missing_ranges(nums, low, high):
+# Fill this in.
+
+print(missing_ranges([1, 3, 5, 10], 1, 10))
+# [2, 4, 6->9]
+```
+
 ## MoveZeros
 
 Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.

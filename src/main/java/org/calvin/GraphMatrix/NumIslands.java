@@ -26,7 +26,7 @@ public class NumIslands {
         if (c > 0 && m[r][c - 1] == 'x') {
             return dfsIslands(m, r, c - 1);
         }
-        if (c < m[r].length && m[r][c + 1] == 'x') {
+        if (c < m[r].length - 1 && m[r][c + 1] == 'x') {
             return dfsIslands(m, r, c + 1);
         }
         return true;

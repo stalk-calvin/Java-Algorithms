@@ -3,8 +3,6 @@ package org.calvin.GraphMatrix;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class NumIslandsTest {
 
     private NumIslands fixture;
@@ -16,11 +14,11 @@ public class NumIslandsTest {
 
     @Test
     public void numIsland() {
-        char[][] m = {{'0','0','0','x','0'},
-                {'0','0','0','x','0'},
-                {'0','0','0','x','0'},
-                {'0','x','0','0','0'},
-                {'0','0','0','0','0'}};
+        char[][] m = {
+                {'x','x','x'},
+                {'0','x','0'},
+                {'x','x','x'}
+        };
         System.out.println(fixture.numIsland(m));
     }
 }

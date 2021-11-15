@@ -19,7 +19,7 @@ public class RunLengthEncodeDecodeTest {
 
     @Test
     public void shouldDecodeText() {
-        assertEquals("AAABBBCCCC", fixture.decode("3A3B4C"));
+        assertEquals("AAAAAAAAAAAAAFBBBCCCC", fixture.decode("13A1F3B4C"));
     }
 
     @Test

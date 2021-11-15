@@ -22,13 +22,17 @@ public class RunLengthEncodeDecode {
     public String decode(String in) {
         char[] tracker = in.toCharArray();
         StringBuilder sb = new StringBuilder();
+        StringBuilder nums = new StringBuilder();
         for (int i = 0; i < tracker.length; i++) {
             if (Character.isDigit(tracker[i])) {
-                int x = Integer.parseInt(String.valueOf(tracker[i]));
+                nums.append(tracker[i]);
+            } else if (nums.length()>0) {
+                int x = Integer.parseInt(nums.toString());
                 while (x != 0) {
-                    sb.append(tracker[i+1]);
+                    sb.append(tracker[i]);
                     x--;
                 }
+                nums = new StringBuilder();
             }
         }
         return sb.toString().isEmpty() ? in : sb.toString();

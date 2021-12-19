@@ -10,9 +10,9 @@ This is where I play and learn different kind of algorithms, data structures, co
 
 [![](https://contrib.rocks/image?repo=stalk-calvin/Java-Algorithms)](https://github.com/stalk-calvin/Java-Algorithms/graphs/contributors)
 
-## Dependancies
+## Dependencies
 
-Dependancies are listed in the [pom.xml](https://github.com/stalk-calvin/Java-Algorithms/blob/master/pom.xml) file. See dependancies tag.
+Dependencies are listed in the [pom.xml](https://github.com/stalk-calvin/Java-Algorithms/blob/master/pom.xml) file. See dependencies tag.
 
 ## License
 

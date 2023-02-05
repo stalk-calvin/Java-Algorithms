@@ -1,24 +1,18 @@
-dist: trusty
+# Travis CI Java documentation can be found in:
+# https://docs.travis-ci.com/user/languages/java/
 
-before_script:
- - export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
- - export MAVEN_OPTS="-Xmx2048m"
- - echo $JAVA_TOOL_OPTIONS
- - echo $MAVEN_OPTS
+# We will use Ubuntu 18.04 (bionic beaver). List of options:
+# https://docs.travis-ci.com/user/reference/overview/#linux
+dist: xenial
 
+# This enables the 'defaults' to test java applications:
 language: java
 
-notifications:
-  email:
-    recipients:
-      - stalk.calvin@gmail.com
-    on_success: change
-    on_failure: always
-
+# We can specify a list of JDKs to be used for testing
+# A list of available JDKs in Trusty can be seed in:
+# https://docs.travis-ci.com/user/reference/xenial/#jvm-clojure-groovy-java-scala-support
 jdk:
-  - oraclejdk8
-
-before_install:
-  - sudo apt-get install jq
+  - openjdk8
+  - openjdk11
 
 script: "mvn clean test jacoco:report coveralls:report"

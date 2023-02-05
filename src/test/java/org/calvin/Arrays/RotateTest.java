@@ -5,16 +5,16 @@
 
 package org.calvin.Arrays;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RotateTest {
     Rotate fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Rotate();
     }
@@ -39,6 +39,13 @@ public class RotateTest {
     public void shouldSearchRotatedSortedArray() {
         int[] input = {4,5,6,7,0,1,2};
         int actual = fixture.rotated_sorted_search(input, 0);
+        assertEquals(4, actual);
+    }
+
+    @Test
+    public void shouldSearchRotatedSortedArrayWithPivot() {
+        int[] input = {4,5,6,7,0,1,2};
+        int actual = fixture.searchRotated(input, 0);
         assertEquals(4, actual);
     }
 }

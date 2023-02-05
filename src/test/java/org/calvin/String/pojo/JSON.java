@@ -5,7 +5,7 @@
 
 package org.calvin.String.pojo;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -13,10 +13,8 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
-import org.calvin.String.pojo.json.Menu;
-import org.calvin.String.pojo.json.MenuItem;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class JSON {
     private static final String INPUT_TEST_JSON = "src/test/resources/pojo/test.json";
@@ -28,7 +26,7 @@ public class JSON {
         gson = new GsonBuilder().setPrettyPrinting().create();
     }
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = gson.fromJson(FileUtils.readFileToString(new File(INPUT_TEST_JSON)), Menu.class);
     }

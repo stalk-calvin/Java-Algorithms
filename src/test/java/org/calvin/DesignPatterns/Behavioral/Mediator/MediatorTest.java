@@ -5,25 +5,25 @@
 
 package org.calvin.DesignPatterns.Behavioral.Mediator;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.PrintStream;
 
 import static org.mockito.Matchers.startsWith;
 import static org.mockito.Mockito.verify;
 
-@RunWith(MockitoJUnitRunner.class)
+@ExtendWith(MockitoExtension.class)
 public class MediatorTest {
     private Mediator fixture;
 
     @Mock
     private PrintStream ps;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         System.setOut(ps);
         fixture = new Mediator(new AEventHandler(), new BEventHandler(), new CEventHandler());

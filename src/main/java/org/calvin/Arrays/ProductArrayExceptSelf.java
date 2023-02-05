@@ -27,4 +27,28 @@ public class ProductArrayExceptSelf {
 
         return result;
     }
+
+    public int[] productExceptSelfOneArr(int[] nums) {
+
+        int length = nums.length;
+        int[] ans = new int[length];
+
+        ans[0] = 1;
+        //Product to the left
+        for(int i = 1; i< length; i++)
+        {
+            ans[i] = ans[i-1] * nums[i-1];
+        }
+
+        int right = 1;
+        //Multiply it by Product to the right
+        for(int j=length-1; j >=0; j-- )
+        {
+            ans[j] *= right;
+            right *= nums[j];
+
+        }
+
+        return ans;
+    }
 }

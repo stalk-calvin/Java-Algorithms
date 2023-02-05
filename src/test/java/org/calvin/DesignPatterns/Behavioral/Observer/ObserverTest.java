@@ -5,10 +5,10 @@
 
 package org.calvin.DesignPatterns.Behavioral.Observer;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ObserverTest {
     private Auctioneer auctioneer;
@@ -16,7 +16,7 @@ public class ObserverTest {
     private Bidder b2;
     private Bidder b3;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         auctioneer = new Auctioneer(new Subject());
         b1 = new Bidder(auctioneer);

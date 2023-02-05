@@ -5,20 +5,20 @@
 
 package org.calvin.Tree.Heap;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 @Slf4j
 public class HeapTest {
 
     private Heap<Integer> fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new Heap<>(Integer.class);
         for (int i = 0; i < Heap.MAX_SIZE; i++) {

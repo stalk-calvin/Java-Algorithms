@@ -1,16 +1,16 @@
 package org.calvin.Tree;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.calvin.Tree.CalculateExpression.TreeNode;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CalculateExpressionTest {
     private CalculateExpression fixture;
     private TreeNode root = createTree();
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new CalculateExpression();
     }

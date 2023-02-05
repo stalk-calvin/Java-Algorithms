@@ -5,20 +5,20 @@
 
 package org.calvin.Numbers;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import com.google.common.collect.Lists;
 
 public class ThreeSumTest {
     private ThreeSum fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new ThreeSum();
     }

@@ -1,15 +1,15 @@
 package org.calvin.DesignPatterns.Structural.Forwarding_Composition_Inheritance;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InheritedHashSetTest {
     private InheritedHashSet<String> fixture;
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new InheritedHashSet<>();
     }

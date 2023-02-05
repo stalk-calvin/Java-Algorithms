@@ -7,17 +7,17 @@ package org.calvin.Tree.Traversal;
 
 import com.google.common.collect.Lists;
 import org.calvin.Tree.TreeNode;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BFSTest {
     private BFS fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new BFS();
     }

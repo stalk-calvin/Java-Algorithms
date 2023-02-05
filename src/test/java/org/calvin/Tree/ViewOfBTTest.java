@@ -2,18 +2,18 @@ package org.calvin.Tree;
 
 import com.google.common.collect.Lists;
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class ViewOfBTTest {
     private ViewOfBT fixture;
     private static int[] input1 = {1,2,3,4,5,6,7};
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new ViewOfBT();
     }

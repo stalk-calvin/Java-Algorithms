@@ -5,23 +5,29 @@
 
 package org.calvin.String;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SimpleRegularExpressionTest {
     private SimpleRegularExpression fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new SimpleRegularExpression();
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void shouldNotAcceptNullStringsAsInput() {
-        fixture.evaluate(null, null);
+        IllegalArgumentException thrown = Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            fixture.evaluate(null, null);
+        }, "IllegalArgumentException was expected");
+
+        Assertions.assertEquals("You can't pass a null strings as input", thrown.getMessage());
+
     }
 
     @Test public void shouldReturnFalseIfInputDoesNotMatchesAndDoesNotContainKeyElements() {

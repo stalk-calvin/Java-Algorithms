@@ -5,21 +5,15 @@
 
 package org.calvin.String;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class UniqueCharsTest {
     private UniqueChars fixture;
 
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
-
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new UniqueChars();
     }
@@ -37,10 +31,11 @@ public class UniqueCharsTest {
     }
 
     @Test
-    public void shouldNotHaveUniqueCharsWithNullInput() throws Exception {
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("You can't pass a null input as argument.");
-        fixture.hasUniqueChars(null);
+    public void shouldNotHaveUniqueCharsWithNullInput() {
+        Exception exception =
+                assertThrows(IllegalArgumentException.class, () ->
+                    fixture.hasUniqueChars(null));
+        assertEquals("You can't pass a null input as argument.", exception.getMessage());
     }
 
     @Test
@@ -62,9 +57,10 @@ public class UniqueCharsTest {
     }
 
     @Test
-    public void shouldASCIINotHaveUniqueCharsWithNullInput() throws Exception {
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("You can't pass a null input as argument.");
-        fixture.hasASCIIUniqueChars(null);
+    public void shouldASCIINotHaveUniqueCharsWithNullInput() {
+        Exception exception =
+                assertThrows(IllegalArgumentException.class, () ->
+                    fixture.hasASCIIUniqueChars(null));
+        assertEquals("You can't pass a null input as argument.", exception.getMessage());
     }
 }

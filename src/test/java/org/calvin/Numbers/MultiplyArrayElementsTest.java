@@ -5,19 +5,19 @@
 
 package org.calvin.Numbers;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class MultiplyArrayElementsTest {
     private MultiplyArrayElements fixture;
 
     private static final int[] input = {1,2,3,4,5};
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new MultiplyArrayElements();
     }

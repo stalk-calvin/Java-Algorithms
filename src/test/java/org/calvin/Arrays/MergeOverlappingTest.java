@@ -1,11 +1,11 @@
 package org.calvin.Arrays;
 
 import com.google.common.collect.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MergeOverlappingTest {
 //    inputs = [(1,3),(5,8),(2,10),(20,25)]

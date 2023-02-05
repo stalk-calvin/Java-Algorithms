@@ -5,11 +5,11 @@
 
 package org.calvin.LinkedList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class Cycle2Test {
     private static final int[] vals = {-1, -2, 0, 1, 2, 3, 4, 5, 6, 7, 8};
@@ -17,7 +17,7 @@ public class Cycle2Test {
     private Cycle2 fixture;
     private ListNode listBase;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new Cycle2();
         listBase = AssortedMethods.createLinkedListFromArray(vals);

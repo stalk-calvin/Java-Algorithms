@@ -5,15 +5,15 @@
 
 package org.calvin.Arrays;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
 public class IntersectionTest {
     Intersection fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Intersection();
     }

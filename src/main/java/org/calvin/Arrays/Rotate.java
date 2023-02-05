@@ -6,6 +6,29 @@
 package org.calvin.Arrays;
 
 public class Rotate {
+    public int searchRotated(int[] nums, int target) {
+        if (nums == null || nums.length == 0) return -1;
+        int pivot = findPivot(nums, 0, nums.length - 1);
+        if (target >= nums[0]) return binarySearch(nums, 0, pivot, target);
+        else return binarySearch(nums, pivot, nums.length - 1, target);
+    }
+
+    private int findPivot(int[] nums, int start, int end) {
+        if (start == end) return start;
+        int mid = start + (end - start) / 2;
+        if (nums[mid] > nums[end]) return findPivot(nums, mid + 1, end);
+        else return findPivot(nums, start, mid);
+    }
+
+    private int binarySearch(int[] nums, int start, int end, int target) {
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if (nums[mid] == target) return mid;
+            else if (nums[mid] > target) end = mid - 1;
+            else start = mid + 1;
+        }
+        return -1;
+    }
     public int rotated_sorted_search(int[] nums, int target) {
         if (nums == null) {
             return -1;

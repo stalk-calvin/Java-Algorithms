@@ -1,14 +1,14 @@
 package org.calvin.Arrays;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class FindMaximumDiffTest {
     private FindMaximumDiff fixture;
     private static int[] input = {34, 8, 10, 3, 2, 80, 30, 33, 1};
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new FindMaximumDiff();
     }

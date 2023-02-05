@@ -5,16 +5,16 @@
 
 package org.calvin.BinarySearch;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class FirstBadVersionTest {
     private FirstBadVersion fixture;
     private static final int SIZE = 100;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new FirstBadVersion(SIZE);
     }

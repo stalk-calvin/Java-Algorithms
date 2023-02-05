@@ -4,17 +4,17 @@
  */
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Arrays;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class SlidingWindowMaximumTest {
     SlidingWindowMaximum fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new SlidingWindowMaximum();
     }

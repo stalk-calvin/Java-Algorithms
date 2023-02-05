@@ -5,18 +5,18 @@
 
 package org.calvin.PropertyTesting;
 
-import static org.junit.Assert.assertEquals;
-
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
-import org.junit.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @RunWith(JUnitQuickcheck.class)
 public class CalculatorTest {
     private Calculator fixture;
 
-    @Before public void setUp() throws Exception {
+    @BeforeEach public void setUp() throws Exception {
         fixture = new Calculator();
     }
 
@@ -24,6 +24,7 @@ public class CalculatorTest {
     public void shouldAddNumbers(int number) throws Exception {
         int expectedInitial = fixture.getResult();
         fixture.add(number);
+        System.out.println("expectedInitial: "+expectedInitial+", number: "+number);
         assertEquals(expectedInitial + number, fixture.getResult());
     }
 
@@ -31,6 +32,7 @@ public class CalculatorTest {
     public void shouldSubtractNumbers(int number) throws Exception {
         int expectedInitial = fixture.getResult();
         fixture.subtract(number);
+        System.out.println("expectedInitial: "+expectedInitial+", number: "+number);
         assertEquals(expectedInitial - number, fixture.getResult());
     }
 }

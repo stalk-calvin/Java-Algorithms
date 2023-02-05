@@ -5,23 +5,21 @@
 
 package org.calvin.String.pojo;
 
-import static org.junit.Assert.assertEquals;
+import com.thoughtworks.xstream.XStream;
+import org.apache.commons.io.FileUtils;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-import com.thoughtworks.xstream.XStream;
-import org.apache.commons.io.FileUtils;
-import org.calvin.String.pojo.xml.Person;
-import org.calvin.String.pojo.xml.PhoneNumber;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class XML {
     private static final String INPUT_TEST_XML = "src/test/resources/pojo/test.xml";
 
     private XStream xstream = new XStream();
 
-    @Before
+    @BeforeEach
     public void setUp() {
         xstream.alias("person", Person.class);
     }

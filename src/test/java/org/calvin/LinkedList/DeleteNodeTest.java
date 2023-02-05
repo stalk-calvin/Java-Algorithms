@@ -6,10 +6,10 @@
 package org.calvin.LinkedList;
 
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DeleteNodeTest {
     private static final int[] vals = {1,2,3};
@@ -17,7 +17,7 @@ public class DeleteNodeTest {
     private DeleteNode fixture;
     private ListNode listBase;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new DeleteNode();
         listBase = AssortedMethods.createLinkedListFromArray(vals);

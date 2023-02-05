@@ -5,22 +5,18 @@
 
 package org.calvin.Numbers;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Stack;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class SmallestProductNTest {
     private SmallestProductN fixture;
 
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
-
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new SmallestProductN();
     }
@@ -40,10 +36,10 @@ public class SmallestProductNTest {
 
 
     @Test
-    public void shouldNotFindSmallestProductOfN() throws Exception {
-        expectedException.expect(RuntimeException.class);
-        expectedException.expectMessage("No such number");
-
-        fixture.findSmallestProductOfN(17);
+    public void shouldNotFindSmallestProductOfN() {
+        Exception exception =
+                assertThrows(RuntimeException.class, () ->
+                    fixture.findSmallestProductOfN(17));
+        assertEquals("No such number", exception.getMessage());
     }
 }

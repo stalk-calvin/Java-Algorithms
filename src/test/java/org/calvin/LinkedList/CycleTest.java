@@ -6,11 +6,11 @@
 package org.calvin.LinkedList;
 
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CycleTest {
     private static final int[] vals = {-1, -2, 0, 1, 2, 3, 4, 5, 6, 7, 8};
@@ -18,7 +18,7 @@ public class CycleTest {
     Cycle fixture;
     ListNode listBase;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Cycle();
         listBase = AssortedMethods.createLinkedListFromArray(vals);

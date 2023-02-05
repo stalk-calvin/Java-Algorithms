@@ -1,25 +1,20 @@
 package org.calvin.Graph;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.calvin.Graph.Setup.createDAGForShortest;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ShortestPathPQTest {
     private Graph newGraph;
     private ShortestPathPQ fixture;
 
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
-
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         newGraph = createDAGForShortest();
         fixture = new ShortestPathPQ(newGraph);
@@ -34,9 +29,10 @@ public class ShortestPathPQTest {
 
 
     @Test
-    public void shouldNotFindShortestPath() throws Exception {
-        expectedException.expect(Exception.class);
-        expectedException.expectMessage("Invalid start or end!");
-        assertNull(fixture.findShortestPath("A", "Z"));
+    public void shouldNotFindShortestPath() {
+        Exception exception =
+                assertThrows(Exception.class, () ->
+                    fixture.findShortestPath("A", "Z"));
+        assertEquals("Invalid start or end!", exception.getMessage());
     }
 }

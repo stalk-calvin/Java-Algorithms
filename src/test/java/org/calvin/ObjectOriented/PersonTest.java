@@ -1,16 +1,16 @@
 package org.calvin.ObjectOriented;
 
 import com.google.common.collect.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PersonTest {
-    private List<Date> BabyBoomers = Lists.newArrayList(
+    private final List<Date> BabyBoomers = Lists.newArrayList(
             new GregorianCalendar(1955, 1, 1).getTime(),
             new GregorianCalendar(1955, 1, 1).getTime(),
             new GregorianCalendar(1964, 1, 1).getTime(),
@@ -310,6 +310,6 @@ public class PersonTest {
         endTime = System.nanoTime();
         long diff2 = endTime - startTime;
         System.out.println("Took "+ diff2 + " ns");
-        assertTrue("diff: "+diff+", diff2: "+diff2, diff2 > diff);
+        assertTrue(diff2 > diff, "diff: "+diff+", diff2: "+diff2);
     }
 }

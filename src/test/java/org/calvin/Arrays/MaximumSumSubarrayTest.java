@@ -6,17 +6,17 @@
 package org.calvin.Arrays;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MaximumSumSubarrayTest {
     private MaximumSumSubarray fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new MaximumSumSubarray();
     }

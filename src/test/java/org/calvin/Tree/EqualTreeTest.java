@@ -5,17 +5,17 @@
 
 package org.calvin.Tree;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class EqualTreeTest {
     private EqualTree fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new EqualTree();
     }

@@ -1,16 +1,16 @@
 package org.calvin.String;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.google.common.collect.Lists;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class RegexTest {
     private Regex fixture;
 
-    @Before public void setUp() {
+    @BeforeEach public void setUp() {
         fixture = new Regex();
     }
 

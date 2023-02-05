@@ -5,12 +5,11 @@
 
 package org.calvin.DynamicProgramming;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class RangeSumQuery2DTest {
     private static final int[][] matrix = {
@@ -22,10 +21,7 @@ public class RangeSumQuery2DTest {
     };
     private RangeSumQuery2D fixture;
 
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
-
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new RangeSumQuery2D(matrix);
     }
@@ -37,8 +33,7 @@ public class RangeSumQuery2DTest {
 
     @Test
     public void shouldNotCalculateSumRegion() throws Exception {
-        exception.expect(NullPointerException.class);
         fixture = new RangeSumQuery2D(null);
-        assertEquals(11, fixture.sumRegion(1, 1, 2, 2));
+        assertThrows(NullPointerException.class, () -> fixture.sumRegion(1, 1, 2, 2));
     }
 }

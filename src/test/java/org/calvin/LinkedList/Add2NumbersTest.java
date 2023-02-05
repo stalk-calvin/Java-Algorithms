@@ -5,11 +5,11 @@
 
 package org.calvin.LinkedList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class Add2NumbersTest {
     private static final int[] vals1 = {0, 0, 5};
@@ -18,7 +18,7 @@ public class Add2NumbersTest {
     private ListNode number1;
     private ListNode number2;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new Add2Numbers();
         number1 = AssortedMethods.createLinkedListFromArray(vals1);

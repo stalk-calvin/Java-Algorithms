@@ -1,19 +1,19 @@
 package org.calvin.Numbers;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SumOfEvenNumbersTest {
     private SumOfEvenNumbers fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new SumOfEvenNumbers();
     }

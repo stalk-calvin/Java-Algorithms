@@ -5,14 +5,14 @@
 
 package org.calvin.Numbers;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PowerOfNTest {
     private PowerOfN fixture;
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new PowerOfN();
     }

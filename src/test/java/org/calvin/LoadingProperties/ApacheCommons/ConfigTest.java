@@ -5,17 +5,17 @@
 
 package org.calvin.LoadingProperties.ApacheCommons;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.apache.commons.configuration.PropertiesConfiguration;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class ConfigTest {
     private static final String CONFIG_FILE = "config/apache_commons.properties";
     private Config fixture;
 
-    @Before public void setUp() throws Exception {
+    @BeforeEach public void setUp() throws Exception {
         fixture = Config.builder().configFilename(CONFIG_FILE).build();
     }
 

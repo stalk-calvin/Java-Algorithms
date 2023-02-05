@@ -5,10 +5,10 @@
 
 package org.calvin.ObjectOriented.Router;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.Assert.fail;
 
 public class RouterTest {
@@ -20,7 +20,7 @@ public class RouterTest {
     private RoutingTable routingTable5 = new RoutingTable();
     private RoutingTable routingTable6 = new RoutingTable();
 
-    @Before
+    @BeforeEach
     public void setUp() {
         routingTable1.addRoutingEntry(new RoutingEntry("140.1.1.0", "direct", "255.255.255.0", 1));
         routingTable1.addRoutingEntry(new RoutingEntry("140.1.2.0", "direct", "255.255.255.0", 1));

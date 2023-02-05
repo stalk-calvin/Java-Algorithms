@@ -5,8 +5,8 @@
 
 package org.calvin.DesignPatterns.Structural.Composite;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 import org.mockito.Mockito;
 
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.mock;
 
 public class CompositeTest {
     Composite fixture;
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Row( 1 );          // Row1
         Composite second = new Col( 2 );          //   |

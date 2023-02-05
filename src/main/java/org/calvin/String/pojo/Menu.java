@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.String.pojo.json;
+package org.calvin.String.pojo;
 
 import java.util.ArrayList;
 import java.util.List;

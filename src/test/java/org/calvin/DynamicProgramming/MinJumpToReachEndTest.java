@@ -1,15 +1,15 @@
 package org.calvin.DynamicProgramming;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MinJumpToReachEndTest {
     private MinJumpToReachEnd fixture;
     private static int arr[] = {1,3,5,3,2,2,6,1,6,8,9};
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new MinJumpToReachEnd();
     }

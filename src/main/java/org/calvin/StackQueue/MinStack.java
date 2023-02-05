@@ -5,9 +5,9 @@
 
 package org.calvin.StackQueue;
 
-import java.util.EmptyStackException;
+import org.calvin.StackQueue.Stack.EmptyStackException;
+
 import java.util.Stack;
-import java.lang.*;
 
 public class MinStack {
 
@@ -31,7 +31,7 @@ public class MinStack {
     }
 
     public int pop() throws EmptyStackException {
-        if (stack.isEmpty()) throw new EmptyStackException();
+        if (stack.isEmpty()) throw new EmptyStackException("Empty Stack");
         int r = stack.pop();
         if (!minStack.isEmpty() && minStack.peek() == r) {
             minStack.pop();
@@ -40,7 +40,7 @@ public class MinStack {
     }
 
     public int top() throws EmptyStackException {
-        if (stack.isEmpty()) throw new EmptyStackException();
+        if (stack.isEmpty()) throw new EmptyStackException("Empty Stack");
         return stack.peek();
     }
 

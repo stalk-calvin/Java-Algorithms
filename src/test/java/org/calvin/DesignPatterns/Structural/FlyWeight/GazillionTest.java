@@ -10,8 +10,8 @@ import static org.mockito.Mockito.verify;
 
 import java.io.PrintStream;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class GazillionTest {
     private static final int ROWS = 6;
@@ -19,7 +19,7 @@ public class GazillionTest {
 
     Gazillion[][] matrix;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         matrix = new Gazillion[ROWS][COLS];
     }

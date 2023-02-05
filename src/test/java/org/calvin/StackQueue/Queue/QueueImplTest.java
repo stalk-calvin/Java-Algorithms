@@ -5,17 +5,12 @@
 
 package org.calvin.StackQueue.Queue;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class QueueImplTest {
     private QueueImpl fixture;
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void shouldShowAllEntries() throws EmptyQueueException {
@@ -23,11 +18,11 @@ public class QueueImplTest {
         for (int i = 0; i < 6; i++) {
             fixture.enqueue(new Integer(i));
         }
-        assertTrue("Invalid QueueSize, assert value: " + fixture.entryLength(), fixture.entryLength() == 6);
+        assertEquals(6, fixture.entryLength(), "Invalid QueueSize, assert value: " + fixture.entryLength());
 
         for (int i = 0; i < 6; i++) {
             Integer tempint = (Integer) fixture.dequeue();
-            assertTrue("Invalid expected value: "+tempint, tempint == i);
+            assertEquals((int) tempint, i, "Invalid expected value: " + tempint);
         }
     }
 
@@ -35,43 +30,45 @@ public class QueueImplTest {
     public void shouldResizeDouble() throws EmptyQueueException {
         fixture = new QueueImpl(1);
         for (int i = 0; i < 6; i++) {
-            fixture.enqueue(new Integer(i));
+            fixture.enqueue(i);
         }
-        assertTrue("Invalid QueueSize, assert value: " + fixture.entryLength(), fixture.entryLength() == 10);
+        assertEquals(10, fixture.entryLength(), "Invalid QueueSize, assert value: " + fixture.entryLength());
 
         for (int i = 0; i < 6; i++) {
             Integer tempint = (Integer) fixture.dequeue();
-            assertTrue("Invalid expected value: "+tempint, tempint == i);
+            assertEquals((int) tempint, i, "Invalid expected value: " + tempint);
         }
     }
 
     @Test
     public void shouldThrowExceptionDeQueue() throws EmptyQueueException {
         fixture = new QueueImpl(1);
-        expectedException.expect(EmptyQueueException.class);
-        expectedException.expectMessage("Queue Exception on dequeue: Queue empty");
-        fixture.dequeue();
+        Exception exception =
+                assertThrows(EmptyQueueException.class, () ->
+                    fixture.dequeue());
+        assertEquals("Queue Exception on dequeue: Queue empty", exception.getMessage());
     }
 
     @Test
     public void shouldThrowExceptionPeek() throws EmptyQueueException {
         fixture = new QueueImpl(1);
-        expectedException.expect(EmptyQueueException.class);
-        expectedException.expectMessage("Queue Exception on peek: Queue empty");
-        fixture.peek();
+        Exception exception =
+                assertThrows(EmptyQueueException.class, () ->
+                    fixture.peek());
+        assertEquals("Queue Exception on peek: Queue empty", exception.getMessage());
     }
 
     @Test
     public void shouldDoPeek() throws EmptyQueueException {
         fixture = new QueueImpl(1);
         for (int i = 0; i < 6; i++) {
-            fixture.enqueue(new Integer(i));
+            fixture.enqueue(i);
         }
-        assertTrue("Invalid QueueSize, assert value: " + fixture.entryLength(), fixture.entryLength() == 10);
-        assertTrue("Invalid QueueSize, assert value: " + fixture.size(), fixture.size() == 6);
+        assertEquals(10, fixture.entryLength(), "Invalid QueueSize, assert value: " + fixture.entryLength());
+        assertEquals(6, fixture.size(), "Invalid QueueSize, assert value: " + fixture.size());
 
         for (int i = 0; i < 6; i++) {
-            assertTrue("Invalid expected value: "+fixture.peek(), fixture.peek().equals(i));
+            assertEquals(fixture.peek(), i, "Invalid expected value: " + fixture.peek());
             fixture.dequeue();
         }
     }

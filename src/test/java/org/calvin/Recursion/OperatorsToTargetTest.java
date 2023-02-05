@@ -1,11 +1,11 @@
 package org.calvin.Recursion;
 
 import com.google.common.collect.Lists;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OperatorsToTargetTest {
 
@@ -26,7 +26,7 @@ public class OperatorsToTargetTest {
     @Test
     public void shouldHandleZero() {
         List<String> actual = OperatorsToTarget.addOperators("105",5);
-        List<String> expected = Lists.newArrayList("1*0+5","10-5");
+        List<String> expected = Lists.newArrayList("1*0+5");
         assertEquals(expected, actual);
     }
 

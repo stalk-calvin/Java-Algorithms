@@ -8,11 +8,11 @@ package org.calvin.Sort;
 import lombok.extern.slf4j.Slf4j;
 import org.calvin.LinkedList.ListNode;
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Slf4j
 public class MergeSortListTest {

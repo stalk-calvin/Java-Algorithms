@@ -1,16 +1,14 @@
 package org.calvin.Arrays;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertArrayEquals;
 
 public class ProductArrayExceptSelfTest {
     private ProductArrayExceptSelf fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new ProductArrayExceptSelf();
     }
@@ -21,7 +19,15 @@ public class ProductArrayExceptSelfTest {
         int[] expected = {672,84,96,112,336};
         int[] result = fixture.productExceptSelf(input);
 
-        assertTrue(Arrays.equals(expected,result));
+        assertArrayEquals(expected, result);
     }
 
+    @Test
+    public void productExceptSelfAnother() throws Exception {
+        int[] input = {1,2,3,4};
+        int[] expected = {24,12,8,6};
+        int[] result = fixture.productExceptSelfOneArr(input);
+
+        assertArrayEquals(expected, result);
+    }
 }

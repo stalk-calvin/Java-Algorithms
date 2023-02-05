@@ -6,17 +6,17 @@
 package org.calvin.String;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class IsomorphicTest {
     Isomorphic fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Isomorphic();
     }

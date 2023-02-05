@@ -1,7 +1,7 @@
 package org.calvin.ObjectOriented.OnlineBookReader;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class OnlineReaderSystemTest {
     private OnlineReaderSystem fixture;
@@ -10,7 +10,7 @@ public class OnlineReaderSystemTest {
     private Library library = new Library();
     private Display display = new Display();
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new OnlineReaderSystem(um, library, display);
     }

@@ -6,19 +6,19 @@
 package org.calvin.DesignPatterns.Creational.Prototype;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class EmployeesTest {
     private static final List<String> testData = Lists.newArrayList("Calvin","Lee");
 
     Employees fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Employees(testData);
     }

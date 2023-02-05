@@ -5,20 +5,16 @@
 
 package org.calvin.Tree;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FindMinNumberAtPositionTest {
     private FindMinNumberAtPosition fixture;
 
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
-
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new FindMinNumberAtPosition();
     }
@@ -33,30 +29,30 @@ public class FindMinNumberAtPositionTest {
 
     @Test
     public void shouldNotFindNthMinOnNullTree() {
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("cannot process null binary trees");
-        TreeNode actual = fixture.findNthMin(null, 3);
-        assertEquals(3, actual.getVal());
+        Exception exception =
+                assertThrows(IllegalArgumentException.class, () ->
+                    fixture.findNthMin(null, 3));
+        assertEquals("cannot process null binary trees", exception.getMessage());
     }
 
     @Test
     public void shouldNotFindNthMinOnNegativePosition() {
         int position = -3;
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("cannot process negative positions, " + position);
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         TreeNode root = TreeNode.createMinimalBST(array);
-        TreeNode actual = fixture.findNthMin(root, position);
-        assertEquals(3, actual.getVal());
+        Exception exception =
+                assertThrows(IllegalArgumentException.class, () ->
+                    fixture.findNthMin(root, position));
+        assertEquals("cannot process negative positions, " + position, exception.getMessage());
     }
 
     @Test
     public void shouldNotFindNthMinWhenPosGreaterThanInput() {
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("Min position is larger than tree size!");
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         TreeNode root = TreeNode.createMinimalBST(array);
-        TreeNode actual = fixture.findNthMin(root, array.length+1);
-        assertEquals(3, actual.getVal());
+        Exception exception =
+                assertThrows(IllegalArgumentException.class, () ->
+                    fixture.findNthMin(root, array.length+1));
+        assertEquals("Min position is larger than tree size!", exception.getMessage());
     }
 }

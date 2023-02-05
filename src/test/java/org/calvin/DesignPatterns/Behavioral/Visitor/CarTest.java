@@ -5,8 +5,8 @@
 
 package org.calvin.DesignPatterns.Behavioral.Visitor;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.io.PrintStream;
 
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.*;
 public class CarTest {
     private Car fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Car();
     }

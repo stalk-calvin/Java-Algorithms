@@ -1,19 +1,19 @@
 package org.calvin.StackQueue;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SetOfStacksTest {
     private SetOfStacks fixture;
     private static final int capacity = 3;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new SetOfStacks(capacity);
     }

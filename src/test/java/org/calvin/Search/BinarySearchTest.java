@@ -5,20 +5,20 @@
 
 package org.calvin.Search;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class BinarySearchTest {
     private static List<Integer> data = Arrays.asList(8,2,9,1,5,3,7);
 
     private SearchInterface<Integer> fixture;
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new BinarySearch<>();
     }

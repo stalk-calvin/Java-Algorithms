@@ -5,15 +5,15 @@
 
 package org.calvin.Tree;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LCABSTTest {
     LCABST fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new LCABST();
     }
@@ -29,6 +29,7 @@ public class LCABSTTest {
     public void shouldFindLowestCommonAncestorRight() {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         TreeNode root = TreeNode.createMinimalBST(array);
+        root.print();
         assertEquals(root.right, fixture.lowestCommonAncestor(root, root.right.right, root.right.left));
     }
 

@@ -7,13 +7,13 @@ package org.calvin.BinarySearch;
 
 import static junit.framework.TestCase.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class FindNumberInRotatedArrayTest {
     private FindNumberInRotatedArray fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new FindNumberInRotatedArray();
     }

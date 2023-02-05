@@ -1,14 +1,14 @@
 package org.calvin.Tree.Heap;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MedianFinderTest {
     private MedianFinder fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new MedianFinder();
     }

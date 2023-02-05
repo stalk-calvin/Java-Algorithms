@@ -3,7 +3,7 @@
  * All Rights Reserved.
  */
 
-package org.calvin.String.pojo.xml;
+package org.calvin.String.pojo;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

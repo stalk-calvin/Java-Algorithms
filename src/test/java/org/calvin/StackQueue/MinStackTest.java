@@ -5,22 +5,18 @@
 
 package org.calvin.StackQueue;
 
-import static org.junit.Assert.assertEquals;
+import org.calvin.StackQueue.Stack.EmptyStackException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import java.util.EmptyStackException;
-
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MinStackTest {
     MinStack fixture;
 
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new MinStack();
     }
@@ -61,11 +57,11 @@ public class MinStackTest {
 
     @Test
     public void shouldThrowEmptyStackException() {
-        expectedException.expect(EmptyStackException.class);
-
         fixture.push(3);
         fixture.pop();
-        fixture.top();
+        Exception exception =
+                assertThrows(EmptyStackException.class, () ->
+                    fixture.top());
     }
 
 }

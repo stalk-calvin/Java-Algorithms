@@ -5,16 +5,16 @@
 
 package org.calvin.LinkedList;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class RemoveDuplicateFromSortedList2Test {
     private RemoveDuplicateFromSortedList2 fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new RemoveDuplicateFromSortedList2();
     }

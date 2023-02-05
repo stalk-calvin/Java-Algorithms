@@ -1,14 +1,14 @@
 package org.calvin.LinkedList;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class SlidingWindowProductTest {
     private SlidingWindowProduct fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new SlidingWindowProduct(3);
     }

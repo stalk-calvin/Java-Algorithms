@@ -5,25 +5,21 @@
 
 package org.calvin.StackQueue;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.EmptyStackException;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MinStackNodeTest {
     private MinStackNode fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new MinStackNode();
     }
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void shouldDoBasicStackOperation() {
@@ -41,14 +37,12 @@ public class MinStackNodeTest {
 
     @Test
     public void shouldThrowExceptionOnEmptyStackPop() {
-        expectedException.expect(EmptyStackException.class);
-        fixture.pop();
+        assertThrows(EmptyStackException.class, () -> fixture.pop());
     }
 
     @Test
     public void shouldThrowExceptionOnEmptyStackTop() {
-        expectedException.expect(EmptyStackException.class);
-        fixture.top();
+        assertThrows(EmptyStackException.class, () -> fixture.top());
     }
 
     @Test

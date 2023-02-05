@@ -6,18 +6,18 @@
 package org.calvin.Tree;
 
 import org.calvin.__Utils.AssortedMethods;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PathTest {
     Path fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new Path();
     }

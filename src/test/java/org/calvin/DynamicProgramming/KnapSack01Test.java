@@ -2,19 +2,19 @@ package org.calvin.DynamicProgramming;
 
 import com.google.common.collect.Lists;
 import org.calvin.DynamicProgramming.KnapSack01.Item;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class KnapSack01Test {
 
     private KnapSack01 fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new KnapSack01();
     }

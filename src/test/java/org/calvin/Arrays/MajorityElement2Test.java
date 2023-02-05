@@ -5,18 +5,18 @@
 
 package org.calvin.Arrays;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Arrays;
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class MajorityElement2Test {
     private MajorityElement2 fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         fixture = new MajorityElement2();
     }

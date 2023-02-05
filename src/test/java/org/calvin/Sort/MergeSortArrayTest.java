@@ -6,21 +6,21 @@
 package org.calvin.Sort;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.InOrder;
 
 import java.io.PrintStream;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 
 @Slf4j
 public class MergeSortArrayTest {
     private MergeSortArray fixture;
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new MergeSortArray();
     }

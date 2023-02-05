@@ -6,13 +6,13 @@
 package org.calvin.Graph;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
 import static org.calvin.Graph.Setup.createUndirectedGraph;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class BfsDfsTest {
     private Graph newGraph;
@@ -20,7 +20,7 @@ public class BfsDfsTest {
     private List<String> vertices = Lists.newArrayList();
     private static Node source;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         newGraph = createUndirectedGraph();
         source = newGraph.getNode("A");

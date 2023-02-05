@@ -5,29 +5,24 @@
 
 package org.calvin.StackQueue.Stack;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StackImplTest {
     private StackImpl fixture;
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void shouldShowAllEntries() throws EmptyStackException {
         fixture = new StackImpl(0);
         for (int i = 0; i < 6; i++) {
-            fixture.push(new Integer(i));
+            fixture.push(i);
         }
-        assertTrue("Invalid StackSize, assert value: " + fixture.entryLength(), fixture.entryLength() == 6);
+        assertEquals(6, fixture.entryLength(), "Invalid StackSize, assert value: " + fixture.entryLength());
 
         for (int i = 5; i >= 0; i--) {
             Integer tempint = (Integer) fixture.pop();
-            assertTrue("Invalid expected value: "+tempint, tempint == i);
+            assertEquals((int) tempint, i, "Invalid expected value: " + tempint);
         }
     }
 
@@ -35,13 +30,13 @@ public class StackImplTest {
     public void shouldResizeDouble() throws EmptyStackException {
         fixture = new StackImpl(1);
         for (int i = 0; i < 6; i++) {
-            fixture.push(new Integer(i));
+            fixture.push(i);
         }
-        assertTrue("Invalid StackSize, assert value: " + fixture.entryLength(), fixture.entryLength() == 10);
+        assertEquals(10, fixture.entryLength(), "Invalid StackSize, assert value: " + fixture.entryLength());
 
         for (int i = 5; i >= 0; i--) {
             Integer tempint = (Integer) fixture.pop();
-            assertTrue("Invalid expected value: "+tempint, tempint == i);
+            assertEquals((int) tempint, i, "Invalid expected value: " + tempint);
         }
     }
 
@@ -49,30 +44,32 @@ public class StackImplTest {
     @Test
     public void shouldThrowExceptionDeQueue() throws EmptyStackException {
         fixture = new StackImpl(1);
-        expectedException.expect(EmptyStackException.class);
-        expectedException.expectMessage("Stack Exception on pop: Stack empty");
-        fixture.pop();
+        Exception exception =
+                assertThrows(EmptyStackException.class, () ->
+                    fixture.pop());
+        assertEquals("Stack Exception on pop: Stack empty", exception.getMessage());
     }
 
     @Test
     public void shouldThrowExceptionPeek() throws EmptyStackException {
         fixture = new StackImpl(1);
-        expectedException.expect(EmptyStackException.class);
-        expectedException.expectMessage("Stack Exception on peek: Stack empty");
-        fixture.peek();
+        Exception exception =
+                assertThrows(EmptyStackException.class, () ->
+                    fixture.peek());
+        assertEquals("Stack Exception on peek: Stack empty", exception.getMessage());
     }
 
     @Test
     public void shouldDoPeek() throws EmptyStackException {
         fixture = new StackImpl(1);
         for (int i = 0; i < 6; i++) {
-            fixture.push(new Integer(i));
+            fixture.push(i);
         }
-        assertTrue("Invalid QueueSize, assert value: " + fixture.entryLength(), fixture.entryLength() == 10);
-        assertTrue("Invalid QueueSize, assert value: " + fixture.size(), fixture.size() == 6);
+        assertEquals(10, fixture.entryLength(), "Invalid QueueSize, assert value: " + fixture.entryLength());
+        assertEquals(6, fixture.size(), "Invalid QueueSize, assert value: " + fixture.size());
 
         for (int i = 5; i >= 0; i--) {
-            assertTrue("Invalid expected value: "+fixture.peek(), fixture.peek().equals(i));
+            assertEquals(fixture.peek(), i, "Invalid expected value: " + fixture.peek());
             fixture.pop();
         }
     }

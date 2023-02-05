@@ -5,24 +5,24 @@
 
 package org.calvin.String;
 
-import java.io.PrintStream;
-
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InOrder;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@RunWith(MockitoJUnitRunner.class)
+import java.io.PrintStream;
+
+@ExtendWith(MockitoExtension.class)
 public class FizzBuzzTest {
     private FizzBuzz fixture;
 
     @Mock
     PrintStream ps;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         System.setOut(ps);
         fixture = new FizzBuzz();

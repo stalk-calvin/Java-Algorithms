@@ -6,15 +6,15 @@
 package org.calvin.Arrays;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FindDisappearedNumbersTest {
     private FindDisappearedNumbers fixture;
 
-    @Before public void setUp() throws Exception {
+    @BeforeEach public void setUp() throws Exception {
         fixture = new FindDisappearedNumbers();
     }
 

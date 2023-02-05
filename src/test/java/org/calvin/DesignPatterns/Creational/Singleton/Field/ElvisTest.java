@@ -5,7 +5,7 @@
 
 package org.calvin.DesignPatterns.Creational.Singleton.Field;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.PrintStream;
 

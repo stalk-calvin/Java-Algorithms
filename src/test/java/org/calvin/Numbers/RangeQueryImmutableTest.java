@@ -5,15 +5,15 @@
 
 package org.calvin.Numbers;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class RangeQueryImmutableTest {
     RangeQueryImmutable fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         int[] input = {1,2,3,4,5,6,7,8,9};
         fixture = new RangeQueryImmutable(input);

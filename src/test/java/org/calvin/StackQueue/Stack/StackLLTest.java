@@ -5,34 +5,29 @@
 
 package org.calvin.StackQueue.Stack;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StackLLTest {
     private StackLL<Integer> fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new StackLL<>();
     }
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
     @Test
     public void shouldShowAllEntries() {
         for (int i = 0; i < 6; i++) {
             fixture.push(i);
         }
-        assertTrue("Invalid StackSize, assert value: " + fixture.getSize(), fixture.getSize() == 6);
+        assertEquals(6, fixture.getSize(), "Invalid StackSize, assert value: " + fixture.getSize());
 
         for (int i = 5; i >= 0; i--) {
             Integer tempint = (Integer) fixture.pop();
-            assertTrue("Invalid expected value: "+tempint, tempint == i);
+            assertEquals((int) tempint, i, "Invalid expected value: " + tempint);
         }
     }
 
@@ -41,23 +36,26 @@ public class StackLLTest {
         for (int i = 0; i < 40; i++) {
             fixture.push(i);
         }
-        expectedException.expect(FullStackException.class);
-        expectedException.expectMessage("Stack is full");
-        fixture.push(123);
+        Exception exception =
+                assertThrows(FullStackException.class, () ->
+                    fixture.push(123));
+        assertEquals("Stack is full!", exception.getMessage());
     }
 
         @Test
     public void shouldThrowExceptionDeQueue() {
-        expectedException.expect(EmptyStackException.class);
-        expectedException.expectMessage("Stack is empty");
-        fixture.pop();
+        Exception exception =
+                assertThrows(EmptyStackException.class, () ->
+                    fixture.pop());
+        assertEquals("Stack is empty!", exception.getMessage());
     }
 
     @Test
     public void shouldThrowExceptionPeek() {
-        expectedException.expect(EmptyStackException.class);
-        expectedException.expectMessage("Stack is empty");
-        fixture.peek();
+        Exception exception =
+                assertThrows(EmptyStackException.class, () ->
+                    fixture.peek());
+        assertEquals("Stack is empty!", exception.getMessage());
     }
 
     @Test
@@ -65,10 +63,10 @@ public class StackLLTest {
         for (int i = 0; i < 6; i++) {
             fixture.push(i);
         }
-        assertTrue("Invalid QueueSize, assert value: " + fixture.getSize(), fixture.getSize() == 6);
+        assertEquals(6, fixture.getSize(), "Invalid QueueSize, assert value: " + fixture.getSize());
 
         for (int i = 5; i >= 0; i--) {
-            assertTrue("Invalid expected value: "+fixture.peek(), fixture.peek().equals(i));
+            assertEquals((int) fixture.peek(), i, "Invalid expected value: " + fixture.peek());
             fixture.pop();
         }
     }

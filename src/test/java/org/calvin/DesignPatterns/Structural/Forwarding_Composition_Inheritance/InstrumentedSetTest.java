@@ -1,17 +1,17 @@
 package org.calvin.DesignPatterns.Structural.Forwarding_Composition_Inheritance;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class InstrumentedSetTest {
     private InstrumentedSet<String> fixture;
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         Set<String> s = new HashSet<>();
         fixture = new InstrumentedSet<>(s);

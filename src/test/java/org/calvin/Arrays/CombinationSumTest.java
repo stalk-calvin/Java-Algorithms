@@ -1,15 +1,15 @@
 package org.calvin.Arrays;
 
 import com.google.common.collect.Lists;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class CombinationSumTest {
     private CombinationSum fixture;
 
-    @Before
+    @BeforeEach
     public void setUp() {
         fixture = new CombinationSum();
     }

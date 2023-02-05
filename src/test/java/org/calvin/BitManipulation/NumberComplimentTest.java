@@ -5,15 +5,15 @@
 
 package org.calvin.BitManipulation;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class NumberComplimentTest {
     private NumberCompliment fixture;
 
-    @Before public void setUp() throws Exception {
+    @BeforeEach public void setUp() throws Exception {
         fixture = new NumberCompliment();
     }
 

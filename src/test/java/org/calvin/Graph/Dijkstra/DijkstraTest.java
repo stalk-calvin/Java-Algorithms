@@ -5,14 +5,14 @@
 
 package org.calvin.Graph.Dijkstra;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DijkstraTest {
     private static final int[][] cost = { { 0, 3, 2 }, { 0, 0, -2 }, { 0, 0, 0 } };
@@ -22,7 +22,7 @@ public class DijkstraTest {
     private static final List<Edge>[] graph = (List<Edge>[]) Stream.generate(ArrayList::new).limit(n)
             .toArray(List[]::new);
 
-    @Before
+    @BeforeEach
     public void setUp() {
         createGraph();
     }

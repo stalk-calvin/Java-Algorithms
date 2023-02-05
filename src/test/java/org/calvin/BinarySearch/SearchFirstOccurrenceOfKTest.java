@@ -5,15 +5,15 @@
 
 package org.calvin.BinarySearch;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class SearchFirstOccurrenceOfKTest {
     private SearchFirstOccurrenceOfK fixture;
 
-    @Before public void setUp() throws Exception {
+    @BeforeEach public void setUp() throws Exception {
         fixture = new SearchFirstOccurrenceOfK();
     }
 

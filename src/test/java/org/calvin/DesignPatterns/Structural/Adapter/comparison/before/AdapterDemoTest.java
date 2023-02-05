@@ -1,9 +1,9 @@
 package org.calvin.DesignPatterns.Structural.Adapter.comparison.before;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AdapterDemoTest {
     private Object[] shapes;
@@ -11,7 +11,7 @@ public class AdapterDemoTest {
     private static int x2 = 30, y2 = 60;
     private static int width = 40, height = 40;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         shapes = new Object[]{new Line(), new Rectangle()};
     }

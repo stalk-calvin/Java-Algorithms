@@ -1,15 +1,11 @@
 package org.calvin.Numbers;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class BaseConverterTest {
-
-    @Rule
-    public ExpectedException exception = ExpectedException.none();
 
     @Test
     public void shouldConvertFromDecimalToAnyBaseString() throws Exception {
@@ -40,15 +36,19 @@ public class BaseConverterTest {
     }
 
     @Test
-    public void shouldNotConvertFromDecimalOverLimit() throws Exception {
-        exception.expectMessage("Bases greater than 36 not handled");
-        BaseConverter.baseFromDecimalToString(1001, 37);
+    public void shouldNotConvertFromDecimalOverLimit() {
+        Exception exception =
+                assertThrows(Exception.class, () ->
+                        BaseConverter.baseFromDecimalToString(1001, 37));
+        assertEquals("Bases greater than 36 not handled", exception.getMessage());
     }
 
     @Test
-    public void shouldNotConvertFromDecimalUnderLimit() throws Exception {
-        exception.expectMessage("Bases less than 2 not handled");
-        BaseConverter.baseFromDecimalToString(1001, 1);
+    public void shouldNotConvertFromDecimalUnderLimit() {
+        Exception exception =
+                assertThrows(Exception.class, () ->
+                        BaseConverter.baseFromDecimalToString(1001, 1));
+        assertEquals("Bases less than 2 not handled", exception.getMessage());
     }
 
     @Test
@@ -57,7 +57,7 @@ public class BaseConverterTest {
     }
 
     @Test
-    public void shouldNotConvertToDecimalFromAnyBase() throws Exception {
+    public void shouldNotConvertToDecimalFromAnyBase() {
         assertEquals(-1, BaseConverter.toDecimal("6", 2));
     }
 }

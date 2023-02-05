@@ -5,16 +5,12 @@
 
 package org.calvin.DesignPatterns.Creational.StaticFactory;
 
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class ServicesTest {
-
-    @Rule
-    public ExpectedException expectedException = ExpectedException.none();
 
     private static final Provider DEFAULT_PROVIDER = new Provider() {
         public Service newService() {
@@ -68,14 +64,14 @@ public class ServicesTest {
 
     @Test
     public void shouldNotGetAServiceIfUnknown() {
-        expectedException.expect(IllegalArgumentException.class);
-        expectedException.expectMessage("No provider");
         Services.registerDefaultProvider(DEFAULT_PROVIDER);
         Services.registerProvider("comp", COMP_PROVIDER);
         Services.registerProvider("armed", ARMED_PROVIDER);
 
         Service s1 = Services.newInstance();
-        Service s2 = Services.newInstance("??");
-        Service s3 = Services.newInstance("unknown");
+        Exception exception =
+                assertThrows(IllegalArgumentException.class, () ->
+                    Services.newInstance("??"));
+        assertEquals("No provider registered with name: ??", exception.getMessage());
     }
 }

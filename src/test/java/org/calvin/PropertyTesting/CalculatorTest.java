@@ -7,6 +7,7 @@ package org.calvin.PropertyTesting;
 
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.runner.RunWith;
 
@@ -16,7 +17,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class CalculatorTest {
     private Calculator fixture;
 
-    @BeforeEach public void setUp() throws Exception {
+    @Before
+    @BeforeEach
+    public void setUp() throws Exception {
         fixture = new Calculator();
     }
 

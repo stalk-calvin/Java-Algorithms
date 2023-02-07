@@ -7,7 +7,7 @@ package org.calvin.Tree;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import org.calvin.__Utils.AssortedMethods;
+import org.calvin.Tree.AssortedMethods;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

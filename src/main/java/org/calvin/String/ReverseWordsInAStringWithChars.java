@@ -5,7 +5,7 @@
 
 package org.calvin.String;
 
-import org.calvin.__Utils.AssortedMethods;
+import org.calvin.Tree.AssortedMethods;
 
 import java.util.ArrayList;
 import java.util.List;

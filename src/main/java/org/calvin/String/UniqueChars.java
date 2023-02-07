@@ -8,7 +8,7 @@ package org.calvin.String;
 import java.util.HashSet;
 import java.util.Set;
 
-import static org.calvin.__Utils.AssortedMethods.validateInputNull;
+import static org.calvin.Tree.AssortedMethods.validateInputNull;
 
 public class UniqueChars {
 

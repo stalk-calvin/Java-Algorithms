@@ -1,6 +1,6 @@
 package org.calvin.Tree;
 
-import org.calvin.__Utils.AssortedMethods;
+import org.calvin.Tree.AssortedMethods;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

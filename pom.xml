@@ -192,13 +192,6 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <excludes>
-                        <exclude>**/__Book/**</exclude>
-                        <exclude>**/__Threads/**/*</exclude>
-                        <exclude>**/__CohesionCoupling/**/*</exclude>
-                        <exclude>**/__Adjacency/**/*</exclude>
-                        <exclude>**/__Utils/**/*</exclude>
-                    </excludes>
                     <source>17</source>
                     <target>17</target>
                 </configuration>

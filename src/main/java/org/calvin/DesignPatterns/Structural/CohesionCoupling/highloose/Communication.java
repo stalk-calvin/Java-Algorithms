@@ -1,4 +1,4 @@
-package org.calvin.DesignPatterns.Structural.__CohesionCoupling.highloose;
+package org.calvin.DesignPatterns.Structural.CohesionCoupling.highloose;
 
 public interface Communication {
     boolean check();

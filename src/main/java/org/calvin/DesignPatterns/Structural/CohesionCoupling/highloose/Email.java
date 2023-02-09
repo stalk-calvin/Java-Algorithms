@@ -1,9 +1,9 @@
-package org.calvin.DesignPatterns.Structural.__CohesionCoupling.highloose;
+package org.calvin.DesignPatterns.Structural.CohesionCoupling.highloose;
 
-public class EmailFunction implements Communication {
+public class Email implements Communication {
     private String email;
 
-    EmailFunction(String email) {
+    Email(String email) {
         this.email = email;
     }
 
@@ -21,7 +21,7 @@ public class EmailFunction implements Communication {
 
     @Override
     public String toString() {
-        return "EmailFunction{" +
+        return "Email{" +
                 "email='" + email + '\'' +
                 '}';
     }
